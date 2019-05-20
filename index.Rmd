@@ -62,5 +62,5 @@ As mentioned above, we restrict our analysis to key socio-economic and demograph
 * Rs. 10,000 or less; 
 * Rs. 10,000 to 20,000; 
 * Rs. 20,000 to 30,000; 
-* Rs. 30,000 to 50,000; and 
+* Rs. 30,000 to 50,000; and
 * more than Rs. 50,000. 
