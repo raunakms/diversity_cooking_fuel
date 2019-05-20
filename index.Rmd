@@ -1,0 +1,66 @@
+---
+title: "Diversity in cooking-fuel choice and group segmentation for promoting cleaner cooking"
+
+author:
+  - name: "**Ratna K. Shrestha**"
+    affiliation: Vancouver School of Economics, University of British Columbia
+  - name: "**Raunak Shrestha**"
+    affiliation: Department of Urologic Sciences, University of British Columbia; Vancouver Prostate Centre
+
+output: html_document
+
+knit: (function(input_file, encoding) {
+  out_dir <- '_site';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+---
+
+
+# 1. Data Preparation
+
+### Dataset
+Following the 7.8 Mw Gorkha Earthquake in Nepal on April 25, 2015, the Kathmandu Living Labs in collaboration with the National Planning Commission (the Government of Nepal), carried out the largest household survey ever done in Nepal using mobile technology. Although the primary objective of this survey was to assess damages inflicted by the quake and identify beneficiaries eligible for government's housing reconstruction grants, the data contain many other valuable socio-economic information, including the types of fuel used by households for cooking and lighting. The survey was carried out between January and March of 2016, about 10 months after the quake that killed over 9,000 people. The survey includes the information on 762,106 households (about 3.6 million individuals) from the 11 most earthquake-affected districts of Nepal excluding the Kathmandu valley.
+
+The data for all 11 districts were downloaded from the 2015 Nepal Earthquake: Open Data Portal (<http://eq2015.npc.gov.np/>; accessed in September 2018). For this study, we use the following two data files:
+
+1. **csv_household_demographics.csv**; this file contains information on household size, ethnicity, household income, and gender, education and age of household head, and
+2. **csv_household_resources.csv**; this file contains data on the type of fuel used by households for cooking and lighting, source of drinking water, and the ownership of electronic appliances and motor vehicles.
+
+
+### Data Preparation
+As mentioned above, we restrict our analysis to key socio-economic and demographic information of the households (ethnicity, income, education, and location) and their post-earthquake sources of cooking fuel. 
+
+**Ethnicity**: The dataset includes the types of cooking fuel used by 96 different ethnic groups or castes. Since many of these ethnic groups are culturally, and by many other metrics (such as language they speak), very similar to each other, we regroup them into 10 major ethnic groups: 
+
+* Brahman, 
+* Chepang-Thami, 
+* Chhettri, 
+* Dalit, 
+* Gurung-Magar, 
+* Madheshi, 
+* Newar, 
+* Rai-Limbu, 
+* Tamang, and 
+* Muslim-Others.
+
+**Education Level**: The education level of the household heads range from illiterate to Doctoral degree. We regroup the education attainment into 5 levels: 
+
+* Illiterate; 
+* Non-formal and Others; 
+* grade 1-7 as Primary; 
+* grade 8-12 as Secondary; and 
+* Bachelors, Masters, and PhDs as University level education. 
+
+**Geo-climatic Region**: Similarly, the data provide information on municipality (and ward-level) location which allows us to divide the entire earthquake-affected 11 contiguous districts into two geo-climatic regions: 
+
+* Mountainous and 
+* Himalayan. 
+
+**Income Group**: As for income levels, we follow the original dataset's categorization that breaks the monthly income of the households into 5 levels:
+
+* Rs. 10,000 or less; 
+* Rs. 10,000 to 20,000; 
+* Rs. 20,000 to 30,000; 
+* Rs. 30,000 to 50,000; and 
+* more than Rs. 50,000. 
