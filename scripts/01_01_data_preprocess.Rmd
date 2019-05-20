@@ -1,9 +1,0 @@
----
-title: "Data Pre-processing"
-output: html_document
----
-
-# 100. Data Pre-processing
-
-### Dataset
-Following the 7.8 Mw Gorkha Earthquake in Nepal on April 25, 2015, the Kathmandu Living Labs in collaboration with the National Planning Commission (the Government of Nepal), carried out the largest household survey ever done in Nepal using mobile technology. Although the primary objective of this survey was to assess damages inflicted by the quake and identify beneficiaries eligible for government's housing reconstruction grants, the data contain many other valuable socio-economic information, including the types of fuel used by households for cooking and lighting. The survey was carried out between January and March of 2016, about 10 months after the quake that killed over 9,000 people. The survey includes the information on 762,106 households (about 3.6 million individuals) from the 11 most earthquake-affected districts of Nepal excluding the Kathmandu valley.

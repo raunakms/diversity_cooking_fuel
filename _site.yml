@@ -1,0 +1,12 @@
+name: "diversity_cooking_fuel"
+output_dir: "_site"
+navbar:
+  title: ""
+  left:
+  - text: "Home"
+    href: index.html
+  - text: "Data"
+    href: 01_01_data_preprocess.html
+output:
+  html_document:
+theme: cosmo

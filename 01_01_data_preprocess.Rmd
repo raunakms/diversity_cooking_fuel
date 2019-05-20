@@ -1,0 +1,195 @@
+---
+title: "Data Pre-processing"
+
+knit: (function(input_file, encoding) {
+  out_dir <- '_site';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, '01_01_data_preprocess.html'))})
+---
+
+#### Define Libraries
+```{r echo=TRUE, message=FALSE, warning=FALSE, tidy=TRUE}
+library("stringr")
+library("dplyr")
+library("reshape2")
+```
+
+#### Define Path
+```{r tidy=TRUE}
+dir.wrk <- getwd()
+dir.data <- file.path(dir.wrk, "data/data_household")
+dir.annot <- file.path(dir.wrk, "data/data_annotations")
+dir.output <- file.path(dir.wrk, "data/data_processed")
+```
+
+
+#### Define Files
+```{r tidy=TRUE}
+file.household_demo <- file.path(dir.data, "csv_household_demographics.csv.gz")
+file.household_res <- file.path(dir.data, "csv_household_resources.csv.gz")
+file.map_loc <- file.path(dir.data, "ward_vdcmun_district_name_mapping.csv.gz")
+file.eth_grp <- file.path(dir.annot, "group_ethnicity.tsv")
+file.edu_grp <- file.path(dir.annot, "group_education.tsv")
+file.geo_grp <- file.path(dir.annot, "group_georegion.tsv")
+```
+
+#### Load Location Lookup Tables
+```{r tidy=TRUE}
+dat.map <- read.csv(file.map_loc, header=TRUE, stringsAsFactors=FALSE)
+dat.map <- dat.map[!duplicated(dat.map),]
+dat.map$ward_num <- unlist(lapply(str_split(dat.map$ward_id, ""), 
+                                  function(x) as.numeric(paste(x[length(x)-1], x[length(x)], sep="") )))
+
+lookup_dist <- subset(dat.map, select=c("district_id","district_name"))
+lookup_dist <- lookup_dist[!duplicated(lookup_dist),]
+
+head(lookup_dist)
+```
+
+#### Load Grouing Data
+```{r tidy=TRUE}
+dat.eth <- read.delim(file.eth_grp, header=TRUE, stringsAsFactors=FALSE)
+dat.edu <- read.delim(file.edu_grp, header=TRUE, stringsAsFactors=FALSE)
+dat.geo <- read.delim(file.geo_grp, header=TRUE, stringsAsFactors=FALSE)
+
+head(dat.geo)
+```
+
+#### Load Household Data
+```{r tidy=TRUE}
+dat.household_demo <- read.csv(file.household_demo, header=TRUE, stringsAsFactors=FALSE)
+dat.household_res <- read.csv(file.household_res, header=TRUE, stringsAsFactors=FALSE)
+
+### MERGE DATA ---
+dat.household <- Reduce(function(x, y) merge(x, y, all=TRUE), 
+                        list(dat.household_demo, dat.household_res, by="household_id"))
+
+### TRIM DATA ---
+items <- c("household_id","district_id","vdcmun_id",
+           "source_cooking_fuel_post_eq","caste_household",
+           "income_level_household","education_level_household_head")
+dat.household <- subset(dat.household, select=items)
+```
+
+#### Add District Name
+```{r tidy=TRUE}
+dat.household$District <- NA
+for(i in 1:nrow(lookup_dist)){
+  index <- which(dat.household$district_id == lookup_dist$district_id[i])  
+  dat.household$District[index] <- lookup_dist$district_name[i]
+}
+```
+
+#### Add GeoRegion
+```{r tidy=TRUE}
+dat.household$GeoRegion <- NA
+for(i in 1:nrow(dat.geo)){
+  index <- which(dat.household$vdcmun_id == dat.geo$vdcmun_id[i])  
+  dat.household$GeoRegion[index] <- dat.geo$Region[i]
+}
+```
+
+#### Categorize Income
+```{r tidy=TRUE}
+dat.household$IncomeGroup <- NA
+dat.household$IncomeGroup[which(dat.household$income_level_household == "Rs. 10 thousand")] <- "0-10000"
+dat.household$IncomeGroup[which(dat.household$income_level_household == "Rs. 10-20 thousand")] <- "10000-20000"                                              
+dat.household$IncomeGroup[which(dat.household$income_level_household == "Rs. 20-30 thousand")] <- "20000-30000"
+dat.household$IncomeGroup[which(dat.household$income_level_household == "Rs. 30-50 thousand")] <- "30000-50000"
+dat.household$IncomeGroup[which(dat.household$income_level_household == "Rs. 50 thousand or more")] <- "50000-ABOVE"
+```
+
+#### Categorize Ethnicity
+```{r tidy=TRUE}
+dat.household$Ethnicity <- NA
+for(i in 1:nrow(dat.eth)){
+  index <- which(dat.household$caste_household == dat.eth$Caste[i])  
+  dat.household$Ethnicity[index] <- dat.eth$Ethnicity[i]
+}
+```
+
+#### Categorize Educational Level
+```{r tidy=TRUE}
+dat.household$EducationLevel <- NA
+for(i in 1:nrow(dat.edu)){
+  index <- which(dat.household$education_level_household_head == dat.edu$EducationLevel[i])  
+  dat.household$EducationLevel[index] <- dat.edu$EducationGroup[i]
+}
+```
+
+#### Trim Data
+```{r tidy=TRUE}
+dat.household <- dat.household[-which(is.na(dat.household$Ethnicity)),]
+
+### TRIM DATA ---
+items <- c("household_id","District","GeoRegion",
+           "Ethnicity","IncomeGroup","EducationLevel",
+           "source_cooking_fuel_post_eq")
+dat.household <- subset(dat.household, select=items)
+dat.household <- dat.household %>% dplyr::mutate_all(as.character)
+
+head(dat.household)
+
+# WRITE OUTPUT ---
+file.output <- file.path(dir.output, "household_level_data_categorical.tsv")
+write.table(dat.household, file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+```
+
+#### Prepare Frequency Table
+```{r tidy=TRUE}
+df <- dat.household %>% 
+        dplyr::count(Ethnicity, EducationLevel, GeoRegion, IncomeGroup, source_cooking_fuel_post_eq, sort=FALSE, name="Freq")
+
+head(df)
+```
+
+
+#### Impute Missing Values 
+```{r tidy=TRUE}
+dkey <- apply(df, 1, function(x) paste(x[1:5], collapse=":"))
+
+var1 <- setdiff(unique(df$Ethnicity), NA)
+var2 <- setdiff(unique(df$EducationLevel), NA)
+var3 <- setdiff(unique(df$GeoRegion), NA)
+var4 <- setdiff(unique(df$IncomeGroup), NA)
+var5 <- setdiff(unique(df$source_cooking_fuel_post_eq), NA)
+dcom <- expand.grid(var1,var2,var3,var4,var5)
+dcom$key <- apply(dcom, 1, function(x) paste(x[1:5], collapse=":"))
+
+var.missed <- setdiff(dcom$key, dkey)
+dcom <- subset(dcom, dcom$key %in% var.missed)
+dcom <- dcom[,-6]
+dcom$Freq <- 0
+colnames(dcom) <- colnames(df)
+
+# MERGE DATA WITH RESCUED COMBINATION ---
+df <- rbind(df, dcom)
+df <- df[order(df$Ethnicity, df$EducationLevel, df$GeoRegion, 
+               df$IncomeGroup, df$source_cooking_fuel_post_eq),]
+
+dim(df)
+tail(df)
+
+# WRITE OUTPUT ---
+file.output <- file.path(dir.output, "household_level_data_frequency.tsv")
+write.table(df, file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+```
+
+#### Prepare Frequency Table by FuelType Per Column
+```{r tidy=TRUE}
+df <- subset(df, !(is.na(df$Ethnicity)))
+df <- subset(df, !(is.na(df$source_cooking_fuel_post_eq)))
+dm <- reshape2::dcast(data=df, 
+                  formula=Ethnicity+EducationLevel+GeoRegion+IncomeGroup~source_cooking_fuel_post_eq, 
+                  fun.aggregate=sum, value.var="Freq")
+colnames(dm) <- c("Ethnicity","EducationLevel","GeoRegion","IncomeGroup",
+                  "Electricity","GobarGas","Kerosene","LPGas","Others","Wood")
+
+head(dm)
+
+# WRITE OUTPUT ---
+file.output <- file.path(dir.output, "household_level_data_frequency_table.tsv")
+write.table(dm, file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+```
+
