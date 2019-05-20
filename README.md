@@ -14,8 +14,9 @@ The data for all 11 districts were downloaded from the 2015 Nepal Earthquake: Op
 
 # Analysis
 
-* [1.00 Home](https://raunakms.github.io/diversity_cooking_fuel/){target="_blank"}
-* [1.01 Data Pre-processing](https://raunakms.github.io/diversity_cooking_fuel/01_01_data_preprocess.html){target="_blank"}
-* [2.01 Data Preparation to Generate Choropleth Maps](https://raunakms.github.io/diversity_cooking_fuel/02_01_maps_data_preparation.html){target="_blank"}
-* [2.02 Generate Choropleth Maps](https://raunakms.github.io/diversity_cooking_fuel/02_02_maps_plot.html){target="_blank"}
-
+| S.No. | Analysis                                                                                                                                             |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.00  | [Home](https://raunakms.github.io/diversity_cooking_fuel/){target="_blank"}                                                                          |
+| 1.01  | [Data Pre-processing](https://raunakms.github.io/diversity_cooking_fuel/01_01_data_preprocess.html){target="_blank"}                                 |
+| 2.01  | [Data Preparation to Generate Choropleth Maps](https://raunakms.github.io/diversity_cooking_fuel/02_01_maps_data_preparation.html){target="_blank"}  |
+| 2.02  | [Generate Choropleth Maps](https://raunakms.github.io/diversity_cooking_fuel/02_02_maps_plot.html){target="_blank"}                                  |
