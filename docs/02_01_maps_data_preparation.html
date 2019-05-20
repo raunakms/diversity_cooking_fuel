@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Data Preparation to Generate Choropleth Maps</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Data Preparation to Generate Choropleth Maps</h1>
+
+</div>
+
+
+<div id="define-libraries" class="section level4">
+<h4>Define Libraries</h4>
+<pre class="r"><code>library(&quot;stringr&quot;)
+library(&quot;dplyr&quot;)
+library(&quot;reshape2&quot;)</code></pre>
+</div>
+<div id="define-path" class="section level4">
+<h4>Define Path</h4>
+<pre class="r"><code>dir.wrk &lt;- getwd()
+dir.data &lt;- file.path(dir.wrk, &quot;data/data_household&quot;)
+dir.annot &lt;- file.path(dir.wrk, &quot;data/data_annotations&quot;)
+dir.output &lt;- file.path(dir.wrk, &quot;data/data_processed&quot;)
+dir.maps &lt;- file.path(dir.wrk, &quot;data/data_maps&quot;)</code></pre>
+</div>
+<div id="define-files" class="section level4">
+<h4>Define Files</h4>
+<pre class="r"><code>file.household &lt;- file.path(dir.output, &quot;household_level_data_categorical.tsv&quot;)</code></pre>
+</div>
+<div id="load-household-categorical-data" class="section level4">
+<h4>Load Household Categorical Data</h4>
+<pre class="r"><code>dat.household &lt;- read.delim(file.household, header = TRUE, stringsAsFactors = FALSE)
+dat.household &lt;- dat.household %&gt;% dplyr::mutate_all(as.character)
+
+head(dat.household)</code></pre>
+<pre><code>##     household_id    District GeoRegion    Ethnicity IncomeGroup
+## 1 12010100001101 Okhaldhunga  Mountain    Rai-Limbu     0-10000
+## 2 12010100002101 Okhaldhunga  Mountain    Rai-Limbu     0-10000
+## 3 12010100003101 Okhaldhunga  Mountain Gurung-Magar     0-10000
+## 4 12010100004101 Okhaldhunga  Mountain Gurung-Magar     0-10000
+## 5 12010100005101 Okhaldhunga  Mountain Gurung-Magar     0-10000
+## 6 12010100006101 Okhaldhunga  Mountain Gurung-Magar     0-10000
+##   EducationLevel source_cooking_fuel_post_eq
+## 1     Illiterate                        Wood
+## 2     Illiterate                        Wood
+## 3     Illiterate                        Wood
+## 4     Illiterate                        Wood
+## 5     Illiterate                        Wood
+## 6     Illiterate                        Wood</code></pre>
+</div>
+<div id="prepare-frequency-table-by-district-and-fueltype" class="section level4">
+<h4>Prepare Frequency Table by District and FuelType</h4>
+<pre class="r"><code>df &lt;- dat.household %&gt;% dplyr::count(District, source_cooking_fuel_post_eq, 
+    sort = FALSE, name = &quot;Freq&quot;)
+
+head(df)</code></pre>
+<pre><code>## # A tibble: 6 x 3
+##   District source_cooking_fuel_post_eq  Freq
+##   &lt;chr&gt;    &lt;chr&gt;                       &lt;int&gt;
+## 1 Dhading  Electricity                    16
+## 2 Dhading  Gobar Gas                    1806
+## 3 Dhading  Kerosene                       12
+## 4 Dhading  LP Gas                       8895
+## 5 Dhading  Others                         31
+## 6 Dhading  Wood                        75585</code></pre>
+</div>
+<div id="compute-ratios-tables" class="section level4">
+<h4>Compute Ratios Tables</h4>
+<pre class="r"><code>dm &lt;- reshape2::dcast(data = df, formula = District ~ source_cooking_fuel_post_eq, 
+    fun.aggregate = sum, value.var = &quot;Freq&quot;)
+dm &lt;- as.data.frame(cbind(id = dm$District, apply(dm[, -1], 2, function(x) x/sum(x))))
+
+dm[, 1:3]</code></pre>
+<pre><code>##                id         Electricity           Gobar Gas
+## 1         Dhading  0.0846560846560847    0.20506415351425
+## 2         Dolakha   0.142857142857143 0.00510957193141819
+## 3          Gorkha  0.0899470899470899   0.174520267968661
+## 4  Kavrepalanchok  0.0793650793650794    0.19950039741115
+## 5       Makwanpur  0.0899470899470899    0.22754627001249
+## 6         Nuwakot   0.111111111111111  0.0453048711252413
+## 7     Okhaldhunga 0.00529100529100529 0.00408765754513455
+## 8       Ramechhap   0.137566137566138  0.0054502100601794
+## 9          Rasuwa  0.0264550264550265 0.00567730214602021
+## 10       Sindhuli  0.0634920634920635   0.119904621323947
+## 11  Sindhupalchok   0.169312169312169 0.00783467696150789</code></pre>
+<pre class="r"><code># WRITE OUTPUT ---
+file.output &lt;- file.path(dir.output, &quot;maps_tbl_district_fueltype_ratio.tsv&quot;)
+write.table(dm, file.output, sep = &quot;\t&quot;, row.names = FALSE, col.names = TRUE, 
+    quote = FALSE)</code></pre>
+</div>
+<div id="prepare-frequency-table-for-total-household-population" class="section level4">
+<h4>Prepare Frequency Table for Total Household Population</h4>
+<pre class="r"><code>df &lt;- dat.household %&gt;% dplyr::count(District, sort = FALSE, name = &quot;Freq&quot;)
+colnames(df)[which(colnames(df) == &quot;District&quot;)] &lt;- &quot;id&quot;
+
+df</code></pre>
+<pre><code>## # A tibble: 11 x 2
+##    id              Freq
+##    &lt;chr&gt;          &lt;int&gt;
+##  1 Dhading        86345
+##  2 Dolakha        70495
+##  3 Gorkha         75883
+##  4 Kavrepalanchok 91895
+##  5 Makwanpur      88365
+##  6 Nuwakot        75429
+##  7 Okhaldhunga    36112
+##  8 Ramechhap      55253
+##  9 Rasuwa         12380
+## 10 Sindhuli       64908
+## 11 Sindhupalchok  90072</code></pre>
+<pre class="r"><code># WRITE OUTPUT ---
+file.output &lt;- file.path(dir.output, &quot;maps_tbl_district_total_household.tsv&quot;)
+write.table(df, file.output, sep = &quot;\t&quot;, row.names = FALSE, col.names = TRUE, 
+    quote = FALSE)</code></pre>
+</div>
+<div id="prepare-frequency-table-by-district-and-ethnicity" class="section level4">
+<h4>Prepare Frequency Table by District and Ethnicity</h4>
+<pre class="r"><code>df &lt;- dat.household %&gt;% dplyr::count(District, Ethnicity, sort = FALSE, name = &quot;Freq&quot;)
+
+dm &lt;- reshape2::dcast(data = df, formula = District ~ Ethnicity, fun.aggregate = sum, 
+    value.var = &quot;Freq&quot;)
+dm &lt;- as.data.frame(cbind(id = dm$District, apply(dm[, -1], 2, function(x) x/sum(x))))
+
+dm[, 1:3]</code></pre>
+<pre><code>##                id            Brahman        Chepang-Thami
+## 1         Dhading  0.131838687628161    0.199207271236247
+## 2         Dolakha 0.0686078833447255    0.357001298435044
+## 3          Gorkha  0.118869902027797   0.0522107565092599
+## 4  Kavrepalanchok  0.194932786511734 0.000888402924895783
+## 5       Makwanpur  0.122469810890864     0.24738604524021
+## 6         Nuwakot  0.137899293688767 6.83386865304449e-05
+## 7     Okhaldhunga 0.0375757575757576  0.00013667737306089
+## 8       Ramechhap 0.0269036226930964   0.0362195038611358
+## 9          Rasuwa 0.0166416040100251                    0
+## 10       Sindhuli 0.0537252221462748   0.0102508029795667
+## 11  Sindhupalchok 0.0905354294827979   0.0966309027540491</code></pre>
+<pre class="r"><code># WRITE OUTPUT ---
+file.output &lt;- file.path(dir.output, &quot;maps_tbl_district_ethnicity_ratio.tsv&quot;)
+write.table(dm, file.output, sep = &quot;\t&quot;, row.names = FALSE, col.names = TRUE, 
+    quote = FALSE)</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

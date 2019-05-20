@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Generate Choropleth Maps</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Generate Choropleth Maps</h1>
+
+</div>
+
+
+<div id="data-preparation" class="section level3">
+<h3>Data Preparation</h3>
+<p>We obtained the geographical coordinates of Nepal’s administrative units (District Level: 77 Districts) in GeoJSON format from the <strong>Open Knowledge Nepal</strong> data portal (<a href="http://localboundries.oknp.org/" class="uri">http://localboundries.oknp.org/</a>). <br/><br/></p>
+<div id="define-libraries" class="section level4">
+<h4>Define Libraries</h4>
+<pre class="r"><code>library(&quot;stringr&quot;)
+library(&quot;dplyr&quot;)
+library(&quot;reshape2&quot;)
+library(&quot;geojsonio&quot;)
+library(&quot;broom&quot;)
+library(&quot;ggplot2&quot;)
+library(&quot;ggthemes&quot;)
+library(&quot;RColorBrewer&quot;)</code></pre>
+</div>
+<div id="define-path" class="section level4">
+<h4>Define Path</h4>
+<pre class="r"><code>dir.wrk &lt;- getwd()
+dir.data &lt;- file.path(dir.wrk, &quot;data/data_household&quot;)
+dir.annot &lt;- file.path(dir.wrk, &quot;data/data_annotations&quot;)
+dir.output &lt;- file.path(dir.wrk, &quot;data/data_processed&quot;)
+dir.maps &lt;- file.path(dir.wrk, &quot;data/data_maps&quot;)</code></pre>
+</div>
+<div id="define-files" class="section level4">
+<h4>Define Files</h4>
+<pre class="r"><code>file.geo &lt;- file.path(dir.maps, &quot;nepal_district.geojson&quot;)
+file.dat1 &lt;- file.path(dir.output, &quot;maps_tbl_district_total_household.tsv&quot;)
+file.dat2 &lt;- file.path(dir.output, &quot;maps_tbl_district_fueltype_ratio.tsv&quot;)
+file.dat3 &lt;- file.path(dir.output, &quot;maps_tbl_district_ethnicity_ratio.tsv&quot;)</code></pre>
+</div>
+<div id="load-household-population-by-district" class="section level4">
+<h4>Load Household Population by District</h4>
+<pre class="r"><code>dat1 &lt;- read.delim(file.dat1, header = TRUE, stringsAsFactors = FALSE)
+
+head(dat1)</code></pre>
+<pre><code>##               id  Freq
+## 1        Dhading 86345
+## 2        Dolakha 70495
+## 3         Gorkha 75883
+## 4 Kavrepalanchok 91895
+## 5      Makwanpur 88365
+## 6        Nuwakot 75429</code></pre>
+</div>
+<div id="load-maps" class="section level4">
+<h4>Load Maps</h4>
+<pre class="r"><code>geo &lt;- geojsonio::geojson_read(file.geo, method=&quot;local&quot;, parse=TRUE, what=&quot;sp&quot;)
+geo77 &lt;- broom::tidy(geo, region=&quot;DISTRICT&quot;)
+geo11 &lt;- subset(geo77, geo77$id %in% dat1$id)
+
+head(geo11)</code></pre>
+<pre><code>## # A tibble: 6 x 7
+##    long   lat order hole  piece group     id     
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;lgl&gt; &lt;fct&gt; &lt;chr&gt;     &lt;chr&gt;  
+## 1  84.7  27.9 68752 FALSE 1     Dhading.1 Dhading
+## 2  84.7  27.9 68753 FALSE 1     Dhading.1 Dhading
+## 3  84.7  27.9 68754 FALSE 1     Dhading.1 Dhading
+## 4  84.7  27.9 68755 FALSE 1     Dhading.1 Dhading
+## 5  84.7  27.9 68756 FALSE 1     Dhading.1 Dhading
+## 6  84.7  27.9 68757 FALSE 1     Dhading.1 Dhading</code></pre>
+</div>
+<div id="plot-choropleth-maps-nepal-with-all-districts" class="section level4">
+<h4>Plot Choropleth Maps: Nepal with all Districts</h4>
+<pre class="r"><code># PREPARE DATA ---
+d &lt;- geo77
+d$Status &lt;- 0
+d$Status[which(d$id %in% dat1$id)] &lt;- 1
+d$Status &lt;- as.factor(d$Status)
+
+# DEFINE COLORS ---
+cpalette.grp &lt;- c(&quot;#FFFFFF&quot;,&quot;#BDBDBD&quot;)
+
+# PLOT
+map77 &lt;- ggplot(data=d, aes(x=long, y=lat, group=group)) +
+          geom_path() +
+          geom_polygon(aes(fill=Status), color=&quot;#000000&quot;) +
+          scale_fill_manual(values=cpalette.grp) +
+          coord_equal() +
+          theme_map() +
+          theme(
+            plot.title = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+            #aspect.ratio = 1,
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(),
+            axis.ticks = element_blank(),   
+            strip.text = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+            strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+            panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=NA),
+            legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+            legend.title = element_blank(),
+            legend.key.size = unit(0.5, &quot;cm&quot;),
+            legend.position = &quot;none&quot;) +
+          guides(fill=guide_legend(title=&quot;No. of Households&quot;))
+
+map77</code></pre>
+<p><img src="02_02_maps_plot_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="load-household-population-by-district-1" class="section level4">
+<h4>Load Household Population by District</h4>
+<pre class="r"><code>dat1 &lt;- read.delim(file.dat1, header = TRUE, stringsAsFactors = FALSE)
+
+# CONVERT TO DISCRETE DATA ---
+dm &lt;- mutate(dat1, Group = cut(Freq, seq(10000, 1e+05, 10000), include.lowest = TRUE)) %&gt;% 
+    group_by(Group)
+group_ratio &lt;- levels(dm$Group)
+
+# MERGE DATA ---
+df &lt;- merge(geo11, dm, by = &quot;id&quot;)
+head(df)</code></pre>
+<pre><code>##        id     long      lat order  hole piece     group  Freq
+## 1 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1 86345
+## 2 Dhading 84.73970 27.94059 68753 FALSE     1 Dhading.1 86345
+## 3 Dhading 84.73969 27.94087 68754 FALSE     1 Dhading.1 86345
+## 4 Dhading 84.73980 27.94221 68755 FALSE     1 Dhading.1 86345
+## 5 Dhading 84.73977 27.94336 68756 FALSE     1 Dhading.1 86345
+## 6 Dhading 84.73981 27.94370 68757 FALSE     1 Dhading.1 86345
+##           Group
+## 1 (8e+04,9e+04]
+## 2 (8e+04,9e+04]
+## 3 (8e+04,9e+04]
+## 4 (8e+04,9e+04]
+## 5 (8e+04,9e+04]
+## 6 (8e+04,9e+04]</code></pre>
+</div>
+<div id="plot-choropleth-maps-total-no.-of-households" class="section level4">
+<h4>Plot Choropleth Maps: Total No. of Households</h4>
+<pre class="r"><code>map1 &lt;- ggplot(data=df, aes(x=long, y=lat, group=group, fill=Group)) +
+          geom_path() +
+          geom_polygon(aes(fill=Group), color=&quot;#000000&quot;) +
+          scale_fill_brewer(palette = &quot;Blues&quot;) +
+          coord_equal() +
+          theme_map() +
+          theme(
+            plot.title = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+            aspect.ratio = 1,
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(),
+            axis.ticks = element_blank(),   
+            strip.text = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+            strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+            panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=NA),
+            legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+            legend.title = element_text(size = 10, color=&quot;#000000&quot;),
+            legend.key.size = unit(0.5, &quot;cm&quot;),
+            legend.position = &quot;right&quot;) +
+          guides(fill=guide_legend(title=&quot;No. of Households&quot;, ncol=1))
+
+map1</code></pre>
+<p><img src="02_02_maps_plot_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="load-household-fueltype-usage-proportions-by-district" class="section level4">
+<h4>Load Household FuelType Usage Proportions by District</h4>
+<pre class="r"><code>dat2 &lt;- read.delim(file.dat2, header = TRUE, stringsAsFactors = FALSE)
+
+head(dat2)</code></pre>
+<pre><code>##               id Electricity   Gobar.Gas   Kerosene     LP.Gas     Others
+## 1        Dhading  0.08465608 0.205064154 0.05714286 0.10945537 0.06768559
+## 2        Dolakha  0.14285714 0.005109572 0.11904762 0.08824108 0.13537118
+## 3         Gorkha  0.08994709 0.174520268 0.07619048 0.09196958 0.10698690
+## 4 Kavrepalanchok  0.07936508 0.199500397 0.15238095 0.19404179 0.04148472
+## 5      Makwanpur  0.08994709 0.227546270 0.11428571 0.24897251 0.16157205
+## 6        Nuwakot  0.11111111 0.045304871 0.09523810 0.07829843 0.05676856
+##         Wood
+## 1 0.11518469
+## 2 0.09625774
+## 3 0.10178191
+## 4 0.11323104
+## 5 0.10059783
+## 6 0.10454018</code></pre>
+<pre class="r"><code># CONVERT TO DISCRETE DATA ---
+dm &lt;- reshape2::melt(dat2, id.vars = &quot;id&quot;, variable.name = &quot;FuelType&quot;, value.name = &quot;Ratio&quot;)
+dm &lt;- mutate(dm, RatioGroup = cut(Ratio, seq(0, 0.25, 0.05), include.lowest = TRUE)) %&gt;% 
+    group_by(RatioGroup)
+
+group_ratio &lt;- levels(dm$RatioGroup)
+type_fuel &lt;- c(&quot;Wood&quot;, &quot;LP.Gas&quot;, &quot;Gobar.Gas&quot;, &quot;Kerosene&quot;, &quot;Electricity&quot;, &quot;Others&quot;)
+
+# MERGE DATA ---
+df &lt;- merge(geo11, dm, by = &quot;id&quot;)
+
+# FACTORIZE DATA ---
+df$FuelType &lt;- factor(df$FuelType, levels = type_fuel)
+df$RatioGroup &lt;- factor(df$RatioGroup, levels = group_ratio)
+
+head(df)</code></pre>
+<pre><code>##        id     long      lat order  hole piece     group    FuelType
+## 1 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1 Electricity
+## 2 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1      Others
+## 3 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1        Wood
+## 4 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1    Kerosene
+## 5 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1      LP.Gas
+## 6 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1   Gobar.Gas
+##        Ratio RatioGroup
+## 1 0.08465608 (0.05,0.1]
+## 2 0.06768559 (0.05,0.1]
+## 3 0.11518469 (0.1,0.15]
+## 4 0.05714286 (0.05,0.1]
+## 5 0.10945537 (0.1,0.15]
+## 6 0.20506415 (0.2,0.25]</code></pre>
+</div>
+<div id="plot-choropleth-maps-proportion-of-households-using-fueltype" class="section level4">
+<h4>Plot Choropleth Maps: Proportion of Households using FuelType</h4>
+<pre class="r"><code>map2 &lt;- ggplot(data=df, aes(x=long, y=lat, group=group, fill=RatioGroup)) +
+          geom_path() +
+          geom_polygon(aes(fill=RatioGroup), color=&quot;#000000&quot;) +
+          scale_fill_brewer(palette = &quot;Blues&quot;) +
+          facet_wrap(~FuelType, ncol=3, drop=FALSE,  strip.position=&quot;top&quot;) +
+          coord_equal() +
+          theme_map() +
+          theme(
+               plot.title = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+               aspect.ratio = 1,
+               panel.grid.major = element_blank(),
+               panel.grid.minor = element_blank(),
+               axis.ticks = element_blank(),    
+               strip.text = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+               strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+               panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=NA),
+               legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+               legend.title = element_text(size = 10, color=&quot;#000000&quot;),
+               legend.key.size = unit(0.5, &quot;cm&quot;),
+               legend.position = &quot;right&quot;) +
+          guides(fill=guide_legend(title=&quot;Proportion of Households&quot;, ncol=1))
+
+map2</code></pre>
+<p><img src="02_02_maps_plot_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="load-household-population-by-ethnicity-and-district" class="section level4">
+<h4>Load Household Population by Ethnicity and District</h4>
+<pre class="r"><code>dat3 &lt;- read.delim(file.dat3, header = TRUE, stringsAsFactors = FALSE)
+
+head(dat3)</code></pre>
+<pre><code>##               id    Brahman Chepang.Thami    Chettri      Dalit
+## 1        Dhading 0.13183869  1.992073e-01 0.09895938 0.13744536
+## 2        Dolakha 0.06860788  3.570013e-01 0.18636705 0.06896213
+## 3         Gorkha 0.11886990  5.221076e-02 0.06745067 0.17466477
+## 4 Kavrepalanchok 0.19493279  8.884029e-04 0.10279011 0.10281694
+## 5      Makwanpur 0.12246981  2.473860e-01 0.07565513 0.05270396
+## 6        Nuwakot 0.13789929  6.833869e-05 0.07101362 0.06762366
+##   Gurung.Magar    Madhesi Muslim.Others      Newar   Rai.Limbu     Tamang
+## 1   0.18856305 0.06368421    0.09718067 0.11869743 0.030502227 0.08889155
+## 2   0.02672287 0.02500000    0.02683347 0.10158448 0.170972201 0.05719957
+## 3   0.30926197 0.12394737    0.31012601 0.08608953 0.039318077 0.01146000
+## 4   0.04920577 0.03947368    0.08258544 0.16717928 0.007617877 0.15064451
+## 5   0.06055718 0.27210526    0.05439217 0.08283894 0.072277684 0.20192754
+## 6   0.04849707 0.08394737    0.06055661 0.08180400 0.105882353 0.14936267</code></pre>
+<pre class="r"><code># CONVERT TO DISCRETE DATA ---
+dm &lt;- reshape2::melt(dat3, id.vars = &quot;id&quot;, variable.name = &quot;Ethnicity&quot;, value.name = &quot;Ratio&quot;)
+dm &lt;- mutate(dm, RatioGroup = cut(Ratio, seq(0, 0.4, 0.05), include.lowest = TRUE)) %&gt;% 
+    group_by(RatioGroup)
+
+group_ratio &lt;- levels(dm$RatioGroup)
+type_ethnicity &lt;- c(&quot;Newar&quot;, &quot;Brahman&quot;, &quot;Madhesi&quot;, &quot;Chettri&quot;, &quot;Muslim.Others&quot;, 
+    &quot;Gurung.Magar&quot;, &quot;Dalit&quot;, &quot;Rai.Limbu&quot;, &quot;Tamang&quot;, &quot;Chepang.Thami&quot;)
+
+# MERGE DATA ---
+df &lt;- merge(geo11, dm, by = &quot;id&quot;)
+
+# FACTORIZE DATA ---
+df$Ethnicity &lt;- factor(df$Ethnicity, levels = type_ethnicity)
+df$RatioGroup &lt;- factor(df$RatioGroup, levels = group_ratio)
+
+head(df)</code></pre>
+<pre><code>##        id     long      lat order  hole piece     group     Ethnicity
+## 1 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1       Brahman
+## 2 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1 Muslim.Others
+## 3 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1     Rai.Limbu
+## 4 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1       Madhesi
+## 5 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1        Tamang
+## 6 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1  Gurung.Magar
+##        Ratio RatioGroup
+## 1 0.13183869 (0.1,0.15]
+## 2 0.09718067 (0.05,0.1]
+## 3 0.03050223   [0,0.05]
+## 4 0.06368421 (0.05,0.1]
+## 5 0.08889155 (0.05,0.1]
+## 6 0.18856305 (0.15,0.2]</code></pre>
+</div>
+<div id="plot-choropleth-maps-proportion-of-households-by-ethnicity" class="section level4">
+<h4>Plot Choropleth Maps: Proportion of Households by Ethnicity</h4>
+<pre class="r"><code>map3 &lt;- ggplot(data=df, aes(x=long, y=lat, group=group, fill=RatioGroup)) +
+          geom_path() +
+          geom_polygon(aes(fill=RatioGroup), color=&quot;#000000&quot;) +
+          scale_fill_brewer(palette = &quot;Blues&quot;) +
+          facet_wrap(~Ethnicity, ncol=4, drop=FALSE,  strip.position=&quot;top&quot;) +
+          coord_equal() +
+          theme_map() +
+          theme(
+               plot.title = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+               aspect.ratio = 1,
+               panel.grid.major = element_blank(),
+               panel.grid.minor = element_blank(),
+               axis.ticks = element_blank(),    
+               strip.text = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+               strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+               panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=NA),
+               legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+               legend.title = element_text(size = 10, color=&quot;#000000&quot;),
+               legend.key.size = unit(0.5, &quot;cm&quot;),
+               legend.position = &quot;right&quot;) +
+          guides(fill=guide_legend(title=&quot;Proportion of Households&quot;, ncol=1))
+
+map3</code></pre>
+<p><img src="02_02_maps_plot_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
