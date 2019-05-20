@@ -1,0 +1,241 @@
+---
+title: "Generate Choropleth Maps"
+
+output: html_document
+
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, '02_02_maps_plot.html'))})
+---
+
+### Data Preparation
+We obtained the geographical coordinates of Nepal's administrative units (District Level: 77 Districts) in GeoJSON format from the **Open Knowledge Nepal** data portal (http://localboundries.oknp.org/). <br/><br/>
+
+#### Define Libraries
+```{r echo=TRUE, message=FALSE, warning=FALSE, tidy=TRUE}
+library("stringr")
+library("dplyr")
+library("reshape2")
+library("geojsonio")
+library("broom")
+library("ggplot2")
+library("ggthemes")
+library("RColorBrewer")
+```
+
+#### Define Path
+```{r tidy=TRUE}
+dir.wrk <- getwd()
+dir.data <- file.path(dir.wrk, "data/data_household")
+dir.annot <- file.path(dir.wrk, "data/data_annotations")
+dir.output <- file.path(dir.wrk, "data/data_processed")
+dir.maps <- file.path(dir.wrk, "data/data_maps")
+```
+
+#### Define Files
+```{r tidy=TRUE}
+file.geo <- file.path(dir.maps, "nepal_district.geojson")
+file.dat1 <- file.path(dir.output, "maps_tbl_district_total_household.tsv")
+file.dat2 <- file.path(dir.output, "maps_tbl_district_fueltype_ratio.tsv")
+file.dat3 <- file.path(dir.output, "maps_tbl_district_ethnicity_ratio.tsv")
+```
+
+#### Load Household Population by District
+```{r tidy=TRUE}
+dat1 <- read.delim(file.dat1, header=TRUE, stringsAsFactors=FALSE)
+
+head(dat1)
+```
+
+#### Load Maps
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+geo <- geojsonio::geojson_read(file.geo, method="local", parse=TRUE, what="sp")
+geo77 <- broom::tidy(geo, region="DISTRICT")
+geo11 <- subset(geo77, geo77$id %in% dat1$id)
+
+head(geo11)
+```
+
+#### Plot Choropleth Maps: Nepal with all Districts
+```{r fig.align = "center"}
+# PREPARE DATA ---
+d <- geo77
+d$Status <- 0
+d$Status[which(d$id %in% dat1$id)] <- 1
+d$Status <- as.factor(d$Status)
+
+# DEFINE COLORS ---
+cpalette.grp <- c("#FFFFFF","#BDBDBD")
+
+# PLOT
+map77 <- ggplot(data=d, aes(x=long, y=lat, group=group)) +
+          geom_path() +
+          geom_polygon(aes(fill=Status), color="#000000") +
+          scale_fill_manual(values=cpalette.grp) +
+          coord_equal() +
+          theme_map() +
+          theme(
+            plot.title = element_text(size = 10, color="#000000", hjust=0.5),
+            #aspect.ratio = 1,
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(),
+            axis.ticks = element_blank(),	
+            strip.text = element_text(size = 10, color="#000000", hjust=0.5),
+            strip.background = element_rect(fill="#FFFFFF", color="#FFFFFF"),
+            panel.background = element_rect(fill="#FFFFFF", color=NA),
+            legend.text = element_text(size = 10, color="#000000"),
+            legend.title = element_blank(),
+            legend.key.size = unit(0.5, "cm"),
+            legend.position = "none") +
+          guides(fill=guide_legend(title="No. of Households"))
+
+map77
+```
+
+#### Load Household Population by District
+```{r tidy=TRUE}
+dat1 <- read.delim(file.dat1, header=TRUE, stringsAsFactors=FALSE)
+
+# CONVERT TO DISCRETE DATA ---
+dm <-  mutate(dat1, Group=cut(Freq, seq(10000, 100000, 10000), include.lowest = TRUE)) %>% 
+              group_by(Group) 
+group_ratio <- levels(dm$Group)
+
+# MERGE DATA ---
+df <- merge(geo11, dm, by="id")
+head(df)
+```
+
+
+#### Plot Choropleth Maps: Total No. of Households
+```{r fig.height = 7, fig.width = 7, fig.align = "center"}
+map1 <- ggplot(data=df, aes(x=long, y=lat, group=group, fill=Group)) +
+          geom_path() +
+          geom_polygon(aes(fill=Group), color="#000000") +
+          scale_fill_brewer(palette = "Blues") +
+          coord_equal() +
+          theme_map() +
+          theme(
+            plot.title = element_text(size = 10, color="#000000", hjust=0.5),
+            aspect.ratio = 1,
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(),
+            axis.ticks = element_blank(),	
+            strip.text = element_text(size = 10, color="#000000", hjust=0.5),
+            strip.background = element_rect(fill="#FFFFFF", color="#FFFFFF"),
+            panel.background = element_rect(fill="#FFFFFF", color=NA),
+            legend.text = element_text(size = 10, color="#000000"),
+            legend.title = element_text(size = 10, color="#000000"),
+            legend.key.size = unit(0.5, "cm"),
+            legend.position = "right") +
+          guides(fill=guide_legend(title="No. of Households", ncol=1))
+
+map1
+```
+
+#### Load Household FuelType Usage Proportions by District
+```{r tidy=TRUE}
+dat2 <- read.delim(file.dat2, header=TRUE, stringsAsFactors=FALSE)
+
+head(dat2)
+
+# CONVERT TO DISCRETE DATA ---
+dm <- reshape2::melt(dat2, id.vars="id", variable.name="FuelType", value.name="Ratio")
+dm <-  mutate(dm, RatioGroup=cut(Ratio, seq(0,0.25,0.05), include.lowest = TRUE)) %>% 
+              group_by(RatioGroup)
+
+group_ratio <- levels(dm$RatioGroup)
+type_fuel <- c("Wood","LP.Gas","Gobar.Gas","Kerosene","Electricity", "Others")
+
+# MERGE DATA ---
+df <- merge(geo11, dm, by="id")
+
+# FACTORIZE DATA ---
+df$FuelType <- factor(df$FuelType, levels=type_fuel)
+df$RatioGroup <- factor(df$RatioGroup, levels=group_ratio)
+
+head(df)
+```
+
+#### Plot Choropleth Maps: Proportion of Households using FuelType
+```{r fig.height = 7, fig.width = 7, fig.align = "center"}
+map2 <- ggplot(data=df, aes(x=long, y=lat, group=group, fill=RatioGroup)) +
+          geom_path() +
+          geom_polygon(aes(fill=RatioGroup), color="#000000") +
+          scale_fill_brewer(palette = "Blues") +
+          facet_wrap(~FuelType, ncol=3, drop=FALSE,  strip.position="top") +
+          coord_equal() +
+          theme_map() +
+          theme(
+               plot.title = element_text(size = 10, color="#000000", hjust=0.5),
+               aspect.ratio = 1,
+               panel.grid.major = element_blank(),
+               panel.grid.minor = element_blank(),
+               axis.ticks = element_blank(),	
+               strip.text = element_text(size = 10, color="#000000", hjust=0.5),
+               strip.background = element_rect(fill="#FFFFFF", color="#FFFFFF"),
+               panel.background = element_rect(fill="#FFFFFF", color=NA),
+               legend.text = element_text(size = 10, color="#000000"),
+               legend.title = element_text(size = 10, color="#000000"),
+               legend.key.size = unit(0.5, "cm"),
+               legend.position = "right") +
+          guides(fill=guide_legend(title="Proportion of Households", ncol=1))
+
+map2
+```
+
+
+#### Load Household Population by Ethnicity and District
+```{r tidy=TRUE}
+dat3 <- read.delim(file.dat3, header=TRUE, stringsAsFactors=FALSE)
+
+head(dat3)
+
+# CONVERT TO DISCRETE DATA ---
+dm <- reshape2::melt(dat3, id.vars="id", variable.name="Ethnicity", value.name="Ratio")
+dm <-  mutate(dm, RatioGroup=cut(Ratio, seq(0,0.4,0.05), include.lowest = TRUE)) %>% 
+              group_by(RatioGroup)
+
+group_ratio <- levels(dm$RatioGroup)
+type_ethnicity <- c("Newar","Brahman","Madhesi","Chettri","Muslim.Others",
+                         "Gurung.Magar","Dalit","Rai.Limbu","Tamang","Chepang.Thami")
+
+# MERGE DATA ---
+df <- merge(geo11, dm, by="id")
+
+# FACTORIZE DATA ---
+df$Ethnicity <- factor(df$Ethnicity, levels=type_ethnicity)
+df$RatioGroup <- factor(df$RatioGroup, levels=group_ratio)
+
+head(df)
+```
+
+
+#### Plot Choropleth Maps: Proportion of Households by Ethnicity
+```{r fig.height = 7, fig.width = 7, fig.align = "center"}
+map3 <- ggplot(data=df, aes(x=long, y=lat, group=group, fill=RatioGroup)) +
+          geom_path() +
+          geom_polygon(aes(fill=RatioGroup), color="#000000") +
+          scale_fill_brewer(palette = "Blues") +
+          facet_wrap(~Ethnicity, ncol=4, drop=FALSE,  strip.position="top") +
+          coord_equal() +
+          theme_map() +
+          theme(
+               plot.title = element_text(size = 10, color="#000000", hjust=0.5),
+               aspect.ratio = 1,
+               panel.grid.major = element_blank(),
+               panel.grid.minor = element_blank(),
+               axis.ticks = element_blank(),	
+               strip.text = element_text(size = 10, color="#000000", hjust=0.5),
+               strip.background = element_rect(fill="#FFFFFF", color="#FFFFFF"),
+               panel.background = element_rect(fill="#FFFFFF", color=NA),
+               legend.text = element_text(size = 10, color="#000000"),
+               legend.title = element_text(size = 10, color="#000000"),
+               legend.key.size = unit(0.5, "cm"),
+               legend.position = "right") +
+          guides(fill=guide_legend(title="Proportion of Households", ncol=1))
+
+map3
+```

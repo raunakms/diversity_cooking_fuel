@@ -1,0 +1,88 @@
+---
+title: "Data Preparation to Generate Choropleth Maps"
+output: html_document
+
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, '02_01_maps_data_preparation.html'))})
+---
+
+
+#### Define Libraries
+```{r echo=TRUE, message=FALSE, warning=FALSE, tidy=TRUE}
+library("stringr")
+library("dplyr")
+library("reshape2")
+```
+
+#### Define Path
+```{r tidy=TRUE}
+dir.wrk <- getwd()
+dir.data <- file.path(dir.wrk, "data/data_household")
+dir.annot <- file.path(dir.wrk, "data/data_annotations")
+dir.output <- file.path(dir.wrk, "data/data_processed")
+dir.maps <- file.path(dir.wrk, "data/data_maps")
+```
+
+#### Define Files
+```{r tidy=TRUE}
+file.household <- file.path(dir.output, "household_level_data_categorical.tsv")
+```
+
+#### Load Household Categorical Data
+```{r tidy=TRUE}
+dat.household <- read.delim(file.household, header=TRUE, stringsAsFactors=FALSE)
+dat.household <- dat.household %>% dplyr::mutate_all(as.character)
+
+head(dat.household)
+```
+
+#### Prepare Frequency Table by District and FuelType
+```{r tidy=TRUE}
+df <- dat.household %>% 
+          dplyr::count(District, source_cooking_fuel_post_eq, sort=FALSE, name="Freq")
+
+head(df)
+```
+
+#### Compute Ratios Tables
+```{r tidy=TRUE}
+dm <- reshape2::dcast(data=df, formula= District~source_cooking_fuel_post_eq, fun.aggregate=sum, value.var="Freq")
+dm <- as.data.frame(cbind(id=dm$District, apply(dm[,-1], 2, function(x) x/sum(x))))
+
+dm[,1:3]
+
+# WRITE OUTPUT ---
+file.output <- file.path(dir.output, "maps_tbl_district_fueltype_ratio.tsv")
+write.table(dm, file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+```
+
+#### Prepare Frequency Table for Total Household Population
+```{r tidy=TRUE}
+df <- dat.household %>% 
+          dplyr::count(District, sort=FALSE, name="Freq")
+colnames(df)[which(colnames(df) == "District")] <- "id"
+
+df
+
+# WRITE OUTPUT ---
+file.output <- file.path(dir.output, "maps_tbl_district_total_household.tsv")
+write.table(df, file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+```
+
+#### Prepare Frequency Table by District and Ethnicity
+```{r tidy=TRUE}
+df <- dat.household %>% 
+        dplyr::count(District, Ethnicity, sort=FALSE, name="Freq")
+
+dm <- reshape2::dcast(data=df, formula=District~Ethnicity, fun.aggregate=sum, value.var="Freq")
+dm <- as.data.frame(cbind(id=dm$District, apply(dm[,-1], 2, function(x) x/sum(x))))
+
+dm[,1:3]
+
+# WRITE OUTPUT ---
+file.output <- file.path(dir.output, "maps_tbl_district_ethnicity_ratio.tsv")
+write.table(dm, file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+```
