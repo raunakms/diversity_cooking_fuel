@@ -1,5 +1,5 @@
 name: "diversity_cooking_fuel"
-output_dir: "_site"
+output_dir: "docs"
 navbar:
   title: ""
   left:
