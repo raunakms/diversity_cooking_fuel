@@ -1,0 +1,169 @@
+---
+title: "ANOVA tests"
+output: html_document
+
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, '06_01_annova_tests.html'))})
+---
+
+#### Define Libraries
+```{r echo=TRUE, message=FALSE, warning=FALSE, tidy=TRUE}
+library("stringr")
+library("dplyr")
+library("reshape2")
+library("ggplot2")
+library("RColorBrewer")
+library("vegan")
+library("RVAideMemoire")
+```
+
+#### Define Path
+```{r tidy=TRUE}
+dir.wrk <- getwd()
+dir.data <- file.path(dir.wrk, "data/data_household")
+dir.annot <- file.path(dir.wrk, "data/data_annotations")
+dir.process <- file.path(dir.wrk, "data/data_processed")
+dir.output <- file.path(dir.wrk, "output")
+```
+
+#### Define Files
+```{r tidy=TRUE}
+file.dat <- file.path(dir.process, "household_level_data_frequency_table.tsv")
+```
+
+#### Define Categories
+```{r}
+type_eth <- c("Newar","Brahman","Madhesi","Chettri","Muslim−Others",
+             "Gurung−Magar","Dalit","Rai−Limbu","Tamang","Chepang−Thami")
+type_fuel <- c("Wood","Electricity","BioGas","Keroscene","LPGas","Others")
+type_inc <- c("0-10000","10000-20000","20000-30000","30000-50000","50000-ABOVE")
+type_edu <- c("Illiterate","NonFormal-Other","Primary","Secondary","University")
+type_geo <- c("Himalayan","Mountain")
+
+cpalette.eth <- c("#e31a1c","#a6cee3","#1f78b4","#b2df8a","#33a02c",
+                  "#fb9a99","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a")
+cpalette.inc <- c("#fdd49e","#fdbb84","#fc8d59","#e34a33","#b30000")
+cpalette.edu <- c("#bfd3e6","#9ebcda","#8c96c6","#8856a7","#810f7c")
+cpalette.geo <- c("#35978f","#bf812d")
+```
+
+#### Load Frequency Table Data
+```{r}
+dat <- read.delim(file.dat, header=TRUE, stringsAsFactors=FALSE)
+dat <- dat[-which(rowSums(dat[,5:10]) == 0),]
+
+head(dat)
+```
+
+#### Transform Data to Log Scale
+```{r}
+dml <- vegan::decostand(dat[,5:10], "log")
+dml <-  cbind(dat[,-c(5:10)], dml)
+dml$Ethnicity <- factor(dml$Ethnicity, levels=type_eth)
+
+head(dml)
+```
+
+#### Kruskal-Wallis Test (One-way ANOVA) on Abundance Data
+```{r}
+list.kw <- list()
+list.kw[[1]] <- kruskal.test(Wood ~ Ethnicity, data=dml)
+list.kw[[2]] <- kruskal.test(Electricity ~ Ethnicity, data=dml)
+list.kw[[3]] <- kruskal.test(GobarGas ~ Ethnicity, data=dml)
+list.kw[[4]] <- kruskal.test(Kerosene ~ Ethnicity, data=dml)
+list.kw[[5]] <- kruskal.test(LPGas ~ Ethnicity, data=dml)
+list.kw[[6]] <- kruskal.test(Others ~ Ethnicity, data=dml)
+
+# EXtract Data ---
+list.df <- list()
+for(i in 1:length(list.kw)){
+  d <- list.kw[[i]]
+  list.df[[i]] <- data.frame(Item=d$data.name, ChiSq.Statistic=d$statistic, df=d$parameter, pvalue=d$p.value)  
+}
+
+# Aggregate Data ---
+df <- do.call(rbind.data.frame, list.df)
+rownames(df) <- c(1:nrow(df))
+
+head(df)
+
+# Write Output ---
+file.output <- file.path(dir.output, "stats_abundance_krusalwallis_test.tsv")
+write.table(df, file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+```
+
+#### Transform Data to Relative Scale (Total Transformation)
+```{r}
+dmt <- vegan::decostand(dat[,5:10], "total")
+dmt <-  cbind(dat[,-c(5:10)], dmt)
+dmt$Ethnicity <- factor(dmt$Ethnicity, levels=type_eth)
+
+head(dmt)
+```
+
+#### Perform Pairwise Wilcoxn Rank Sum Test 
+```{r warning=FALSE}
+list.wrst <- list()
+list.wrst[[1]] <- pairwise.wilcox.test(x=dmt$Wood, g=dmt$Ethnicity, p.adjust.method="none", paired=FALSE)
+list.wrst[[2]] <- pairwise.wilcox.test(x=dmt$Electricity, g=dmt$Ethnicity, p.adjust.method="none", paired=FALSE)
+list.wrst[[3]] <- pairwise.wilcox.test(x=dmt$GobarGas, g=dmt$Ethnicity, p.adjust.method="none", paired=FALSE)
+list.wrst[[4]] <- pairwise.wilcox.test(x=dmt$Kerosene, g=dmt$Ethnicity, p.adjust.method="none", paired=FALSE)
+list.wrst[[5]] <- pairwise.wilcox.test(x=dmt$LPGas, g=dmt$Ethnicity, p.adjust.metho ="none", paired=FALSE)
+list.wrst[[6]] <- pairwise.wilcox.test(x=dmt$Others, g=dmt$Ethnicity, p.adjust.method="none", paired=FALSE)
+
+# EXtract Data ---
+list.df <- list()
+for(i in 1:length(list.wrst)){
+  d <- melt(list.wrst[[i]]$p.value)
+  colnames(d) <- c("Ethnicity1", "Ethnicity2", "pvalue")
+  d <- d[-which(is.na(d$pvalue)),]
+  d$pvalue.adj <- p.adjust(p=d$pvalue, method="bonferroni", n=length(d$pvalue))
+  list.df[[i]] <- cbind(FuelType=type_fuel[i], d)
+}
+
+# Aggregate Data ---
+df <- do.call(rbind.data.frame, list.df)
+rownames(df) <- c(1:nrow(df))
+
+head(df)
+
+# Write Output ---
+file.output <- file.path(dir.output, "stats_abundance_Mann–Whitney_test.tsv")
+write.table(df, file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+```
+
+#### Perform Permanova Test 
+```{r}
+# GET DISTANCE MATRIX ---
+dist_dml <- vegan::vegdist(x=as.matrix(dml[,5:10]), method="euclidean", binary=FALSE, diag=TRUE, upper=TRUE, na.rm=FALSE)
+
+# PERMANOVA TEST ---
+set.seed(12345)
+y_permanova <- vegan::adonis(dist_dml ~ IncomeGroup+Ethnicity+EducationLevel+GeoRegion, 
+                          data=dml, permutations=999, method="euclidean", parallel=4)
+y_permanova
+
+# Write Output ---
+file.output <- file.path(dir.output, "stats_abundance_permanova.tsv")
+write.table(as.data.frame(y_permanova$aov.tab), file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+```
+
+
+#### Post-hoc Test for Permanova
+```{r tidy=TRUE}
+permtst <- RVAideMemoire::pairwise.perm.manova(resp=dist_dml, fact=dml$Ethnicity, 
+                                  test="Pillai", nperm=999, progress=TRUE, p.method="none")
+df <- reshape2::melt(permtst$p.value)
+colnames(df) <- c("Ethnicity1","Ethnicity2","pvalue")
+df <- df[-which(is.na(df$pvalue)),]
+df$pvalue.adj <- p.adjust(p=df$pvalue, method="bonferroni", n=length(df$pvalue))
+
+head(df)
+
+# Write Table ---
+file.output <- file.path(dir.output, "stats_abundance_permanova_posthoc.tsv")
+write.table(df, file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+```

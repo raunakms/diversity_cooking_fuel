@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Ordination Analysis</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="01_01_data_preprocess.html">Pre-process</a>
+</li>
+<li>
+  <a href="02_02_maps_plot.html">Maps</a>
+</li>
+<li>
+  <a href="03_01_baseline_data.html">Baseline Data</a>
+</li>
+<li>
+  <a href="04_01_ordination_analysis.html">Ordination</a>
+</li>
+<li>
+  <a href="05_01_alpha_diversity.html">Alpha Diversity</a>
+</li>
+<li>
+  <a href="06_01_annova_tests.html">Annova</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Ordination Analysis</h1>
+
+</div>
+
+
+<div id="define-libraries" class="section level4">
+<h4>Define Libraries</h4>
+<pre class="r"><code>library(&quot;stringr&quot;)
+library(&quot;dplyr&quot;)
+library(&quot;reshape2&quot;)
+library(&quot;ggplot2&quot;)
+library(&quot;RColorBrewer&quot;)
+library(&quot;vegan&quot;)</code></pre>
+</div>
+<div id="define-path" class="section level4">
+<h4>Define Path</h4>
+<pre class="r"><code>dir.wrk &lt;- getwd()
+dir.data &lt;- file.path(dir.wrk, &quot;data/data_household&quot;)
+dir.annot &lt;- file.path(dir.wrk, &quot;data/data_annotations&quot;)
+dir.output &lt;- file.path(dir.wrk, &quot;data/data_processed&quot;)</code></pre>
+</div>
+<div id="define-files" class="section level4">
+<h4>Define Files</h4>
+<pre class="r"><code>file.dat &lt;- file.path(dir.output, &quot;household_level_data_frequency_table.tsv&quot;)</code></pre>
+</div>
+<div id="define-categories" class="section level4">
+<h4>Define Categories</h4>
+<pre class="r"><code>type_eth &lt;- c(&quot;Newar&quot;,&quot;Brahman&quot;,&quot;Madhesi&quot;,&quot;Chettri&quot;,&quot;Muslim−Others&quot;,
+             &quot;Gurung−Magar&quot;,&quot;Dalit&quot;,&quot;Rai−Limbu&quot;,&quot;Tamang&quot;,&quot;Chepang−Thami&quot;)
+type_fuel &lt;- c(&quot;Wood&quot;,&quot;LP Gas&quot;,&quot;Gobar Gas&quot;,&quot;Kerosene&quot;,&quot;Electricity&quot;,&quot;Others&quot;)
+type_inc &lt;- c(&quot;0-10000&quot;,&quot;10000-20000&quot;,&quot;20000-30000&quot;,&quot;30000-50000&quot;,&quot;50000-ABOVE&quot;)
+type_edu &lt;- c(&quot;Illiterate&quot;,&quot;NonFormal-Other&quot;,&quot;Primary&quot;,&quot;Secondary&quot;,&quot;University&quot;)
+type_geo &lt;- c(&quot;Himalayan&quot;,&quot;Mountain&quot;)
+
+cpalette.eth &lt;- c(&quot;#e31a1c&quot;,&quot;#a6cee3&quot;,&quot;#1f78b4&quot;,&quot;#b2df8a&quot;,&quot;#33a02c&quot;,
+                  &quot;#fb9a99&quot;,&quot;#fdbf6f&quot;,&quot;#ff7f00&quot;,&quot;#cab2d6&quot;,&quot;#6a3d9a&quot;)
+cpalette.inc &lt;- c(&quot;#fdd49e&quot;,&quot;#fdbb84&quot;,&quot;#fc8d59&quot;,&quot;#e34a33&quot;,&quot;#b30000&quot;)
+cpalette.edu &lt;- c(&quot;#bfd3e6&quot;,&quot;#9ebcda&quot;,&quot;#8c96c6&quot;,&quot;#8856a7&quot;,&quot;#810f7c&quot;)
+cpalette.geo &lt;- c(&quot;#35978f&quot;,&quot;#bf812d&quot;)
+cpalette.grp &lt;- c(&quot;#E31A1C&quot;,&quot;#BDBDBD&quot;)</code></pre>
+</div>
+<div id="load-frequency-table-data" class="section level4">
+<h4>Load Frequency Table Data</h4>
+<pre class="r"><code>dat &lt;- read.delim(file.dat, header=TRUE, stringsAsFactors=FALSE)
+dat &lt;- dat[-which(rowSums(dat[,5:10]) == 0),]
+
+head(dat)</code></pre>
+<pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas
+## 1   Brahman     Illiterate Himalayan     0-10000           1       24
+## 2   Brahman     Illiterate Himalayan 10000-20000           0       20
+## 3   Brahman     Illiterate Himalayan 20000-30000           0        6
+## 4   Brahman     Illiterate Himalayan 30000-50000           0        1
+## 5   Brahman     Illiterate Himalayan 50000-ABOVE           0        1
+## 6   Brahman     Illiterate  Mountain     0-10000           0      159
+##   Kerosene LPGas Others Wood
+## 1        1   118      4 5608
+## 2        0   188      0 2077
+## 3        0    93      0  718
+## 4        0    38      0  212
+## 5        0    23      0   94
+## 6        5   375      3 7932</code></pre>
+</div>
+<div id="transform-data-to-log-scale" class="section level4">
+<h4>Transform Data to log Scale</h4>
+<pre class="r"><code>df &lt;- vegan::decostand(dat[,5:10], &quot;log&quot;)
+df &lt;- cbind(dat[,-c(5:10)], df)
+
+df$Ethnicity &lt;- factor(df$Ethnicity, levels=type_eth)
+df$IncomeGroup &lt;- factor(df$IncomeGroup, levels=type_inc)
+df$EducationLevel &lt;- factor(df$EducationLevel, levels=type_edu)
+df$GeoRegion &lt;- factor(df$GeoRegion, levels=type_geo)
+
+head(df)</code></pre>
+<pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas
+## 1   Brahman     Illiterate Himalayan     0-10000           1 5.584963
+## 2   Brahman     Illiterate Himalayan 10000-20000           0 5.321928
+## 3   Brahman     Illiterate Himalayan 20000-30000           0 3.584963
+## 4   Brahman     Illiterate Himalayan 30000-50000           0 1.000000
+## 5   Brahman     Illiterate Himalayan 50000-ABOVE           0 1.000000
+## 6   Brahman     Illiterate  Mountain     0-10000           0 8.312883
+##   Kerosene    LPGas   Others      Wood
+## 1 1.000000 7.882643 3.000000 13.453271
+## 2 0.000000 8.554589 0.000000 12.020286
+## 3 0.000000 7.539159 0.000000 10.487840
+## 4 0.000000 6.247928 0.000000  8.727920
+## 5 0.000000 5.523562 0.000000  7.554589
+## 6 3.321928 9.550747 2.584963 13.953469</code></pre>
+</div>
+<div id="compute-distance-matrix" class="section level4">
+<h4>Compute Distance Matrix</h4>
+<pre class="r"><code>dm &lt;- vegan::vegdist(x=as.matrix(df[,5:10]), method=&quot;euclidean&quot;, 
+                     binary=FALSE, diag=TRUE, upper=TRUE, na.rm=FALSE)</code></pre>
+<p><br/><br/></p>
+</div>
+<div id="a.-ordination-by-ethnicity" class="section level3">
+<h3><strong>A. Ordination: by Ethnicity</strong></h3>
+<pre class="r"><code># BETA DIVERSITY ---
+bd_eth &lt;- vegan::betadisper(d=dm, group=df$Ethnicity, type=&quot;centroid&quot;)
+
+bd_eth</code></pre>
+<pre><code>## 
+##  Homogeneity of multivariate dispersions
+## 
+## Call: vegan::betadisper(d = dm, group = df$Ethnicity, type =
+## &quot;centroid&quot;)
+## 
+## No. of Positive Eigenvalues: 6
+## No. of Negative Eigenvalues: 0
+## 
+## Average distance to centroid:
+##         Newar       Brahman       Madhesi       Chettri Muslim-Others 
+##         3.872         3.876         3.247         3.954         3.128 
+##  Gurung-Magar         Dalit     Rai-Limbu        Tamang Chepang-Thami 
+##         4.066         4.709         3.575         4.393         3.799 
+## 
+## Eigenvalues for PCoA axes:
+##   PCoA1   PCoA2   PCoA3   PCoA4   PCoA5   PCoA6 
+## 11684.2  1048.3   847.6   436.9   159.2   139.1</code></pre>
+<pre class="r"><code># GET EIGENVALUES ---
+d_eth &lt;- data.frame(Ethnicity=df$Ethnicity, bd_eth$vectors[,1:2])
+d_eth$Ethnicity &lt;- factor(d_eth$Ethnicity, levels=type_eth)</code></pre>
+<div id="plot-ordination" class="section level4">
+<h4>Plot Ordination</h4>
+<pre class="r"><code># PLOT ---
+p1 &lt;- ggplot(d_eth, aes(x=PCoA1, y=PCoA2)) + 
+          geom_hline(yintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_vline(xintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_point(aes(fill=Ethnicity, color=Ethnicity), size=3, shape=16) +
+          scale_color_manual(values=cpalette.eth) +
+          coord_cartesian(xlim=c(-11, 11), ylim=c(-5,5.2)) +
+          theme(
+               axis.text.x = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+               plot.title = element_text(size = 15, color=&quot;#000000&quot;, hjust=0.5),
+               panel.grid.major = element_blank(),
+               panel.grid.minor = element_blank(),
+               axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;),    
+               strip.text = element_text(size=10, color=&quot;#000000&quot;),
+               strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+               panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+               legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+               legend.title = element_blank(),
+               legend.key.size = unit(0.5, &quot;cm&quot;),
+               legend.position = &quot;right&quot;) +
+          ylab(&quot;PCoA2&quot;) +
+          xlab(&quot;PCoA1&quot;) + 
+          ggtitle(&quot;Ethnicity&quot;) 
+
+p1</code></pre>
+<p><img src="04_01_ordination_analysis_files/figure-html/unnamed-chunk-9-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div id="prepare-data-for-segregated-plot-by-ethnicity" class="section level4">
+<h4>Prepare data for Segregated Plot by Ethnicity</h4>
+<pre class="r"><code># PREPARE DATA ---
+list.dt &lt;- list()
+for(k in 1:length(type_eth)){
+  d &lt;- d_eth
+  d$Label &lt;- &quot;bg&quot;
+  d$Group &lt;- type_eth[k]
+  ind &lt;- which(str_detect(as.character(d$Ethnicity), type_eth[k]) == TRUE)
+  d$Label[ind] &lt;- &quot;fg&quot;
+  d &lt;- d[order(d$Label, decreasing = FALSE),]
+  list.dt[[k]] &lt;- d
+}
+
+# AGGREGATE DATA ---
+dt &lt;- do.call(rbind.data.frame, list.dt)
+
+# FACTORIZE ---
+dt$Ethnicity &lt;- factor(dt$Ethnicity, levels=type_eth)
+dt$Group &lt;- factor(dt$Group, levels=type_eth)
+dt$Label &lt;- factor(dt$Label, levels=c(&quot;fg&quot;,&quot;bg&quot;))</code></pre>
+</div>
+<div id="plot-ordination-1" class="section level4">
+<h4>Plot Ordination</h4>
+<pre class="r"><code># PLOT ---
+p11 &lt;- ggplot(dt, aes(x=PCoA1, y=PCoA2)) + 
+          geom_hline(yintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_vline(xintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_point(aes(fill=Label, color=Label), size=2, shape=16) +
+          scale_color_manual(values=cpalette.grp) +
+          coord_cartesian(xlim=c(-11, 11), ylim=c(-5,5.2)) +
+          facet_wrap(~Group, ncol=5, scales=&quot;fixed&quot;, drop=FALSE, strip.position=&quot;top&quot;) +
+          theme(
+               axis.text.x = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+               plot.title = element_text(size = 15, color=&quot;#000000&quot;, hjust=0.5),
+               panel.grid.major = element_blank(),
+               panel.grid.minor = element_blank(),
+               axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;),    
+               strip.text = element_text(size=10, color=&quot;#000000&quot;),
+               strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+               panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+               legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+               legend.title = element_blank(),
+               legend.key.size = unit(0.5, &quot;cm&quot;),
+               legend.position = &quot;none&quot;) +
+          ylab(&quot;PCoA2&quot;) +
+          xlab(&quot;PCoA1&quot;) + 
+          ggtitle(&quot;Ethnicity&quot;) 
+
+p11</code></pre>
+<p><img src="04_01_ordination_analysis_files/figure-html/unnamed-chunk-11-1.png" width="1152" style="display: block; margin: auto;" /></p>
+</div>
+<div id="fit-fueltype-factors-onto-the-ordination" class="section level4">
+<h4>Fit FuelType factors onto the ordination</h4>
+<pre class="r"><code>set.seed(12345)
+efit &lt;- vegan::envfit(ord=bd_eth, env=df[,5:10], permutations=1000, strata=NULL, choices=c(1,2), display=&quot;sites&quot;)
+
+dfit &lt;- data.frame(Category=rownames(efit$vectors$arrows), efit$vectors$arrows[,1:2])
+dfit$Category &lt;- factor(dfit$Category, levels=dfit$Category)</code></pre>
+</div>
+<div id="get-centroids-ethnicity" class="section level4">
+<h4>Get Centroids: Ethnicity</h4>
+<pre class="r"><code># Get Centroids
+df_eth &lt;- data.frame(Category=rownames(bd_eth$centroids[,1:2]), bd_eth$centroids[,1:2])
+df_eth$Category &lt;- as.character(df_eth$Category)
+
+#Factorize ---
+df_eth$Category &lt;- factor(df_eth$Category, levels=type_eth)</code></pre>
+</div>
+<div id="plot-ordination-centroids-ethnicity" class="section level4">
+<h4>Plot Ordination Centroids: Ethnicity</h4>
+<pre class="r"><code># PLOT ---
+p12 &lt;- ggplot(df_eth, aes(x=PCoA1, y=PCoA2, label=Category)) + 
+        geom_hline(yintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+        geom_vline(xintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+        geom_point(aes(fill=Category, color=Category), size=5, shape=16) +
+        scale_color_manual(values=cpalette.eth) +
+        geom_text(size=3, hjust=0, nudge_x=-0.5, nudge_y=-0.1) +
+        geom_text(data=dfit, aes(x=PCoA1, y=PCoA2, label=Category), size = 3, vjust=1, color=&quot;red&quot;) +
+        geom_segment(data=dfit, aes(x=0, y=0, xend=PCoA1, yend=PCoA2, label=Category), 
+                     arrow=arrow(length=unit(0.2,&quot;cm&quot;)), alpha=0.75, color=&quot;red&quot;) +
+        coord_cartesian(xlim=c(-6, 6)) +
+        theme(
+          axis.text.x = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+          plot.title = element_text(size = 15, color=&quot;#000000&quot;, hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;), 
+          strip.text = element_text(size=10, color=&quot;#000000&quot;),
+          strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+          panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+          legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, &quot;cm&quot;),
+          legend.position = &quot;right&quot;) +
+      ylab(&quot;PCoA2&quot;) +
+      xlab(&quot;PCoA1&quot;) + 
+      ggtitle(&quot;Centroids: Ethnicity&quot;) </code></pre>
+<pre><code>## Warning: Ignoring unknown aesthetics: label</code></pre>
+<pre class="r"><code>p12</code></pre>
+<p><img src="04_01_ordination_analysis_files/figure-html/unnamed-chunk-14-1.png" width="768" style="display: block; margin: auto;" /> <br/><br/></p>
+</div>
+</div>
+<div id="b.-ordination-by-incomegroup" class="section level3">
+<h3><strong>B. Ordination: by IncomeGroup</strong></h3>
+<pre class="r"><code># BETA DIVERSITY ---
+bd_inc &lt;- vegan::betadisper(d=dm, group=df$IncomeGroup, type=&quot;centroid&quot;)
+
+bd_inc</code></pre>
+<pre><code>## 
+##  Homogeneity of multivariate dispersions
+## 
+## Call: vegan::betadisper(d = dm, group = df$IncomeGroup, type =
+## &quot;centroid&quot;)
+## 
+## No. of Positive Eigenvalues: 6
+## No. of Negative Eigenvalues: 0
+## 
+## Average distance to centroid:
+##     0-10000 10000-20000 20000-30000 30000-50000 50000-ABOVE 
+##       4.969       4.560       4.179       3.812       3.317 
+## 
+## Eigenvalues for PCoA axes:
+##   PCoA1   PCoA2   PCoA3   PCoA4   PCoA5   PCoA6 
+## 11684.2  1048.3   847.6   436.9   159.2   139.1</code></pre>
+<pre class="r"><code># GET EIGENVALUES ---
+d_inc &lt;- data.frame(IncomeGroup=df$IncomeGroup, bd_inc$vectors[,1:2])
+d_inc$IncomeGroup &lt;- factor(d_inc$IncomeGroup, levels=type_inc)</code></pre>
+<div id="plot-ordination-2" class="section level4">
+<h4>Plot Ordination</h4>
+<pre class="r"><code># PLOT ---
+p2 &lt;- ggplot(d_inc, aes(x=PCoA1, y=PCoA2)) + 
+          geom_hline(yintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_vline(xintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_point(aes(fill=IncomeGroup, color=IncomeGroup), size=3, shape=18) +
+          scale_color_manual(values=cpalette.inc) +
+          coord_cartesian(xlim=c(-11, 11), ylim=c(-5,5.2)) +
+          theme(
+               axis.text.x = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+               plot.title = element_text(size = 15, color=&quot;#000000&quot;, hjust=0.5),
+               panel.grid.major = element_blank(),
+               panel.grid.minor = element_blank(),
+               axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;),    
+               strip.text = element_text(size=10, color=&quot;#000000&quot;),
+               strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+               panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+               legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+               legend.title = element_blank(),
+               legend.key.size = unit(0.5, &quot;cm&quot;),
+               legend.position = &quot;right&quot;) +
+          ylab(&quot;PCoA2&quot;) +
+          xlab(&quot;PCoA1&quot;) + 
+          ggtitle(&quot;IncomeGroup&quot;) 
+
+p2</code></pre>
+<p><img src="04_01_ordination_analysis_files/figure-html/unnamed-chunk-16-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div id="prepare-data-for-segregated-plot-by-incomegroup" class="section level4">
+<h4>Prepare data for Segregated Plot by IncomeGroup</h4>
+<pre class="r"><code># PREPARE DATA ---
+list.dt &lt;- list()
+for(k in 1:length(type_inc)){
+  d &lt;- d_inc
+  d$Label &lt;- &quot;bg&quot;
+  d$Group &lt;- type_inc[k]
+  ind &lt;- which(str_detect(as.character(d$IncomeGroup), type_inc[k]) == TRUE)
+  d$Label[ind] &lt;- &quot;fg&quot;
+  d &lt;- d[order(d$Label, decreasing = FALSE),]
+  list.dt[[k]] &lt;- d
+}
+
+# AGGREGATE DATA ---
+dt &lt;- do.call(rbind.data.frame, list.dt)
+
+# FACTORIZE ---
+dt$IncomeGroup &lt;- factor(dt$IncomeGroup, levels=type_inc)
+dt$Group &lt;- factor(dt$Group, levels=type_inc)
+dt$Label &lt;- factor(dt$Label, levels=c(&quot;fg&quot;,&quot;bg&quot;))</code></pre>
+</div>
+<div id="plot-ordination-3" class="section level4">
+<h4>Plot Ordination</h4>
+<pre class="r"><code># PLOT ---
+p21 &lt;- ggplot(dt, aes(x=PCoA1, y=PCoA2)) + 
+          geom_hline(yintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_vline(xintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_point(aes(fill=Label, color=Label), size=2, shape=18) +
+          scale_color_manual(values=cpalette.grp) +
+          coord_cartesian(xlim=c(-11, 11), ylim=c(-5,5.2)) +
+          facet_wrap(~Group, ncol=5, scales=&quot;fixed&quot;, drop=FALSE, strip.position=&quot;top&quot;) +
+          theme(
+               axis.text.x = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+               plot.title = element_text(size = 15, color=&quot;#000000&quot;, hjust=0.5),
+               panel.grid.major = element_blank(),
+               panel.grid.minor = element_blank(),
+               axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;),    
+               strip.text = element_text(size=10, color=&quot;#000000&quot;),
+               strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+               panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+               legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+               legend.title = element_blank(),
+               legend.key.size = unit(0.5, &quot;cm&quot;),
+               legend.position = &quot;none&quot;) +
+          ylab(&quot;PCoA2&quot;) +
+          xlab(&quot;PCoA1&quot;) + 
+          ggtitle(&quot;IncomeGroup&quot;) 
+
+p21</code></pre>
+<p><img src="04_01_ordination_analysis_files/figure-html/unnamed-chunk-18-1.png" width="1152" style="display: block; margin: auto;" /></p>
+</div>
+<div id="get-centroids-incomegroup" class="section level4">
+<h4>Get Centroids: IncomeGroup</h4>
+<pre class="r"><code># Get Centroids
+df_inc &lt;- data.frame(Category=rownames(bd_inc$centroids[,1:2]), bd_inc$centroids[,1:2])
+df_inc$Category &lt;- as.character(df_inc$Category)
+
+#Factorize ---
+df_inc$Category &lt;- factor(df_inc$Category, levels=type_inc)</code></pre>
+</div>
+<div id="plot-ordination-centroids-incomegroup" class="section level4">
+<h4>Plot Ordination Centroids: IncomeGroup</h4>
+<pre class="r"><code># PLOT ---
+p22 &lt;- ggplot(df_inc, aes(x=PCoA1, y=PCoA2, label=Category)) + 
+        geom_hline(yintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+        geom_vline(xintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+        geom_point(aes(fill=Category, color=Category), size=5, shape=16) +
+        scale_color_manual(values=cpalette.inc) +
+        geom_text(size=3, hjust=0, nudge_x=-0.5, nudge_y=-0.1) +
+        coord_cartesian(xlim=c(-6, 6)) +
+        theme(
+          axis.text.x = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+          plot.title = element_text(size = 15, color=&quot;#000000&quot;, hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;), 
+          strip.text = element_text(size=10, color=&quot;#000000&quot;),
+          strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+          panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+          legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, &quot;cm&quot;),
+          legend.position = &quot;right&quot;) +
+      ylab(&quot;PCoA2&quot;) +
+      xlab(&quot;PCoA1&quot;) + 
+      ggtitle(&quot;Centroids: IncomeGroup&quot;) 
+
+p22</code></pre>
+<p><img src="04_01_ordination_analysis_files/figure-html/unnamed-chunk-20-1.png" width="768" style="display: block; margin: auto;" /> <br/><br/></p>
+</div>
+</div>
+<div id="c.-ordination-by-educationlevel" class="section level3">
+<h3><strong>C. Ordination: by EducationLevel</strong></h3>
+<pre class="r"><code># BETA DIVERSITY ---
+bd_edu &lt;- vegan::betadisper(d=dm, group=df$EducationLevel, type=&quot;centroid&quot;)
+
+bd_edu</code></pre>
+<pre><code>## 
+##  Homogeneity of multivariate dispersions
+## 
+## Call: vegan::betadisper(d = dm, group = df$EducationLevel, type =
+## &quot;centroid&quot;)
+## 
+## No. of Positive Eigenvalues: 6
+## No. of Negative Eigenvalues: 0
+## 
+## Average distance to centroid:
+##      Illiterate NonFormal-Other         Primary       Secondary 
+##           4.802           4.562           4.690           4.781 
+##      University 
+##           3.547 
+## 
+## Eigenvalues for PCoA axes:
+##   PCoA1   PCoA2   PCoA3   PCoA4   PCoA5   PCoA6 
+## 11684.2  1048.3   847.6   436.9   159.2   139.1</code></pre>
+<pre class="r"><code># GET EIGENVALUES ---
+d_edu &lt;- data.frame(EducationLevel=df$EducationLevel, bd_edu$vectors[,1:2])
+d_edu$EducationLevel &lt;- factor(d_edu$EducationLevel, levels=type_edu)</code></pre>
+<div id="plot-ordination-4" class="section level4">
+<h4>Plot Ordination</h4>
+<pre class="r"><code># PLOT ---
+p3 &lt;- ggplot(d_edu, aes(x=PCoA1, y=PCoA2)) + 
+          geom_hline(yintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_vline(xintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_point(aes(fill=EducationLevel, color=EducationLevel), size=3, shape=17) +
+          scale_color_manual(values=cpalette.edu) +
+          coord_cartesian(xlim=c(-11, 11), ylim=c(-5,5.2)) +
+          theme(
+               axis.text.x = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+               plot.title = element_text(size = 15, color=&quot;#000000&quot;, hjust=0.5),
+               panel.grid.major = element_blank(),
+               panel.grid.minor = element_blank(),
+               axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;),    
+               strip.text = element_text(size=10, color=&quot;#000000&quot;),
+               strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+               panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+               legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+               legend.title = element_blank(),
+               legend.key.size = unit(0.5, &quot;cm&quot;),
+               legend.position = &quot;right&quot;) +
+          ylab(&quot;PCoA2&quot;) +
+          xlab(&quot;PCoA1&quot;) + 
+          ggtitle(&quot;EducationLevel&quot;) 
+
+p3</code></pre>
+<p><img src="04_01_ordination_analysis_files/figure-html/unnamed-chunk-22-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div id="prepare-data-for-segregated-plot-by-educationlevel" class="section level4">
+<h4>Prepare data for Segregated Plot by EducationLevel</h4>
+<pre class="r"><code># PREPARE DATA ---
+list.dt &lt;- list()
+for(k in 1:length(type_edu)){
+  d &lt;- d_edu
+  d$Label &lt;- &quot;bg&quot;
+  d$Group &lt;- type_edu[k]
+  ind &lt;- which(str_detect(as.character(d$EducationLevel), type_edu[k]) == TRUE)
+  d$Label[ind] &lt;- &quot;fg&quot;
+  d &lt;- d[order(d$Label, decreasing = FALSE),]
+  list.dt[[k]] &lt;- d
+}
+
+# AGGREGATE DATA ---
+dt &lt;- do.call(rbind.data.frame, list.dt)
+
+# FACTORIZE ---
+dt$EducationLevel &lt;- factor(dt$EducationLevel, levels=type_edu)
+dt$Group &lt;- factor(dt$Group, levels=type_edu)
+dt$Label &lt;- factor(dt$Label, levels=c(&quot;fg&quot;,&quot;bg&quot;))</code></pre>
+</div>
+<div id="plot-ordination-5" class="section level4">
+<h4>Plot Ordination</h4>
+<pre class="r"><code># PLOT ---
+p31 &lt;- ggplot(dt, aes(x=PCoA1, y=PCoA2)) + 
+          geom_hline(yintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_vline(xintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_point(aes(fill=Label, color=Label), size=2, shape=17) +
+          scale_color_manual(values=cpalette.grp) +
+          coord_cartesian(xlim=c(-11, 11), ylim=c(-5,5.2)) +
+          facet_wrap(~Group, ncol=5, scales=&quot;fixed&quot;, drop=FALSE, strip.position=&quot;top&quot;) +
+          theme(
+               axis.text.x = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+               plot.title = element_text(size = 15, color=&quot;#000000&quot;, hjust=0.5),
+               panel.grid.major = element_blank(),
+               panel.grid.minor = element_blank(),
+               axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;),    
+               strip.text = element_text(size=10, color=&quot;#000000&quot;),
+               strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+               panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+               legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+               legend.title = element_blank(),
+               legend.key.size = unit(0.5, &quot;cm&quot;),
+               legend.position = &quot;none&quot;) +
+          ylab(&quot;PCoA2&quot;) +
+          xlab(&quot;PCoA1&quot;) + 
+          ggtitle(&quot;EducationLevel&quot;) 
+
+p31</code></pre>
+<p><img src="04_01_ordination_analysis_files/figure-html/unnamed-chunk-24-1.png" width="1152" style="display: block; margin: auto;" /></p>
+</div>
+<div id="get-centroids-educationlevel" class="section level4">
+<h4>Get Centroids: EducationLevel</h4>
+<pre class="r"><code># Get Centroids
+df_edu &lt;- data.frame(Category=rownames(bd_edu$centroids[,1:2]), bd_edu$centroids[,1:2])
+df_edu$Category &lt;- as.character(df_edu$Category)
+
+#Factorize ---
+df_edu$Category &lt;- factor(df_edu$Category, levels=type_edu)</code></pre>
+</div>
+<div id="plot-ordination-centroids-educationlevel" class="section level4">
+<h4>Plot Ordination Centroids: EducationLevel</h4>
+<pre class="r"><code># PLOT ---
+p32 &lt;- ggplot(df_edu, aes(x=PCoA1, y=PCoA2, label=Category)) + 
+        geom_hline(yintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+        geom_vline(xintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+        geom_point(aes(fill=Category, color=Category), size=5, shape=16) +
+        scale_color_manual(values=cpalette.edu) +
+        geom_text(size=3, hjust=0, nudge_x=-0.5, nudge_y=-0.1) +
+        coord_cartesian(xlim=c(-6, 6)) +
+        theme(
+          axis.text.x = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+          plot.title = element_text(size = 15, color=&quot;#000000&quot;, hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;), 
+          strip.text = element_text(size=10, color=&quot;#000000&quot;),
+          strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+          panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+          legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, &quot;cm&quot;),
+          legend.position = &quot;right&quot;) +
+      ylab(&quot;PCoA2&quot;) +
+      xlab(&quot;PCoA1&quot;) + 
+      ggtitle(&quot;Centroids: EducationLevel&quot;) 
+
+p32</code></pre>
+<p><img src="04_01_ordination_analysis_files/figure-html/unnamed-chunk-26-1.png" width="768" style="display: block; margin: auto;" /> <br/><br/></p>
+</div>
+</div>
+<div id="d.-ordination-by-georegion" class="section level3">
+<h3><strong>D. Ordination: by GeoRegion</strong></h3>
+<pre class="r"><code># BETA DIVERSITY ---
+bd_geo &lt;- vegan::betadisper(d=dm, group=df$GeoRegion, type=&quot;centroid&quot;)
+
+bd_geo</code></pre>
+<pre><code>## 
+##  Homogeneity of multivariate dispersions
+## 
+## Call: vegan::betadisper(d = dm, group = df$GeoRegion, type =
+## &quot;centroid&quot;)
+## 
+## No. of Positive Eigenvalues: 6
+## No. of Negative Eigenvalues: 0
+## 
+## Average distance to centroid:
+## Himalayan  Mountain 
+##     4.386     4.973 
+## 
+## Eigenvalues for PCoA axes:
+##   PCoA1   PCoA2   PCoA3   PCoA4   PCoA5   PCoA6 
+## 11684.2  1048.3   847.6   436.9   159.2   139.1</code></pre>
+<pre class="r"><code># GET EIGENVALUES ---
+d_geo &lt;- data.frame(GeoRegion=df$GeoRegion, bd_geo$vectors[,1:2])
+d_geo$GeoRegion &lt;- factor(d_geo$GeoRegion, levels=type_geo)</code></pre>
+<div id="plot-ordination-6" class="section level4">
+<h4>Plot Ordination</h4>
+<pre class="r"><code># PLOT ---
+p4 &lt;- ggplot(d_geo, aes(x=PCoA1, y=PCoA2)) + 
+          geom_hline(yintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_vline(xintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_point(aes(fill=GeoRegion, color=GeoRegion), size=3, shape=15) +
+          scale_color_manual(values=cpalette.geo) +
+          coord_cartesian(xlim=c(-11, 11), ylim=c(-5,5.2)) +
+          theme(
+               axis.text.x = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+               plot.title = element_text(size = 15, color=&quot;#000000&quot;, hjust=0.5),
+               panel.grid.major = element_blank(),
+               panel.grid.minor = element_blank(),
+               axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;),    
+               strip.text = element_text(size=10, color=&quot;#000000&quot;),
+               strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+               panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+               legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+               legend.title = element_blank(),
+               legend.key.size = unit(0.5, &quot;cm&quot;),
+               legend.position = &quot;right&quot;) +
+          ylab(&quot;PCoA2&quot;) +
+          xlab(&quot;PCoA1&quot;) + 
+          ggtitle(&quot;GeoRegion&quot;) 
+
+p4</code></pre>
+<p><img src="04_01_ordination_analysis_files/figure-html/unnamed-chunk-28-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div id="prepare-data-for-segregated-plot-by-georegion" class="section level4">
+<h4>Prepare data for Segregated Plot by GeoRegion</h4>
+<pre class="r"><code># PREPARE DATA ---
+list.dt &lt;- list()
+for(k in 1:length(type_geo)){
+  d &lt;- d_geo
+  d$Label &lt;- &quot;bg&quot;
+  d$Group &lt;- type_geo[k]
+  ind &lt;- which(str_detect(as.character(d$GeoRegion), type_geo[k]) == TRUE)
+  d$Label[ind] &lt;- &quot;fg&quot;
+  d &lt;- d[order(d$Label, decreasing = FALSE),]
+  list.dt[[k]] &lt;- d
+}
+
+# AGGREGATE DATA ---
+dt &lt;- do.call(rbind.data.frame, list.dt)
+
+# FACTORIZE ---
+dt$GeoRegion &lt;- factor(dt$GeoRegion, levels=type_geo)
+dt$Group &lt;- factor(dt$Group, levels=type_geo)
+dt$Label &lt;- factor(dt$Label, levels=c(&quot;fg&quot;,&quot;bg&quot;))</code></pre>
+</div>
+<div id="plot-ordination-7" class="section level4">
+<h4>Plot Ordination</h4>
+<pre class="r"><code># PLOT ---
+p41 &lt;- ggplot(dt, aes(x=PCoA1, y=PCoA2)) + 
+          geom_hline(yintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_vline(xintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+          geom_point(aes(fill=Label, color=Label), size=2, shape=15) +
+          scale_color_manual(values=cpalette.grp) +
+          coord_cartesian(xlim=c(-11, 11), ylim=c(-5,5.2)) +
+          facet_wrap(~Group, ncol=5, scales=&quot;fixed&quot;, drop=FALSE, strip.position=&quot;top&quot;) +
+          theme(
+               axis.text.x = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+               axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+               plot.title = element_text(size = 15, color=&quot;#000000&quot;, hjust=0.5),
+               panel.grid.major = element_blank(),
+               panel.grid.minor = element_blank(),
+               axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;),    
+               strip.text = element_text(size=10, color=&quot;#000000&quot;),
+               strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+               panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+               legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+               legend.title = element_blank(),
+               legend.key.size = unit(0.5, &quot;cm&quot;),
+               legend.position = &quot;none&quot;) +
+          ylab(&quot;PCoA2&quot;) +
+          xlab(&quot;PCoA1&quot;) + 
+          ggtitle(&quot;GeoRegion&quot;) 
+
+p41</code></pre>
+<p><img src="04_01_ordination_analysis_files/figure-html/unnamed-chunk-30-1.png" width="576" style="display: block; margin: auto;" /></p>
+</div>
+<div id="get-centroids-georegion" class="section level4">
+<h4>Get Centroids: GeoRegion</h4>
+<pre class="r"><code># Get Centroids
+df_geo &lt;- data.frame(Category=rownames(bd_geo$centroids[,1:2]), bd_geo$centroids[,1:2])
+df_geo$Category &lt;- as.character(df_geo$Category)
+
+#Factorize ---
+df_geo$Category &lt;- factor(df_geo$Category, levels=type_geo)</code></pre>
+</div>
+<div id="plot-ordination-centroids-georegion" class="section level4">
+<h4>Plot Ordination Centroids: GeoRegion</h4>
+<pre class="r"><code># PLOT ---
+p42 &lt;- ggplot(df_geo, aes(x=PCoA1, y=PCoA2, label=Category)) + 
+        geom_hline(yintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+        geom_vline(xintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+        geom_point(aes(fill=Category, color=Category), size=5, shape=16) +
+        scale_color_manual(values=cpalette.geo) +
+        geom_text(size=3, hjust=0, nudge_x=-0.5, nudge_y=-0.1) +
+        coord_cartesian(xlim=c(-6, 6)) +
+        theme(
+          axis.text.x = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+          plot.title = element_text(size = 15, color=&quot;#000000&quot;, hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;), 
+          strip.text = element_text(size=10, color=&quot;#000000&quot;),
+          strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+          panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+          legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, &quot;cm&quot;),
+          legend.position = &quot;right&quot;) +
+      ylab(&quot;PCoA2&quot;) +
+      xlab(&quot;PCoA1&quot;) + 
+      ggtitle(&quot;Centroids: GeoRegion&quot;) 
+
+p42</code></pre>
+<p><img src="04_01_ordination_analysis_files/figure-html/unnamed-chunk-32-1.png" width="768" style="display: block; margin: auto;" /> <br/><br/></p>
+</div>
+</div>
+<div id="e.-merge-centroid-data-ethnicity-incomegroup-educationlevel-georegion" class="section level3">
+<h3><strong>E. Merge Centroid Data: Ethnicity + IncomeGroup + EducationLevel + GeoRegion</strong></h3>
+<pre class="r"><code>df_eth$Group &lt;- &quot;Ethnicity&quot;
+df_inc$Group &lt;- &quot;IncomeGroup&quot;
+df_edu$Group &lt;- &quot;EducationLevel&quot;
+df_geo$Group &lt;- &quot;GeoRegion&quot;
+df &lt;- rbind(df_eth, df_inc, df_edu, df_geo)
+
+# FACTORIZE ---
+df$Category &lt;- factor(df$Category, levels=c(type_eth, type_inc, type_edu, type_geo))
+df$Group &lt;- factor(df$Group, levels=c(&quot;Ethnicity&quot;,&quot;IncomeGroup&quot;,&quot;EducationLevel&quot;,&quot;GeoRegion&quot;))</code></pre>
+<div id="plot-ordination-centroids-ethnicity-incomegroup-educationlevel-georegion" class="section level4">
+<h4>Plot Ordination Centroids: Ethnicity + IncomeGroup + EducationLevel + GeoRegion</h4>
+<pre class="r"><code># Define Colors ---
+jColFun &lt;- colorRampPalette(brewer.pal(n = 9, &quot;Set1&quot;))
+cpalette &lt;- c(cpalette.eth, cpalette.inc, cpalette.edu, cpalette.geo)
+
+# PLOT ---
+p &lt;- ggplot(df, aes(x=PCoA1, y=PCoA2, label=Category)) + 
+        geom_hline(yintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+        geom_vline(xintercept=0, linetype=&quot;dashed&quot;, color = &quot;#bdbdbd&quot;) +
+        geom_point(aes(fill=Category, color=Category, shape=Group), size=5) +
+        scale_color_manual(values=cpalette) +
+        scale_shape_manual(values=c(16,18,17,15)) +
+        geom_text(size=3, hjust=0, nudge_x=-0.5, nudge_y=-0.1) +
+        coord_cartesian(xlim=c(-6, 6)) +
+        theme(
+          axis.text.x = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+          plot.title = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;), 
+          strip.text = element_text(size=10, color=&quot;#000000&quot;),
+          strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+          panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+          legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, &quot;cm&quot;),
+          legend.position = &quot;right&quot;) +
+      ylab(&quot;PCoA2&quot;) +
+      xlab(&quot;PCoA1&quot;) + 
+      ggtitle(&quot;Centroids: Ethnicity + IncomeGroup + EducationLevel + GeoRegion&quot;) 
+
+p</code></pre>
+<p><img src="04_01_ordination_analysis_files/figure-html/unnamed-chunk-34-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

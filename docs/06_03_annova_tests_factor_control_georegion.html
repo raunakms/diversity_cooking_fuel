@@ -11,7 +11,7 @@
 
 
 
-<title>Data Preparation to Generate Choropleth Maps</title>
+<title>Permanova with Factor Control: GeoRegion</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -316,7 +316,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Data Preparation to Generate Choropleth Maps</h1>
+<h1 class="title toc-ignore">Permanova with Factor Control: GeoRegion</h1>
 
 </div>
 
@@ -325,131 +325,131 @@ $(document).ready(function () {
 <h4>Define Libraries</h4>
 <pre class="r"><code>library(&quot;stringr&quot;)
 library(&quot;dplyr&quot;)
-library(&quot;reshape2&quot;)</code></pre>
+library(&quot;vegan&quot;)</code></pre>
 </div>
 <div id="define-path" class="section level4">
 <h4>Define Path</h4>
 <pre class="r"><code>dir.wrk &lt;- getwd()
 dir.data &lt;- file.path(dir.wrk, &quot;data/data_household&quot;)
 dir.annot &lt;- file.path(dir.wrk, &quot;data/data_annotations&quot;)
-dir.output &lt;- file.path(dir.wrk, &quot;data/data_processed&quot;)
-dir.maps &lt;- file.path(dir.wrk, &quot;data/data_maps&quot;)</code></pre>
+dir.process &lt;- file.path(dir.wrk, &quot;data/data_processed&quot;)
+dir.output &lt;- file.path(dir.wrk, &quot;output&quot;)</code></pre>
 </div>
 <div id="define-files" class="section level4">
 <h4>Define Files</h4>
-<pre class="r"><code>file.household &lt;- file.path(dir.output, &quot;household_level_data_categorical.tsv&quot;)</code></pre>
+<pre class="r"><code>file.dat &lt;- file.path(dir.process, &quot;household_level_data_frequency_table.tsv&quot;)</code></pre>
 </div>
-<div id="load-household-categorical-data" class="section level4">
-<h4>Load Household Categorical Data</h4>
-<pre class="r"><code>dat.household &lt;- read.delim(file.household, header = TRUE, stringsAsFactors = FALSE)
-dat.household &lt;- dat.household %&gt;% dplyr::mutate_all(as.character)
+<div id="define-categories" class="section level4">
+<h4>Define Categories</h4>
+<pre class="r"><code>type_eth &lt;- c(&quot;Newar&quot;,&quot;Brahman&quot;,&quot;Madhesi&quot;,&quot;Chettri&quot;,&quot;Muslim−Others&quot;,
+             &quot;Gurung−Magar&quot;,&quot;Dalit&quot;,&quot;Rai−Limbu&quot;,&quot;Tamang&quot;,&quot;Chepang−Thami&quot;)
+type_fuel &lt;- c(&quot;Wood&quot;,&quot;Electricity&quot;,&quot;BioGas&quot;,&quot;Keroscene&quot;,&quot;LPGas&quot;,&quot;Others&quot;)
+type_inc &lt;- c(&quot;0-10000&quot;,&quot;10000-20000&quot;,&quot;20000-30000&quot;,&quot;30000-50000&quot;,&quot;50000-ABOVE&quot;)
+type_edu &lt;- c(&quot;Illiterate&quot;,&quot;NonFormal-Other&quot;,&quot;Primary&quot;,&quot;Secondary&quot;,&quot;University&quot;)
+type_geo &lt;- c(&quot;Himalayan&quot;,&quot;Mountain&quot;)
 
-head(dat.household)</code></pre>
-<pre><code>##     household_id    District GeoRegion    Ethnicity IncomeGroup
-## 1 12010100001101 Okhaldhunga  Mountain    Rai-Limbu     0-10000
-## 2 12010100002101 Okhaldhunga  Mountain    Rai-Limbu     0-10000
-## 3 12010100003101 Okhaldhunga  Mountain Gurung-Magar     0-10000
-## 4 12010100004101 Okhaldhunga  Mountain Gurung-Magar     0-10000
-## 5 12010100005101 Okhaldhunga  Mountain Gurung-Magar     0-10000
-## 6 12010100006101 Okhaldhunga  Mountain Gurung-Magar     0-10000
-##   EducationLevel source_cooking_fuel_post_eq
-## 1     Illiterate                        Wood
-## 2     Illiterate                        Wood
-## 3     Illiterate                        Wood
-## 4     Illiterate                        Wood
-## 5     Illiterate                        Wood
-## 6     Illiterate                        Wood</code></pre>
+cpalette.eth &lt;- c(&quot;#e31a1c&quot;,&quot;#a6cee3&quot;,&quot;#1f78b4&quot;,&quot;#b2df8a&quot;,&quot;#33a02c&quot;,
+                  &quot;#fb9a99&quot;,&quot;#fdbf6f&quot;,&quot;#ff7f00&quot;,&quot;#cab2d6&quot;,&quot;#6a3d9a&quot;)
+cpalette.inc &lt;- c(&quot;#fdd49e&quot;,&quot;#fdbb84&quot;,&quot;#fc8d59&quot;,&quot;#e34a33&quot;,&quot;#b30000&quot;)
+cpalette.edu &lt;- c(&quot;#bfd3e6&quot;,&quot;#9ebcda&quot;,&quot;#8c96c6&quot;,&quot;#8856a7&quot;,&quot;#810f7c&quot;)
+cpalette.geo &lt;- c(&quot;#35978f&quot;,&quot;#bf812d&quot;)</code></pre>
 </div>
-<div id="prepare-frequency-table-by-district-and-fueltype" class="section level4">
-<h4>Prepare Frequency Table by District and FuelType</h4>
-<pre class="r"><code>df &lt;- dat.household %&gt;% dplyr::count(District, source_cooking_fuel_post_eq, 
-    sort = FALSE, name = &quot;Freq&quot;)
+<div id="load-frequency-table-data" class="section level4">
+<h4>Load Frequency Table Data</h4>
+<pre class="r"><code>dat &lt;- read.delim(file.dat, header=TRUE, stringsAsFactors=FALSE)
+dat &lt;- dat[-which(rowSums(dat[,5:10]) == 0),]
+
+head(dat)</code></pre>
+<pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas
+## 1   Brahman     Illiterate Himalayan     0-10000           1       24
+## 2   Brahman     Illiterate Himalayan 10000-20000           0       20
+## 3   Brahman     Illiterate Himalayan 20000-30000           0        6
+## 4   Brahman     Illiterate Himalayan 30000-50000           0        1
+## 5   Brahman     Illiterate Himalayan 50000-ABOVE           0        1
+## 6   Brahman     Illiterate  Mountain     0-10000           0      159
+##   Kerosene LPGas Others Wood
+## 1        1   118      4 5608
+## 2        0   188      0 2077
+## 3        0    93      0  718
+## 4        0    38      0  212
+## 5        0    23      0   94
+## 6        5   375      3 7932</code></pre>
+</div>
+<div id="transform-data-to-log-scale" class="section level4">
+<h4>Transform Data to Log Scale</h4>
+<pre class="r"><code>dml &lt;- vegan::decostand(dat[,5:10], &quot;log&quot;)
+dml &lt;-  cbind(dat[,-c(5:10)], dml)
+dml$Ethnicity &lt;- factor(dml$Ethnicity, levels=type_eth)
+
+head(dml)</code></pre>
+<pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas
+## 1   Brahman     Illiterate Himalayan     0-10000           1 5.584963
+## 2   Brahman     Illiterate Himalayan 10000-20000           0 5.321928
+## 3   Brahman     Illiterate Himalayan 20000-30000           0 3.584963
+## 4   Brahman     Illiterate Himalayan 30000-50000           0 1.000000
+## 5   Brahman     Illiterate Himalayan 50000-ABOVE           0 1.000000
+## 6   Brahman     Illiterate  Mountain     0-10000           0 8.312883
+##   Kerosene    LPGas   Others      Wood
+## 1 1.000000 7.882643 3.000000 13.453271
+## 2 0.000000 8.554589 0.000000 12.020286
+## 3 0.000000 7.539159 0.000000 10.487840
+## 4 0.000000 6.247928 0.000000  8.727920
+## 5 0.000000 5.523562 0.000000  7.554589
+## 6 3.321928 9.550747 2.584963 13.953469</code></pre>
+</div>
+<div id="function-get_permanova" class="section level4">
+<h4>Function: get_permanova()</h4>
+<pre class="r"><code>get_permanova &lt;- function(dm, control_geo, type_eth, type_inc, type_edu){
+     # Retain Data for Control GeoRegion ---
+     dm &lt;- subset(dm, dm$GeoRegion == control_geo)  
+  
+     # Factorize ---
+     dm$Ethnicity &lt;- factor(dm$Ethnicity, levels=type_eth)
+     dm$IncomeGroup &lt;- factor(dm$IncomeGroup, levels=type_inc)
+     dm$EducationLevel &lt;- factor(dm$EducationLevel, levels=type_edu)
+  
+     # Compute Distance Matrix ---
+     dist_dm &lt;- vegan::vegdist(x=as.matrix(dm[,5:10]), method=&quot;euclidean&quot;, binary=FALSE, diag=TRUE, upper=TRUE, na.rm = FALSE)
+
+     # Adonis test ---
+     set.seed(12345)
+     y_permanova &lt;- vegan::adonis(dist_dm ~ Ethnicity+IncomeGroup+EducationLevel, 
+                                  data=dm, permutations=999, method=&quot;euclidean&quot;, parallel=4)
+
+     return(y_permanova)
+}</code></pre>
+</div>
+<div id="get-permanova-by-control-georegion" class="section level4">
+<h4>Get Permanova by Control GeoRegion</h4>
+<pre class="r"><code>list.permanova &lt;- list()
+for(i in 1:length(type_geo)){
+  control_geo &lt;- type_geo[i] 
+  d &lt;- get_permanova(dm=dml, control_geo, type_eth, type_inc, type_edu)
+  list.permanova[[i]] &lt;- cbind(Control_GeoRegion=control_geo,  Factor=rownames(as.data.frame(d$aov.tab)),  as.data.frame(d$aov.tab))
+}
+
+# Aggregate Results ---
+df &lt;- do.call(rbind.data.frame, list.permanova)
+rownames(df) &lt;- c(1:nrow(df))
 
 head(df)</code></pre>
-<pre><code>## # A tibble: 6 x 3
-##   District source_cooking_fuel_post_eq  Freq
-##   &lt;chr&gt;    &lt;chr&gt;                       &lt;int&gt;
-## 1 Dhading  Electricity                    16
-## 2 Dhading  Gobar Gas                    1806
-## 3 Dhading  Kerosene                       12
-## 4 Dhading  LP Gas                       8895
-## 5 Dhading  Others                         31
-## 6 Dhading  Wood                        75585</code></pre>
-</div>
-<div id="compute-ratios-tables" class="section level4">
-<h4>Compute Ratios Tables</h4>
-<pre class="r"><code>dm &lt;- reshape2::dcast(data = df, formula = District ~ source_cooking_fuel_post_eq, 
-    fun.aggregate = sum, value.var = &quot;Freq&quot;)
-dm &lt;- as.data.frame(cbind(id = dm$District, apply(dm[, -1], 2, function(x) x/sum(x))))
-
-dm[, 1:3]</code></pre>
-<pre><code>##                id         Electricity           Gobar Gas
-## 1         Dhading  0.0846560846560847    0.20506415351425
-## 2         Dolakha   0.142857142857143 0.00510957193141819
-## 3          Gorkha  0.0899470899470899   0.174520267968661
-## 4  Kavrepalanchok  0.0793650793650794    0.19950039741115
-## 5       Makwanpur  0.0899470899470899    0.22754627001249
-## 6         Nuwakot   0.111111111111111  0.0453048711252413
-## 7     Okhaldhunga 0.00529100529100529 0.00408765754513455
-## 8       Ramechhap   0.137566137566138  0.0054502100601794
-## 9          Rasuwa  0.0264550264550265 0.00567730214602021
-## 10       Sindhuli  0.0634920634920635   0.119904621323947
-## 11  Sindhupalchok   0.169312169312169 0.00783467696150789</code></pre>
-<pre class="r"><code># WRITE OUTPUT ---
-file.output &lt;- file.path(dir.output, &quot;maps_tbl_district_fueltype_ratio.tsv&quot;)
-write.table(dm, file.output, sep = &quot;\t&quot;, row.names = FALSE, col.names = TRUE, 
-    quote = FALSE)</code></pre>
-</div>
-<div id="prepare-frequency-table-for-total-household-population" class="section level4">
-<h4>Prepare Frequency Table for Total Household Population</h4>
-<pre class="r"><code>df &lt;- dat.household %&gt;% dplyr::count(District, sort = FALSE, name = &quot;Freq&quot;)
-colnames(df)[which(colnames(df) == &quot;District&quot;)] &lt;- &quot;id&quot;
-
-df</code></pre>
-<pre><code>## # A tibble: 11 x 2
-##    id              Freq
-##    &lt;chr&gt;          &lt;int&gt;
-##  1 Dhading        86345
-##  2 Dolakha        70495
-##  3 Gorkha         75883
-##  4 Kavrepalanchok 91895
-##  5 Makwanpur      88365
-##  6 Nuwakot        75429
-##  7 Okhaldhunga    36112
-##  8 Ramechhap      55253
-##  9 Rasuwa         12380
-## 10 Sindhuli       64908
-## 11 Sindhupalchok  90072</code></pre>
-<pre class="r"><code># WRITE OUTPUT ---
-file.output &lt;- file.path(dir.output, &quot;maps_tbl_district_total_household.tsv&quot;)
-write.table(df, file.output, sep = &quot;\t&quot;, row.names = FALSE, col.names = TRUE, 
-    quote = FALSE)</code></pre>
-</div>
-<div id="prepare-frequency-table-by-district-and-ethnicity" class="section level4">
-<h4>Prepare Frequency Table by District and Ethnicity</h4>
-<pre class="r"><code>df &lt;- dat.household %&gt;% dplyr::count(District, Ethnicity, sort = FALSE, name = &quot;Freq&quot;)
-
-dm &lt;- reshape2::dcast(data = df, formula = District ~ Ethnicity, fun.aggregate = sum, 
-    value.var = &quot;Freq&quot;)
-dm &lt;- as.data.frame(cbind(id = dm$District, apply(dm[, -1], 2, function(x) x/sum(x))))
-
-dm[, 1:3]</code></pre>
-<pre><code>##                id            Brahman        Chepang-Thami
-## 1         Dhading  0.131838687628161    0.199207271236247
-## 2         Dolakha 0.0686078833447255    0.357001298435044
-## 3          Gorkha  0.118869902027797   0.0522107565092599
-## 4  Kavrepalanchok  0.194932786511734 0.000888402924895783
-## 5       Makwanpur  0.122469810890864     0.24738604524021
-## 6         Nuwakot  0.137899293688767 6.83386865304449e-05
-## 7     Okhaldhunga 0.0375757575757576  0.00013667737306089
-## 8       Ramechhap 0.0269036226930964   0.0362195038611358
-## 9          Rasuwa 0.0166416040100251                    0
-## 10       Sindhuli 0.0537252221462748   0.0102508029795667
-## 11  Sindhupalchok 0.0905354294827979   0.0966309027540491</code></pre>
-<pre class="r"><code># WRITE OUTPUT ---
-file.output &lt;- file.path(dir.output, &quot;maps_tbl_district_ethnicity_ratio.tsv&quot;)
-write.table(dm, file.output, sep = &quot;\t&quot;, row.names = FALSE, col.names = TRUE, 
-    quote = FALSE)</code></pre>
+<pre><code>##   Control_GeoRegion         Factor  Df SumsOfSqs   MeanSqs  F.Model
+## 1         Himalayan      Ethnicity   9 2502.5584 278.06204 64.04317
+## 2         Himalayan    IncomeGroup   4 1660.4860 415.12151 95.61067
+## 3         Himalayan EducationLevel   4  846.3357 211.58393 48.73195
+## 4         Himalayan      Residuals 230  998.6118   4.34179       NA
+## 5         Himalayan          Total 247 6007.9920        NA       NA
+## 6          Mountain      Ethnicity   9 3260.7168 362.30187 71.09840
+##          R2 Pr(&gt;F)
+## 1 0.4165382  0.001
+## 2 0.2763795  0.001
+## 3 0.1408683  0.001
+## 4 0.1662139     NA
+## 5 1.0000000     NA
+## 6 0.4219129  0.001</code></pre>
+<pre class="r"><code># Write Table ---
+file.output &lt;- file.path(dir.output, &quot;stats_abundance_permanova_factorcontrol_georegion.tsv&quot;)
+write.table(df, file.output, sep=&quot;\t&quot;, row.names=FALSE, col.names=TRUE, quote=FALSE)</code></pre>
 </div>
 
 
