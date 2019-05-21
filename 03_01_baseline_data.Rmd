@@ -1,0 +1,425 @@
+---
+title: "Explore Baseline Data"
+output: html_document
+
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, '03_01_baseline_data.html'))})
+---
+
+#### Define Libraries
+```{r echo=TRUE, message=FALSE, warning=FALSE, tidy=TRUE}
+library("stringr")
+library("dplyr")
+library("reshape2")
+library("ggplot2")
+library("gplots")
+library("RColorBrewer")
+```
+
+#### Define Path
+```{r tidy=TRUE}
+dir.wrk <- getwd()
+dir.data <- file.path(dir.wrk, "data/data_household")
+dir.annot <- file.path(dir.wrk, "data/data_annotations")
+dir.output <- file.path(dir.wrk, "data/data_processed")
+```
+
+#### Define Files
+```{r tidy=TRUE}
+file.dat <- file.path(dir.output, "household_level_data_categorical.tsv")
+```
+
+#### Define Categories
+```{r}
+type_ethnicity <- c("Newar","Brahman","Madhesi","Chettri","Muslim−Others",
+                    "Gurung−Magar","Dalit","Rai−Limbu","Tamang","Chepang−Thami")
+type_fuel <- c("Wood","LP Gas","Gobar Gas","Kerosene","Electricity","Others")
+type_geo <- c("Himalayan","Mountain")
+
+cpalette.eth <- c("#e31a1c","#a6cee3","#1f78b4","#b2df8a","#33a02c",
+                  "#fb9a99","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a")
+cpalette.inc <- c("#fdd49e","#fdbb84","#fc8d59","#e34a33","#b30000")
+cpalette.edu <- c("#bfd3e6","#9ebcda","#8c96c6","#8856a7","#810f7c")
+```
+
+#### Load Data
+```{r tidy=TRUE}
+dat <- read.delim(file.dat, header=TRUE, stringsAsFactors=FALSE)
+dat <- dat %>% dplyr::mutate_all(as.character)
+
+# FACTORIZE DATA ---
+dat$source_cooking_fuel_post_eq <- factor(dat$source_cooking_fuel_post_eq, levels=type_fuel)
+dat$Ethnicity <- factor(dat$Ethnicity, levels=type_ethnicity)
+
+head(dat)
+```
+
+#### Get Proportion of Fuel Type in Total Population
+```{r}
+df <- dat %>% 
+          dplyr::count(source_cooking_fuel_post_eq, sort=FALSE, name="Freq") %>%
+          mutate(Proportion= Freq/sum(Freq))
+df$Group <- "Total Household"
+df$source_cooking_fuel_post_eq <- factor(df$source_cooking_fuel_post_eq, levels=type_fuel)
+
+head(df)
+```
+
+
+#### Plot Proportion by Fuel Type in Total Household
+```{r fig.height = 4, fig.width = 3, fig.align = "center"}
+# COLOR PALETTE ---
+jColFun <- colorRampPalette(brewer.pal(n = 9, "Set1"))
+
+# PLOT ---
+p1 <- ggplot(df, aes(x=Group, y=Proportion)) + 
+        geom_bar(aes(fill=source_cooking_fuel_post_eq), stat="identity", color=NA, width=0.8, size=0.5) + 
+        scale_fill_manual(values=jColFun(6)) +
+        theme(
+          axis.text.x = element_blank(),
+          axis.text.y = element_text(size = 10, color="#000000"),
+          axis.title = element_text(size = 10, color="#000000"),
+          plot.title = element_text(size = 10, color="#000000", hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color="#000000"),	
+          strip.text = element_text(size=10, color="#000000"),
+          strip.background = element_rect(fill="#FFFFFF", color="#FFFFFF"),
+          panel.background = element_rect(fill="#FFFFFF", color="#000000"),
+          legend.text = element_text(size = 10, color="#000000"),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, "cm"),
+          legend.position = "right") +
+      ylab("Proportion of Household") +
+      xlab("") + 
+      ggtitle("") 
+
+p1
+```
+
+
+#### Get Proportion by Ethnicity, Income Group, and Fuel Type
+```{r}
+dm <- dat %>% 
+          dplyr::count(Ethnicity, IncomeGroup, source_cooking_fuel_post_eq, sort=FALSE, name="Freq") %>%
+          group_by(Ethnicity, IncomeGroup) %>%
+          mutate(Proportion=Freq/sum(Freq))
+
+dm$source_cooking_fuel_post_eq <- factor(dm$source_cooking_fuel_post_eq, levels=type_fuel)
+dm$Ethnicity <- factor(dm$Ethnicity, levels=type_ethnicity)
+
+head(dm)
+```
+
+
+#### Plot Household Proportion by Ethnicity, Income Group, and Fuel Type
+```{r fig.height = 4, fig.width = 8, fig.align = "center"}
+# COLOR PALETTE ---
+jColFun <- colorRampPalette(brewer.pal(n = 9, "Set1"))
+
+# PLOT ---
+p2 <- ggplot(dm, aes(x=IncomeGroup, y=Proportion)) + 
+        geom_bar(aes(fill=source_cooking_fuel_post_eq), stat="identity", color="#000000", width=0.8, size=0.5) + 
+        scale_fill_manual(values=jColFun(6)) +
+        facet_wrap(~Ethnicity, ncol=5, scales="fixed", drop=FALSE, strip.position="top") +
+        theme(
+          axis.text.x = element_text(size = 10, color="#000000", angle=90, hjust=1, vjust=0.5),
+          axis.text.y = element_text(size = 10, color="#000000"),
+          axis.title = element_text(size = 10, color="#000000"),
+          plot.title = element_text(size = 10, color="#000000", hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color="#000000"),	
+          strip.text = element_text(size=10, color="#000000"),
+          strip.background = element_rect(fill="#FFFFFF", color="#FFFFFF"),
+          panel.background = element_rect(fill="#FFFFFF", color="#000000"),
+          legend.text = element_text(size = 10, color="#000000"),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, "cm"),
+          legend.position = "right") +
+      ylab("Proportion of Household") +
+      xlab("Income Group") + 
+      ggtitle("") 
+
+p2
+```
+
+#### Get Household Proportion by Ethnicity, Education Level, and Fuel Type
+```{r}
+dm <- dat %>% 
+          dplyr::count(Ethnicity, EducationLevel, source_cooking_fuel_post_eq, sort=FALSE, name="Freq") %>%
+          group_by(Ethnicity, EducationLevel) %>%
+          mutate(Proportion=Freq/sum(Freq))
+
+dm$source_cooking_fuel_post_eq <- factor(dm$source_cooking_fuel_post_eq, levels=type_fuel)
+dm$EducationLevel <- as.factor(dm$EducationLevel)
+
+head(dm)
+```
+
+#### Plot Household Proportion by Ethnicity, Education Level, and Fuel Type
+```{r fig.height = 4, fig.width = 8, fig.align = "center"}
+# COLOR PALETTE ---
+jColFun <- colorRampPalette(brewer.pal(n = 9, "Set1"))
+
+# PLOT ---
+p3 <- ggplot(dm, aes(x=EducationLevel, y=Proportion)) + 
+        geom_bar(aes(fill=source_cooking_fuel_post_eq), stat="identity", color="#000000", width=0.8, size=0.5) + 
+        scale_fill_manual(values=jColFun(6)) +
+        facet_wrap(~Ethnicity, ncol=5, scales="fixed", drop=FALSE, strip.position="top") +
+        theme(
+          axis.text.x = element_text(size = 10, color="#000000", angle=90, hjust=1, vjust=0.5),
+          axis.text.y = element_text(size = 10, color="#000000"),
+          axis.title = element_text(size = 10, color="#000000"),
+          plot.title = element_text(size = 10, color="#000000", hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color="#000000"),	
+          strip.text = element_text(size=10, color="#000000"),
+          strip.background = element_rect(fill="#FFFFFF", color="#FFFFFF"),
+          panel.background = element_rect(fill="#FFFFFF", color="#000000"),
+          legend.text = element_text(size = 10, color="#000000"),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, "cm"),
+          legend.position = "right") +
+      ylab("Proportion of Household") +
+      xlab("Education Level") + 
+      ggtitle("") 
+
+p3
+```
+
+#### Get Household Proportion by Ethnicity, Geo-climatic Region, and Fuel Type
+```{r}
+dm <- dat %>% 
+          dplyr::count(Ethnicity, GeoRegion, source_cooking_fuel_post_eq, sort=FALSE, name="Freq") %>%
+          group_by(Ethnicity, GeoRegion) %>%
+          mutate(Proportion=Freq/sum(Freq))
+
+dm$source_cooking_fuel_post_eq <- factor(dm$source_cooking_fuel_post_eq, levels=type_fuel)
+dm$GeoRegion <- factor(dm$GeoRegion, levels=type_geo)
+
+head(dm)
+```
+
+
+#### Plot Household Proportion by Ethnicity, Geo-climatic Region, and Fuel Type
+```{r fig.height = 4, fig.width = 8, fig.align = "center"}
+# COLOR PALETTE ---
+jColFun <- colorRampPalette(brewer.pal(n = 9, "Set1"))
+
+# PLOT ---
+p4 <- ggplot(dm, aes(x=GeoRegion, y=Proportion)) + 
+        geom_bar(aes(fill=source_cooking_fuel_post_eq), stat="identity", color="#000000", width=0.8, size=0.5) + 
+        scale_fill_manual(values=jColFun(6)) +
+        facet_wrap(~Ethnicity, ncol=5, scales="fixed", drop=FALSE, strip.position="top") +
+        theme(
+          axis.text.x = element_text(size = 10, color="#000000", angle=90, hjust=1, vjust=0.5),
+          axis.text.y = element_text(size = 10, color="#000000"),
+          axis.title = element_text(size = 10, color="#000000"),
+          plot.title = element_text(size = 10, color="#000000", hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color="#000000"),	
+          strip.text = element_text(size=10, color="#000000"),
+          strip.background = element_rect(fill="#FFFFFF", color="#FFFFFF"),
+          panel.background = element_rect(fill="#FFFFFF", color="#000000"),
+          legend.text = element_text(size = 10, color="#000000"),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, "cm"),
+          legend.position = "right") +
+      ylab("Proportion of Household") +
+      xlab("Geo-climatic Region") + 
+      ggtitle("") 
+
+p4
+```
+
+#### Ethnic Household Population Distribution
+```{r}
+dm <- dat %>% 
+        dplyr::count(Ethnicity, sort=TRUE, name="Freq") %>%
+        mutate(Percentage= (Freq/sum(Freq)) * 100)
+dm$Country <- "Nepal"
+
+# Factorize data
+dm$Ethnicity <- factor(dm$Ethnicity, levels=type_ethnicity)
+
+head(dm)
+```
+
+#### Plot Household Proportion by Ethnicity
+```{r fig.height = 4, fig.width = 3, fig.align = "center"}
+# PLOT ---
+p5 <- ggplot(dm, aes(x=Country, y=Percentage)) + 
+        geom_bar(aes(fill=Ethnicity), stat="identity", color=NA, width=0.8, size=0.5) + 
+        scale_fill_manual(values=cpalette.eth) +
+        theme(
+          axis.text.x = element_blank(),
+          axis.text.y = element_text(size = 10, color="#000000"),
+          axis.title = element_text(size = 10, color="#000000"),
+          plot.title = element_text(size = 10, color="#000000", hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color="#000000"),	
+          strip.text = element_text(size=10, color="#000000"),
+          strip.background = element_rect(fill="#FFFFFF", color="#FFFFFF"),
+          panel.background = element_rect(fill="#FFFFFF", color="#000000"),
+          legend.text = element_text(size = 10, color="#000000"),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, "cm"),
+          legend.position = "right") +
+      ylab("Percentage of Household") +
+      xlab("Ethnicity") + 
+      ggtitle("") 
+
+p5
+```
+
+
+
+#### Household Population Distribution by IncomeGroup
+```{r}
+dm <- dat %>% 
+        dplyr::count(IncomeGroup, sort=TRUE, name="Freq") %>%
+        mutate(Percentage= (Freq/sum(Freq)) * 100)
+dm$Country <- "Nepal"
+
+# Factorize data
+dm$IncomeGroup <- as.factor(dm$IncomeGroup)
+
+head(dm)
+```
+
+#### Plot Household Proportion by IncomeGroup
+```{r fig.height = 4, fig.width = 3, fig.align = "center"}
+# PLOT ---
+p6 <- ggplot(dm, aes(x=Country, y=Percentage)) + 
+        geom_bar(aes(fill=IncomeGroup), stat="identity", color=NA, width=0.8, size=0.5) + 
+        scale_fill_manual(values=cpalette.inc) +
+        theme(
+          axis.text.x = element_blank(),
+          axis.text.y = element_text(size = 10, color="#000000"),
+          axis.title = element_text(size = 10, color="#000000"),
+          plot.title = element_text(size = 10, color="#000000", hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color="#000000"),	
+          strip.text = element_text(size=10, color="#000000"),
+          strip.background = element_rect(fill="#FFFFFF", color="#FFFFFF"),
+          panel.background = element_rect(fill="#FFFFFF", color="#000000"),
+          legend.text = element_text(size = 10, color="#000000"),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, "cm"),
+          legend.position = "right") +
+      ylab("Percentage of Household") +
+      xlab("IncomeGroup") + 
+      ggtitle("") 
+
+p6
+```
+
+
+#### Household Population Distribution by EducationLevel
+```{r}
+dm <- dat %>% 
+        dplyr::count(EducationLevel, sort=TRUE, name="Freq") %>%
+        mutate(Percentage= (Freq/sum(Freq)) * 100)
+dm$Country <- "Nepal"
+
+# Factorize data
+dm$IncomeGroup <- as.factor(dm$EducationLevel)
+
+head(dm)
+```
+
+#### Plot Household Proportion by EducationLevel
+```{r fig.height = 4, fig.width = 3, fig.align = "center"}
+# PLOT ---
+p7 <- ggplot(dm, aes(x=Country, y=Percentage)) + 
+        geom_bar(aes(fill=EducationLevel), stat="identity", color=NA, width=0.8, size=0.5) + 
+        scale_fill_manual(values=cpalette.edu) +
+        theme(
+          axis.text.x = element_blank(),
+          axis.text.y = element_text(size = 10, color="#000000"),
+          axis.title = element_text(size = 10, color="#000000"),
+          plot.title = element_text(size = 10, color="#000000", hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color="#000000"),	
+          strip.text = element_text(size=10, color="#000000"),
+          strip.background = element_rect(fill="#FFFFFF", color="#FFFFFF"),
+          panel.background = element_rect(fill="#FFFFFF", color="#000000"),
+          legend.text = element_text(size = 10, color="#000000"),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, "cm"),
+          legend.position = "right") +
+      ylab("Percentage of Household") +
+      xlab("EducationLevel") + 
+      ggtitle("") 
+
+p7
+```
+
+
+#### Get Abundance by Ethnicity and Fuel Type
+```{r}
+df <- dat %>% dplyr::count(Ethnicity, source_cooking_fuel_post_eq, sort=FALSE, name="Freq")
+dm <- reshape2::dcast(data=df, formula=Ethnicity ~ source_cooking_fuel_post_eq, fun.aggregate=sum, value.var="Freq")
+head(dm)
+```
+
+#### Total (Relative) Transformation
+```{r}
+# TOTAL TRANSFORMATION ---
+dmt <- vegan::decostand(dm[,2:7], "total")
+rownames(dmt) <- dm$Ethnicity
+dmt <- dmt[match(rev(type_ethnicity), rownames(dmt)),]
+                               
+dmt
+```
+
+#### Heatmap Total (Relative) Salce Abundance by Ethnicity and FuelType
+```{r fig.align = "center"}
+jColFun <- colorRampPalette(brewer.pal(n = 9, "Reds"))
+
+heatmap.2(as.matrix(dmt), col = jColFun(256), margin=c(8,15),
+          Colv=TRUE, Rowv = FALSE, cexRow=1, cexCol=1,
+          dendrogram ="none", trace="none", main="",
+          hclustfun = function(x) hclust(x, method = "ward.D2"), 
+          distfun = function(x) dist(x, method = "euclidean"),
+          colsep=c(1:50), rowsep=c(1:50),
+          sepcolor="#BDBDBD", sepwidth=c(0.0005,0.0005), 
+          key="TRUE", keysize=1, density.info="none", 
+          key.title = NA, key.xlab = NA, key.ylab = NA,
+          key.par=list(mgp=c(1.5, 0.5, 0), mar=c(2.5, 2.5, 1, 0)))
+```
+
+#### Get Distance Matrix of Ethnicity based on FuelType Usage
+```{r}
+# LOG TRANSFORMATION ---
+dml <- vegan::decostand(dm[,2:7], "log")
+dist_dml <- vegan::vegdist(x=as.matrix(dml), method="euclidean", binary=FALSE, diag=TRUE, upper=TRUE, na.rm = FALSE)
+dist_dml <- as.matrix(dist_dml)
+colnames(dist_dml) <- rownames(dist_dml) <- dm$Ethnicity
+```
+
+
+#### Correlation by Ethnicity
+```{r fig.align = "center"}
+jColFun <- colorRampPalette(brewer.pal(n = 9, "Blues"))
+
+heatmap.2(dist_dml, col=rev(jColFun(256)), margin=c(8,15),
+          Colv=TRUE, Rowv = TRUE, cexRow=1, cexCol=1,
+          dendrogram ="both", trace="none", main="",
+          hclustfun = function(x) hclust(x, method = "ward.D2"), 
+          distfun = function(x) dist(x, method = "euclidean"),
+          colsep=c(1:50), rowsep=c(1:50),
+          sepcolor="#FFFFFF", sepwidth=c(0.0005,0.0005), 
+          key="TRUE", keysize=1, density.info="none", symkey=0,
+          key.title = NA, key.xlab = NA, key.ylab = NA,
+          key.par=list(mgp=c(1.5, 0.5, 0), mar=c(2.5, 2.5, 1, 0)))
+```

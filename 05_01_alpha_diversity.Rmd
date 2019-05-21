@@ -1,0 +1,103 @@
+---
+title: "Alpha Diversity"
+output: html_document
+
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, '05_01_alpha_diversity.html'))})
+---
+
+
+#### Define Libraries
+```{r echo=TRUE, message=FALSE, warning=FALSE, tidy=TRUE}
+library("stringr")
+library("dplyr")
+library("reshape2")
+library("ggplot2")
+library("RColorBrewer")
+library("vegan")
+```
+
+#### Define Path
+```{r tidy=TRUE}
+dir.wrk <- getwd()
+dir.data <- file.path(dir.wrk, "data/data_household")
+dir.annot <- file.path(dir.wrk, "data/data_annotations")
+dir.output <- file.path(dir.wrk, "data/data_processed")
+```
+
+
+#### Define Files
+```{r tidy=TRUE}
+file.dat <- file.path(dir.output, "household_level_data_frequency_table.tsv")
+```
+
+#### Define Categories
+```{r}
+type_eth <- c("Newar","Brahman","Madhesi","Chettri","Muslim−Others",
+             "Gurung−Magar","Dalit","Rai−Limbu","Tamang","Chepang−Thami")
+type_fuel <- c("Wood","LP Gas","Gobar Gas","Kerosene","Electricity","Others")
+type_inc <- c("0-10000","10000-20000","20000-30000","30000-50000","50000-ABOVE")
+type_edu <- c("Illiterate","NonFormal-Other","Primary","Secondary","University")
+type_geo <- c("Himalayan","Mountain")
+
+cpalette.eth <- c("#e31a1c","#a6cee3","#1f78b4","#b2df8a","#33a02c",
+                  "#fb9a99","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a")
+cpalette.inc <- c("#fdd49e","#fdbb84","#fc8d59","#e34a33","#b30000")
+cpalette.edu <- c("#bfd3e6","#9ebcda","#8c96c6","#8856a7","#810f7c")
+cpalette.geo <- c("#35978f","#bf812d")
+```
+
+#### Load Frequency Table Data
+```{r}
+dat <- read.delim(file.dat, header=TRUE, stringsAsFactors=FALSE)
+dat <- dat[-which(rowSums(dat[,5:10]) == 0),]
+
+head(dat)
+```
+
+#### Calculate Shannon  Index
+```{r}
+dat$ShannonIndex <- vegan::diversity(x=dat[,5:10], index = "shannon", MARGIN = 1, base = exp(1))
+
+# Get Group Medians
+mu <- plyr::ddply(dat, "Ethnicity", summarise, grp.mean=mean(ShannonIndex), grp.median=median(ShannonIndex), grp.stdev=sd(ShannonIndex))
+mu <- mu[order(mu$grp.median, decreasing=TRUE),]
+
+# Factorize Data
+dat$Ethnicity <- factor(dat$Ethnicity, levels=mu$Ethnicity)
+
+head(dat)
+```
+
+#### Plot Shannon Index: by Ethnicity
+```{r fig.height = 3, fig.width = 6, fig.align = "center"}
+# PLOT ---
+p1 <- ggplot(dat, aes(x=Ethnicity, y=ShannonIndex)) + 
+        geom_boxplot(aes(fill=Ethnicity), color="#000000", alpha=0.7) +
+        geom_jitter(width=0.2, cex=0.5, color="#525252", alpha=0.3) +
+        scale_fill_manual(values=cpalette.eth) +
+        coord_flip() +
+        theme(
+          axis.text.x = element_text(size = 10, color="#000000"),
+          axis.text.y = element_text(size = 10, color="#000000"),
+          axis.title = element_text(size = 10, color="#000000"),
+          plot.title = element_text(size = 10, color="#000000", hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color="#000000"),	
+          strip.text = element_text(size=10, color="#000000"),
+          strip.background = element_rect(fill="#FFFFFF", color="#FFFFFF"),
+          panel.background = element_rect(fill="#FFFFFF", color="#000000"),
+          legend.text = element_text(size = 10, color="#000000"),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, "cm"),
+          legend.position = "none") +
+      ylab("Shannon Index") +
+      xlab("Ethnicity") + 
+      ggtitle("Shannon Index Distribution") 
+
+p1
+```

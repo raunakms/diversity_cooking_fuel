@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Explore Baseline Data</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="01_01_data_preprocess.html">Pre-process</a>
+</li>
+<li>
+  <a href="02_02_maps_plot.html">Maps</a>
+</li>
+<li>
+  <a href="03_01_baseline_data.html">Baseline Data</a>
+</li>
+<li>
+  <a href="04_01_ordination_analysis.html">Ordination</a>
+</li>
+<li>
+  <a href="05_01_alpha_diversity.html">Alpha Diversity</a>
+</li>
+<li>
+  <a href="06_01_annova_tests.html">Annova</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Explore Baseline Data</h1>
+
+</div>
+
+
+<div id="define-libraries" class="section level4">
+<h4>Define Libraries</h4>
+<pre class="r"><code>library(&quot;stringr&quot;)
+library(&quot;dplyr&quot;)
+library(&quot;reshape2&quot;)
+library(&quot;ggplot2&quot;)
+library(&quot;gplots&quot;)
+library(&quot;RColorBrewer&quot;)</code></pre>
+</div>
+<div id="define-path" class="section level4">
+<h4>Define Path</h4>
+<pre class="r"><code>dir.wrk &lt;- getwd()
+dir.data &lt;- file.path(dir.wrk, &quot;data/data_household&quot;)
+dir.annot &lt;- file.path(dir.wrk, &quot;data/data_annotations&quot;)
+dir.output &lt;- file.path(dir.wrk, &quot;data/data_processed&quot;)</code></pre>
+</div>
+<div id="define-files" class="section level4">
+<h4>Define Files</h4>
+<pre class="r"><code>file.dat &lt;- file.path(dir.output, &quot;household_level_data_categorical.tsv&quot;)</code></pre>
+</div>
+<div id="define-categories" class="section level4">
+<h4>Define Categories</h4>
+<pre class="r"><code>type_ethnicity &lt;- c(&quot;Newar&quot;,&quot;Brahman&quot;,&quot;Madhesi&quot;,&quot;Chettri&quot;,&quot;Muslim−Others&quot;,
+                    &quot;Gurung−Magar&quot;,&quot;Dalit&quot;,&quot;Rai−Limbu&quot;,&quot;Tamang&quot;,&quot;Chepang−Thami&quot;)
+type_fuel &lt;- c(&quot;Wood&quot;,&quot;LP Gas&quot;,&quot;Gobar Gas&quot;,&quot;Kerosene&quot;,&quot;Electricity&quot;,&quot;Others&quot;)
+type_geo &lt;- c(&quot;Himalayan&quot;,&quot;Mountain&quot;)
+
+cpalette.eth &lt;- c(&quot;#e31a1c&quot;,&quot;#a6cee3&quot;,&quot;#1f78b4&quot;,&quot;#b2df8a&quot;,&quot;#33a02c&quot;,
+                  &quot;#fb9a99&quot;,&quot;#fdbf6f&quot;,&quot;#ff7f00&quot;,&quot;#cab2d6&quot;,&quot;#6a3d9a&quot;)
+cpalette.inc &lt;- c(&quot;#fdd49e&quot;,&quot;#fdbb84&quot;,&quot;#fc8d59&quot;,&quot;#e34a33&quot;,&quot;#b30000&quot;)
+cpalette.edu &lt;- c(&quot;#bfd3e6&quot;,&quot;#9ebcda&quot;,&quot;#8c96c6&quot;,&quot;#8856a7&quot;,&quot;#810f7c&quot;)</code></pre>
+</div>
+<div id="load-data" class="section level4">
+<h4>Load Data</h4>
+<pre class="r"><code>dat &lt;- read.delim(file.dat, header = TRUE, stringsAsFactors = FALSE)
+dat &lt;- dat %&gt;% dplyr::mutate_all(as.character)
+
+# FACTORIZE DATA ---
+dat$source_cooking_fuel_post_eq &lt;- factor(dat$source_cooking_fuel_post_eq, levels = type_fuel)
+dat$Ethnicity &lt;- factor(dat$Ethnicity, levels = type_ethnicity)
+
+head(dat)</code></pre>
+<pre><code>##     household_id    District GeoRegion    Ethnicity IncomeGroup
+## 1 12010100001101 Okhaldhunga  Mountain    Rai-Limbu     0-10000
+## 2 12010100002101 Okhaldhunga  Mountain    Rai-Limbu     0-10000
+## 3 12010100003101 Okhaldhunga  Mountain Gurung-Magar     0-10000
+## 4 12010100004101 Okhaldhunga  Mountain Gurung-Magar     0-10000
+## 5 12010100005101 Okhaldhunga  Mountain Gurung-Magar     0-10000
+## 6 12010100006101 Okhaldhunga  Mountain Gurung-Magar     0-10000
+##   EducationLevel source_cooking_fuel_post_eq
+## 1     Illiterate                        Wood
+## 2     Illiterate                        Wood
+## 3     Illiterate                        Wood
+## 4     Illiterate                        Wood
+## 5     Illiterate                        Wood
+## 6     Illiterate                        Wood</code></pre>
+</div>
+<div id="get-proportion-of-fuel-type-in-total-population" class="section level4">
+<h4>Get Proportion of Fuel Type in Total Population</h4>
+<pre class="r"><code>df &lt;- dat %&gt;% 
+          dplyr::count(source_cooking_fuel_post_eq, sort=FALSE, name=&quot;Freq&quot;) %&gt;%
+          mutate(Proportion= Freq/sum(Freq))
+df$Group &lt;- &quot;Total Household&quot;
+df$source_cooking_fuel_post_eq &lt;- factor(df$source_cooking_fuel_post_eq, levels=type_fuel)
+
+head(df)</code></pre>
+<pre><code>## # A tibble: 6 x 4
+##   source_cooking_fuel_post_eq   Freq Proportion Group          
+##   &lt;fct&gt;                        &lt;int&gt;      &lt;dbl&gt; &lt;chr&gt;          
+## 1 Wood                        656207   0.878    Total Household
+## 2 LP Gas                       81266   0.109    Total Household
+## 3 Gobar Gas                     8807   0.0118   Total Household
+## 4 Kerosene                       210   0.000281 Total Household
+## 5 Electricity                    189   0.000253 Total Household
+## 6 Others                         458   0.000613 Total Household</code></pre>
+</div>
+<div id="plot-proportion-by-fuel-type-in-total-household" class="section level4">
+<h4>Plot Proportion by Fuel Type in Total Household</h4>
+<pre class="r"><code># COLOR PALETTE ---
+jColFun &lt;- colorRampPalette(brewer.pal(n = 9, &quot;Set1&quot;))
+
+# PLOT ---
+p1 &lt;- ggplot(df, aes(x=Group, y=Proportion)) + 
+        geom_bar(aes(fill=source_cooking_fuel_post_eq), stat=&quot;identity&quot;, color=NA, width=0.8, size=0.5) + 
+        scale_fill_manual(values=jColFun(6)) +
+        theme(
+          axis.text.x = element_blank(),
+          axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+          plot.title = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;), 
+          strip.text = element_text(size=10, color=&quot;#000000&quot;),
+          strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+          panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+          legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, &quot;cm&quot;),
+          legend.position = &quot;right&quot;) +
+      ylab(&quot;Proportion of Household&quot;) +
+      xlab(&quot;&quot;) + 
+      ggtitle(&quot;&quot;) 
+
+p1</code></pre>
+<p><img src="03_01_baseline_data_files/figure-html/unnamed-chunk-7-1.png" width="288" style="display: block; margin: auto;" /></p>
+</div>
+<div id="get-proportion-by-ethnicity-income-group-and-fuel-type" class="section level4">
+<h4>Get Proportion by Ethnicity, Income Group, and Fuel Type</h4>
+<pre class="r"><code>dm &lt;- dat %&gt;% 
+          dplyr::count(Ethnicity, IncomeGroup, source_cooking_fuel_post_eq, sort=FALSE, name=&quot;Freq&quot;) %&gt;%
+          group_by(Ethnicity, IncomeGroup) %&gt;%
+          mutate(Proportion=Freq/sum(Freq))
+
+dm$source_cooking_fuel_post_eq &lt;- factor(dm$source_cooking_fuel_post_eq, levels=type_fuel)
+dm$Ethnicity &lt;- factor(dm$Ethnicity, levels=type_ethnicity)
+
+head(dm)</code></pre>
+<pre><code>## # A tibble: 6 x 5
+## # Groups:   Ethnicity, IncomeGroup [1]
+##   Ethnicity IncomeGroup source_cooking_fuel_post_eq  Freq Proportion
+##   &lt;fct&gt;     &lt;chr&gt;       &lt;fct&gt;                       &lt;int&gt;      &lt;dbl&gt;
+## 1 Newar     0-10000     Wood                        27747   0.910   
+## 2 Newar     0-10000     LP Gas                       2268   0.0744  
+## 3 Newar     0-10000     Gobar Gas                     442   0.0145  
+## 4 Newar     0-10000     Kerosene                        5   0.000164
+## 5 Newar     0-10000     Electricity                    11   0.000361
+## 6 Newar     0-10000     Others                         15   0.000492</code></pre>
+</div>
+<div id="plot-household-proportion-by-ethnicity-income-group-and-fuel-type" class="section level4">
+<h4>Plot Household Proportion by Ethnicity, Income Group, and Fuel Type</h4>
+<pre class="r"><code># COLOR PALETTE ---
+jColFun &lt;- colorRampPalette(brewer.pal(n = 9, &quot;Set1&quot;))
+
+# PLOT ---
+p2 &lt;- ggplot(dm, aes(x=IncomeGroup, y=Proportion)) + 
+        geom_bar(aes(fill=source_cooking_fuel_post_eq), stat=&quot;identity&quot;, color=&quot;#000000&quot;, width=0.8, size=0.5) + 
+        scale_fill_manual(values=jColFun(6)) +
+        facet_wrap(~Ethnicity, ncol=5, scales=&quot;fixed&quot;, drop=FALSE, strip.position=&quot;top&quot;) +
+        theme(
+          axis.text.x = element_text(size = 10, color=&quot;#000000&quot;, angle=90, hjust=1, vjust=0.5),
+          axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+          plot.title = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;), 
+          strip.text = element_text(size=10, color=&quot;#000000&quot;),
+          strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+          panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+          legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, &quot;cm&quot;),
+          legend.position = &quot;right&quot;) +
+      ylab(&quot;Proportion of Household&quot;) +
+      xlab(&quot;Income Group&quot;) + 
+      ggtitle(&quot;&quot;) 
+
+p2</code></pre>
+<p><img src="03_01_baseline_data_files/figure-html/unnamed-chunk-9-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div id="get-household-proportion-by-ethnicity-education-level-and-fuel-type" class="section level4">
+<h4>Get Household Proportion by Ethnicity, Education Level, and Fuel Type</h4>
+<pre class="r"><code>dm &lt;- dat %&gt;% 
+          dplyr::count(Ethnicity, EducationLevel, source_cooking_fuel_post_eq, sort=FALSE, name=&quot;Freq&quot;) %&gt;%
+          group_by(Ethnicity, EducationLevel) %&gt;%
+          mutate(Proportion=Freq/sum(Freq))
+
+dm$source_cooking_fuel_post_eq &lt;- factor(dm$source_cooking_fuel_post_eq, levels=type_fuel)
+dm$EducationLevel &lt;- as.factor(dm$EducationLevel)
+
+head(dm)</code></pre>
+<pre><code>## # A tibble: 6 x 5
+## # Groups:   Ethnicity, EducationLevel [1]
+##   Ethnicity EducationLevel source_cooking_fuel_post_eq  Freq Proportion
+##   &lt;fct&gt;     &lt;fct&gt;          &lt;fct&gt;                       &lt;int&gt;      &lt;dbl&gt;
+## 1 Newar     Illiterate     Wood                        16549   0.867   
+## 2 Newar     Illiterate     LP Gas                       2207   0.116   
+## 3 Newar     Illiterate     Gobar Gas                     311   0.0163  
+## 4 Newar     Illiterate     Kerosene                        3   0.000157
+## 5 Newar     Illiterate     Electricity                     5   0.000262
+## 6 Newar     Illiterate     Others                          8   0.000419</code></pre>
+</div>
+<div id="plot-household-proportion-by-ethnicity-education-level-and-fuel-type" class="section level4">
+<h4>Plot Household Proportion by Ethnicity, Education Level, and Fuel Type</h4>
+<pre class="r"><code># COLOR PALETTE ---
+jColFun &lt;- colorRampPalette(brewer.pal(n = 9, &quot;Set1&quot;))
+
+# PLOT ---
+p3 &lt;- ggplot(dm, aes(x=EducationLevel, y=Proportion)) + 
+        geom_bar(aes(fill=source_cooking_fuel_post_eq), stat=&quot;identity&quot;, color=&quot;#000000&quot;, width=0.8, size=0.5) + 
+        scale_fill_manual(values=jColFun(6)) +
+        facet_wrap(~Ethnicity, ncol=5, scales=&quot;fixed&quot;, drop=FALSE, strip.position=&quot;top&quot;) +
+        theme(
+          axis.text.x = element_text(size = 10, color=&quot;#000000&quot;, angle=90, hjust=1, vjust=0.5),
+          axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+          plot.title = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;), 
+          strip.text = element_text(size=10, color=&quot;#000000&quot;),
+          strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+          panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+          legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, &quot;cm&quot;),
+          legend.position = &quot;right&quot;) +
+      ylab(&quot;Proportion of Household&quot;) +
+      xlab(&quot;Education Level&quot;) + 
+      ggtitle(&quot;&quot;) 
+
+p3</code></pre>
+<p><img src="03_01_baseline_data_files/figure-html/unnamed-chunk-11-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div id="get-household-proportion-by-ethnicity-geo-climatic-region-and-fuel-type" class="section level4">
+<h4>Get Household Proportion by Ethnicity, Geo-climatic Region, and Fuel Type</h4>
+<pre class="r"><code>dm &lt;- dat %&gt;% 
+          dplyr::count(Ethnicity, GeoRegion, source_cooking_fuel_post_eq, sort=FALSE, name=&quot;Freq&quot;) %&gt;%
+          group_by(Ethnicity, GeoRegion) %&gt;%
+          mutate(Proportion=Freq/sum(Freq))
+
+dm$source_cooking_fuel_post_eq &lt;- factor(dm$source_cooking_fuel_post_eq, levels=type_fuel)
+dm$GeoRegion &lt;- factor(dm$GeoRegion, levels=type_geo)
+
+head(dm)</code></pre>
+<pre><code>## # A tibble: 6 x 5
+## # Groups:   Ethnicity, GeoRegion [1]
+##   Ethnicity GeoRegion source_cooking_fuel_post_eq  Freq Proportion
+##   &lt;fct&gt;     &lt;fct&gt;     &lt;fct&gt;                       &lt;int&gt;      &lt;dbl&gt;
+## 1 Newar     Himalayan Wood                        20763   0.798   
+## 2 Newar     Himalayan LP Gas                       5065   0.195   
+## 3 Newar     Himalayan Gobar Gas                     127   0.00488 
+## 4 Newar     Himalayan Kerosene                       11   0.000423
+## 5 Newar     Himalayan Electricity                    25   0.000961
+## 6 Newar     Himalayan Others                         18   0.000692</code></pre>
+</div>
+<div id="plot-household-proportion-by-ethnicity-geo-climatic-region-and-fuel-type" class="section level4">
+<h4>Plot Household Proportion by Ethnicity, Geo-climatic Region, and Fuel Type</h4>
+<pre class="r"><code># COLOR PALETTE ---
+jColFun &lt;- colorRampPalette(brewer.pal(n = 9, &quot;Set1&quot;))
+
+# PLOT ---
+p4 &lt;- ggplot(dm, aes(x=GeoRegion, y=Proportion)) + 
+        geom_bar(aes(fill=source_cooking_fuel_post_eq), stat=&quot;identity&quot;, color=&quot;#000000&quot;, width=0.8, size=0.5) + 
+        scale_fill_manual(values=jColFun(6)) +
+        facet_wrap(~Ethnicity, ncol=5, scales=&quot;fixed&quot;, drop=FALSE, strip.position=&quot;top&quot;) +
+        theme(
+          axis.text.x = element_text(size = 10, color=&quot;#000000&quot;, angle=90, hjust=1, vjust=0.5),
+          axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+          plot.title = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;), 
+          strip.text = element_text(size=10, color=&quot;#000000&quot;),
+          strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+          panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+          legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, &quot;cm&quot;),
+          legend.position = &quot;right&quot;) +
+      ylab(&quot;Proportion of Household&quot;) +
+      xlab(&quot;Geo-climatic Region&quot;) + 
+      ggtitle(&quot;&quot;) 
+
+p4</code></pre>
+<p><img src="03_01_baseline_data_files/figure-html/unnamed-chunk-13-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div id="ethnic-household-population-distribution" class="section level4">
+<h4>Ethnic Household Population Distribution</h4>
+<pre class="r"><code>dm &lt;- dat %&gt;% 
+        dplyr::count(Ethnicity, sort=TRUE, name=&quot;Freq&quot;) %&gt;%
+        mutate(Percentage= (Freq/sum(Freq)) * 100)
+dm$Country &lt;- &quot;Nepal&quot;
+
+# Factorize data
+dm$Ethnicity &lt;- factor(dm$Ethnicity, levels=type_ethnicity)
+
+head(dm)</code></pre>
+<pre><code>## # A tibble: 6 x 4
+##   Ethnicity      Freq Percentage Country
+##   &lt;fct&gt;         &lt;int&gt;      &lt;dbl&gt; &lt;chr&gt;  
+## 1 Tamang       209075      28.0  Nepal  
+## 2 Chettri      134439      18.0  Nepal  
+## 3 Brahman      109725      14.7  Nepal  
+## 4 Gurung-Magar  81840      11.0  Nepal  
+## 5 Dalit         81436      10.9  Nepal  
+## 6 Newar         68603       9.18 Nepal</code></pre>
+</div>
+<div id="plot-household-proportion-by-ethnicity" class="section level4">
+<h4>Plot Household Proportion by Ethnicity</h4>
+<pre class="r"><code># PLOT ---
+p5 &lt;- ggplot(dm, aes(x=Country, y=Percentage)) + 
+        geom_bar(aes(fill=Ethnicity), stat=&quot;identity&quot;, color=NA, width=0.8, size=0.5) + 
+        scale_fill_manual(values=cpalette.eth) +
+        theme(
+          axis.text.x = element_blank(),
+          axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+          plot.title = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;), 
+          strip.text = element_text(size=10, color=&quot;#000000&quot;),
+          strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+          panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+          legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, &quot;cm&quot;),
+          legend.position = &quot;right&quot;) +
+      ylab(&quot;Percentage of Household&quot;) +
+      xlab(&quot;Ethnicity&quot;) + 
+      ggtitle(&quot;&quot;) 
+
+p5</code></pre>
+<p><img src="03_01_baseline_data_files/figure-html/unnamed-chunk-15-1.png" width="288" style="display: block; margin: auto;" /></p>
+</div>
+<div id="household-population-distribution-by-incomegroup" class="section level4">
+<h4>Household Population Distribution by IncomeGroup</h4>
+<pre class="r"><code>dm &lt;- dat %&gt;% 
+        dplyr::count(IncomeGroup, sort=TRUE, name=&quot;Freq&quot;) %&gt;%
+        mutate(Percentage= (Freq/sum(Freq)) * 100)
+dm$Country &lt;- &quot;Nepal&quot;
+
+# Factorize data
+dm$IncomeGroup &lt;- as.factor(dm$IncomeGroup)
+
+head(dm)</code></pre>
+<pre><code>## # A tibble: 5 x 4
+##   IncomeGroup   Freq Percentage Country
+##   &lt;fct&gt;        &lt;int&gt;      &lt;dbl&gt; &lt;chr&gt;  
+## 1 0-10000     409102      54.8  Nepal  
+## 2 10000-20000 231688      31.0  Nepal  
+## 3 20000-30000  76124      10.2  Nepal  
+## 4 30000-50000  21943       2.94 Nepal  
+## 5 50000-ABOVE   8280       1.11 Nepal</code></pre>
+</div>
+<div id="plot-household-proportion-by-incomegroup" class="section level4">
+<h4>Plot Household Proportion by IncomeGroup</h4>
+<pre class="r"><code># PLOT ---
+p6 &lt;- ggplot(dm, aes(x=Country, y=Percentage)) + 
+        geom_bar(aes(fill=IncomeGroup), stat=&quot;identity&quot;, color=NA, width=0.8, size=0.5) + 
+        scale_fill_manual(values=cpalette.inc) +
+        theme(
+          axis.text.x = element_blank(),
+          axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+          plot.title = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;), 
+          strip.text = element_text(size=10, color=&quot;#000000&quot;),
+          strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+          panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+          legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, &quot;cm&quot;),
+          legend.position = &quot;right&quot;) +
+      ylab(&quot;Percentage of Household&quot;) +
+      xlab(&quot;IncomeGroup&quot;) + 
+      ggtitle(&quot;&quot;) 
+
+p6</code></pre>
+<p><img src="03_01_baseline_data_files/figure-html/unnamed-chunk-17-1.png" width="288" style="display: block; margin: auto;" /></p>
+</div>
+<div id="household-population-distribution-by-educationlevel" class="section level4">
+<h4>Household Population Distribution by EducationLevel</h4>
+<pre class="r"><code>dm &lt;- dat %&gt;% 
+        dplyr::count(EducationLevel, sort=TRUE, name=&quot;Freq&quot;) %&gt;%
+        mutate(Percentage= (Freq/sum(Freq)) * 100)
+dm$Country &lt;- &quot;Nepal&quot;
+
+# Factorize data
+dm$IncomeGroup &lt;- as.factor(dm$EducationLevel)
+
+head(dm)</code></pre>
+<pre><code>## # A tibble: 5 x 5
+##   EducationLevel    Freq Percentage Country IncomeGroup    
+##   &lt;chr&gt;            &lt;int&gt;      &lt;dbl&gt; &lt;chr&gt;   &lt;fct&gt;          
+## 1 Illiterate      263157      35.2  Nepal   Illiterate     
+## 2 Primary         171947      23.0  Nepal   Primary        
+## 3 NonFormal-Other 160562      21.5  Nepal   NonFormal-Other
+## 4 Secondary       135970      18.2  Nepal   Secondary      
+## 5 University       15501       2.07 Nepal   University</code></pre>
+</div>
+<div id="plot-household-proportion-by-educationlevel" class="section level4">
+<h4>Plot Household Proportion by EducationLevel</h4>
+<pre class="r"><code># PLOT ---
+p7 &lt;- ggplot(dm, aes(x=Country, y=Percentage)) + 
+        geom_bar(aes(fill=EducationLevel), stat=&quot;identity&quot;, color=NA, width=0.8, size=0.5) + 
+        scale_fill_manual(values=cpalette.edu) +
+        theme(
+          axis.text.x = element_blank(),
+          axis.text.y = element_text(size = 10, color=&quot;#000000&quot;),
+          axis.title = element_text(size = 10, color=&quot;#000000&quot;),
+          plot.title = element_text(size = 10, color=&quot;#000000&quot;, hjust=0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.ticks = element_line(size=0.4, color=&quot;#000000&quot;), 
+          strip.text = element_text(size=10, color=&quot;#000000&quot;),
+          strip.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#FFFFFF&quot;),
+          panel.background = element_rect(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;),
+          legend.text = element_text(size = 10, color=&quot;#000000&quot;),
+          legend.title = element_blank(),
+          legend.key.size = unit(0.5, &quot;cm&quot;),
+          legend.position = &quot;right&quot;) +
+      ylab(&quot;Percentage of Household&quot;) +
+      xlab(&quot;EducationLevel&quot;) + 
+      ggtitle(&quot;&quot;) 
+
+p7</code></pre>
+<p><img src="03_01_baseline_data_files/figure-html/unnamed-chunk-19-1.png" width="288" style="display: block; margin: auto;" /></p>
+</div>
+<div id="get-abundance-by-ethnicity-and-fuel-type" class="section level4">
+<h4>Get Abundance by Ethnicity and Fuel Type</h4>
+<pre class="r"><code>df &lt;- dat %&gt;% dplyr::count(Ethnicity, source_cooking_fuel_post_eq, sort=FALSE, name=&quot;Freq&quot;)
+dm &lt;- reshape2::dcast(data=df, formula=Ethnicity ~ source_cooking_fuel_post_eq, fun.aggregate=sum, value.var=&quot;Freq&quot;)
+head(dm)</code></pre>
+<pre><code>##       Ethnicity   Wood LP Gas Gobar Gas Kerosene Electricity Others
+## 1         Newar  50677  16389      1441       25          39     32
+## 2       Brahman  86186  20236      3156       39          30     78
+## 3       Madhesi   2501   1263        13        6           5     12
+## 4       Chettri 115935  17083      1252       41          48     80
+## 5 Muslim-Others   9742   1220        62        2           4      1
+## 6  Gurung-Magar  74867   6135       770       18          13     37</code></pre>
+</div>
+<div id="total-relative-transformation" class="section level4">
+<h4>Total (Relative) Transformation</h4>
+<pre class="r"><code># TOTAL TRANSFORMATION ---
+dmt &lt;- vegan::decostand(dm[,2:7], &quot;total&quot;)
+rownames(dmt) &lt;- dm$Ethnicity
+dmt &lt;- dmt[match(rev(type_ethnicity), rownames(dmt)),]
+                               
+dmt</code></pre>
+<pre><code>##                    Wood     LP Gas   Gobar Gas     Kerosene  Electricity
+## Chepang-Thami 0.9847605 0.01243764 0.001571790 0.0001366774 0.0000000000
+## Tamang        0.9354634 0.05919407 0.004342939 0.0001817530 0.0001817530
+## Rai-Limbu     0.9295654 0.06128091 0.007986484 0.0002764552 0.0000614345
+## Dalit         0.9338008 0.05387052 0.011321774 0.0003683874 0.0001227958
+## Gurung-Magar  0.9147972 0.07496334 0.009408602 0.0002199413 0.0001588465
+## Muslim-Others 0.8831475 0.11059741 0.005620524 0.0001813072 0.0003626145
+## Chettri       0.8623614 0.12706878 0.009312774 0.0003049710 0.0003570393
+## Madhesi       0.6581579 0.33236842 0.003421053 0.0015789474 0.0013157895
+## Brahman       0.7854728 0.18442470 0.028762816 0.0003554340 0.0002734108
+## Newar         0.7386995 0.23889626 0.021004912 0.0003644156 0.0005684883
+##                     Others
+## Chepang-Thami 1.093419e-03
+## Tamang        6.361354e-04
+## Rai-Limbu     8.293657e-04
+## Dalit         5.157424e-04
+## Gurung-Magar  4.521017e-04
+## Muslim-Others 9.065361e-05
+## Chettri       5.950654e-04
+## Madhesi       3.157895e-03
+## Brahman       7.108681e-04
+## Newar         4.664519e-04</code></pre>
+</div>
+<div id="heatmap-total-relative-salce-abundance-by-ethnicity-and-fueltype" class="section level4">
+<h4>Heatmap Total (Relative) Salce Abundance by Ethnicity and FuelType</h4>
+<pre class="r"><code>jColFun &lt;- colorRampPalette(brewer.pal(n = 9, &quot;Reds&quot;))
+
+heatmap.2(as.matrix(dmt), col = jColFun(256), margin=c(8,15),
+          Colv=TRUE, Rowv = FALSE, cexRow=1, cexCol=1,
+          dendrogram =&quot;none&quot;, trace=&quot;none&quot;, main=&quot;&quot;,
+          hclustfun = function(x) hclust(x, method = &quot;ward.D2&quot;), 
+          distfun = function(x) dist(x, method = &quot;euclidean&quot;),
+          colsep=c(1:50), rowsep=c(1:50),
+          sepcolor=&quot;#BDBDBD&quot;, sepwidth=c(0.0005,0.0005), 
+          key=&quot;TRUE&quot;, keysize=1, density.info=&quot;none&quot;, 
+          key.title = NA, key.xlab = NA, key.ylab = NA,
+          key.par=list(mgp=c(1.5, 0.5, 0), mar=c(2.5, 2.5, 1, 0)))</code></pre>
+<p><img src="03_01_baseline_data_files/figure-html/unnamed-chunk-22-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="get-distance-matrix-of-ethnicity-based-on-fueltype-usage" class="section level4">
+<h4>Get Distance Matrix of Ethnicity based on FuelType Usage</h4>
+<pre class="r"><code># LOG TRANSFORMATION ---
+dml &lt;- vegan::decostand(dm[,2:7], &quot;log&quot;)
+dist_dml &lt;- vegan::vegdist(x=as.matrix(dml), method=&quot;euclidean&quot;, binary=FALSE, diag=TRUE, upper=TRUE, na.rm = FALSE)
+dist_dml &lt;- as.matrix(dist_dml)
+colnames(dist_dml) &lt;- rownames(dist_dml) &lt;- dm$Ethnicity</code></pre>
+</div>
+<div id="correlation-by-ethnicity" class="section level4">
+<h4>Correlation by Ethnicity</h4>
+<pre class="r"><code>jColFun &lt;- colorRampPalette(brewer.pal(n = 9, &quot;Blues&quot;))
+
+heatmap.2(dist_dml, col=rev(jColFun(256)), margin=c(8,15),
+          Colv=TRUE, Rowv = TRUE, cexRow=1, cexCol=1,
+          dendrogram =&quot;both&quot;, trace=&quot;none&quot;, main=&quot;&quot;,
+          hclustfun = function(x) hclust(x, method = &quot;ward.D2&quot;), 
+          distfun = function(x) dist(x, method = &quot;euclidean&quot;),
+          colsep=c(1:50), rowsep=c(1:50),
+          sepcolor=&quot;#FFFFFF&quot;, sepwidth=c(0.0005,0.0005), 
+          key=&quot;TRUE&quot;, keysize=1, density.info=&quot;none&quot;, symkey=0,
+          key.title = NA, key.xlab = NA, key.ylab = NA,
+          key.par=list(mgp=c(1.5, 0.5, 0), mar=c(2.5, 2.5, 1, 0)))</code></pre>
+<p><img src="03_01_baseline_data_files/figure-html/unnamed-chunk-24-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -5,6 +5,18 @@ navbar:
   left:
   - text: "Home"
     href: index.html
+  - text: "Pre-process"
+    href: 01_01_data_preprocess.html
+  - text: "Maps"
+    href: 02_02_maps_plot.html
+  - text: "Baseline Data"
+    href: 03_01_baseline_data.html
+  - text: "Ordination"
+    href: 04_01_ordination_analysis.html
+  - text: "Alpha Diversity"
+    href: 05_01_alpha_diversity.html
+  - text: "Annova"
+    href: 06_01_annova_tests.html
 output:
   html_document:
 theme: cosmo
