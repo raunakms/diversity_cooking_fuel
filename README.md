@@ -1,7 +1,7 @@
 # Diversity in cooking-fuel choice and group segmentation for promoting cleaner cooking
 
-**Ratna K. Shrestha** (Vancouver School of Economics, University of British Columbia)
-**Raunak Shrestha** (Department of Urologic Sciences, University of British Columbia; Vancouver Prostate)
+**Ratna K. Shrestha** (Vancouver School of Economics, University of British Columbia)<br/>
+**Raunak Shrestha** (Department of Urologic Sciences, University of British Columbia; Vancouver Prostate)<br/>
 
 
 ### Abstract
