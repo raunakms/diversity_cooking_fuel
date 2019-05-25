@@ -326,7 +326,7 @@ $(document).ready(function () {
 <div id="dataset" class="section level3">
 <h3>Dataset</h3>
 <p>Following the 7.8 Mw Gorkha Earthquake in Nepal on April 25, 2015, the Kathmandu Living Labs in collaboration with the National Planning Commission (the Government of Nepal), carried out the largest household survey ever done in Nepal using mobile technology. Although the primary objective of this survey was to assess damages inflicted by the quake and identify beneficiaries eligible for government’s housing reconstruction grants, the data contain many other valuable socio-economic information, including the types of fuel used by households for cooking and lighting. The survey was carried out between January and March of 2016, about 10 months after the quake that killed over 9,000 people. The survey includes the information on 762,106 households (about 3.6 million individuals) from the 11 most earthquake-affected districts of Nepal excluding the Kathmandu valley.</p>
-<p>The data for all 11 districts were downloaded from the 2015 Nepal Earthquake: Open Data Portal (<a href="http://eq2015.npc.gov.np/" class="uri">http://eq2015.npc.gov.np/</a>; accessed in September 2018). For this study, we use the following two data files:</p>
+<p>The data for all 11 districts were downloaded from the <strong>2015 Nepal Earthquake: Open Data Portal</strong> (<a href="http://eq2015.npc.gov.np/" class="uri">http://eq2015.npc.gov.np/</a>). For this study, we use the following two data files:</p>
 <ol style="list-style-type: decimal">
 <li><strong>csv_household_demographics.csv</strong>; this file contains information on household size, ethnicity, household income, and gender, education and age of household head, and</li>
 <li><strong>csv_household_resources.csv</strong>; this file contains data on the type of fuel used by households for cooking and lighting, source of drinking water, and the ownership of electronic appliances and motor vehicles.</li>
@@ -358,8 +358,8 @@ $(document).ready(function () {
 </ul>
 <p><strong>Geo-climatic Region</strong>: Similarly, the data provide information on municipality (and ward-level) location which allows us to divide the entire earthquake-affected 11 contiguous districts into two geo-climatic regions:</p>
 <ul>
-<li>Mountainous and</li>
-<li>Himalayan.</li>
+<li>Himalayan and</li>
+<li>Hill.</li>
 </ul>
 <p><strong>Income Group</strong>: As for income levels, we follow the original dataset’s categorization that breaks the monthly income of the households into 5 levels:</p>
 <ul>
@@ -424,13 +424,13 @@ head(dat.geo)</code></pre>
 ## 4          12   Okhaldhunga      1204            Likhu Rural Municipality
 ## 5          12   Okhaldhunga      1205    Manebhanjyang Rural Municipality
 ## 6          12   Okhaldhunga      1206           Molung Rural Municipality
-##     Region
-## 1 Mountain
-## 2 Mountain
-## 3 Mountain
-## 4 Mountain
-## 5 Mountain
-## 6 Mountain</code></pre>
+##   Region
+## 1   Hill
+## 2   Hill
+## 3   Hill
+## 4   Hill
+## 5   Hill
+## 6   Hill</code></pre>
 </div>
 <div id="load-household-data" class="section level4">
 <h4>Load Household Data</h4>
@@ -499,12 +499,12 @@ dat.household &lt;- dat.household %&gt;% dplyr::mutate_all(as.character)
 
 head(dat.household)</code></pre>
 <pre><code>##     household_id    District GeoRegion    Ethnicity IncomeGroup
-## 1 12010100001101 Okhaldhunga  Mountain    Rai-Limbu     0-10000
-## 2 12010100002101 Okhaldhunga  Mountain    Rai-Limbu     0-10000
-## 3 12010100003101 Okhaldhunga  Mountain Gurung-Magar     0-10000
-## 4 12010100004101 Okhaldhunga  Mountain Gurung-Magar     0-10000
-## 5 12010100005101 Okhaldhunga  Mountain Gurung-Magar     0-10000
-## 6 12010100006101 Okhaldhunga  Mountain Gurung-Magar     0-10000
+## 1 12010100001101 Okhaldhunga      Hill    Rai-Limbu     0-10000
+## 2 12010100002101 Okhaldhunga      Hill    Rai-Limbu     0-10000
+## 3 12010100003101 Okhaldhunga      Hill Gurung-Magar     0-10000
+## 4 12010100004101 Okhaldhunga      Hill Gurung-Magar     0-10000
+## 5 12010100005101 Okhaldhunga      Hill Gurung-Magar     0-10000
+## 6 12010100006101 Okhaldhunga      Hill Gurung-Magar     0-10000
 ##   EducationLevel source_cooking_fuel_post_eq
 ## 1     Illiterate                        Wood
 ## 2     Illiterate                        Wood
@@ -526,12 +526,12 @@ head(df)</code></pre>
 <pre><code>## # A tibble: 6 x 6
 ##   Ethnicity EducationLevel GeoRegion IncomeGroup source_cooking_fuel~  Freq
 ##   &lt;chr&gt;     &lt;chr&gt;          &lt;chr&gt;     &lt;chr&gt;       &lt;chr&gt;                &lt;int&gt;
-## 1 Brahman   Illiterate     Himalayan 0-10000     Electricity              1
-## 2 Brahman   Illiterate     Himalayan 0-10000     Gobar Gas               24
-## 3 Brahman   Illiterate     Himalayan 0-10000     Kerosene                 1
-## 4 Brahman   Illiterate     Himalayan 0-10000     LP Gas                 118
-## 5 Brahman   Illiterate     Himalayan 0-10000     Others                   4
-## 6 Brahman   Illiterate     Himalayan 0-10000     Wood                  5608</code></pre>
+## 1 Brahman   Illiterate     Hill      0-10000     Gobar Gas              159
+## 2 Brahman   Illiterate     Hill      0-10000     Kerosene                 5
+## 3 Brahman   Illiterate     Hill      0-10000     LP Gas                 375
+## 4 Brahman   Illiterate     Hill      0-10000     Others                   3
+## 5 Brahman   Illiterate     Hill      0-10000     Wood                  7932
+## 6 Brahman   Illiterate     Hill      10000-20000 Gobar Gas              213</code></pre>
 </div>
 <div id="impute-missing-values" class="section level4">
 <h4>Impute Missing Values</h4>
@@ -562,12 +562,12 @@ dim(df)</code></pre>
 <pre><code>## # A tibble: 6 x 6
 ##   Ethnicity EducationLevel GeoRegion IncomeGroup source_cooking_fuel~  Freq
 ##   &lt;chr&gt;     &lt;chr&gt;          &lt;chr&gt;     &lt;chr&gt;       &lt;chr&gt;                &lt;dbl&gt;
-## 1 Tamang    University     Mountain  50000-ABOVE Electricity              0
-## 2 Tamang    University     Mountain  50000-ABOVE Gobar Gas                0
-## 3 Tamang    University     Mountain  50000-ABOVE Kerosene                 0
-## 4 Tamang    University     Mountain  50000-ABOVE LP Gas                   8
-## 5 Tamang    University     Mountain  50000-ABOVE Others                   0
-## 6 Tamang    University     Mountain  50000-ABOVE Wood                     8</code></pre>
+## 1 Tamang    University     Himalayan 50000-ABOVE Electricity              0
+## 2 Tamang    University     Himalayan 50000-ABOVE Gobar Gas                0
+## 3 Tamang    University     Himalayan 50000-ABOVE Kerosene                 0
+## 4 Tamang    University     Himalayan 50000-ABOVE LP Gas                  12
+## 5 Tamang    University     Himalayan 50000-ABOVE Others                   0
+## 6 Tamang    University     Himalayan 50000-ABOVE Wood                    11</code></pre>
 <pre class="r"><code># WRITE OUTPUT ---
 file.output &lt;- file.path(dir.output, &quot;household_level_data_frequency.tsv&quot;)
 write.table(df, file.output, sep = &quot;\t&quot;, row.names = FALSE, col.names = TRUE, 
@@ -584,19 +584,19 @@ colnames(dm) &lt;- c(&quot;Ethnicity&quot;, &quot;EducationLevel&quot;, &quot;Ge
 
 head(dm)</code></pre>
 <pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas
-## 1   Brahman     Illiterate Himalayan     0-10000           1       24
-## 2   Brahman     Illiterate Himalayan 10000-20000           0       20
-## 3   Brahman     Illiterate Himalayan 20000-30000           0        6
-## 4   Brahman     Illiterate Himalayan 30000-50000           0        1
-## 5   Brahman     Illiterate Himalayan 50000-ABOVE           0        1
-## 6   Brahman     Illiterate  Mountain     0-10000           0      159
+## 1   Brahman     Illiterate      Hill     0-10000           0      159
+## 2   Brahman     Illiterate      Hill 10000-20000           0      213
+## 3   Brahman     Illiterate      Hill 20000-30000           1       95
+## 4   Brahman     Illiterate      Hill 30000-50000           0       27
+## 5   Brahman     Illiterate      Hill 50000-ABOVE           0        9
+## 6   Brahman     Illiterate Himalayan     0-10000           1       24
 ##   Kerosene LPGas Others Wood
-## 1        1   118      4 5608
-## 2        0   188      0 2077
-## 3        0    93      0  718
-## 4        0    38      0  212
-## 5        0    23      0   94
-## 6        5   375      3 7932</code></pre>
+## 1        5   375      3 7932
+## 2        1   666      1 3245
+## 3        0   336      0 1038
+## 4        0   109      0  355
+## 5        0    69      1  156
+## 6        1   118      4 5608</code></pre>
 <pre class="r"><code># WRITE OUTPUT ---
 file.output &lt;- file.path(dir.output, &quot;household_level_data_frequency_table.tsv&quot;)
 write.table(dm, file.output, sep = &quot;\t&quot;, row.names = FALSE, col.names = TRUE, 

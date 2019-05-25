@@ -350,7 +350,7 @@ dir.output &lt;- file.path(dir.wrk, &quot;output&quot;)</code></pre>
 type_fuel &lt;- c(&quot;Wood&quot;,&quot;Electricity&quot;,&quot;BioGas&quot;,&quot;Keroscene&quot;,&quot;LPGas&quot;,&quot;Others&quot;)
 type_inc &lt;- c(&quot;0-10000&quot;,&quot;10000-20000&quot;,&quot;20000-30000&quot;,&quot;30000-50000&quot;,&quot;50000-ABOVE&quot;)
 type_edu &lt;- c(&quot;Illiterate&quot;,&quot;NonFormal-Other&quot;,&quot;Primary&quot;,&quot;Secondary&quot;,&quot;University&quot;)
-type_geo &lt;- c(&quot;Himalayan&quot;,&quot;Mountain&quot;)
+type_geo &lt;- c(&quot;Himalayan&quot;,&quot;Hill&quot;)
 
 cpalette.eth &lt;- c(&quot;#e31a1c&quot;,&quot;#a6cee3&quot;,&quot;#1f78b4&quot;,&quot;#b2df8a&quot;,&quot;#33a02c&quot;,
                   &quot;#fb9a99&quot;,&quot;#fdbf6f&quot;,&quot;#ff7f00&quot;,&quot;#cab2d6&quot;,&quot;#6a3d9a&quot;)
@@ -365,19 +365,19 @@ dat &lt;- dat[-which(rowSums(dat[,5:10]) == 0),]
 
 head(dat)</code></pre>
 <pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas
-## 1   Brahman     Illiterate Himalayan     0-10000           1       24
-## 2   Brahman     Illiterate Himalayan 10000-20000           0       20
-## 3   Brahman     Illiterate Himalayan 20000-30000           0        6
-## 4   Brahman     Illiterate Himalayan 30000-50000           0        1
-## 5   Brahman     Illiterate Himalayan 50000-ABOVE           0        1
-## 6   Brahman     Illiterate  Mountain     0-10000           0      159
+## 1   Brahman     Illiterate      Hill     0-10000           0      159
+## 2   Brahman     Illiterate      Hill 10000-20000           0      213
+## 3   Brahman     Illiterate      Hill 20000-30000           1       95
+## 4   Brahman     Illiterate      Hill 30000-50000           0       27
+## 5   Brahman     Illiterate      Hill 50000-ABOVE           0        9
+## 6   Brahman     Illiterate Himalayan     0-10000           1       24
 ##   Kerosene LPGas Others Wood
-## 1        1   118      4 5608
-## 2        0   188      0 2077
-## 3        0    93      0  718
-## 4        0    38      0  212
-## 5        0    23      0   94
-## 6        5   375      3 7932</code></pre>
+## 1        5   375      3 7932
+## 2        1   666      1 3245
+## 3        0   336      0 1038
+## 4        0   109      0  355
+## 5        0    69      1  156
+## 6        1   118      4 5608</code></pre>
 </div>
 <div id="transform-data-to-log-scale" class="section level4">
 <h4>Transform Data to Log Scale</h4>
@@ -387,19 +387,19 @@ dml$Ethnicity &lt;- factor(dml$Ethnicity, levels=type_eth)
 
 head(dml)</code></pre>
 <pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas
-## 1   Brahman     Illiterate Himalayan     0-10000           1 5.584963
-## 2   Brahman     Illiterate Himalayan 10000-20000           0 5.321928
-## 3   Brahman     Illiterate Himalayan 20000-30000           0 3.584963
-## 4   Brahman     Illiterate Himalayan 30000-50000           0 1.000000
-## 5   Brahman     Illiterate Himalayan 50000-ABOVE           0 1.000000
-## 6   Brahman     Illiterate  Mountain     0-10000           0 8.312883
-##   Kerosene    LPGas   Others      Wood
-## 1 1.000000 7.882643 3.000000 13.453271
-## 2 0.000000 8.554589 0.000000 12.020286
-## 3 0.000000 7.539159 0.000000 10.487840
-## 4 0.000000 6.247928 0.000000  8.727920
-## 5 0.000000 5.523562 0.000000  7.554589
-## 6 3.321928 9.550747 2.584963 13.953469</code></pre>
+## 1   Brahman     Illiterate      Hill     0-10000           0 8.312883
+## 2   Brahman     Illiterate      Hill 10000-20000           0 8.734710
+## 3   Brahman     Illiterate      Hill 20000-30000           1 7.569856
+## 4   Brahman     Illiterate      Hill 30000-50000           0 5.754888
+## 5   Brahman     Illiterate      Hill 50000-ABOVE           0 4.169925
+## 6   Brahman     Illiterate Himalayan     0-10000           1 5.584963
+##   Kerosene     LPGas   Others      Wood
+## 1 3.321928  9.550747 2.584963 13.953469
+## 2 1.000000 10.379378 1.000000 12.664003
+## 3 0.000000  9.392317 0.000000 11.019591
+## 4 0.000000  7.768184 0.000000  9.471675
+## 5 0.000000  7.108524 1.000000  8.285402
+## 6 1.000000  7.882643 3.000000 13.453271</code></pre>
 </div>
 <div id="kruskal-wallis-test-one-way-anova-on-abundance-data" class="section level4">
 <h4>Kruskal-Wallis Test (One-way ANOVA) on Abundance Data</h4>
@@ -442,19 +442,19 @@ dmt$Ethnicity &lt;- factor(dmt$Ethnicity, levels=type_eth)
 
 head(dmt)</code></pre>
 <pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup  Electricity    GobarGas
-## 1   Brahman     Illiterate Himalayan     0-10000 0.0001737318 0.004169562
-## 2   Brahman     Illiterate Himalayan 10000-20000 0.0000000000 0.008752735
-## 3   Brahman     Illiterate Himalayan 20000-30000 0.0000000000 0.007343941
-## 4   Brahman     Illiterate Himalayan 30000-50000 0.0000000000 0.003984064
-## 5   Brahman     Illiterate Himalayan 50000-ABOVE 0.0000000000 0.008474576
-## 6   Brahman     Illiterate  Mountain     0-10000 0.0000000000 0.018763276
+## 1   Brahman     Illiterate      Hill     0-10000 0.0000000000 0.018763276
+## 2   Brahman     Illiterate      Hill 10000-20000 0.0000000000 0.051623849
+## 3   Brahman     Illiterate      Hill 20000-30000 0.0006802721 0.064625850
+## 4   Brahman     Illiterate      Hill 30000-50000 0.0000000000 0.054989817
+## 5   Brahman     Illiterate      Hill 50000-ABOVE 0.0000000000 0.038297872
+## 6   Brahman     Illiterate Himalayan     0-10000 0.0001737318 0.004169562
 ##       Kerosene      LPGas       Others      Wood
-## 1 0.0001737318 0.02050035 0.0006949270 0.9742877
-## 2 0.0000000000 0.08227571 0.0000000000 0.9089716
-## 3 0.0000000000 0.11383109 0.0000000000 0.8788250
-## 4 0.0000000000 0.15139442 0.0000000000 0.8446215
-## 5 0.0000000000 0.19491525 0.0000000000 0.7966102
-## 6 0.0005900401 0.04425301 0.0003540241 0.9360397</code></pre>
+## 1 0.0005900401 0.04425301 0.0003540241 0.9360397
+## 2 0.0002423655 0.16141541 0.0002423655 0.7864760
+## 3 0.0000000000 0.22857143 0.0000000000 0.7061224
+## 4 0.0000000000 0.22199593 0.0000000000 0.7230143
+## 5 0.0000000000 0.29361702 0.0042553191 0.6638298
+## 6 0.0001737318 0.02050035 0.0006949270 0.9742877</code></pre>
 </div>
 <div id="perform-pairwise-wilcoxn-rank-sum-test" class="section level4">
 <h4>Perform Pairwise Wilcoxn Rank Sum Test</h4>
@@ -535,13 +535,13 @@ df$pvalue.adj &lt;- p.adjust(p = df$pvalue, method = &quot;bonferroni&quot;, n =
 
 head(df)</code></pre>
 <pre><code>##      Ethnicity1 Ethnicity2 pvalue pvalue.adj
-## 1       Brahman      Newar  0.017      0.765
+## 1       Brahman      Newar  0.018      0.810
 ## 2       Madhesi      Newar  0.001      0.045
-## 3       Chettri      Newar  0.081      1.000
+## 3       Chettri      Newar  0.070      1.000
 ## 4 Muslim-Others      Newar  0.001      0.045
-## 5  Gurung-Magar      Newar  0.010      0.450
+## 5  Gurung-Magar      Newar  0.018      0.810
 ## 6         Dalit      Newar  0.004      0.180</code></pre>
-<pre class="r"><code># Write Table ---
+<pre class="r"><code># Write Output ---
 file.output &lt;- file.path(dir.output, &quot;stats_abundance_permanova_posthoc.tsv&quot;)
 write.table(df, file.output, sep = &quot;\t&quot;, row.names = FALSE, col.names = TRUE, 
     quote = FALSE)</code></pre>

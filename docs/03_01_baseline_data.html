@@ -346,7 +346,7 @@ dir.output &lt;- file.path(dir.wrk, &quot;data/data_processed&quot;)</code></pre
 <pre class="r"><code>type_ethnicity &lt;- c(&quot;Newar&quot;,&quot;Brahman&quot;,&quot;Madhesi&quot;,&quot;Chettri&quot;,&quot;Muslim−Others&quot;,
                     &quot;Gurung−Magar&quot;,&quot;Dalit&quot;,&quot;Rai−Limbu&quot;,&quot;Tamang&quot;,&quot;Chepang−Thami&quot;)
 type_fuel &lt;- c(&quot;Wood&quot;,&quot;LP Gas&quot;,&quot;Gobar Gas&quot;,&quot;Kerosene&quot;,&quot;Electricity&quot;,&quot;Others&quot;)
-type_geo &lt;- c(&quot;Himalayan&quot;,&quot;Mountain&quot;)
+type_geo &lt;- c(&quot;Himalayan&quot;,&quot;Hill&quot;)
 
 cpalette.eth &lt;- c(&quot;#e31a1c&quot;,&quot;#a6cee3&quot;,&quot;#1f78b4&quot;,&quot;#b2df8a&quot;,&quot;#33a02c&quot;,
                   &quot;#fb9a99&quot;,&quot;#fdbf6f&quot;,&quot;#ff7f00&quot;,&quot;#cab2d6&quot;,&quot;#6a3d9a&quot;)
@@ -364,12 +364,12 @@ dat$Ethnicity &lt;- factor(dat$Ethnicity, levels = type_ethnicity)
 
 head(dat)</code></pre>
 <pre><code>##     household_id    District GeoRegion    Ethnicity IncomeGroup
-## 1 12010100001101 Okhaldhunga  Mountain    Rai-Limbu     0-10000
-## 2 12010100002101 Okhaldhunga  Mountain    Rai-Limbu     0-10000
-## 3 12010100003101 Okhaldhunga  Mountain Gurung-Magar     0-10000
-## 4 12010100004101 Okhaldhunga  Mountain Gurung-Magar     0-10000
-## 5 12010100005101 Okhaldhunga  Mountain Gurung-Magar     0-10000
-## 6 12010100006101 Okhaldhunga  Mountain Gurung-Magar     0-10000
+## 1 12010100001101 Okhaldhunga      Hill    Rai-Limbu     0-10000
+## 2 12010100002101 Okhaldhunga      Hill    Rai-Limbu     0-10000
+## 3 12010100003101 Okhaldhunga      Hill Gurung-Magar     0-10000
+## 4 12010100004101 Okhaldhunga      Hill Gurung-Magar     0-10000
+## 5 12010100005101 Okhaldhunga      Hill Gurung-Magar     0-10000
+## 6 12010100006101 Okhaldhunga      Hill Gurung-Magar     0-10000
 ##   EducationLevel source_cooking_fuel_post_eq
 ## 1     Illiterate                        Wood
 ## 2     Illiterate                        Wood
@@ -551,12 +551,12 @@ head(dm)</code></pre>
 ## # Groups:   Ethnicity, GeoRegion [1]
 ##   Ethnicity GeoRegion source_cooking_fuel_post_eq  Freq Proportion
 ##   &lt;fct&gt;     &lt;fct&gt;     &lt;fct&gt;                       &lt;int&gt;      &lt;dbl&gt;
-## 1 Newar     Himalayan Wood                        20763   0.798   
-## 2 Newar     Himalayan LP Gas                       5065   0.195   
-## 3 Newar     Himalayan Gobar Gas                     127   0.00488 
-## 4 Newar     Himalayan Kerosene                       11   0.000423
-## 5 Newar     Himalayan Electricity                    25   0.000961
-## 6 Newar     Himalayan Others                         18   0.000692</code></pre>
+## 1 Newar     Hill      Wood                        29914   0.702   
+## 2 Newar     Hill      LP Gas                      11324   0.266   
+## 3 Newar     Hill      Gobar Gas                    1314   0.0308  
+## 4 Newar     Hill      Kerosene                       14   0.000329
+## 5 Newar     Hill      Electricity                    14   0.000329
+## 6 Newar     Hill      Others                         14   0.000329</code></pre>
 </div>
 <div id="plot-household-proportion-by-ethnicity-geo-climatic-region-and-fuel-type" class="section level4">
 <h4>Plot Household Proportion by Ethnicity, Geo-climatic Region, and Fuel Type</h4>
