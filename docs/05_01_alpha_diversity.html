@@ -348,7 +348,7 @@ dir.output &lt;- file.path(dir.wrk, &quot;data/data_processed&quot;)</code></pre
 type_fuel &lt;- c(&quot;Wood&quot;,&quot;LP Gas&quot;,&quot;Gobar Gas&quot;,&quot;Kerosene&quot;,&quot;Electricity&quot;,&quot;Others&quot;)
 type_inc &lt;- c(&quot;0-10000&quot;,&quot;10000-20000&quot;,&quot;20000-30000&quot;,&quot;30000-50000&quot;,&quot;50000-ABOVE&quot;)
 type_edu &lt;- c(&quot;Illiterate&quot;,&quot;NonFormal-Other&quot;,&quot;Primary&quot;,&quot;Secondary&quot;,&quot;University&quot;)
-type_geo &lt;- c(&quot;Himalayan&quot;,&quot;Hill&quot;)
+type_geo &lt;- c(&quot;Himalayan&quot;,&quot;Hilly&quot;)
 
 cpalette.eth &lt;- c(&quot;#e31a1c&quot;,&quot;#a6cee3&quot;,&quot;#1f78b4&quot;,&quot;#b2df8a&quot;,&quot;#33a02c&quot;,
                   &quot;#fb9a99&quot;,&quot;#fdbf6f&quot;,&quot;#ff7f00&quot;,&quot;#cab2d6&quot;,&quot;#6a3d9a&quot;)
@@ -363,11 +363,11 @@ dat &lt;- dat[-which(rowSums(dat[,5:10]) == 0),]
 
 head(dat)</code></pre>
 <pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas
-## 1   Brahman     Illiterate      Hill     0-10000           0      159
-## 2   Brahman     Illiterate      Hill 10000-20000           0      213
-## 3   Brahman     Illiterate      Hill 20000-30000           1       95
-## 4   Brahman     Illiterate      Hill 30000-50000           0       27
-## 5   Brahman     Illiterate      Hill 50000-ABOVE           0        9
+## 1   Brahman     Illiterate     Hilly     0-10000           0      159
+## 2   Brahman     Illiterate     Hilly 10000-20000           0      213
+## 3   Brahman     Illiterate     Hilly 20000-30000           1       95
+## 4   Brahman     Illiterate     Hilly 30000-50000           0       27
+## 5   Brahman     Illiterate     Hilly 50000-ABOVE           0        9
 ## 6   Brahman     Illiterate Himalayan     0-10000           1       24
 ##   Kerosene LPGas Others Wood
 ## 1        5   375      3 7932
@@ -390,11 +390,11 @@ dat$Ethnicity &lt;- factor(dat$Ethnicity, levels=mu$Ethnicity)
 
 head(dat)</code></pre>
 <pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas
-## 1   Brahman     Illiterate      Hill     0-10000           0      159
-## 2   Brahman     Illiterate      Hill 10000-20000           0      213
-## 3   Brahman     Illiterate      Hill 20000-30000           1       95
-## 4   Brahman     Illiterate      Hill 30000-50000           0       27
-## 5   Brahman     Illiterate      Hill 50000-ABOVE           0        9
+## 1   Brahman     Illiterate     Hilly     0-10000           0      159
+## 2   Brahman     Illiterate     Hilly 10000-20000           0      213
+## 3   Brahman     Illiterate     Hilly 20000-30000           1       95
+## 4   Brahman     Illiterate     Hilly 30000-50000           0       27
+## 5   Brahman     Illiterate     Hilly 50000-ABOVE           0        9
 ## 6   Brahman     Illiterate Himalayan     0-10000           1       24
 ##   Kerosene LPGas Others Wood ShannonIndex
 ## 1        5   375      3 7932    0.2816436

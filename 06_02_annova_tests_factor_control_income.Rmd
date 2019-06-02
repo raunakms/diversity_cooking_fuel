@@ -38,7 +38,7 @@ type_eth <- c("Newar","Brahman","Madhesi","Chettri","Muslim−Others",
 type_fuel <- c("Wood","Electricity","BioGas","Keroscene","LPGas","Others")
 type_inc <- c("0-10000","10000-20000","20000-30000","30000-50000","50000-ABOVE")
 type_edu <- c("Illiterate","NonFormal-Other","Primary","Secondary","University")
-type_geo <- c("Himalayan","Hill")
+type_geo <- c("Himalayan","Hilly")
 
 cpalette.eth <- c("#e31a1c","#a6cee3","#1f78b4","#b2df8a","#33a02c",
                   "#fb9a99","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a")
