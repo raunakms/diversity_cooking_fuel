@@ -456,8 +456,8 @@ head(dmt)</code></pre>
 ## 5 0.0000000000 0.29361702 0.0042553191 0.6638298
 ## 6 0.0001737318 0.02050035 0.0006949270 0.9742877</code></pre>
 </div>
-<div id="perform-pairwise-wilcoxn-rank-sum-test" class="section level4">
-<h4>Perform Pairwise Wilcoxn Rank Sum Test</h4>
+<div id="perform-pairwise-wilcoxon-rank-sum-test-mann-whitney-u-test" class="section level4">
+<h4>Perform Pairwise Wilcoxon Rank Sum Test (Mann-Whitney U Test)</h4>
 <pre class="r"><code>list.wrst &lt;- list()
 list.wrst[[1]] &lt;- pairwise.wilcox.test(x=dmt$Wood, g=dmt$Ethnicity, p.adjust.method=&quot;none&quot;, paired=FALSE)
 list.wrst[[2]] &lt;- pairwise.wilcox.test(x=dmt$Electricity, g=dmt$Ethnicity, p.adjust.method=&quot;none&quot;, paired=FALSE)

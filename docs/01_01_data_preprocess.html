@@ -361,7 +361,7 @@ $(document).ready(function () {
 <li>Himalayan and</li>
 <li>Hilly.</li>
 </ul>
-<p><strong>Income Group</strong>: As for income levels, we follow the original dataset’s categorization that breaks the monthly income of the households into 5 levels:</p>
+<p><strong>Income Group</strong>: As for income levels (Rs. 110 = USD 1, approx.), we follow the original dataset’s categorization that breaks the monthly income of the households into 5 levels:</p>
 <ul>
 <li>Rs. 10,000 or less;</li>
 <li>Rs. 10,000 to 20,000;</li>
@@ -410,8 +410,8 @@ head(lookup_dist)</code></pre>
 ## 293          23  Sindhupalchok
 ## 398          24 Kavrepalanchok</code></pre>
 </div>
-<div id="load-grouing-data" class="section level4">
-<h4>Load Grouing Data</h4>
+<div id="load-grouping-data" class="section level4">
+<h4>Load Grouping Data</h4>
 <pre class="r"><code>dat.eth &lt;- read.delim(file.eth_grp, header = TRUE, stringsAsFactors = FALSE)
 dat.edu &lt;- read.delim(file.edu_grp, header = TRUE, stringsAsFactors = FALSE)
 dat.geo &lt;- read.delim(file.geo_grp, header = TRUE, stringsAsFactors = FALSE)
@@ -446,8 +446,8 @@ items &lt;- c(&quot;household_id&quot;, &quot;district_id&quot;, &quot;vdcmun_id
     &quot;caste_household&quot;, &quot;income_level_household&quot;, &quot;education_level_household_head&quot;)
 dat.household &lt;- subset(dat.household, select = items)</code></pre>
 </div>
-<div id="add-district-name" class="section level4">
-<h4>Add District Name</h4>
+<div id="add-district-names" class="section level4">
+<h4>Add District Names</h4>
 <pre class="r"><code>dat.household$District &lt;- NA
 for (i in 1:nrow(lookup_dist)) {
     index &lt;- which(dat.household$district_id == lookup_dist$district_id[i])

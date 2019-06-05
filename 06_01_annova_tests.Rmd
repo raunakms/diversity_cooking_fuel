@@ -104,7 +104,7 @@ dmt$Ethnicity <- factor(dmt$Ethnicity, levels=type_eth)
 head(dmt)
 ```
 
-#### Perform Pairwise Wilcoxn Rank Sum Test 
+#### Perform Pairwise Wilcoxon Rank Sum Test (Mann-Whitney U Test)
 ```{r warning=FALSE}
 list.wrst <- list()
 list.wrst[[1]] <- pairwise.wilcox.test(x=dmt$Wood, g=dmt$Ethnicity, p.adjust.method="none", paired=FALSE)

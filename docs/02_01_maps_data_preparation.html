@@ -376,8 +376,8 @@ head(df)</code></pre>
 ## 5 Dhading  Others                         31
 ## 6 Dhading  Wood                        75585</code></pre>
 </div>
-<div id="compute-ratios-tables" class="section level4">
-<h4>Compute Ratios Tables</h4>
+<div id="compute-ratio-tables" class="section level4">
+<h4>Compute Ratio Tables</h4>
 <pre class="r"><code>dm &lt;- reshape2::dcast(data = df, formula = District ~ source_cooking_fuel_post_eq, 
     fun.aggregate = sum, value.var = &quot;Freq&quot;)
 dm &lt;- as.data.frame(cbind(id = dm$District, apply(dm[, -1], 2, function(x) x/sum(x))))

@@ -49,7 +49,7 @@ We restrict our analysis to four key socio-economic and demographic information 
 * Himalayan and 
 * Hilly. 
 
-**Income Group**: As for income levels, we follow the original dataset's categorization that breaks the monthly income of the households into 5 levels:
+**Income Group**: As for income levels (Rs. 110 = USD 1, approx.), we follow the original dataset's categorization that breaks the monthly income of the households into 5 levels:
 
 * Rs. 10,000 or less; 
 * Rs. 10,000 to 20,000; 
@@ -98,7 +98,7 @@ lookup_dist <- lookup_dist[!duplicated(lookup_dist),]
 head(lookup_dist)
 ```
 
-#### Load Grouing Data
+#### Load Grouping Data
 ```{r tidy=TRUE}
 dat.eth <- read.delim(file.eth_grp, header=TRUE, stringsAsFactors=FALSE)
 dat.edu <- read.delim(file.edu_grp, header=TRUE, stringsAsFactors=FALSE)
@@ -123,7 +123,7 @@ items <- c("household_id","district_id","vdcmun_id",
 dat.household <- subset(dat.household, select=items)
 ```
 
-#### Add District Name
+#### Add District Names
 ```{r tidy=TRUE}
 dat.household$District <- NA
 for(i in 1:nrow(lookup_dist)){

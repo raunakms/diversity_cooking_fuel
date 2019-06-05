@@ -417,7 +417,7 @@ map77</code></pre>
 <p><img src="02_02_maps_plot_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="load-household-population-by-earthquake-affected-districts" class="section level4">
-<h4>Load Household Population by Earthquake affected Districts</h4>
+<h4>Load Household Population by Earthquake-affected Districts</h4>
 <pre class="r"><code>dat1 &lt;- read.delim(file.dat1, header = TRUE, stringsAsFactors = FALSE)
 
 # CONVERT TO DISCRETE DATA ---
@@ -519,8 +519,8 @@ head(df)</code></pre>
 ## 5 0.10945537 (0.1,0.15]
 ## 6 0.20506415 (0.2,0.25]</code></pre>
 </div>
-<div id="plot-choropleth-maps-proportion-of-households-using-fueltype" class="section level4">
-<h4>Plot Choropleth Maps: Proportion of Households using FuelType</h4>
+<div id="plot-choropleth-maps-proportion-of-households-using-six-fueltypes" class="section level4">
+<h4>Plot Choropleth Maps: Proportion of Households using six FuelTypes</h4>
 <pre class="r"><code>map2 &lt;- ggplot(data=df, aes(x=long, y=lat, group=group, fill=RatioGroup)) +
           geom_path() +
           geom_polygon(aes(fill=RatioGroup), color=&quot;#000000&quot;) +
