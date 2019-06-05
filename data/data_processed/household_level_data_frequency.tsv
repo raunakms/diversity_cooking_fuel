@@ -1,34 +1,34 @@
 Ethnicity	EducationLevel	GeoRegion	IncomeGroup	source_cooking_fuel_post_eq	Freq
-Brahman	Illiterate	Hill	0-10000	Electricity	0
-Brahman	Illiterate	Hill	0-10000	Gobar Gas	159
-Brahman	Illiterate	Hill	0-10000	Kerosene	5
-Brahman	Illiterate	Hill	0-10000	LP Gas	375
-Brahman	Illiterate	Hill	0-10000	Others	3
-Brahman	Illiterate	Hill	0-10000	Wood	7932
-Brahman	Illiterate	Hill	10000-20000	Electricity	0
-Brahman	Illiterate	Hill	10000-20000	Gobar Gas	213
-Brahman	Illiterate	Hill	10000-20000	Kerosene	1
-Brahman	Illiterate	Hill	10000-20000	LP Gas	666
-Brahman	Illiterate	Hill	10000-20000	Others	1
-Brahman	Illiterate	Hill	10000-20000	Wood	3245
-Brahman	Illiterate	Hill	20000-30000	Electricity	1
-Brahman	Illiterate	Hill	20000-30000	Gobar Gas	95
-Brahman	Illiterate	Hill	20000-30000	Kerosene	0
-Brahman	Illiterate	Hill	20000-30000	LP Gas	336
-Brahman	Illiterate	Hill	20000-30000	Others	0
-Brahman	Illiterate	Hill	20000-30000	Wood	1038
-Brahman	Illiterate	Hill	30000-50000	Electricity	0
-Brahman	Illiterate	Hill	30000-50000	Gobar Gas	27
-Brahman	Illiterate	Hill	30000-50000	Kerosene	0
-Brahman	Illiterate	Hill	30000-50000	LP Gas	109
-Brahman	Illiterate	Hill	30000-50000	Others	0
-Brahman	Illiterate	Hill	30000-50000	Wood	355
-Brahman	Illiterate	Hill	50000-ABOVE	Electricity	0
-Brahman	Illiterate	Hill	50000-ABOVE	Gobar Gas	9
-Brahman	Illiterate	Hill	50000-ABOVE	Kerosene	0
-Brahman	Illiterate	Hill	50000-ABOVE	LP Gas	69
-Brahman	Illiterate	Hill	50000-ABOVE	Others	1
-Brahman	Illiterate	Hill	50000-ABOVE	Wood	156
+Brahman	Illiterate	Hilly	0-10000	Electricity	0
+Brahman	Illiterate	Hilly	0-10000	Gobar Gas	159
+Brahman	Illiterate	Hilly	0-10000	Kerosene	5
+Brahman	Illiterate	Hilly	0-10000	LP Gas	375
+Brahman	Illiterate	Hilly	0-10000	Others	3
+Brahman	Illiterate	Hilly	0-10000	Wood	7932
+Brahman	Illiterate	Hilly	10000-20000	Electricity	0
+Brahman	Illiterate	Hilly	10000-20000	Gobar Gas	213
+Brahman	Illiterate	Hilly	10000-20000	Kerosene	1
+Brahman	Illiterate	Hilly	10000-20000	LP Gas	666
+Brahman	Illiterate	Hilly	10000-20000	Others	1
+Brahman	Illiterate	Hilly	10000-20000	Wood	3245
+Brahman	Illiterate	Hilly	20000-30000	Electricity	1
+Brahman	Illiterate	Hilly	20000-30000	Gobar Gas	95
+Brahman	Illiterate	Hilly	20000-30000	Kerosene	0
+Brahman	Illiterate	Hilly	20000-30000	LP Gas	336
+Brahman	Illiterate	Hilly	20000-30000	Others	0
+Brahman	Illiterate	Hilly	20000-30000	Wood	1038
+Brahman	Illiterate	Hilly	30000-50000	Electricity	0
+Brahman	Illiterate	Hilly	30000-50000	Gobar Gas	27
+Brahman	Illiterate	Hilly	30000-50000	Kerosene	0
+Brahman	Illiterate	Hilly	30000-50000	LP Gas	109
+Brahman	Illiterate	Hilly	30000-50000	Others	0
+Brahman	Illiterate	Hilly	30000-50000	Wood	355
+Brahman	Illiterate	Hilly	50000-ABOVE	Electricity	0
+Brahman	Illiterate	Hilly	50000-ABOVE	Gobar Gas	9
+Brahman	Illiterate	Hilly	50000-ABOVE	Kerosene	0
+Brahman	Illiterate	Hilly	50000-ABOVE	LP Gas	69
+Brahman	Illiterate	Hilly	50000-ABOVE	Others	1
+Brahman	Illiterate	Hilly	50000-ABOVE	Wood	156
 Brahman	Illiterate	Himalayan	0-10000	Electricity	1
 Brahman	Illiterate	Himalayan	0-10000	Gobar Gas	24
 Brahman	Illiterate	Himalayan	0-10000	Kerosene	1
@@ -59,36 +59,36 @@ Brahman	Illiterate	Himalayan	50000-ABOVE	Kerosene	0
 Brahman	Illiterate	Himalayan	50000-ABOVE	LP Gas	23
 Brahman	Illiterate	Himalayan	50000-ABOVE	Others	0
 Brahman	Illiterate	Himalayan	50000-ABOVE	Wood	94
-Brahman	NonFormal-Other	Hill	0-10000	Electricity	2
-Brahman	NonFormal-Other	Hill	0-10000	Gobar Gas	205
-Brahman	NonFormal-Other	Hill	0-10000	Kerosene	3
-Brahman	NonFormal-Other	Hill	0-10000	LP Gas	480
-Brahman	NonFormal-Other	Hill	0-10000	Others	1
-Brahman	NonFormal-Other	Hill	0-10000	Wood	5923
-Brahman	NonFormal-Other	Hill	10000-20000	Electricity	1
-Brahman	NonFormal-Other	Hill	10000-20000	Gobar Gas	235
-Brahman	NonFormal-Other	Hill	10000-20000	Kerosene	0
-Brahman	NonFormal-Other	Hill	10000-20000	LP Gas	1064
-Brahman	NonFormal-Other	Hill	10000-20000	Others	0
-Brahman	NonFormal-Other	Hill	10000-20000	Wood	3588
-Brahman	NonFormal-Other	Hill	20000-30000	Electricity	1
-Brahman	NonFormal-Other	Hill	20000-30000	Gobar Gas	105
-Brahman	NonFormal-Other	Hill	20000-30000	Kerosene	0
-Brahman	NonFormal-Other	Hill	20000-30000	LP Gas	702
-Brahman	NonFormal-Other	Hill	20000-30000	Others	1
-Brahman	NonFormal-Other	Hill	20000-30000	Wood	1243
-Brahman	NonFormal-Other	Hill	30000-50000	Electricity	0
-Brahman	NonFormal-Other	Hill	30000-50000	Gobar Gas	40
-Brahman	NonFormal-Other	Hill	30000-50000	Kerosene	0
-Brahman	NonFormal-Other	Hill	30000-50000	LP Gas	206
-Brahman	NonFormal-Other	Hill	30000-50000	Others	1
-Brahman	NonFormal-Other	Hill	30000-50000	Wood	321
-Brahman	NonFormal-Other	Hill	50000-ABOVE	Electricity	0
-Brahman	NonFormal-Other	Hill	50000-ABOVE	Gobar Gas	13
-Brahman	NonFormal-Other	Hill	50000-ABOVE	Kerosene	0
-Brahman	NonFormal-Other	Hill	50000-ABOVE	LP Gas	86
-Brahman	NonFormal-Other	Hill	50000-ABOVE	Others	0
-Brahman	NonFormal-Other	Hill	50000-ABOVE	Wood	112
+Brahman	NonFormal-Other	Hilly	0-10000	Electricity	2
+Brahman	NonFormal-Other	Hilly	0-10000	Gobar Gas	205
+Brahman	NonFormal-Other	Hilly	0-10000	Kerosene	3
+Brahman	NonFormal-Other	Hilly	0-10000	LP Gas	480
+Brahman	NonFormal-Other	Hilly	0-10000	Others	1
+Brahman	NonFormal-Other	Hilly	0-10000	Wood	5923
+Brahman	NonFormal-Other	Hilly	10000-20000	Electricity	1
+Brahman	NonFormal-Other	Hilly	10000-20000	Gobar Gas	235
+Brahman	NonFormal-Other	Hilly	10000-20000	Kerosene	0
+Brahman	NonFormal-Other	Hilly	10000-20000	LP Gas	1064
+Brahman	NonFormal-Other	Hilly	10000-20000	Others	0
+Brahman	NonFormal-Other	Hilly	10000-20000	Wood	3588
+Brahman	NonFormal-Other	Hilly	20000-30000	Electricity	1
+Brahman	NonFormal-Other	Hilly	20000-30000	Gobar Gas	105
+Brahman	NonFormal-Other	Hilly	20000-30000	Kerosene	0
+Brahman	NonFormal-Other	Hilly	20000-30000	LP Gas	702
+Brahman	NonFormal-Other	Hilly	20000-30000	Others	1
+Brahman	NonFormal-Other	Hilly	20000-30000	Wood	1243
+Brahman	NonFormal-Other	Hilly	30000-50000	Electricity	0
+Brahman	NonFormal-Other	Hilly	30000-50000	Gobar Gas	40
+Brahman	NonFormal-Other	Hilly	30000-50000	Kerosene	0
+Brahman	NonFormal-Other	Hilly	30000-50000	LP Gas	206
+Brahman	NonFormal-Other	Hilly	30000-50000	Others	1
+Brahman	NonFormal-Other	Hilly	30000-50000	Wood	321
+Brahman	NonFormal-Other	Hilly	50000-ABOVE	Electricity	0
+Brahman	NonFormal-Other	Hilly	50000-ABOVE	Gobar Gas	13
+Brahman	NonFormal-Other	Hilly	50000-ABOVE	Kerosene	0
+Brahman	NonFormal-Other	Hilly	50000-ABOVE	LP Gas	86
+Brahman	NonFormal-Other	Hilly	50000-ABOVE	Others	0
+Brahman	NonFormal-Other	Hilly	50000-ABOVE	Wood	112
 Brahman	NonFormal-Other	Himalayan	0-10000	Electricity	0
 Brahman	NonFormal-Other	Himalayan	0-10000	Gobar Gas	27
 Brahman	NonFormal-Other	Himalayan	0-10000	Kerosene	0
@@ -119,36 +119,36 @@ Brahman	NonFormal-Other	Himalayan	50000-ABOVE	Kerosene	0
 Brahman	NonFormal-Other	Himalayan	50000-ABOVE	LP Gas	35
 Brahman	NonFormal-Other	Himalayan	50000-ABOVE	Others	0
 Brahman	NonFormal-Other	Himalayan	50000-ABOVE	Wood	94
-Brahman	Primary	Hill	0-10000	Electricity	1
-Brahman	Primary	Hill	0-10000	Gobar Gas	170
-Brahman	Primary	Hill	0-10000	Kerosene	3
-Brahman	Primary	Hill	0-10000	LP Gas	313
-Brahman	Primary	Hill	0-10000	Others	3
-Brahman	Primary	Hill	0-10000	Wood	5012
-Brahman	Primary	Hill	10000-20000	Electricity	0
-Brahman	Primary	Hill	10000-20000	Gobar Gas	265
-Brahman	Primary	Hill	10000-20000	Kerosene	4
-Brahman	Primary	Hill	10000-20000	LP Gas	924
-Brahman	Primary	Hill	10000-20000	Others	0
-Brahman	Primary	Hill	10000-20000	Wood	3284
-Brahman	Primary	Hill	20000-30000	Electricity	0
-Brahman	Primary	Hill	20000-30000	Gobar Gas	92
-Brahman	Primary	Hill	20000-30000	Kerosene	0
-Brahman	Primary	Hill	20000-30000	LP Gas	639
-Brahman	Primary	Hill	20000-30000	Others	2
-Brahman	Primary	Hill	20000-30000	Wood	1002
-Brahman	Primary	Hill	30000-50000	Electricity	0
-Brahman	Primary	Hill	30000-50000	Gobar Gas	35
-Brahman	Primary	Hill	30000-50000	Kerosene	1
-Brahman	Primary	Hill	30000-50000	LP Gas	199
-Brahman	Primary	Hill	30000-50000	Others	0
-Brahman	Primary	Hill	30000-50000	Wood	292
-Brahman	Primary	Hill	50000-ABOVE	Electricity	0
-Brahman	Primary	Hill	50000-ABOVE	Gobar Gas	16
-Brahman	Primary	Hill	50000-ABOVE	Kerosene	0
-Brahman	Primary	Hill	50000-ABOVE	LP Gas	86
-Brahman	Primary	Hill	50000-ABOVE	Others	1
-Brahman	Primary	Hill	50000-ABOVE	Wood	78
+Brahman	Primary	Hilly	0-10000	Electricity	1
+Brahman	Primary	Hilly	0-10000	Gobar Gas	170
+Brahman	Primary	Hilly	0-10000	Kerosene	3
+Brahman	Primary	Hilly	0-10000	LP Gas	313
+Brahman	Primary	Hilly	0-10000	Others	3
+Brahman	Primary	Hilly	0-10000	Wood	5012
+Brahman	Primary	Hilly	10000-20000	Electricity	0
+Brahman	Primary	Hilly	10000-20000	Gobar Gas	265
+Brahman	Primary	Hilly	10000-20000	Kerosene	4
+Brahman	Primary	Hilly	10000-20000	LP Gas	924
+Brahman	Primary	Hilly	10000-20000	Others	0
+Brahman	Primary	Hilly	10000-20000	Wood	3284
+Brahman	Primary	Hilly	20000-30000	Electricity	0
+Brahman	Primary	Hilly	20000-30000	Gobar Gas	92
+Brahman	Primary	Hilly	20000-30000	Kerosene	0
+Brahman	Primary	Hilly	20000-30000	LP Gas	639
+Brahman	Primary	Hilly	20000-30000	Others	2
+Brahman	Primary	Hilly	20000-30000	Wood	1002
+Brahman	Primary	Hilly	30000-50000	Electricity	0
+Brahman	Primary	Hilly	30000-50000	Gobar Gas	35
+Brahman	Primary	Hilly	30000-50000	Kerosene	1
+Brahman	Primary	Hilly	30000-50000	LP Gas	199
+Brahman	Primary	Hilly	30000-50000	Others	0
+Brahman	Primary	Hilly	30000-50000	Wood	292
+Brahman	Primary	Hilly	50000-ABOVE	Electricity	0
+Brahman	Primary	Hilly	50000-ABOVE	Gobar Gas	16
+Brahman	Primary	Hilly	50000-ABOVE	Kerosene	0
+Brahman	Primary	Hilly	50000-ABOVE	LP Gas	86
+Brahman	Primary	Hilly	50000-ABOVE	Others	1
+Brahman	Primary	Hilly	50000-ABOVE	Wood	78
 Brahman	Primary	Himalayan	0-10000	Electricity	0
 Brahman	Primary	Himalayan	0-10000	Gobar Gas	25
 Brahman	Primary	Himalayan	0-10000	Kerosene	0
@@ -179,36 +179,36 @@ Brahman	Primary	Himalayan	50000-ABOVE	Kerosene	0
 Brahman	Primary	Himalayan	50000-ABOVE	LP Gas	37
 Brahman	Primary	Himalayan	50000-ABOVE	Others	0
 Brahman	Primary	Himalayan	50000-ABOVE	Wood	64
-Brahman	Secondary	Hill	0-10000	Electricity	0
-Brahman	Secondary	Hill	0-10000	Gobar Gas	244
-Brahman	Secondary	Hill	0-10000	Kerosene	3
-Brahman	Secondary	Hill	0-10000	LP Gas	808
-Brahman	Secondary	Hill	0-10000	Others	4
-Brahman	Secondary	Hill	0-10000	Wood	5774
-Brahman	Secondary	Hill	10000-20000	Electricity	4
-Brahman	Secondary	Hill	10000-20000	Gobar Gas	473
-Brahman	Secondary	Hill	10000-20000	Kerosene	3
-Brahman	Secondary	Hill	10000-20000	LP Gas	3069
-Brahman	Secondary	Hill	10000-20000	Others	4
-Brahman	Secondary	Hill	10000-20000	Wood	6274
-Brahman	Secondary	Hill	20000-30000	Electricity	0
-Brahman	Secondary	Hill	20000-30000	Gobar Gas	236
-Brahman	Secondary	Hill	20000-30000	Kerosene	0
-Brahman	Secondary	Hill	20000-30000	LP Gas	2246
-Brahman	Secondary	Hill	20000-30000	Others	4
-Brahman	Secondary	Hill	20000-30000	Wood	2021
-Brahman	Secondary	Hill	30000-50000	Electricity	0
-Brahman	Secondary	Hill	30000-50000	Gobar Gas	75
-Brahman	Secondary	Hill	30000-50000	Kerosene	0
-Brahman	Secondary	Hill	30000-50000	LP Gas	743
-Brahman	Secondary	Hill	30000-50000	Others	2
-Brahman	Secondary	Hill	30000-50000	Wood	555
-Brahman	Secondary	Hill	50000-ABOVE	Electricity	0
-Brahman	Secondary	Hill	50000-ABOVE	Gobar Gas	18
-Brahman	Secondary	Hill	50000-ABOVE	Kerosene	0
-Brahman	Secondary	Hill	50000-ABOVE	LP Gas	303
-Brahman	Secondary	Hill	50000-ABOVE	Others	0
-Brahman	Secondary	Hill	50000-ABOVE	Wood	166
+Brahman	Secondary	Hilly	0-10000	Electricity	0
+Brahman	Secondary	Hilly	0-10000	Gobar Gas	244
+Brahman	Secondary	Hilly	0-10000	Kerosene	3
+Brahman	Secondary	Hilly	0-10000	LP Gas	808
+Brahman	Secondary	Hilly	0-10000	Others	4
+Brahman	Secondary	Hilly	0-10000	Wood	5774
+Brahman	Secondary	Hilly	10000-20000	Electricity	4
+Brahman	Secondary	Hilly	10000-20000	Gobar Gas	473
+Brahman	Secondary	Hilly	10000-20000	Kerosene	3
+Brahman	Secondary	Hilly	10000-20000	LP Gas	3069
+Brahman	Secondary	Hilly	10000-20000	Others	4
+Brahman	Secondary	Hilly	10000-20000	Wood	6274
+Brahman	Secondary	Hilly	20000-30000	Electricity	0
+Brahman	Secondary	Hilly	20000-30000	Gobar Gas	236
+Brahman	Secondary	Hilly	20000-30000	Kerosene	0
+Brahman	Secondary	Hilly	20000-30000	LP Gas	2246
+Brahman	Secondary	Hilly	20000-30000	Others	4
+Brahman	Secondary	Hilly	20000-30000	Wood	2021
+Brahman	Secondary	Hilly	30000-50000	Electricity	0
+Brahman	Secondary	Hilly	30000-50000	Gobar Gas	75
+Brahman	Secondary	Hilly	30000-50000	Kerosene	0
+Brahman	Secondary	Hilly	30000-50000	LP Gas	743
+Brahman	Secondary	Hilly	30000-50000	Others	2
+Brahman	Secondary	Hilly	30000-50000	Wood	555
+Brahman	Secondary	Hilly	50000-ABOVE	Electricity	0
+Brahman	Secondary	Hilly	50000-ABOVE	Gobar Gas	18
+Brahman	Secondary	Hilly	50000-ABOVE	Kerosene	0
+Brahman	Secondary	Hilly	50000-ABOVE	LP Gas	303
+Brahman	Secondary	Hilly	50000-ABOVE	Others	0
+Brahman	Secondary	Hilly	50000-ABOVE	Wood	166
 Brahman	Secondary	Himalayan	0-10000	Electricity	0
 Brahman	Secondary	Himalayan	0-10000	Gobar Gas	47
 Brahman	Secondary	Himalayan	0-10000	Kerosene	2
@@ -239,36 +239,36 @@ Brahman	Secondary	Himalayan	50000-ABOVE	Kerosene	1
 Brahman	Secondary	Himalayan	50000-ABOVE	LP Gas	124
 Brahman	Secondary	Himalayan	50000-ABOVE	Others	1
 Brahman	Secondary	Himalayan	50000-ABOVE	Wood	115
-Brahman	University	Hill	0-10000	Electricity	0
-Brahman	University	Hill	0-10000	Gobar Gas	13
-Brahman	University	Hill	0-10000	Kerosene	0
-Brahman	University	Hill	0-10000	LP Gas	108
-Brahman	University	Hill	0-10000	Others	0
-Brahman	University	Hill	0-10000	Wood	398
-Brahman	University	Hill	10000-20000	Electricity	3
-Brahman	University	Hill	10000-20000	Gobar Gas	43
-Brahman	University	Hill	10000-20000	Kerosene	0
-Brahman	University	Hill	10000-20000	LP Gas	662
-Brahman	University	Hill	10000-20000	Others	3
-Brahman	University	Hill	10000-20000	Wood	974
-Brahman	University	Hill	20000-30000	Electricity	1
-Brahman	University	Hill	20000-30000	Gobar Gas	41
-Brahman	University	Hill	20000-30000	Kerosene	2
-Brahman	University	Hill	20000-30000	LP Gas	781
-Brahman	University	Hill	20000-30000	Others	3
-Brahman	University	Hill	20000-30000	Wood	583
-Brahman	University	Hill	30000-50000	Electricity	0
-Brahman	University	Hill	30000-50000	Gobar Gas	15
-Brahman	University	Hill	30000-50000	Kerosene	0
-Brahman	University	Hill	30000-50000	LP Gas	325
-Brahman	University	Hill	30000-50000	Others	2
-Brahman	University	Hill	30000-50000	Wood	193
-Brahman	University	Hill	50000-ABOVE	Electricity	0
-Brahman	University	Hill	50000-ABOVE	Gobar Gas	2
-Brahman	University	Hill	50000-ABOVE	Kerosene	0
-Brahman	University	Hill	50000-ABOVE	LP Gas	204
-Brahman	University	Hill	50000-ABOVE	Others	1
-Brahman	University	Hill	50000-ABOVE	Wood	68
+Brahman	University	Hilly	0-10000	Electricity	0
+Brahman	University	Hilly	0-10000	Gobar Gas	13
+Brahman	University	Hilly	0-10000	Kerosene	0
+Brahman	University	Hilly	0-10000	LP Gas	108
+Brahman	University	Hilly	0-10000	Others	0
+Brahman	University	Hilly	0-10000	Wood	398
+Brahman	University	Hilly	10000-20000	Electricity	3
+Brahman	University	Hilly	10000-20000	Gobar Gas	43
+Brahman	University	Hilly	10000-20000	Kerosene	0
+Brahman	University	Hilly	10000-20000	LP Gas	662
+Brahman	University	Hilly	10000-20000	Others	3
+Brahman	University	Hilly	10000-20000	Wood	974
+Brahman	University	Hilly	20000-30000	Electricity	1
+Brahman	University	Hilly	20000-30000	Gobar Gas	41
+Brahman	University	Hilly	20000-30000	Kerosene	2
+Brahman	University	Hilly	20000-30000	LP Gas	781
+Brahman	University	Hilly	20000-30000	Others	3
+Brahman	University	Hilly	20000-30000	Wood	583
+Brahman	University	Hilly	30000-50000	Electricity	0
+Brahman	University	Hilly	30000-50000	Gobar Gas	15
+Brahman	University	Hilly	30000-50000	Kerosene	0
+Brahman	University	Hilly	30000-50000	LP Gas	325
+Brahman	University	Hilly	30000-50000	Others	2
+Brahman	University	Hilly	30000-50000	Wood	193
+Brahman	University	Hilly	50000-ABOVE	Electricity	0
+Brahman	University	Hilly	50000-ABOVE	Gobar Gas	2
+Brahman	University	Hilly	50000-ABOVE	Kerosene	0
+Brahman	University	Hilly	50000-ABOVE	LP Gas	204
+Brahman	University	Hilly	50000-ABOVE	Others	1
+Brahman	University	Hilly	50000-ABOVE	Wood	68
 Brahman	University	Himalayan	0-10000	Electricity	0
 Brahman	University	Himalayan	0-10000	Gobar Gas	3
 Brahman	University	Himalayan	0-10000	Kerosene	0
@@ -299,36 +299,36 @@ Brahman	University	Himalayan	50000-ABOVE	Kerosene	0
 Brahman	University	Himalayan	50000-ABOVE	LP Gas	61
 Brahman	University	Himalayan	50000-ABOVE	Others	0
 Brahman	University	Himalayan	50000-ABOVE	Wood	49
-Chepang-Thami	Illiterate	Hill	0-10000	Electricity	0
-Chepang-Thami	Illiterate	Hill	0-10000	Gobar Gas	7
-Chepang-Thami	Illiterate	Hill	0-10000	Kerosene	0
-Chepang-Thami	Illiterate	Hill	0-10000	LP Gas	9
-Chepang-Thami	Illiterate	Hill	0-10000	Others	9
-Chepang-Thami	Illiterate	Hill	0-10000	Wood	3842
-Chepang-Thami	Illiterate	Hill	10000-20000	Electricity	0
-Chepang-Thami	Illiterate	Hill	10000-20000	Gobar Gas	0
-Chepang-Thami	Illiterate	Hill	10000-20000	Kerosene	0
-Chepang-Thami	Illiterate	Hill	10000-20000	LP Gas	11
-Chepang-Thami	Illiterate	Hill	10000-20000	Others	0
-Chepang-Thami	Illiterate	Hill	10000-20000	Wood	296
-Chepang-Thami	Illiterate	Hill	20000-30000	Electricity	0
-Chepang-Thami	Illiterate	Hill	20000-30000	Gobar Gas	0
-Chepang-Thami	Illiterate	Hill	20000-30000	Kerosene	0
-Chepang-Thami	Illiterate	Hill	20000-30000	LP Gas	0
-Chepang-Thami	Illiterate	Hill	20000-30000	Others	0
-Chepang-Thami	Illiterate	Hill	20000-30000	Wood	43
-Chepang-Thami	Illiterate	Hill	30000-50000	Electricity	0
-Chepang-Thami	Illiterate	Hill	30000-50000	Gobar Gas	0
-Chepang-Thami	Illiterate	Hill	30000-50000	Kerosene	0
-Chepang-Thami	Illiterate	Hill	30000-50000	LP Gas	1
-Chepang-Thami	Illiterate	Hill	30000-50000	Others	0
-Chepang-Thami	Illiterate	Hill	30000-50000	Wood	10
-Chepang-Thami	Illiterate	Hill	50000-ABOVE	Electricity	0
-Chepang-Thami	Illiterate	Hill	50000-ABOVE	Gobar Gas	0
-Chepang-Thami	Illiterate	Hill	50000-ABOVE	Kerosene	0
-Chepang-Thami	Illiterate	Hill	50000-ABOVE	LP Gas	0
-Chepang-Thami	Illiterate	Hill	50000-ABOVE	Others	0
-Chepang-Thami	Illiterate	Hill	50000-ABOVE	Wood	2
+Chepang-Thami	Illiterate	Hilly	0-10000	Electricity	0
+Chepang-Thami	Illiterate	Hilly	0-10000	Gobar Gas	7
+Chepang-Thami	Illiterate	Hilly	0-10000	Kerosene	0
+Chepang-Thami	Illiterate	Hilly	0-10000	LP Gas	9
+Chepang-Thami	Illiterate	Hilly	0-10000	Others	9
+Chepang-Thami	Illiterate	Hilly	0-10000	Wood	3842
+Chepang-Thami	Illiterate	Hilly	10000-20000	Electricity	0
+Chepang-Thami	Illiterate	Hilly	10000-20000	Gobar Gas	0
+Chepang-Thami	Illiterate	Hilly	10000-20000	Kerosene	0
+Chepang-Thami	Illiterate	Hilly	10000-20000	LP Gas	11
+Chepang-Thami	Illiterate	Hilly	10000-20000	Others	0
+Chepang-Thami	Illiterate	Hilly	10000-20000	Wood	296
+Chepang-Thami	Illiterate	Hilly	20000-30000	Electricity	0
+Chepang-Thami	Illiterate	Hilly	20000-30000	Gobar Gas	0
+Chepang-Thami	Illiterate	Hilly	20000-30000	Kerosene	0
+Chepang-Thami	Illiterate	Hilly	20000-30000	LP Gas	0
+Chepang-Thami	Illiterate	Hilly	20000-30000	Others	0
+Chepang-Thami	Illiterate	Hilly	20000-30000	Wood	43
+Chepang-Thami	Illiterate	Hilly	30000-50000	Electricity	0
+Chepang-Thami	Illiterate	Hilly	30000-50000	Gobar Gas	0
+Chepang-Thami	Illiterate	Hilly	30000-50000	Kerosene	0
+Chepang-Thami	Illiterate	Hilly	30000-50000	LP Gas	1
+Chepang-Thami	Illiterate	Hilly	30000-50000	Others	0
+Chepang-Thami	Illiterate	Hilly	30000-50000	Wood	10
+Chepang-Thami	Illiterate	Hilly	50000-ABOVE	Electricity	0
+Chepang-Thami	Illiterate	Hilly	50000-ABOVE	Gobar Gas	0
+Chepang-Thami	Illiterate	Hilly	50000-ABOVE	Kerosene	0
+Chepang-Thami	Illiterate	Hilly	50000-ABOVE	LP Gas	0
+Chepang-Thami	Illiterate	Hilly	50000-ABOVE	Others	0
+Chepang-Thami	Illiterate	Hilly	50000-ABOVE	Wood	2
 Chepang-Thami	Illiterate	Himalayan	0-10000	Electricity	0
 Chepang-Thami	Illiterate	Himalayan	0-10000	Gobar Gas	1
 Chepang-Thami	Illiterate	Himalayan	0-10000	Kerosene	1
@@ -359,36 +359,36 @@ Chepang-Thami	Illiterate	Himalayan	50000-ABOVE	Kerosene	0
 Chepang-Thami	Illiterate	Himalayan	50000-ABOVE	LP Gas	0
 Chepang-Thami	Illiterate	Himalayan	50000-ABOVE	Others	0
 Chepang-Thami	Illiterate	Himalayan	50000-ABOVE	Wood	10
-Chepang-Thami	NonFormal-Other	Hill	0-10000	Electricity	0
-Chepang-Thami	NonFormal-Other	Hill	0-10000	Gobar Gas	2
-Chepang-Thami	NonFormal-Other	Hill	0-10000	Kerosene	1
-Chepang-Thami	NonFormal-Other	Hill	0-10000	LP Gas	4
-Chepang-Thami	NonFormal-Other	Hill	0-10000	Others	2
-Chepang-Thami	NonFormal-Other	Hill	0-10000	Wood	1280
-Chepang-Thami	NonFormal-Other	Hill	10000-20000	Electricity	0
-Chepang-Thami	NonFormal-Other	Hill	10000-20000	Gobar Gas	0
-Chepang-Thami	NonFormal-Other	Hill	10000-20000	Kerosene	0
-Chepang-Thami	NonFormal-Other	Hill	10000-20000	LP Gas	5
-Chepang-Thami	NonFormal-Other	Hill	10000-20000	Others	0
-Chepang-Thami	NonFormal-Other	Hill	10000-20000	Wood	150
-Chepang-Thami	NonFormal-Other	Hill	20000-30000	Electricity	0
-Chepang-Thami	NonFormal-Other	Hill	20000-30000	Gobar Gas	1
-Chepang-Thami	NonFormal-Other	Hill	20000-30000	Kerosene	0
-Chepang-Thami	NonFormal-Other	Hill	20000-30000	LP Gas	1
-Chepang-Thami	NonFormal-Other	Hill	20000-30000	Others	0
-Chepang-Thami	NonFormal-Other	Hill	20000-30000	Wood	19
-Chepang-Thami	NonFormal-Other	Hill	30000-50000	Electricity	0
-Chepang-Thami	NonFormal-Other	Hill	30000-50000	Gobar Gas	1
-Chepang-Thami	NonFormal-Other	Hill	30000-50000	Kerosene	0
-Chepang-Thami	NonFormal-Other	Hill	30000-50000	LP Gas	0
-Chepang-Thami	NonFormal-Other	Hill	30000-50000	Others	0
-Chepang-Thami	NonFormal-Other	Hill	30000-50000	Wood	2
-Chepang-Thami	NonFormal-Other	Hill	50000-ABOVE	Electricity	0
-Chepang-Thami	NonFormal-Other	Hill	50000-ABOVE	Gobar Gas	0
-Chepang-Thami	NonFormal-Other	Hill	50000-ABOVE	Kerosene	0
-Chepang-Thami	NonFormal-Other	Hill	50000-ABOVE	LP Gas	0
-Chepang-Thami	NonFormal-Other	Hill	50000-ABOVE	Others	0
-Chepang-Thami	NonFormal-Other	Hill	50000-ABOVE	Wood	0
+Chepang-Thami	NonFormal-Other	Hilly	0-10000	Electricity	0
+Chepang-Thami	NonFormal-Other	Hilly	0-10000	Gobar Gas	2
+Chepang-Thami	NonFormal-Other	Hilly	0-10000	Kerosene	1
+Chepang-Thami	NonFormal-Other	Hilly	0-10000	LP Gas	4
+Chepang-Thami	NonFormal-Other	Hilly	0-10000	Others	2
+Chepang-Thami	NonFormal-Other	Hilly	0-10000	Wood	1280
+Chepang-Thami	NonFormal-Other	Hilly	10000-20000	Electricity	0
+Chepang-Thami	NonFormal-Other	Hilly	10000-20000	Gobar Gas	0
+Chepang-Thami	NonFormal-Other	Hilly	10000-20000	Kerosene	0
+Chepang-Thami	NonFormal-Other	Hilly	10000-20000	LP Gas	5
+Chepang-Thami	NonFormal-Other	Hilly	10000-20000	Others	0
+Chepang-Thami	NonFormal-Other	Hilly	10000-20000	Wood	150
+Chepang-Thami	NonFormal-Other	Hilly	20000-30000	Electricity	0
+Chepang-Thami	NonFormal-Other	Hilly	20000-30000	Gobar Gas	1
+Chepang-Thami	NonFormal-Other	Hilly	20000-30000	Kerosene	0
+Chepang-Thami	NonFormal-Other	Hilly	20000-30000	LP Gas	1
+Chepang-Thami	NonFormal-Other	Hilly	20000-30000	Others	0
+Chepang-Thami	NonFormal-Other	Hilly	20000-30000	Wood	19
+Chepang-Thami	NonFormal-Other	Hilly	30000-50000	Electricity	0
+Chepang-Thami	NonFormal-Other	Hilly	30000-50000	Gobar Gas	1
+Chepang-Thami	NonFormal-Other	Hilly	30000-50000	Kerosene	0
+Chepang-Thami	NonFormal-Other	Hilly	30000-50000	LP Gas	0
+Chepang-Thami	NonFormal-Other	Hilly	30000-50000	Others	0
+Chepang-Thami	NonFormal-Other	Hilly	30000-50000	Wood	2
+Chepang-Thami	NonFormal-Other	Hilly	50000-ABOVE	Electricity	0
+Chepang-Thami	NonFormal-Other	Hilly	50000-ABOVE	Gobar Gas	0
+Chepang-Thami	NonFormal-Other	Hilly	50000-ABOVE	Kerosene	0
+Chepang-Thami	NonFormal-Other	Hilly	50000-ABOVE	LP Gas	0
+Chepang-Thami	NonFormal-Other	Hilly	50000-ABOVE	Others	0
+Chepang-Thami	NonFormal-Other	Hilly	50000-ABOVE	Wood	0
 Chepang-Thami	NonFormal-Other	Himalayan	0-10000	Electricity	0
 Chepang-Thami	NonFormal-Other	Himalayan	0-10000	Gobar Gas	1
 Chepang-Thami	NonFormal-Other	Himalayan	0-10000	Kerosene	0
@@ -419,36 +419,36 @@ Chepang-Thami	NonFormal-Other	Himalayan	50000-ABOVE	Kerosene	0
 Chepang-Thami	NonFormal-Other	Himalayan	50000-ABOVE	LP Gas	1
 Chepang-Thami	NonFormal-Other	Himalayan	50000-ABOVE	Others	0
 Chepang-Thami	NonFormal-Other	Himalayan	50000-ABOVE	Wood	6
-Chepang-Thami	Primary	Hill	0-10000	Electricity	0
-Chepang-Thami	Primary	Hill	0-10000	Gobar Gas	3
-Chepang-Thami	Primary	Hill	0-10000	Kerosene	0
-Chepang-Thami	Primary	Hill	0-10000	LP Gas	19
-Chepang-Thami	Primary	Hill	0-10000	Others	3
-Chepang-Thami	Primary	Hill	0-10000	Wood	1624
-Chepang-Thami	Primary	Hill	10000-20000	Electricity	0
-Chepang-Thami	Primary	Hill	10000-20000	Gobar Gas	0
-Chepang-Thami	Primary	Hill	10000-20000	Kerosene	0
-Chepang-Thami	Primary	Hill	10000-20000	LP Gas	16
-Chepang-Thami	Primary	Hill	10000-20000	Others	0
-Chepang-Thami	Primary	Hill	10000-20000	Wood	242
-Chepang-Thami	Primary	Hill	20000-30000	Electricity	0
-Chepang-Thami	Primary	Hill	20000-30000	Gobar Gas	2
-Chepang-Thami	Primary	Hill	20000-30000	Kerosene	0
-Chepang-Thami	Primary	Hill	20000-30000	LP Gas	2
-Chepang-Thami	Primary	Hill	20000-30000	Others	0
-Chepang-Thami	Primary	Hill	20000-30000	Wood	31
-Chepang-Thami	Primary	Hill	30000-50000	Electricity	0
-Chepang-Thami	Primary	Hill	30000-50000	Gobar Gas	0
-Chepang-Thami	Primary	Hill	30000-50000	Kerosene	0
-Chepang-Thami	Primary	Hill	30000-50000	LP Gas	2
-Chepang-Thami	Primary	Hill	30000-50000	Others	0
-Chepang-Thami	Primary	Hill	30000-50000	Wood	7
-Chepang-Thami	Primary	Hill	50000-ABOVE	Electricity	0
-Chepang-Thami	Primary	Hill	50000-ABOVE	Gobar Gas	0
-Chepang-Thami	Primary	Hill	50000-ABOVE	Kerosene	0
-Chepang-Thami	Primary	Hill	50000-ABOVE	LP Gas	1
-Chepang-Thami	Primary	Hill	50000-ABOVE	Others	0
-Chepang-Thami	Primary	Hill	50000-ABOVE	Wood	1
+Chepang-Thami	Primary	Hilly	0-10000	Electricity	0
+Chepang-Thami	Primary	Hilly	0-10000	Gobar Gas	3
+Chepang-Thami	Primary	Hilly	0-10000	Kerosene	0
+Chepang-Thami	Primary	Hilly	0-10000	LP Gas	19
+Chepang-Thami	Primary	Hilly	0-10000	Others	3
+Chepang-Thami	Primary	Hilly	0-10000	Wood	1624
+Chepang-Thami	Primary	Hilly	10000-20000	Electricity	0
+Chepang-Thami	Primary	Hilly	10000-20000	Gobar Gas	0
+Chepang-Thami	Primary	Hilly	10000-20000	Kerosene	0
+Chepang-Thami	Primary	Hilly	10000-20000	LP Gas	16
+Chepang-Thami	Primary	Hilly	10000-20000	Others	0
+Chepang-Thami	Primary	Hilly	10000-20000	Wood	242
+Chepang-Thami	Primary	Hilly	20000-30000	Electricity	0
+Chepang-Thami	Primary	Hilly	20000-30000	Gobar Gas	2
+Chepang-Thami	Primary	Hilly	20000-30000	Kerosene	0
+Chepang-Thami	Primary	Hilly	20000-30000	LP Gas	2
+Chepang-Thami	Primary	Hilly	20000-30000	Others	0
+Chepang-Thami	Primary	Hilly	20000-30000	Wood	31
+Chepang-Thami	Primary	Hilly	30000-50000	Electricity	0
+Chepang-Thami	Primary	Hilly	30000-50000	Gobar Gas	0
+Chepang-Thami	Primary	Hilly	30000-50000	Kerosene	0
+Chepang-Thami	Primary	Hilly	30000-50000	LP Gas	2
+Chepang-Thami	Primary	Hilly	30000-50000	Others	0
+Chepang-Thami	Primary	Hilly	30000-50000	Wood	7
+Chepang-Thami	Primary	Hilly	50000-ABOVE	Electricity	0
+Chepang-Thami	Primary	Hilly	50000-ABOVE	Gobar Gas	0
+Chepang-Thami	Primary	Hilly	50000-ABOVE	Kerosene	0
+Chepang-Thami	Primary	Hilly	50000-ABOVE	LP Gas	1
+Chepang-Thami	Primary	Hilly	50000-ABOVE	Others	0
+Chepang-Thami	Primary	Hilly	50000-ABOVE	Wood	1
 Chepang-Thami	Primary	Himalayan	0-10000	Electricity	0
 Chepang-Thami	Primary	Himalayan	0-10000	Gobar Gas	0
 Chepang-Thami	Primary	Himalayan	0-10000	Kerosene	0
@@ -479,36 +479,36 @@ Chepang-Thami	Primary	Himalayan	50000-ABOVE	Kerosene	0
 Chepang-Thami	Primary	Himalayan	50000-ABOVE	LP Gas	0
 Chepang-Thami	Primary	Himalayan	50000-ABOVE	Others	0
 Chepang-Thami	Primary	Himalayan	50000-ABOVE	Wood	3
-Chepang-Thami	Secondary	Hill	0-10000	Electricity	0
-Chepang-Thami	Secondary	Hill	0-10000	Gobar Gas	0
-Chepang-Thami	Secondary	Hill	0-10000	Kerosene	0
-Chepang-Thami	Secondary	Hill	0-10000	LP Gas	13
-Chepang-Thami	Secondary	Hill	0-10000	Others	0
-Chepang-Thami	Secondary	Hill	0-10000	Wood	197
-Chepang-Thami	Secondary	Hill	10000-20000	Electricity	0
-Chepang-Thami	Secondary	Hill	10000-20000	Gobar Gas	2
-Chepang-Thami	Secondary	Hill	10000-20000	Kerosene	0
-Chepang-Thami	Secondary	Hill	10000-20000	LP Gas	8
-Chepang-Thami	Secondary	Hill	10000-20000	Others	0
-Chepang-Thami	Secondary	Hill	10000-20000	Wood	67
-Chepang-Thami	Secondary	Hill	20000-30000	Electricity	0
-Chepang-Thami	Secondary	Hill	20000-30000	Gobar Gas	0
-Chepang-Thami	Secondary	Hill	20000-30000	Kerosene	0
-Chepang-Thami	Secondary	Hill	20000-30000	LP Gas	5
-Chepang-Thami	Secondary	Hill	20000-30000	Others	0
-Chepang-Thami	Secondary	Hill	20000-30000	Wood	11
-Chepang-Thami	Secondary	Hill	30000-50000	Electricity	0
-Chepang-Thami	Secondary	Hill	30000-50000	Gobar Gas	0
-Chepang-Thami	Secondary	Hill	30000-50000	Kerosene	0
-Chepang-Thami	Secondary	Hill	30000-50000	LP Gas	0
-Chepang-Thami	Secondary	Hill	30000-50000	Others	0
-Chepang-Thami	Secondary	Hill	30000-50000	Wood	3
-Chepang-Thami	Secondary	Hill	50000-ABOVE	Electricity	0
-Chepang-Thami	Secondary	Hill	50000-ABOVE	Gobar Gas	0
-Chepang-Thami	Secondary	Hill	50000-ABOVE	Kerosene	0
-Chepang-Thami	Secondary	Hill	50000-ABOVE	LP Gas	0
-Chepang-Thami	Secondary	Hill	50000-ABOVE	Others	0
-Chepang-Thami	Secondary	Hill	50000-ABOVE	Wood	3
+Chepang-Thami	Secondary	Hilly	0-10000	Electricity	0
+Chepang-Thami	Secondary	Hilly	0-10000	Gobar Gas	0
+Chepang-Thami	Secondary	Hilly	0-10000	Kerosene	0
+Chepang-Thami	Secondary	Hilly	0-10000	LP Gas	13
+Chepang-Thami	Secondary	Hilly	0-10000	Others	0
+Chepang-Thami	Secondary	Hilly	0-10000	Wood	197
+Chepang-Thami	Secondary	Hilly	10000-20000	Electricity	0
+Chepang-Thami	Secondary	Hilly	10000-20000	Gobar Gas	2
+Chepang-Thami	Secondary	Hilly	10000-20000	Kerosene	0
+Chepang-Thami	Secondary	Hilly	10000-20000	LP Gas	8
+Chepang-Thami	Secondary	Hilly	10000-20000	Others	0
+Chepang-Thami	Secondary	Hilly	10000-20000	Wood	67
+Chepang-Thami	Secondary	Hilly	20000-30000	Electricity	0
+Chepang-Thami	Secondary	Hilly	20000-30000	Gobar Gas	0
+Chepang-Thami	Secondary	Hilly	20000-30000	Kerosene	0
+Chepang-Thami	Secondary	Hilly	20000-30000	LP Gas	5
+Chepang-Thami	Secondary	Hilly	20000-30000	Others	0
+Chepang-Thami	Secondary	Hilly	20000-30000	Wood	11
+Chepang-Thami	Secondary	Hilly	30000-50000	Electricity	0
+Chepang-Thami	Secondary	Hilly	30000-50000	Gobar Gas	0
+Chepang-Thami	Secondary	Hilly	30000-50000	Kerosene	0
+Chepang-Thami	Secondary	Hilly	30000-50000	LP Gas	0
+Chepang-Thami	Secondary	Hilly	30000-50000	Others	0
+Chepang-Thami	Secondary	Hilly	30000-50000	Wood	3
+Chepang-Thami	Secondary	Hilly	50000-ABOVE	Electricity	0
+Chepang-Thami	Secondary	Hilly	50000-ABOVE	Gobar Gas	0
+Chepang-Thami	Secondary	Hilly	50000-ABOVE	Kerosene	0
+Chepang-Thami	Secondary	Hilly	50000-ABOVE	LP Gas	0
+Chepang-Thami	Secondary	Hilly	50000-ABOVE	Others	0
+Chepang-Thami	Secondary	Hilly	50000-ABOVE	Wood	3
 Chepang-Thami	Secondary	Himalayan	0-10000	Electricity	0
 Chepang-Thami	Secondary	Himalayan	0-10000	Gobar Gas	0
 Chepang-Thami	Secondary	Himalayan	0-10000	Kerosene	0
@@ -539,36 +539,36 @@ Chepang-Thami	Secondary	Himalayan	50000-ABOVE	Kerosene	0
 Chepang-Thami	Secondary	Himalayan	50000-ABOVE	LP Gas	0
 Chepang-Thami	Secondary	Himalayan	50000-ABOVE	Others	0
 Chepang-Thami	Secondary	Himalayan	50000-ABOVE	Wood	1
-Chepang-Thami	University	Hill	0-10000	Electricity	0
-Chepang-Thami	University	Hill	0-10000	Gobar Gas	0
-Chepang-Thami	University	Hill	0-10000	Kerosene	0
-Chepang-Thami	University	Hill	0-10000	LP Gas	0
-Chepang-Thami	University	Hill	0-10000	Others	0
-Chepang-Thami	University	Hill	0-10000	Wood	4
-Chepang-Thami	University	Hill	10000-20000	Electricity	0
-Chepang-Thami	University	Hill	10000-20000	Gobar Gas	0
-Chepang-Thami	University	Hill	10000-20000	Kerosene	0
-Chepang-Thami	University	Hill	10000-20000	LP Gas	3
-Chepang-Thami	University	Hill	10000-20000	Others	0
-Chepang-Thami	University	Hill	10000-20000	Wood	2
-Chepang-Thami	University	Hill	20000-30000	Electricity	0
-Chepang-Thami	University	Hill	20000-30000	Gobar Gas	0
-Chepang-Thami	University	Hill	20000-30000	Kerosene	0
-Chepang-Thami	University	Hill	20000-30000	LP Gas	0
-Chepang-Thami	University	Hill	20000-30000	Others	0
-Chepang-Thami	University	Hill	20000-30000	Wood	1
-Chepang-Thami	University	Hill	30000-50000	Electricity	0
-Chepang-Thami	University	Hill	30000-50000	Gobar Gas	0
-Chepang-Thami	University	Hill	30000-50000	Kerosene	0
-Chepang-Thami	University	Hill	30000-50000	LP Gas	1
-Chepang-Thami	University	Hill	30000-50000	Others	0
-Chepang-Thami	University	Hill	30000-50000	Wood	0
-Chepang-Thami	University	Hill	50000-ABOVE	Electricity	0
-Chepang-Thami	University	Hill	50000-ABOVE	Gobar Gas	0
-Chepang-Thami	University	Hill	50000-ABOVE	Kerosene	0
-Chepang-Thami	University	Hill	50000-ABOVE	LP Gas	0
-Chepang-Thami	University	Hill	50000-ABOVE	Others	0
-Chepang-Thami	University	Hill	50000-ABOVE	Wood	0
+Chepang-Thami	University	Hilly	0-10000	Electricity	0
+Chepang-Thami	University	Hilly	0-10000	Gobar Gas	0
+Chepang-Thami	University	Hilly	0-10000	Kerosene	0
+Chepang-Thami	University	Hilly	0-10000	LP Gas	0
+Chepang-Thami	University	Hilly	0-10000	Others	0
+Chepang-Thami	University	Hilly	0-10000	Wood	4
+Chepang-Thami	University	Hilly	10000-20000	Electricity	0
+Chepang-Thami	University	Hilly	10000-20000	Gobar Gas	0
+Chepang-Thami	University	Hilly	10000-20000	Kerosene	0
+Chepang-Thami	University	Hilly	10000-20000	LP Gas	3
+Chepang-Thami	University	Hilly	10000-20000	Others	0
+Chepang-Thami	University	Hilly	10000-20000	Wood	2
+Chepang-Thami	University	Hilly	20000-30000	Electricity	0
+Chepang-Thami	University	Hilly	20000-30000	Gobar Gas	0
+Chepang-Thami	University	Hilly	20000-30000	Kerosene	0
+Chepang-Thami	University	Hilly	20000-30000	LP Gas	0
+Chepang-Thami	University	Hilly	20000-30000	Others	0
+Chepang-Thami	University	Hilly	20000-30000	Wood	1
+Chepang-Thami	University	Hilly	30000-50000	Electricity	0
+Chepang-Thami	University	Hilly	30000-50000	Gobar Gas	0
+Chepang-Thami	University	Hilly	30000-50000	Kerosene	0
+Chepang-Thami	University	Hilly	30000-50000	LP Gas	1
+Chepang-Thami	University	Hilly	30000-50000	Others	0
+Chepang-Thami	University	Hilly	30000-50000	Wood	0
+Chepang-Thami	University	Hilly	50000-ABOVE	Electricity	0
+Chepang-Thami	University	Hilly	50000-ABOVE	Gobar Gas	0
+Chepang-Thami	University	Hilly	50000-ABOVE	Kerosene	0
+Chepang-Thami	University	Hilly	50000-ABOVE	LP Gas	0
+Chepang-Thami	University	Hilly	50000-ABOVE	Others	0
+Chepang-Thami	University	Hilly	50000-ABOVE	Wood	0
 Chepang-Thami	University	Himalayan	0-10000	Electricity	0
 Chepang-Thami	University	Himalayan	0-10000	Gobar Gas	0
 Chepang-Thami	University	Himalayan	0-10000	Kerosene	0
@@ -599,36 +599,36 @@ Chepang-Thami	University	Himalayan	50000-ABOVE	Kerosene	0
 Chepang-Thami	University	Himalayan	50000-ABOVE	LP Gas	0
 Chepang-Thami	University	Himalayan	50000-ABOVE	Others	0
 Chepang-Thami	University	Himalayan	50000-ABOVE	Wood	0
-Chettri	Illiterate	Hill	0-10000	Electricity	1
-Chettri	Illiterate	Hill	0-10000	Gobar Gas	88
-Chettri	Illiterate	Hill	0-10000	Kerosene	4
-Chettri	Illiterate	Hill	0-10000	LP Gas	357
-Chettri	Illiterate	Hill	0-10000	Others	9
-Chettri	Illiterate	Hill	0-10000	Wood	12796
-Chettri	Illiterate	Hill	10000-20000	Electricity	0
-Chettri	Illiterate	Hill	10000-20000	Gobar Gas	84
-Chettri	Illiterate	Hill	10000-20000	Kerosene	4
-Chettri	Illiterate	Hill	10000-20000	LP Gas	561
-Chettri	Illiterate	Hill	10000-20000	Others	2
-Chettri	Illiterate	Hill	10000-20000	Wood	4039
-Chettri	Illiterate	Hill	20000-30000	Electricity	0
-Chettri	Illiterate	Hill	20000-30000	Gobar Gas	28
-Chettri	Illiterate	Hill	20000-30000	Kerosene	2
-Chettri	Illiterate	Hill	20000-30000	LP Gas	229
-Chettri	Illiterate	Hill	20000-30000	Others	2
-Chettri	Illiterate	Hill	20000-30000	Wood	887
-Chettri	Illiterate	Hill	30000-50000	Electricity	0
-Chettri	Illiterate	Hill	30000-50000	Gobar Gas	5
-Chettri	Illiterate	Hill	30000-50000	Kerosene	0
-Chettri	Illiterate	Hill	30000-50000	LP Gas	76
-Chettri	Illiterate	Hill	30000-50000	Others	0
-Chettri	Illiterate	Hill	30000-50000	Wood	245
-Chettri	Illiterate	Hill	50000-ABOVE	Electricity	0
-Chettri	Illiterate	Hill	50000-ABOVE	Gobar Gas	4
-Chettri	Illiterate	Hill	50000-ABOVE	Kerosene	0
-Chettri	Illiterate	Hill	50000-ABOVE	LP Gas	43
-Chettri	Illiterate	Hill	50000-ABOVE	Others	0
-Chettri	Illiterate	Hill	50000-ABOVE	Wood	88
+Chettri	Illiterate	Hilly	0-10000	Electricity	1
+Chettri	Illiterate	Hilly	0-10000	Gobar Gas	88
+Chettri	Illiterate	Hilly	0-10000	Kerosene	4
+Chettri	Illiterate	Hilly	0-10000	LP Gas	357
+Chettri	Illiterate	Hilly	0-10000	Others	9
+Chettri	Illiterate	Hilly	0-10000	Wood	12796
+Chettri	Illiterate	Hilly	10000-20000	Electricity	0
+Chettri	Illiterate	Hilly	10000-20000	Gobar Gas	84
+Chettri	Illiterate	Hilly	10000-20000	Kerosene	4
+Chettri	Illiterate	Hilly	10000-20000	LP Gas	561
+Chettri	Illiterate	Hilly	10000-20000	Others	2
+Chettri	Illiterate	Hilly	10000-20000	Wood	4039
+Chettri	Illiterate	Hilly	20000-30000	Electricity	0
+Chettri	Illiterate	Hilly	20000-30000	Gobar Gas	28
+Chettri	Illiterate	Hilly	20000-30000	Kerosene	2
+Chettri	Illiterate	Hilly	20000-30000	LP Gas	229
+Chettri	Illiterate	Hilly	20000-30000	Others	2
+Chettri	Illiterate	Hilly	20000-30000	Wood	887
+Chettri	Illiterate	Hilly	30000-50000	Electricity	0
+Chettri	Illiterate	Hilly	30000-50000	Gobar Gas	5
+Chettri	Illiterate	Hilly	30000-50000	Kerosene	0
+Chettri	Illiterate	Hilly	30000-50000	LP Gas	76
+Chettri	Illiterate	Hilly	30000-50000	Others	0
+Chettri	Illiterate	Hilly	30000-50000	Wood	245
+Chettri	Illiterate	Hilly	50000-ABOVE	Electricity	0
+Chettri	Illiterate	Hilly	50000-ABOVE	Gobar Gas	4
+Chettri	Illiterate	Hilly	50000-ABOVE	Kerosene	0
+Chettri	Illiterate	Hilly	50000-ABOVE	LP Gas	43
+Chettri	Illiterate	Hilly	50000-ABOVE	Others	0
+Chettri	Illiterate	Hilly	50000-ABOVE	Wood	88
 Chettri	Illiterate	Himalayan	0-10000	Electricity	2
 Chettri	Illiterate	Himalayan	0-10000	Gobar Gas	20
 Chettri	Illiterate	Himalayan	0-10000	Kerosene	2
@@ -659,36 +659,36 @@ Chettri	Illiterate	Himalayan	50000-ABOVE	Kerosene	0
 Chettri	Illiterate	Himalayan	50000-ABOVE	LP Gas	23
 Chettri	Illiterate	Himalayan	50000-ABOVE	Others	0
 Chettri	Illiterate	Himalayan	50000-ABOVE	Wood	130
-Chettri	NonFormal-Other	Hill	0-10000	Electricity	2
-Chettri	NonFormal-Other	Hill	0-10000	Gobar Gas	79
-Chettri	NonFormal-Other	Hill	0-10000	Kerosene	4
-Chettri	NonFormal-Other	Hill	0-10000	LP Gas	333
-Chettri	NonFormal-Other	Hill	0-10000	Others	2
-Chettri	NonFormal-Other	Hill	0-10000	Wood	7661
-Chettri	NonFormal-Other	Hill	10000-20000	Electricity	2
-Chettri	NonFormal-Other	Hill	10000-20000	Gobar Gas	107
-Chettri	NonFormal-Other	Hill	10000-20000	Kerosene	0
-Chettri	NonFormal-Other	Hill	10000-20000	LP Gas	860
-Chettri	NonFormal-Other	Hill	10000-20000	Others	0
-Chettri	NonFormal-Other	Hill	10000-20000	Wood	4039
-Chettri	NonFormal-Other	Hill	20000-30000	Electricity	0
-Chettri	NonFormal-Other	Hill	20000-30000	Gobar Gas	47
-Chettri	NonFormal-Other	Hill	20000-30000	Kerosene	0
-Chettri	NonFormal-Other	Hill	20000-30000	LP Gas	420
-Chettri	NonFormal-Other	Hill	20000-30000	Others	0
-Chettri	NonFormal-Other	Hill	20000-30000	Wood	944
-Chettri	NonFormal-Other	Hill	30000-50000	Electricity	0
-Chettri	NonFormal-Other	Hill	30000-50000	Gobar Gas	10
-Chettri	NonFormal-Other	Hill	30000-50000	Kerosene	0
-Chettri	NonFormal-Other	Hill	30000-50000	LP Gas	103
-Chettri	NonFormal-Other	Hill	30000-50000	Others	0
-Chettri	NonFormal-Other	Hill	30000-50000	Wood	233
-Chettri	NonFormal-Other	Hill	50000-ABOVE	Electricity	0
-Chettri	NonFormal-Other	Hill	50000-ABOVE	Gobar Gas	2
-Chettri	NonFormal-Other	Hill	50000-ABOVE	Kerosene	0
-Chettri	NonFormal-Other	Hill	50000-ABOVE	LP Gas	47
-Chettri	NonFormal-Other	Hill	50000-ABOVE	Others	0
-Chettri	NonFormal-Other	Hill	50000-ABOVE	Wood	71
+Chettri	NonFormal-Other	Hilly	0-10000	Electricity	2
+Chettri	NonFormal-Other	Hilly	0-10000	Gobar Gas	79
+Chettri	NonFormal-Other	Hilly	0-10000	Kerosene	4
+Chettri	NonFormal-Other	Hilly	0-10000	LP Gas	333
+Chettri	NonFormal-Other	Hilly	0-10000	Others	2
+Chettri	NonFormal-Other	Hilly	0-10000	Wood	7661
+Chettri	NonFormal-Other	Hilly	10000-20000	Electricity	2
+Chettri	NonFormal-Other	Hilly	10000-20000	Gobar Gas	107
+Chettri	NonFormal-Other	Hilly	10000-20000	Kerosene	0
+Chettri	NonFormal-Other	Hilly	10000-20000	LP Gas	860
+Chettri	NonFormal-Other	Hilly	10000-20000	Others	0
+Chettri	NonFormal-Other	Hilly	10000-20000	Wood	4039
+Chettri	NonFormal-Other	Hilly	20000-30000	Electricity	0
+Chettri	NonFormal-Other	Hilly	20000-30000	Gobar Gas	47
+Chettri	NonFormal-Other	Hilly	20000-30000	Kerosene	0
+Chettri	NonFormal-Other	Hilly	20000-30000	LP Gas	420
+Chettri	NonFormal-Other	Hilly	20000-30000	Others	0
+Chettri	NonFormal-Other	Hilly	20000-30000	Wood	944
+Chettri	NonFormal-Other	Hilly	30000-50000	Electricity	0
+Chettri	NonFormal-Other	Hilly	30000-50000	Gobar Gas	10
+Chettri	NonFormal-Other	Hilly	30000-50000	Kerosene	0
+Chettri	NonFormal-Other	Hilly	30000-50000	LP Gas	103
+Chettri	NonFormal-Other	Hilly	30000-50000	Others	0
+Chettri	NonFormal-Other	Hilly	30000-50000	Wood	233
+Chettri	NonFormal-Other	Hilly	50000-ABOVE	Electricity	0
+Chettri	NonFormal-Other	Hilly	50000-ABOVE	Gobar Gas	2
+Chettri	NonFormal-Other	Hilly	50000-ABOVE	Kerosene	0
+Chettri	NonFormal-Other	Hilly	50000-ABOVE	LP Gas	47
+Chettri	NonFormal-Other	Hilly	50000-ABOVE	Others	0
+Chettri	NonFormal-Other	Hilly	50000-ABOVE	Wood	71
 Chettri	NonFormal-Other	Himalayan	0-10000	Electricity	1
 Chettri	NonFormal-Other	Himalayan	0-10000	Gobar Gas	13
 Chettri	NonFormal-Other	Himalayan	0-10000	Kerosene	2
@@ -719,36 +719,36 @@ Chettri	NonFormal-Other	Himalayan	50000-ABOVE	Kerosene	0
 Chettri	NonFormal-Other	Himalayan	50000-ABOVE	LP Gas	33
 Chettri	NonFormal-Other	Himalayan	50000-ABOVE	Others	0
 Chettri	NonFormal-Other	Himalayan	50000-ABOVE	Wood	114
-Chettri	Primary	Hill	0-10000	Electricity	4
-Chettri	Primary	Hill	0-10000	Gobar Gas	69
-Chettri	Primary	Hill	0-10000	Kerosene	0
-Chettri	Primary	Hill	0-10000	LP Gas	382
-Chettri	Primary	Hill	0-10000	Others	4
-Chettri	Primary	Hill	0-10000	Wood	7761
-Chettri	Primary	Hill	10000-20000	Electricity	1
-Chettri	Primary	Hill	10000-20000	Gobar Gas	123
-Chettri	Primary	Hill	10000-20000	Kerosene	3
-Chettri	Primary	Hill	10000-20000	LP Gas	1141
-Chettri	Primary	Hill	10000-20000	Others	1
-Chettri	Primary	Hill	10000-20000	Wood	4559
-Chettri	Primary	Hill	20000-30000	Electricity	1
-Chettri	Primary	Hill	20000-30000	Gobar Gas	33
-Chettri	Primary	Hill	20000-30000	Kerosene	0
-Chettri	Primary	Hill	20000-30000	LP Gas	562
-Chettri	Primary	Hill	20000-30000	Others	0
-Chettri	Primary	Hill	20000-30000	Wood	1035
-Chettri	Primary	Hill	30000-50000	Electricity	0
-Chettri	Primary	Hill	30000-50000	Gobar Gas	17
-Chettri	Primary	Hill	30000-50000	Kerosene	0
-Chettri	Primary	Hill	30000-50000	LP Gas	150
-Chettri	Primary	Hill	30000-50000	Others	0
-Chettri	Primary	Hill	30000-50000	Wood	266
-Chettri	Primary	Hill	50000-ABOVE	Electricity	0
-Chettri	Primary	Hill	50000-ABOVE	Gobar Gas	5
-Chettri	Primary	Hill	50000-ABOVE	Kerosene	0
-Chettri	Primary	Hill	50000-ABOVE	LP Gas	75
-Chettri	Primary	Hill	50000-ABOVE	Others	0
-Chettri	Primary	Hill	50000-ABOVE	Wood	84
+Chettri	Primary	Hilly	0-10000	Electricity	4
+Chettri	Primary	Hilly	0-10000	Gobar Gas	69
+Chettri	Primary	Hilly	0-10000	Kerosene	0
+Chettri	Primary	Hilly	0-10000	LP Gas	382
+Chettri	Primary	Hilly	0-10000	Others	4
+Chettri	Primary	Hilly	0-10000	Wood	7761
+Chettri	Primary	Hilly	10000-20000	Electricity	1
+Chettri	Primary	Hilly	10000-20000	Gobar Gas	123
+Chettri	Primary	Hilly	10000-20000	Kerosene	3
+Chettri	Primary	Hilly	10000-20000	LP Gas	1141
+Chettri	Primary	Hilly	10000-20000	Others	1
+Chettri	Primary	Hilly	10000-20000	Wood	4559
+Chettri	Primary	Hilly	20000-30000	Electricity	1
+Chettri	Primary	Hilly	20000-30000	Gobar Gas	33
+Chettri	Primary	Hilly	20000-30000	Kerosene	0
+Chettri	Primary	Hilly	20000-30000	LP Gas	562
+Chettri	Primary	Hilly	20000-30000	Others	0
+Chettri	Primary	Hilly	20000-30000	Wood	1035
+Chettri	Primary	Hilly	30000-50000	Electricity	0
+Chettri	Primary	Hilly	30000-50000	Gobar Gas	17
+Chettri	Primary	Hilly	30000-50000	Kerosene	0
+Chettri	Primary	Hilly	30000-50000	LP Gas	150
+Chettri	Primary	Hilly	30000-50000	Others	0
+Chettri	Primary	Hilly	30000-50000	Wood	266
+Chettri	Primary	Hilly	50000-ABOVE	Electricity	0
+Chettri	Primary	Hilly	50000-ABOVE	Gobar Gas	5
+Chettri	Primary	Hilly	50000-ABOVE	Kerosene	0
+Chettri	Primary	Hilly	50000-ABOVE	LP Gas	75
+Chettri	Primary	Hilly	50000-ABOVE	Others	0
+Chettri	Primary	Hilly	50000-ABOVE	Wood	84
 Chettri	Primary	Himalayan	0-10000	Electricity	1
 Chettri	Primary	Himalayan	0-10000	Gobar Gas	20
 Chettri	Primary	Himalayan	0-10000	Kerosene	3
@@ -779,36 +779,36 @@ Chettri	Primary	Himalayan	50000-ABOVE	Kerosene	0
 Chettri	Primary	Himalayan	50000-ABOVE	LP Gas	37
 Chettri	Primary	Himalayan	50000-ABOVE	Others	0
 Chettri	Primary	Himalayan	50000-ABOVE	Wood	97
-Chettri	Secondary	Hill	0-10000	Electricity	2
-Chettri	Secondary	Hill	0-10000	Gobar Gas	70
-Chettri	Secondary	Hill	0-10000	Kerosene	1
-Chettri	Secondary	Hill	0-10000	LP Gas	602
-Chettri	Secondary	Hill	0-10000	Others	7
-Chettri	Secondary	Hill	0-10000	Wood	5492
-Chettri	Secondary	Hill	10000-20000	Electricity	6
-Chettri	Secondary	Hill	10000-20000	Gobar Gas	189
-Chettri	Secondary	Hill	10000-20000	Kerosene	2
-Chettri	Secondary	Hill	10000-20000	LP Gas	2421
-Chettri	Secondary	Hill	10000-20000	Others	10
-Chettri	Secondary	Hill	10000-20000	Wood	5257
-Chettri	Secondary	Hill	20000-30000	Electricity	1
-Chettri	Secondary	Hill	20000-30000	Gobar Gas	83
-Chettri	Secondary	Hill	20000-30000	Kerosene	1
-Chettri	Secondary	Hill	20000-30000	LP Gas	1364
-Chettri	Secondary	Hill	20000-30000	Others	6
-Chettri	Secondary	Hill	20000-30000	Wood	1411
-Chettri	Secondary	Hill	30000-50000	Electricity	0
-Chettri	Secondary	Hill	30000-50000	Gobar Gas	15
-Chettri	Secondary	Hill	30000-50000	Kerosene	0
-Chettri	Secondary	Hill	30000-50000	LP Gas	438
-Chettri	Secondary	Hill	30000-50000	Others	0
-Chettri	Secondary	Hill	30000-50000	Wood	372
-Chettri	Secondary	Hill	50000-ABOVE	Electricity	0
-Chettri	Secondary	Hill	50000-ABOVE	Gobar Gas	8
-Chettri	Secondary	Hill	50000-ABOVE	Kerosene	0
-Chettri	Secondary	Hill	50000-ABOVE	LP Gas	185
-Chettri	Secondary	Hill	50000-ABOVE	Others	0
-Chettri	Secondary	Hill	50000-ABOVE	Wood	131
+Chettri	Secondary	Hilly	0-10000	Electricity	2
+Chettri	Secondary	Hilly	0-10000	Gobar Gas	70
+Chettri	Secondary	Hilly	0-10000	Kerosene	1
+Chettri	Secondary	Hilly	0-10000	LP Gas	602
+Chettri	Secondary	Hilly	0-10000	Others	7
+Chettri	Secondary	Hilly	0-10000	Wood	5492
+Chettri	Secondary	Hilly	10000-20000	Electricity	6
+Chettri	Secondary	Hilly	10000-20000	Gobar Gas	189
+Chettri	Secondary	Hilly	10000-20000	Kerosene	2
+Chettri	Secondary	Hilly	10000-20000	LP Gas	2421
+Chettri	Secondary	Hilly	10000-20000	Others	10
+Chettri	Secondary	Hilly	10000-20000	Wood	5257
+Chettri	Secondary	Hilly	20000-30000	Electricity	1
+Chettri	Secondary	Hilly	20000-30000	Gobar Gas	83
+Chettri	Secondary	Hilly	20000-30000	Kerosene	1
+Chettri	Secondary	Hilly	20000-30000	LP Gas	1364
+Chettri	Secondary	Hilly	20000-30000	Others	6
+Chettri	Secondary	Hilly	20000-30000	Wood	1411
+Chettri	Secondary	Hilly	30000-50000	Electricity	0
+Chettri	Secondary	Hilly	30000-50000	Gobar Gas	15
+Chettri	Secondary	Hilly	30000-50000	Kerosene	0
+Chettri	Secondary	Hilly	30000-50000	LP Gas	438
+Chettri	Secondary	Hilly	30000-50000	Others	0
+Chettri	Secondary	Hilly	30000-50000	Wood	372
+Chettri	Secondary	Hilly	50000-ABOVE	Electricity	0
+Chettri	Secondary	Hilly	50000-ABOVE	Gobar Gas	8
+Chettri	Secondary	Hilly	50000-ABOVE	Kerosene	0
+Chettri	Secondary	Hilly	50000-ABOVE	LP Gas	185
+Chettri	Secondary	Hilly	50000-ABOVE	Others	0
+Chettri	Secondary	Hilly	50000-ABOVE	Wood	131
 Chettri	Secondary	Himalayan	0-10000	Electricity	3
 Chettri	Secondary	Himalayan	0-10000	Gobar Gas	6
 Chettri	Secondary	Himalayan	0-10000	Kerosene	4
@@ -839,36 +839,36 @@ Chettri	Secondary	Himalayan	50000-ABOVE	Kerosene	1
 Chettri	Secondary	Himalayan	50000-ABOVE	LP Gas	135
 Chettri	Secondary	Himalayan	50000-ABOVE	Others	1
 Chettri	Secondary	Himalayan	50000-ABOVE	Wood	171
-Chettri	University	Hill	0-10000	Electricity	0
-Chettri	University	Hill	0-10000	Gobar Gas	3
-Chettri	University	Hill	0-10000	Kerosene	0
-Chettri	University	Hill	0-10000	LP Gas	36
-Chettri	University	Hill	0-10000	Others	1
-Chettri	University	Hill	0-10000	Wood	190
-Chettri	University	Hill	10000-20000	Electricity	1
-Chettri	University	Hill	10000-20000	Gobar Gas	8
-Chettri	University	Hill	10000-20000	Kerosene	0
-Chettri	University	Hill	10000-20000	LP Gas	262
-Chettri	University	Hill	10000-20000	Others	3
-Chettri	University	Hill	10000-20000	Wood	484
-Chettri	University	Hill	20000-30000	Electricity	0
-Chettri	University	Hill	20000-30000	Gobar Gas	7
-Chettri	University	Hill	20000-30000	Kerosene	0
-Chettri	University	Hill	20000-30000	LP Gas	272
-Chettri	University	Hill	20000-30000	Others	1
-Chettri	University	Hill	20000-30000	Wood	212
-Chettri	University	Hill	30000-50000	Electricity	1
-Chettri	University	Hill	30000-50000	Gobar Gas	8
-Chettri	University	Hill	30000-50000	Kerosene	0
-Chettri	University	Hill	30000-50000	LP Gas	146
-Chettri	University	Hill	30000-50000	Others	1
-Chettri	University	Hill	30000-50000	Wood	74
-Chettri	University	Hill	50000-ABOVE	Electricity	0
-Chettri	University	Hill	50000-ABOVE	Gobar Gas	5
-Chettri	University	Hill	50000-ABOVE	Kerosene	1
-Chettri	University	Hill	50000-ABOVE	LP Gas	50
-Chettri	University	Hill	50000-ABOVE	Others	0
-Chettri	University	Hill	50000-ABOVE	Wood	24
+Chettri	University	Hilly	0-10000	Electricity	0
+Chettri	University	Hilly	0-10000	Gobar Gas	3
+Chettri	University	Hilly	0-10000	Kerosene	0
+Chettri	University	Hilly	0-10000	LP Gas	36
+Chettri	University	Hilly	0-10000	Others	1
+Chettri	University	Hilly	0-10000	Wood	190
+Chettri	University	Hilly	10000-20000	Electricity	1
+Chettri	University	Hilly	10000-20000	Gobar Gas	8
+Chettri	University	Hilly	10000-20000	Kerosene	0
+Chettri	University	Hilly	10000-20000	LP Gas	262
+Chettri	University	Hilly	10000-20000	Others	3
+Chettri	University	Hilly	10000-20000	Wood	484
+Chettri	University	Hilly	20000-30000	Electricity	0
+Chettri	University	Hilly	20000-30000	Gobar Gas	7
+Chettri	University	Hilly	20000-30000	Kerosene	0
+Chettri	University	Hilly	20000-30000	LP Gas	272
+Chettri	University	Hilly	20000-30000	Others	1
+Chettri	University	Hilly	20000-30000	Wood	212
+Chettri	University	Hilly	30000-50000	Electricity	1
+Chettri	University	Hilly	30000-50000	Gobar Gas	8
+Chettri	University	Hilly	30000-50000	Kerosene	0
+Chettri	University	Hilly	30000-50000	LP Gas	146
+Chettri	University	Hilly	30000-50000	Others	1
+Chettri	University	Hilly	30000-50000	Wood	74
+Chettri	University	Hilly	50000-ABOVE	Electricity	0
+Chettri	University	Hilly	50000-ABOVE	Gobar Gas	5
+Chettri	University	Hilly	50000-ABOVE	Kerosene	1
+Chettri	University	Hilly	50000-ABOVE	LP Gas	50
+Chettri	University	Hilly	50000-ABOVE	Others	0
+Chettri	University	Hilly	50000-ABOVE	Wood	24
 Chettri	University	Himalayan	0-10000	Electricity	0
 Chettri	University	Himalayan	0-10000	Gobar Gas	1
 Chettri	University	Himalayan	0-10000	Kerosene	0
@@ -899,36 +899,36 @@ Chettri	University	Himalayan	50000-ABOVE	Kerosene	0
 Chettri	University	Himalayan	50000-ABOVE	LP Gas	62
 Chettri	University	Himalayan	50000-ABOVE	Others	0
 Chettri	University	Himalayan	50000-ABOVE	Wood	47
-Dalit	Illiterate	Hill	0-10000	Electricity	2
-Dalit	Illiterate	Hill	0-10000	Gobar Gas	150
-Dalit	Illiterate	Hill	0-10000	Kerosene	4
-Dalit	Illiterate	Hill	0-10000	LP Gas	191
-Dalit	Illiterate	Hill	0-10000	Others	10
-Dalit	Illiterate	Hill	0-10000	Wood	16560
-Dalit	Illiterate	Hill	10000-20000	Electricity	0
-Dalit	Illiterate	Hill	10000-20000	Gobar Gas	98
-Dalit	Illiterate	Hill	10000-20000	Kerosene	2
-Dalit	Illiterate	Hill	10000-20000	LP Gas	279
-Dalit	Illiterate	Hill	10000-20000	Others	1
-Dalit	Illiterate	Hill	10000-20000	Wood	4195
-Dalit	Illiterate	Hill	20000-30000	Electricity	0
-Dalit	Illiterate	Hill	20000-30000	Gobar Gas	25
-Dalit	Illiterate	Hill	20000-30000	Kerosene	1
-Dalit	Illiterate	Hill	20000-30000	LP Gas	114
-Dalit	Illiterate	Hill	20000-30000	Others	0
-Dalit	Illiterate	Hill	20000-30000	Wood	992
-Dalit	Illiterate	Hill	30000-50000	Electricity	0
-Dalit	Illiterate	Hill	30000-50000	Gobar Gas	6
-Dalit	Illiterate	Hill	30000-50000	Kerosene	0
-Dalit	Illiterate	Hill	30000-50000	LP Gas	34
-Dalit	Illiterate	Hill	30000-50000	Others	0
-Dalit	Illiterate	Hill	30000-50000	Wood	171
-Dalit	Illiterate	Hill	50000-ABOVE	Electricity	0
-Dalit	Illiterate	Hill	50000-ABOVE	Gobar Gas	2
-Dalit	Illiterate	Hill	50000-ABOVE	Kerosene	0
-Dalit	Illiterate	Hill	50000-ABOVE	LP Gas	12
-Dalit	Illiterate	Hill	50000-ABOVE	Others	0
-Dalit	Illiterate	Hill	50000-ABOVE	Wood	44
+Dalit	Illiterate	Hilly	0-10000	Electricity	2
+Dalit	Illiterate	Hilly	0-10000	Gobar Gas	150
+Dalit	Illiterate	Hilly	0-10000	Kerosene	4
+Dalit	Illiterate	Hilly	0-10000	LP Gas	191
+Dalit	Illiterate	Hilly	0-10000	Others	10
+Dalit	Illiterate	Hilly	0-10000	Wood	16560
+Dalit	Illiterate	Hilly	10000-20000	Electricity	0
+Dalit	Illiterate	Hilly	10000-20000	Gobar Gas	98
+Dalit	Illiterate	Hilly	10000-20000	Kerosene	2
+Dalit	Illiterate	Hilly	10000-20000	LP Gas	279
+Dalit	Illiterate	Hilly	10000-20000	Others	1
+Dalit	Illiterate	Hilly	10000-20000	Wood	4195
+Dalit	Illiterate	Hilly	20000-30000	Electricity	0
+Dalit	Illiterate	Hilly	20000-30000	Gobar Gas	25
+Dalit	Illiterate	Hilly	20000-30000	Kerosene	1
+Dalit	Illiterate	Hilly	20000-30000	LP Gas	114
+Dalit	Illiterate	Hilly	20000-30000	Others	0
+Dalit	Illiterate	Hilly	20000-30000	Wood	992
+Dalit	Illiterate	Hilly	30000-50000	Electricity	0
+Dalit	Illiterate	Hilly	30000-50000	Gobar Gas	6
+Dalit	Illiterate	Hilly	30000-50000	Kerosene	0
+Dalit	Illiterate	Hilly	30000-50000	LP Gas	34
+Dalit	Illiterate	Hilly	30000-50000	Others	0
+Dalit	Illiterate	Hilly	30000-50000	Wood	171
+Dalit	Illiterate	Hilly	50000-ABOVE	Electricity	0
+Dalit	Illiterate	Hilly	50000-ABOVE	Gobar Gas	2
+Dalit	Illiterate	Hilly	50000-ABOVE	Kerosene	0
+Dalit	Illiterate	Hilly	50000-ABOVE	LP Gas	12
+Dalit	Illiterate	Hilly	50000-ABOVE	Others	0
+Dalit	Illiterate	Hilly	50000-ABOVE	Wood	44
 Dalit	Illiterate	Himalayan	0-10000	Electricity	1
 Dalit	Illiterate	Himalayan	0-10000	Gobar Gas	74
 Dalit	Illiterate	Himalayan	0-10000	Kerosene	2
@@ -959,36 +959,36 @@ Dalit	Illiterate	Himalayan	50000-ABOVE	Kerosene	0
 Dalit	Illiterate	Himalayan	50000-ABOVE	LP Gas	3
 Dalit	Illiterate	Himalayan	50000-ABOVE	Others	0
 Dalit	Illiterate	Himalayan	50000-ABOVE	Wood	35
-Dalit	NonFormal-Other	Hill	0-10000	Electricity	0
-Dalit	NonFormal-Other	Hill	0-10000	Gobar Gas	53
-Dalit	NonFormal-Other	Hill	0-10000	Kerosene	1
-Dalit	NonFormal-Other	Hill	0-10000	LP Gas	167
-Dalit	NonFormal-Other	Hill	0-10000	Others	5
-Dalit	NonFormal-Other	Hill	0-10000	Wood	7186
-Dalit	NonFormal-Other	Hill	10000-20000	Electricity	1
-Dalit	NonFormal-Other	Hill	10000-20000	Gobar Gas	57
-Dalit	NonFormal-Other	Hill	10000-20000	Kerosene	0
-Dalit	NonFormal-Other	Hill	10000-20000	LP Gas	282
-Dalit	NonFormal-Other	Hill	10000-20000	Others	2
-Dalit	NonFormal-Other	Hill	10000-20000	Wood	2828
-Dalit	NonFormal-Other	Hill	20000-30000	Electricity	0
-Dalit	NonFormal-Other	Hill	20000-30000	Gobar Gas	11
-Dalit	NonFormal-Other	Hill	20000-30000	Kerosene	1
-Dalit	NonFormal-Other	Hill	20000-30000	LP Gas	145
-Dalit	NonFormal-Other	Hill	20000-30000	Others	0
-Dalit	NonFormal-Other	Hill	20000-30000	Wood	746
-Dalit	NonFormal-Other	Hill	30000-50000	Electricity	0
-Dalit	NonFormal-Other	Hill	30000-50000	Gobar Gas	0
-Dalit	NonFormal-Other	Hill	30000-50000	Kerosene	0
-Dalit	NonFormal-Other	Hill	30000-50000	LP Gas	25
-Dalit	NonFormal-Other	Hill	30000-50000	Others	0
-Dalit	NonFormal-Other	Hill	30000-50000	Wood	125
-Dalit	NonFormal-Other	Hill	50000-ABOVE	Electricity	0
-Dalit	NonFormal-Other	Hill	50000-ABOVE	Gobar Gas	1
-Dalit	NonFormal-Other	Hill	50000-ABOVE	Kerosene	0
-Dalit	NonFormal-Other	Hill	50000-ABOVE	LP Gas	12
-Dalit	NonFormal-Other	Hill	50000-ABOVE	Others	0
-Dalit	NonFormal-Other	Hill	50000-ABOVE	Wood	29
+Dalit	NonFormal-Other	Hilly	0-10000	Electricity	0
+Dalit	NonFormal-Other	Hilly	0-10000	Gobar Gas	53
+Dalit	NonFormal-Other	Hilly	0-10000	Kerosene	1
+Dalit	NonFormal-Other	Hilly	0-10000	LP Gas	167
+Dalit	NonFormal-Other	Hilly	0-10000	Others	5
+Dalit	NonFormal-Other	Hilly	0-10000	Wood	7186
+Dalit	NonFormal-Other	Hilly	10000-20000	Electricity	1
+Dalit	NonFormal-Other	Hilly	10000-20000	Gobar Gas	57
+Dalit	NonFormal-Other	Hilly	10000-20000	Kerosene	0
+Dalit	NonFormal-Other	Hilly	10000-20000	LP Gas	282
+Dalit	NonFormal-Other	Hilly	10000-20000	Others	2
+Dalit	NonFormal-Other	Hilly	10000-20000	Wood	2828
+Dalit	NonFormal-Other	Hilly	20000-30000	Electricity	0
+Dalit	NonFormal-Other	Hilly	20000-30000	Gobar Gas	11
+Dalit	NonFormal-Other	Hilly	20000-30000	Kerosene	1
+Dalit	NonFormal-Other	Hilly	20000-30000	LP Gas	145
+Dalit	NonFormal-Other	Hilly	20000-30000	Others	0
+Dalit	NonFormal-Other	Hilly	20000-30000	Wood	746
+Dalit	NonFormal-Other	Hilly	30000-50000	Electricity	0
+Dalit	NonFormal-Other	Hilly	30000-50000	Gobar Gas	0
+Dalit	NonFormal-Other	Hilly	30000-50000	Kerosene	0
+Dalit	NonFormal-Other	Hilly	30000-50000	LP Gas	25
+Dalit	NonFormal-Other	Hilly	30000-50000	Others	0
+Dalit	NonFormal-Other	Hilly	30000-50000	Wood	125
+Dalit	NonFormal-Other	Hilly	50000-ABOVE	Electricity	0
+Dalit	NonFormal-Other	Hilly	50000-ABOVE	Gobar Gas	1
+Dalit	NonFormal-Other	Hilly	50000-ABOVE	Kerosene	0
+Dalit	NonFormal-Other	Hilly	50000-ABOVE	LP Gas	12
+Dalit	NonFormal-Other	Hilly	50000-ABOVE	Others	0
+Dalit	NonFormal-Other	Hilly	50000-ABOVE	Wood	29
 Dalit	NonFormal-Other	Himalayan	0-10000	Electricity	0
 Dalit	NonFormal-Other	Himalayan	0-10000	Gobar Gas	18
 Dalit	NonFormal-Other	Himalayan	0-10000	Kerosene	1
@@ -1019,36 +1019,36 @@ Dalit	NonFormal-Other	Himalayan	50000-ABOVE	Kerosene	0
 Dalit	NonFormal-Other	Himalayan	50000-ABOVE	LP Gas	6
 Dalit	NonFormal-Other	Himalayan	50000-ABOVE	Others	0
 Dalit	NonFormal-Other	Himalayan	50000-ABOVE	Wood	21
-Dalit	Primary	Hill	0-10000	Electricity	0
-Dalit	Primary	Hill	0-10000	Gobar Gas	93
-Dalit	Primary	Hill	0-10000	Kerosene	2
-Dalit	Primary	Hill	0-10000	LP Gas	224
-Dalit	Primary	Hill	0-10000	Others	3
-Dalit	Primary	Hill	0-10000	Wood	7663
-Dalit	Primary	Hill	10000-20000	Electricity	0
-Dalit	Primary	Hill	10000-20000	Gobar Gas	113
-Dalit	Primary	Hill	10000-20000	Kerosene	3
-Dalit	Primary	Hill	10000-20000	LP Gas	557
-Dalit	Primary	Hill	10000-20000	Others	0
-Dalit	Primary	Hill	10000-20000	Wood	3803
-Dalit	Primary	Hill	20000-30000	Electricity	0
-Dalit	Primary	Hill	20000-30000	Gobar Gas	24
-Dalit	Primary	Hill	20000-30000	Kerosene	0
-Dalit	Primary	Hill	20000-30000	LP Gas	228
-Dalit	Primary	Hill	20000-30000	Others	1
-Dalit	Primary	Hill	20000-30000	Wood	807
-Dalit	Primary	Hill	30000-50000	Electricity	0
-Dalit	Primary	Hill	30000-50000	Gobar Gas	7
-Dalit	Primary	Hill	30000-50000	Kerosene	0
-Dalit	Primary	Hill	30000-50000	LP Gas	43
-Dalit	Primary	Hill	30000-50000	Others	0
-Dalit	Primary	Hill	30000-50000	Wood	152
-Dalit	Primary	Hill	50000-ABOVE	Electricity	0
-Dalit	Primary	Hill	50000-ABOVE	Gobar Gas	0
-Dalit	Primary	Hill	50000-ABOVE	Kerosene	0
-Dalit	Primary	Hill	50000-ABOVE	LP Gas	16
-Dalit	Primary	Hill	50000-ABOVE	Others	0
-Dalit	Primary	Hill	50000-ABOVE	Wood	29
+Dalit	Primary	Hilly	0-10000	Electricity	0
+Dalit	Primary	Hilly	0-10000	Gobar Gas	93
+Dalit	Primary	Hilly	0-10000	Kerosene	2
+Dalit	Primary	Hilly	0-10000	LP Gas	224
+Dalit	Primary	Hilly	0-10000	Others	3
+Dalit	Primary	Hilly	0-10000	Wood	7663
+Dalit	Primary	Hilly	10000-20000	Electricity	0
+Dalit	Primary	Hilly	10000-20000	Gobar Gas	113
+Dalit	Primary	Hilly	10000-20000	Kerosene	3
+Dalit	Primary	Hilly	10000-20000	LP Gas	557
+Dalit	Primary	Hilly	10000-20000	Others	0
+Dalit	Primary	Hilly	10000-20000	Wood	3803
+Dalit	Primary	Hilly	20000-30000	Electricity	0
+Dalit	Primary	Hilly	20000-30000	Gobar Gas	24
+Dalit	Primary	Hilly	20000-30000	Kerosene	0
+Dalit	Primary	Hilly	20000-30000	LP Gas	228
+Dalit	Primary	Hilly	20000-30000	Others	1
+Dalit	Primary	Hilly	20000-30000	Wood	807
+Dalit	Primary	Hilly	30000-50000	Electricity	0
+Dalit	Primary	Hilly	30000-50000	Gobar Gas	7
+Dalit	Primary	Hilly	30000-50000	Kerosene	0
+Dalit	Primary	Hilly	30000-50000	LP Gas	43
+Dalit	Primary	Hilly	30000-50000	Others	0
+Dalit	Primary	Hilly	30000-50000	Wood	152
+Dalit	Primary	Hilly	50000-ABOVE	Electricity	0
+Dalit	Primary	Hilly	50000-ABOVE	Gobar Gas	0
+Dalit	Primary	Hilly	50000-ABOVE	Kerosene	0
+Dalit	Primary	Hilly	50000-ABOVE	LP Gas	16
+Dalit	Primary	Hilly	50000-ABOVE	Others	0
+Dalit	Primary	Hilly	50000-ABOVE	Wood	29
 Dalit	Primary	Himalayan	0-10000	Electricity	1
 Dalit	Primary	Himalayan	0-10000	Gobar Gas	36
 Dalit	Primary	Himalayan	0-10000	Kerosene	2
@@ -1079,36 +1079,36 @@ Dalit	Primary	Himalayan	50000-ABOVE	Kerosene	0
 Dalit	Primary	Himalayan	50000-ABOVE	LP Gas	10
 Dalit	Primary	Himalayan	50000-ABOVE	Others	0
 Dalit	Primary	Himalayan	50000-ABOVE	Wood	17
-Dalit	Secondary	Hill	0-10000	Electricity	2
-Dalit	Secondary	Hill	0-10000	Gobar Gas	26
-Dalit	Secondary	Hill	0-10000	Kerosene	0
-Dalit	Secondary	Hill	0-10000	LP Gas	147
-Dalit	Secondary	Hill	0-10000	Others	1
-Dalit	Secondary	Hill	0-10000	Wood	2067
-Dalit	Secondary	Hill	10000-20000	Electricity	1
-Dalit	Secondary	Hill	10000-20000	Gobar Gas	29
-Dalit	Secondary	Hill	10000-20000	Kerosene	1
-Dalit	Secondary	Hill	10000-20000	LP Gas	343
-Dalit	Secondary	Hill	10000-20000	Others	3
-Dalit	Secondary	Hill	10000-20000	Wood	1378
-Dalit	Secondary	Hill	20000-30000	Electricity	0
-Dalit	Secondary	Hill	20000-30000	Gobar Gas	10
-Dalit	Secondary	Hill	20000-30000	Kerosene	1
-Dalit	Secondary	Hill	20000-30000	LP Gas	179
-Dalit	Secondary	Hill	20000-30000	Others	1
-Dalit	Secondary	Hill	20000-30000	Wood	348
-Dalit	Secondary	Hill	30000-50000	Electricity	0
-Dalit	Secondary	Hill	30000-50000	Gobar Gas	3
-Dalit	Secondary	Hill	30000-50000	Kerosene	0
-Dalit	Secondary	Hill	30000-50000	LP Gas	47
-Dalit	Secondary	Hill	30000-50000	Others	0
-Dalit	Secondary	Hill	30000-50000	Wood	62
-Dalit	Secondary	Hill	50000-ABOVE	Electricity	0
-Dalit	Secondary	Hill	50000-ABOVE	Gobar Gas	0
-Dalit	Secondary	Hill	50000-ABOVE	Kerosene	0
-Dalit	Secondary	Hill	50000-ABOVE	LP Gas	7
-Dalit	Secondary	Hill	50000-ABOVE	Others	0
-Dalit	Secondary	Hill	50000-ABOVE	Wood	13
+Dalit	Secondary	Hilly	0-10000	Electricity	2
+Dalit	Secondary	Hilly	0-10000	Gobar Gas	26
+Dalit	Secondary	Hilly	0-10000	Kerosene	0
+Dalit	Secondary	Hilly	0-10000	LP Gas	147
+Dalit	Secondary	Hilly	0-10000	Others	1
+Dalit	Secondary	Hilly	0-10000	Wood	2067
+Dalit	Secondary	Hilly	10000-20000	Electricity	1
+Dalit	Secondary	Hilly	10000-20000	Gobar Gas	29
+Dalit	Secondary	Hilly	10000-20000	Kerosene	1
+Dalit	Secondary	Hilly	10000-20000	LP Gas	343
+Dalit	Secondary	Hilly	10000-20000	Others	3
+Dalit	Secondary	Hilly	10000-20000	Wood	1378
+Dalit	Secondary	Hilly	20000-30000	Electricity	0
+Dalit	Secondary	Hilly	20000-30000	Gobar Gas	10
+Dalit	Secondary	Hilly	20000-30000	Kerosene	1
+Dalit	Secondary	Hilly	20000-30000	LP Gas	179
+Dalit	Secondary	Hilly	20000-30000	Others	1
+Dalit	Secondary	Hilly	20000-30000	Wood	348
+Dalit	Secondary	Hilly	30000-50000	Electricity	0
+Dalit	Secondary	Hilly	30000-50000	Gobar Gas	3
+Dalit	Secondary	Hilly	30000-50000	Kerosene	0
+Dalit	Secondary	Hilly	30000-50000	LP Gas	47
+Dalit	Secondary	Hilly	30000-50000	Others	0
+Dalit	Secondary	Hilly	30000-50000	Wood	62
+Dalit	Secondary	Hilly	50000-ABOVE	Electricity	0
+Dalit	Secondary	Hilly	50000-ABOVE	Gobar Gas	0
+Dalit	Secondary	Hilly	50000-ABOVE	Kerosene	0
+Dalit	Secondary	Hilly	50000-ABOVE	LP Gas	7
+Dalit	Secondary	Hilly	50000-ABOVE	Others	0
+Dalit	Secondary	Hilly	50000-ABOVE	Wood	13
 Dalit	Secondary	Himalayan	0-10000	Electricity	0
 Dalit	Secondary	Himalayan	0-10000	Gobar Gas	24
 Dalit	Secondary	Himalayan	0-10000	Kerosene	1
@@ -1139,36 +1139,36 @@ Dalit	Secondary	Himalayan	50000-ABOVE	Kerosene	0
 Dalit	Secondary	Himalayan	50000-ABOVE	LP Gas	5
 Dalit	Secondary	Himalayan	50000-ABOVE	Others	1
 Dalit	Secondary	Himalayan	50000-ABOVE	Wood	14
-Dalit	University	Hill	0-10000	Electricity	0
-Dalit	University	Hill	0-10000	Gobar Gas	1
-Dalit	University	Hill	0-10000	Kerosene	0
-Dalit	University	Hill	0-10000	LP Gas	11
-Dalit	University	Hill	0-10000	Others	0
-Dalit	University	Hill	0-10000	Wood	33
-Dalit	University	Hill	10000-20000	Electricity	0
-Dalit	University	Hill	10000-20000	Gobar Gas	1
-Dalit	University	Hill	10000-20000	Kerosene	0
-Dalit	University	Hill	10000-20000	LP Gas	24
-Dalit	University	Hill	10000-20000	Others	0
-Dalit	University	Hill	10000-20000	Wood	72
-Dalit	University	Hill	20000-30000	Electricity	0
-Dalit	University	Hill	20000-30000	Gobar Gas	1
-Dalit	University	Hill	20000-30000	Kerosene	0
-Dalit	University	Hill	20000-30000	LP Gas	20
-Dalit	University	Hill	20000-30000	Others	0
-Dalit	University	Hill	20000-30000	Wood	22
-Dalit	University	Hill	30000-50000	Electricity	0
-Dalit	University	Hill	30000-50000	Gobar Gas	0
-Dalit	University	Hill	30000-50000	Kerosene	0
-Dalit	University	Hill	30000-50000	LP Gas	9
-Dalit	University	Hill	30000-50000	Others	0
-Dalit	University	Hill	30000-50000	Wood	8
-Dalit	University	Hill	50000-ABOVE	Electricity	0
-Dalit	University	Hill	50000-ABOVE	Gobar Gas	0
-Dalit	University	Hill	50000-ABOVE	Kerosene	0
-Dalit	University	Hill	50000-ABOVE	LP Gas	5
-Dalit	University	Hill	50000-ABOVE	Others	0
-Dalit	University	Hill	50000-ABOVE	Wood	1
+Dalit	University	Hilly	0-10000	Electricity	0
+Dalit	University	Hilly	0-10000	Gobar Gas	1
+Dalit	University	Hilly	0-10000	Kerosene	0
+Dalit	University	Hilly	0-10000	LP Gas	11
+Dalit	University	Hilly	0-10000	Others	0
+Dalit	University	Hilly	0-10000	Wood	33
+Dalit	University	Hilly	10000-20000	Electricity	0
+Dalit	University	Hilly	10000-20000	Gobar Gas	1
+Dalit	University	Hilly	10000-20000	Kerosene	0
+Dalit	University	Hilly	10000-20000	LP Gas	24
+Dalit	University	Hilly	10000-20000	Others	0
+Dalit	University	Hilly	10000-20000	Wood	72
+Dalit	University	Hilly	20000-30000	Electricity	0
+Dalit	University	Hilly	20000-30000	Gobar Gas	1
+Dalit	University	Hilly	20000-30000	Kerosene	0
+Dalit	University	Hilly	20000-30000	LP Gas	20
+Dalit	University	Hilly	20000-30000	Others	0
+Dalit	University	Hilly	20000-30000	Wood	22
+Dalit	University	Hilly	30000-50000	Electricity	0
+Dalit	University	Hilly	30000-50000	Gobar Gas	0
+Dalit	University	Hilly	30000-50000	Kerosene	0
+Dalit	University	Hilly	30000-50000	LP Gas	9
+Dalit	University	Hilly	30000-50000	Others	0
+Dalit	University	Hilly	30000-50000	Wood	8
+Dalit	University	Hilly	50000-ABOVE	Electricity	0
+Dalit	University	Hilly	50000-ABOVE	Gobar Gas	0
+Dalit	University	Hilly	50000-ABOVE	Kerosene	0
+Dalit	University	Hilly	50000-ABOVE	LP Gas	5
+Dalit	University	Hilly	50000-ABOVE	Others	0
+Dalit	University	Hilly	50000-ABOVE	Wood	1
 Dalit	University	Himalayan	0-10000	Electricity	0
 Dalit	University	Himalayan	0-10000	Gobar Gas	0
 Dalit	University	Himalayan	0-10000	Kerosene	0
@@ -1199,36 +1199,36 @@ Dalit	University	Himalayan	50000-ABOVE	Kerosene	0
 Dalit	University	Himalayan	50000-ABOVE	LP Gas	0
 Dalit	University	Himalayan	50000-ABOVE	Others	1
 Dalit	University	Himalayan	50000-ABOVE	Wood	1
-Gurung-Magar	Illiterate	Hill	0-10000	Electricity	2
-Gurung-Magar	Illiterate	Hill	0-10000	Gobar Gas	78
-Gurung-Magar	Illiterate	Hill	0-10000	Kerosene	4
-Gurung-Magar	Illiterate	Hill	0-10000	LP Gas	205
-Gurung-Magar	Illiterate	Hill	0-10000	Others	6
-Gurung-Magar	Illiterate	Hill	0-10000	Wood	12736
-Gurung-Magar	Illiterate	Hill	10000-20000	Electricity	1
-Gurung-Magar	Illiterate	Hill	10000-20000	Gobar Gas	86
-Gurung-Magar	Illiterate	Hill	10000-20000	Kerosene	3
-Gurung-Magar	Illiterate	Hill	10000-20000	LP Gas	272
-Gurung-Magar	Illiterate	Hill	10000-20000	Others	1
-Gurung-Magar	Illiterate	Hill	10000-20000	Wood	3162
-Gurung-Magar	Illiterate	Hill	20000-30000	Electricity	0
-Gurung-Magar	Illiterate	Hill	20000-30000	Gobar Gas	34
-Gurung-Magar	Illiterate	Hill	20000-30000	Kerosene	0
-Gurung-Magar	Illiterate	Hill	20000-30000	LP Gas	122
-Gurung-Magar	Illiterate	Hill	20000-30000	Others	0
-Gurung-Magar	Illiterate	Hill	20000-30000	Wood	695
-Gurung-Magar	Illiterate	Hill	30000-50000	Electricity	0
-Gurung-Magar	Illiterate	Hill	30000-50000	Gobar Gas	6
-Gurung-Magar	Illiterate	Hill	30000-50000	Kerosene	0
-Gurung-Magar	Illiterate	Hill	30000-50000	LP Gas	30
-Gurung-Magar	Illiterate	Hill	30000-50000	Others	0
-Gurung-Magar	Illiterate	Hill	30000-50000	Wood	162
-Gurung-Magar	Illiterate	Hill	50000-ABOVE	Electricity	0
-Gurung-Magar	Illiterate	Hill	50000-ABOVE	Gobar Gas	1
-Gurung-Magar	Illiterate	Hill	50000-ABOVE	Kerosene	0
-Gurung-Magar	Illiterate	Hill	50000-ABOVE	LP Gas	19
-Gurung-Magar	Illiterate	Hill	50000-ABOVE	Others	1
-Gurung-Magar	Illiterate	Hill	50000-ABOVE	Wood	79
+Gurung-Magar	Illiterate	Hilly	0-10000	Electricity	2
+Gurung-Magar	Illiterate	Hilly	0-10000	Gobar Gas	78
+Gurung-Magar	Illiterate	Hilly	0-10000	Kerosene	4
+Gurung-Magar	Illiterate	Hilly	0-10000	LP Gas	205
+Gurung-Magar	Illiterate	Hilly	0-10000	Others	6
+Gurung-Magar	Illiterate	Hilly	0-10000	Wood	12736
+Gurung-Magar	Illiterate	Hilly	10000-20000	Electricity	1
+Gurung-Magar	Illiterate	Hilly	10000-20000	Gobar Gas	86
+Gurung-Magar	Illiterate	Hilly	10000-20000	Kerosene	3
+Gurung-Magar	Illiterate	Hilly	10000-20000	LP Gas	272
+Gurung-Magar	Illiterate	Hilly	10000-20000	Others	1
+Gurung-Magar	Illiterate	Hilly	10000-20000	Wood	3162
+Gurung-Magar	Illiterate	Hilly	20000-30000	Electricity	0
+Gurung-Magar	Illiterate	Hilly	20000-30000	Gobar Gas	34
+Gurung-Magar	Illiterate	Hilly	20000-30000	Kerosene	0
+Gurung-Magar	Illiterate	Hilly	20000-30000	LP Gas	122
+Gurung-Magar	Illiterate	Hilly	20000-30000	Others	0
+Gurung-Magar	Illiterate	Hilly	20000-30000	Wood	695
+Gurung-Magar	Illiterate	Hilly	30000-50000	Electricity	0
+Gurung-Magar	Illiterate	Hilly	30000-50000	Gobar Gas	6
+Gurung-Magar	Illiterate	Hilly	30000-50000	Kerosene	0
+Gurung-Magar	Illiterate	Hilly	30000-50000	LP Gas	30
+Gurung-Magar	Illiterate	Hilly	30000-50000	Others	0
+Gurung-Magar	Illiterate	Hilly	30000-50000	Wood	162
+Gurung-Magar	Illiterate	Hilly	50000-ABOVE	Electricity	0
+Gurung-Magar	Illiterate	Hilly	50000-ABOVE	Gobar Gas	1
+Gurung-Magar	Illiterate	Hilly	50000-ABOVE	Kerosene	0
+Gurung-Magar	Illiterate	Hilly	50000-ABOVE	LP Gas	19
+Gurung-Magar	Illiterate	Hilly	50000-ABOVE	Others	1
+Gurung-Magar	Illiterate	Hilly	50000-ABOVE	Wood	79
 Gurung-Magar	Illiterate	Himalayan	0-10000	Electricity	1
 Gurung-Magar	Illiterate	Himalayan	0-10000	Gobar Gas	7
 Gurung-Magar	Illiterate	Himalayan	0-10000	Kerosene	0
@@ -1259,36 +1259,36 @@ Gurung-Magar	Illiterate	Himalayan	50000-ABOVE	Kerosene	0
 Gurung-Magar	Illiterate	Himalayan	50000-ABOVE	LP Gas	25
 Gurung-Magar	Illiterate	Himalayan	50000-ABOVE	Others	0
 Gurung-Magar	Illiterate	Himalayan	50000-ABOVE	Wood	106
-Gurung-Magar	NonFormal-Other	Hill	0-10000	Electricity	2
-Gurung-Magar	NonFormal-Other	Hill	0-10000	Gobar Gas	57
-Gurung-Magar	NonFormal-Other	Hill	0-10000	Kerosene	0
-Gurung-Magar	NonFormal-Other	Hill	0-10000	LP Gas	198
-Gurung-Magar	NonFormal-Other	Hill	0-10000	Others	2
-Gurung-Magar	NonFormal-Other	Hill	0-10000	Wood	7670
-Gurung-Magar	NonFormal-Other	Hill	10000-20000	Electricity	0
-Gurung-Magar	NonFormal-Other	Hill	10000-20000	Gobar Gas	72
-Gurung-Magar	NonFormal-Other	Hill	10000-20000	Kerosene	0
-Gurung-Magar	NonFormal-Other	Hill	10000-20000	LP Gas	412
-Gurung-Magar	NonFormal-Other	Hill	10000-20000	Others	1
-Gurung-Magar	NonFormal-Other	Hill	10000-20000	Wood	3315
-Gurung-Magar	NonFormal-Other	Hill	20000-30000	Electricity	0
-Gurung-Magar	NonFormal-Other	Hill	20000-30000	Gobar Gas	28
-Gurung-Magar	NonFormal-Other	Hill	20000-30000	Kerosene	0
-Gurung-Magar	NonFormal-Other	Hill	20000-30000	LP Gas	227
-Gurung-Magar	NonFormal-Other	Hill	20000-30000	Others	0
-Gurung-Magar	NonFormal-Other	Hill	20000-30000	Wood	910
-Gurung-Magar	NonFormal-Other	Hill	30000-50000	Electricity	0
-Gurung-Magar	NonFormal-Other	Hill	30000-50000	Gobar Gas	7
-Gurung-Magar	NonFormal-Other	Hill	30000-50000	Kerosene	0
-Gurung-Magar	NonFormal-Other	Hill	30000-50000	LP Gas	67
-Gurung-Magar	NonFormal-Other	Hill	30000-50000	Others	0
-Gurung-Magar	NonFormal-Other	Hill	30000-50000	Wood	199
-Gurung-Magar	NonFormal-Other	Hill	50000-ABOVE	Electricity	0
-Gurung-Magar	NonFormal-Other	Hill	50000-ABOVE	Gobar Gas	1
-Gurung-Magar	NonFormal-Other	Hill	50000-ABOVE	Kerosene	0
-Gurung-Magar	NonFormal-Other	Hill	50000-ABOVE	LP Gas	19
-Gurung-Magar	NonFormal-Other	Hill	50000-ABOVE	Others	0
-Gurung-Magar	NonFormal-Other	Hill	50000-ABOVE	Wood	56
+Gurung-Magar	NonFormal-Other	Hilly	0-10000	Electricity	2
+Gurung-Magar	NonFormal-Other	Hilly	0-10000	Gobar Gas	57
+Gurung-Magar	NonFormal-Other	Hilly	0-10000	Kerosene	0
+Gurung-Magar	NonFormal-Other	Hilly	0-10000	LP Gas	198
+Gurung-Magar	NonFormal-Other	Hilly	0-10000	Others	2
+Gurung-Magar	NonFormal-Other	Hilly	0-10000	Wood	7670
+Gurung-Magar	NonFormal-Other	Hilly	10000-20000	Electricity	0
+Gurung-Magar	NonFormal-Other	Hilly	10000-20000	Gobar Gas	72
+Gurung-Magar	NonFormal-Other	Hilly	10000-20000	Kerosene	0
+Gurung-Magar	NonFormal-Other	Hilly	10000-20000	LP Gas	412
+Gurung-Magar	NonFormal-Other	Hilly	10000-20000	Others	1
+Gurung-Magar	NonFormal-Other	Hilly	10000-20000	Wood	3315
+Gurung-Magar	NonFormal-Other	Hilly	20000-30000	Electricity	0
+Gurung-Magar	NonFormal-Other	Hilly	20000-30000	Gobar Gas	28
+Gurung-Magar	NonFormal-Other	Hilly	20000-30000	Kerosene	0
+Gurung-Magar	NonFormal-Other	Hilly	20000-30000	LP Gas	227
+Gurung-Magar	NonFormal-Other	Hilly	20000-30000	Others	0
+Gurung-Magar	NonFormal-Other	Hilly	20000-30000	Wood	910
+Gurung-Magar	NonFormal-Other	Hilly	30000-50000	Electricity	0
+Gurung-Magar	NonFormal-Other	Hilly	30000-50000	Gobar Gas	7
+Gurung-Magar	NonFormal-Other	Hilly	30000-50000	Kerosene	0
+Gurung-Magar	NonFormal-Other	Hilly	30000-50000	LP Gas	67
+Gurung-Magar	NonFormal-Other	Hilly	30000-50000	Others	0
+Gurung-Magar	NonFormal-Other	Hilly	30000-50000	Wood	199
+Gurung-Magar	NonFormal-Other	Hilly	50000-ABOVE	Electricity	0
+Gurung-Magar	NonFormal-Other	Hilly	50000-ABOVE	Gobar Gas	1
+Gurung-Magar	NonFormal-Other	Hilly	50000-ABOVE	Kerosene	0
+Gurung-Magar	NonFormal-Other	Hilly	50000-ABOVE	LP Gas	19
+Gurung-Magar	NonFormal-Other	Hilly	50000-ABOVE	Others	0
+Gurung-Magar	NonFormal-Other	Hilly	50000-ABOVE	Wood	56
 Gurung-Magar	NonFormal-Other	Himalayan	0-10000	Electricity	2
 Gurung-Magar	NonFormal-Other	Himalayan	0-10000	Gobar Gas	6
 Gurung-Magar	NonFormal-Other	Himalayan	0-10000	Kerosene	2
@@ -1319,36 +1319,36 @@ Gurung-Magar	NonFormal-Other	Himalayan	50000-ABOVE	Kerosene	0
 Gurung-Magar	NonFormal-Other	Himalayan	50000-ABOVE	LP Gas	29
 Gurung-Magar	NonFormal-Other	Himalayan	50000-ABOVE	Others	0
 Gurung-Magar	NonFormal-Other	Himalayan	50000-ABOVE	Wood	68
-Gurung-Magar	Primary	Hill	0-10000	Electricity	1
-Gurung-Magar	Primary	Hill	0-10000	Gobar Gas	71
-Gurung-Magar	Primary	Hill	0-10000	Kerosene	1
-Gurung-Magar	Primary	Hill	0-10000	LP Gas	275
-Gurung-Magar	Primary	Hill	0-10000	Others	6
-Gurung-Magar	Primary	Hill	0-10000	Wood	6962
-Gurung-Magar	Primary	Hill	10000-20000	Electricity	0
-Gurung-Magar	Primary	Hill	10000-20000	Gobar Gas	107
-Gurung-Magar	Primary	Hill	10000-20000	Kerosene	2
-Gurung-Magar	Primary	Hill	10000-20000	LP Gas	641
-Gurung-Magar	Primary	Hill	10000-20000	Others	3
-Gurung-Magar	Primary	Hill	10000-20000	Wood	3076
-Gurung-Magar	Primary	Hill	20000-30000	Electricity	0
-Gurung-Magar	Primary	Hill	20000-30000	Gobar Gas	34
-Gurung-Magar	Primary	Hill	20000-30000	Kerosene	0
-Gurung-Magar	Primary	Hill	20000-30000	LP Gas	319
-Gurung-Magar	Primary	Hill	20000-30000	Others	2
-Gurung-Magar	Primary	Hill	20000-30000	Wood	753
-Gurung-Magar	Primary	Hill	30000-50000	Electricity	0
-Gurung-Magar	Primary	Hill	30000-50000	Gobar Gas	12
-Gurung-Magar	Primary	Hill	30000-50000	Kerosene	0
-Gurung-Magar	Primary	Hill	30000-50000	LP Gas	76
-Gurung-Magar	Primary	Hill	30000-50000	Others	0
-Gurung-Magar	Primary	Hill	30000-50000	Wood	181
-Gurung-Magar	Primary	Hill	50000-ABOVE	Electricity	0
-Gurung-Magar	Primary	Hill	50000-ABOVE	Gobar Gas	1
-Gurung-Magar	Primary	Hill	50000-ABOVE	Kerosene	0
-Gurung-Magar	Primary	Hill	50000-ABOVE	LP Gas	28
-Gurung-Magar	Primary	Hill	50000-ABOVE	Others	0
-Gurung-Magar	Primary	Hill	50000-ABOVE	Wood	53
+Gurung-Magar	Primary	Hilly	0-10000	Electricity	1
+Gurung-Magar	Primary	Hilly	0-10000	Gobar Gas	71
+Gurung-Magar	Primary	Hilly	0-10000	Kerosene	1
+Gurung-Magar	Primary	Hilly	0-10000	LP Gas	275
+Gurung-Magar	Primary	Hilly	0-10000	Others	6
+Gurung-Magar	Primary	Hilly	0-10000	Wood	6962
+Gurung-Magar	Primary	Hilly	10000-20000	Electricity	0
+Gurung-Magar	Primary	Hilly	10000-20000	Gobar Gas	107
+Gurung-Magar	Primary	Hilly	10000-20000	Kerosene	2
+Gurung-Magar	Primary	Hilly	10000-20000	LP Gas	641
+Gurung-Magar	Primary	Hilly	10000-20000	Others	3
+Gurung-Magar	Primary	Hilly	10000-20000	Wood	3076
+Gurung-Magar	Primary	Hilly	20000-30000	Electricity	0
+Gurung-Magar	Primary	Hilly	20000-30000	Gobar Gas	34
+Gurung-Magar	Primary	Hilly	20000-30000	Kerosene	0
+Gurung-Magar	Primary	Hilly	20000-30000	LP Gas	319
+Gurung-Magar	Primary	Hilly	20000-30000	Others	2
+Gurung-Magar	Primary	Hilly	20000-30000	Wood	753
+Gurung-Magar	Primary	Hilly	30000-50000	Electricity	0
+Gurung-Magar	Primary	Hilly	30000-50000	Gobar Gas	12
+Gurung-Magar	Primary	Hilly	30000-50000	Kerosene	0
+Gurung-Magar	Primary	Hilly	30000-50000	LP Gas	76
+Gurung-Magar	Primary	Hilly	30000-50000	Others	0
+Gurung-Magar	Primary	Hilly	30000-50000	Wood	181
+Gurung-Magar	Primary	Hilly	50000-ABOVE	Electricity	0
+Gurung-Magar	Primary	Hilly	50000-ABOVE	Gobar Gas	1
+Gurung-Magar	Primary	Hilly	50000-ABOVE	Kerosene	0
+Gurung-Magar	Primary	Hilly	50000-ABOVE	LP Gas	28
+Gurung-Magar	Primary	Hilly	50000-ABOVE	Others	0
+Gurung-Magar	Primary	Hilly	50000-ABOVE	Wood	53
 Gurung-Magar	Primary	Himalayan	0-10000	Electricity	0
 Gurung-Magar	Primary	Himalayan	0-10000	Gobar Gas	4
 Gurung-Magar	Primary	Himalayan	0-10000	Kerosene	1
@@ -1379,36 +1379,36 @@ Gurung-Magar	Primary	Himalayan	50000-ABOVE	Kerosene	0
 Gurung-Magar	Primary	Himalayan	50000-ABOVE	LP Gas	35
 Gurung-Magar	Primary	Himalayan	50000-ABOVE	Others	0
 Gurung-Magar	Primary	Himalayan	50000-ABOVE	Wood	89
-Gurung-Magar	Secondary	Hill	0-10000	Electricity	1
-Gurung-Magar	Secondary	Hill	0-10000	Gobar Gas	32
-Gurung-Magar	Secondary	Hill	0-10000	Kerosene	0
-Gurung-Magar	Secondary	Hill	0-10000	LP Gas	331
-Gurung-Magar	Secondary	Hill	0-10000	Others	1
-Gurung-Magar	Secondary	Hill	0-10000	Wood	2688
-Gurung-Magar	Secondary	Hill	10000-20000	Electricity	0
-Gurung-Magar	Secondary	Hill	10000-20000	Gobar Gas	54
-Gurung-Magar	Secondary	Hill	10000-20000	Kerosene	1
-Gurung-Magar	Secondary	Hill	10000-20000	LP Gas	701
-Gurung-Magar	Secondary	Hill	10000-20000	Others	0
-Gurung-Magar	Secondary	Hill	10000-20000	Wood	1835
-Gurung-Magar	Secondary	Hill	20000-30000	Electricity	0
-Gurung-Magar	Secondary	Hill	20000-30000	Gobar Gas	25
-Gurung-Magar	Secondary	Hill	20000-30000	Kerosene	0
-Gurung-Magar	Secondary	Hill	20000-30000	LP Gas	407
-Gurung-Magar	Secondary	Hill	20000-30000	Others	0
-Gurung-Magar	Secondary	Hill	20000-30000	Wood	467
-Gurung-Magar	Secondary	Hill	30000-50000	Electricity	0
-Gurung-Magar	Secondary	Hill	30000-50000	Gobar Gas	5
-Gurung-Magar	Secondary	Hill	30000-50000	Kerosene	0
-Gurung-Magar	Secondary	Hill	30000-50000	LP Gas	127
-Gurung-Magar	Secondary	Hill	30000-50000	Others	0
-Gurung-Magar	Secondary	Hill	30000-50000	Wood	133
-Gurung-Magar	Secondary	Hill	50000-ABOVE	Electricity	0
-Gurung-Magar	Secondary	Hill	50000-ABOVE	Gobar Gas	1
-Gurung-Magar	Secondary	Hill	50000-ABOVE	Kerosene	0
-Gurung-Magar	Secondary	Hill	50000-ABOVE	LP Gas	65
-Gurung-Magar	Secondary	Hill	50000-ABOVE	Others	0
-Gurung-Magar	Secondary	Hill	50000-ABOVE	Wood	33
+Gurung-Magar	Secondary	Hilly	0-10000	Electricity	1
+Gurung-Magar	Secondary	Hilly	0-10000	Gobar Gas	32
+Gurung-Magar	Secondary	Hilly	0-10000	Kerosene	0
+Gurung-Magar	Secondary	Hilly	0-10000	LP Gas	331
+Gurung-Magar	Secondary	Hilly	0-10000	Others	1
+Gurung-Magar	Secondary	Hilly	0-10000	Wood	2688
+Gurung-Magar	Secondary	Hilly	10000-20000	Electricity	0
+Gurung-Magar	Secondary	Hilly	10000-20000	Gobar Gas	54
+Gurung-Magar	Secondary	Hilly	10000-20000	Kerosene	1
+Gurung-Magar	Secondary	Hilly	10000-20000	LP Gas	701
+Gurung-Magar	Secondary	Hilly	10000-20000	Others	0
+Gurung-Magar	Secondary	Hilly	10000-20000	Wood	1835
+Gurung-Magar	Secondary	Hilly	20000-30000	Electricity	0
+Gurung-Magar	Secondary	Hilly	20000-30000	Gobar Gas	25
+Gurung-Magar	Secondary	Hilly	20000-30000	Kerosene	0
+Gurung-Magar	Secondary	Hilly	20000-30000	LP Gas	407
+Gurung-Magar	Secondary	Hilly	20000-30000	Others	0
+Gurung-Magar	Secondary	Hilly	20000-30000	Wood	467
+Gurung-Magar	Secondary	Hilly	30000-50000	Electricity	0
+Gurung-Magar	Secondary	Hilly	30000-50000	Gobar Gas	5
+Gurung-Magar	Secondary	Hilly	30000-50000	Kerosene	0
+Gurung-Magar	Secondary	Hilly	30000-50000	LP Gas	127
+Gurung-Magar	Secondary	Hilly	30000-50000	Others	0
+Gurung-Magar	Secondary	Hilly	30000-50000	Wood	133
+Gurung-Magar	Secondary	Hilly	50000-ABOVE	Electricity	0
+Gurung-Magar	Secondary	Hilly	50000-ABOVE	Gobar Gas	1
+Gurung-Magar	Secondary	Hilly	50000-ABOVE	Kerosene	0
+Gurung-Magar	Secondary	Hilly	50000-ABOVE	LP Gas	65
+Gurung-Magar	Secondary	Hilly	50000-ABOVE	Others	0
+Gurung-Magar	Secondary	Hilly	50000-ABOVE	Wood	33
 Gurung-Magar	Secondary	Himalayan	0-10000	Electricity	0
 Gurung-Magar	Secondary	Himalayan	0-10000	Gobar Gas	5
 Gurung-Magar	Secondary	Himalayan	0-10000	Kerosene	1
@@ -1439,36 +1439,36 @@ Gurung-Magar	Secondary	Himalayan	50000-ABOVE	Kerosene	0
 Gurung-Magar	Secondary	Himalayan	50000-ABOVE	LP Gas	26
 Gurung-Magar	Secondary	Himalayan	50000-ABOVE	Others	0
 Gurung-Magar	Secondary	Himalayan	50000-ABOVE	Wood	59
-Gurung-Magar	University	Hill	0-10000	Electricity	0
-Gurung-Magar	University	Hill	0-10000	Gobar Gas	1
-Gurung-Magar	University	Hill	0-10000	Kerosene	0
-Gurung-Magar	University	Hill	0-10000	LP Gas	13
-Gurung-Magar	University	Hill	0-10000	Others	0
-Gurung-Magar	University	Hill	0-10000	Wood	49
-Gurung-Magar	University	Hill	10000-20000	Electricity	0
-Gurung-Magar	University	Hill	10000-20000	Gobar Gas	0
-Gurung-Magar	University	Hill	10000-20000	Kerosene	0
-Gurung-Magar	University	Hill	10000-20000	LP Gas	43
-Gurung-Magar	University	Hill	10000-20000	Others	1
-Gurung-Magar	University	Hill	10000-20000	Wood	111
-Gurung-Magar	University	Hill	20000-30000	Electricity	0
-Gurung-Magar	University	Hill	20000-30000	Gobar Gas	0
-Gurung-Magar	University	Hill	20000-30000	Kerosene	0
-Gurung-Magar	University	Hill	20000-30000	LP Gas	39
-Gurung-Magar	University	Hill	20000-30000	Others	0
-Gurung-Magar	University	Hill	20000-30000	Wood	55
-Gurung-Magar	University	Hill	30000-50000	Electricity	0
-Gurung-Magar	University	Hill	30000-50000	Gobar Gas	0
-Gurung-Magar	University	Hill	30000-50000	Kerosene	0
-Gurung-Magar	University	Hill	30000-50000	LP Gas	13
-Gurung-Magar	University	Hill	30000-50000	Others	0
-Gurung-Magar	University	Hill	30000-50000	Wood	12
-Gurung-Magar	University	Hill	50000-ABOVE	Electricity	0
-Gurung-Magar	University	Hill	50000-ABOVE	Gobar Gas	1
-Gurung-Magar	University	Hill	50000-ABOVE	Kerosene	0
-Gurung-Magar	University	Hill	50000-ABOVE	LP Gas	8
-Gurung-Magar	University	Hill	50000-ABOVE	Others	0
-Gurung-Magar	University	Hill	50000-ABOVE	Wood	3
+Gurung-Magar	University	Hilly	0-10000	Electricity	0
+Gurung-Magar	University	Hilly	0-10000	Gobar Gas	1
+Gurung-Magar	University	Hilly	0-10000	Kerosene	0
+Gurung-Magar	University	Hilly	0-10000	LP Gas	13
+Gurung-Magar	University	Hilly	0-10000	Others	0
+Gurung-Magar	University	Hilly	0-10000	Wood	49
+Gurung-Magar	University	Hilly	10000-20000	Electricity	0
+Gurung-Magar	University	Hilly	10000-20000	Gobar Gas	0
+Gurung-Magar	University	Hilly	10000-20000	Kerosene	0
+Gurung-Magar	University	Hilly	10000-20000	LP Gas	43
+Gurung-Magar	University	Hilly	10000-20000	Others	1
+Gurung-Magar	University	Hilly	10000-20000	Wood	111
+Gurung-Magar	University	Hilly	20000-30000	Electricity	0
+Gurung-Magar	University	Hilly	20000-30000	Gobar Gas	0
+Gurung-Magar	University	Hilly	20000-30000	Kerosene	0
+Gurung-Magar	University	Hilly	20000-30000	LP Gas	39
+Gurung-Magar	University	Hilly	20000-30000	Others	0
+Gurung-Magar	University	Hilly	20000-30000	Wood	55
+Gurung-Magar	University	Hilly	30000-50000	Electricity	0
+Gurung-Magar	University	Hilly	30000-50000	Gobar Gas	0
+Gurung-Magar	University	Hilly	30000-50000	Kerosene	0
+Gurung-Magar	University	Hilly	30000-50000	LP Gas	13
+Gurung-Magar	University	Hilly	30000-50000	Others	0
+Gurung-Magar	University	Hilly	30000-50000	Wood	12
+Gurung-Magar	University	Hilly	50000-ABOVE	Electricity	0
+Gurung-Magar	University	Hilly	50000-ABOVE	Gobar Gas	1
+Gurung-Magar	University	Hilly	50000-ABOVE	Kerosene	0
+Gurung-Magar	University	Hilly	50000-ABOVE	LP Gas	8
+Gurung-Magar	University	Hilly	50000-ABOVE	Others	0
+Gurung-Magar	University	Hilly	50000-ABOVE	Wood	3
 Gurung-Magar	University	Himalayan	0-10000	Electricity	0
 Gurung-Magar	University	Himalayan	0-10000	Gobar Gas	0
 Gurung-Magar	University	Himalayan	0-10000	Kerosene	0
@@ -1499,36 +1499,36 @@ Gurung-Magar	University	Himalayan	50000-ABOVE	Kerosene	0
 Gurung-Magar	University	Himalayan	50000-ABOVE	LP Gas	4
 Gurung-Magar	University	Himalayan	50000-ABOVE	Others	0
 Gurung-Magar	University	Himalayan	50000-ABOVE	Wood	9
-Madhesi	Illiterate	Hill	0-10000	Electricity	0
-Madhesi	Illiterate	Hill	0-10000	Gobar Gas	0
-Madhesi	Illiterate	Hill	0-10000	Kerosene	0
-Madhesi	Illiterate	Hill	0-10000	LP Gas	27
-Madhesi	Illiterate	Hill	0-10000	Others	2
-Madhesi	Illiterate	Hill	0-10000	Wood	614
-Madhesi	Illiterate	Hill	10000-20000	Electricity	0
-Madhesi	Illiterate	Hill	10000-20000	Gobar Gas	2
-Madhesi	Illiterate	Hill	10000-20000	Kerosene	0
-Madhesi	Illiterate	Hill	10000-20000	LP Gas	70
-Madhesi	Illiterate	Hill	10000-20000	Others	0
-Madhesi	Illiterate	Hill	10000-20000	Wood	127
-Madhesi	Illiterate	Hill	20000-30000	Electricity	0
-Madhesi	Illiterate	Hill	20000-30000	Gobar Gas	0
-Madhesi	Illiterate	Hill	20000-30000	Kerosene	0
-Madhesi	Illiterate	Hill	20000-30000	LP Gas	34
-Madhesi	Illiterate	Hill	20000-30000	Others	0
-Madhesi	Illiterate	Hill	20000-30000	Wood	40
-Madhesi	Illiterate	Hill	30000-50000	Electricity	0
-Madhesi	Illiterate	Hill	30000-50000	Gobar Gas	0
-Madhesi	Illiterate	Hill	30000-50000	Kerosene	0
-Madhesi	Illiterate	Hill	30000-50000	LP Gas	11
-Madhesi	Illiterate	Hill	30000-50000	Others	0
-Madhesi	Illiterate	Hill	30000-50000	Wood	4
-Madhesi	Illiterate	Hill	50000-ABOVE	Electricity	0
-Madhesi	Illiterate	Hill	50000-ABOVE	Gobar Gas	0
-Madhesi	Illiterate	Hill	50000-ABOVE	Kerosene	0
-Madhesi	Illiterate	Hill	50000-ABOVE	LP Gas	4
-Madhesi	Illiterate	Hill	50000-ABOVE	Others	0
-Madhesi	Illiterate	Hill	50000-ABOVE	Wood	0
+Madhesi	Illiterate	Hilly	0-10000	Electricity	0
+Madhesi	Illiterate	Hilly	0-10000	Gobar Gas	0
+Madhesi	Illiterate	Hilly	0-10000	Kerosene	0
+Madhesi	Illiterate	Hilly	0-10000	LP Gas	27
+Madhesi	Illiterate	Hilly	0-10000	Others	2
+Madhesi	Illiterate	Hilly	0-10000	Wood	614
+Madhesi	Illiterate	Hilly	10000-20000	Electricity	0
+Madhesi	Illiterate	Hilly	10000-20000	Gobar Gas	2
+Madhesi	Illiterate	Hilly	10000-20000	Kerosene	0
+Madhesi	Illiterate	Hilly	10000-20000	LP Gas	70
+Madhesi	Illiterate	Hilly	10000-20000	Others	0
+Madhesi	Illiterate	Hilly	10000-20000	Wood	127
+Madhesi	Illiterate	Hilly	20000-30000	Electricity	0
+Madhesi	Illiterate	Hilly	20000-30000	Gobar Gas	0
+Madhesi	Illiterate	Hilly	20000-30000	Kerosene	0
+Madhesi	Illiterate	Hilly	20000-30000	LP Gas	34
+Madhesi	Illiterate	Hilly	20000-30000	Others	0
+Madhesi	Illiterate	Hilly	20000-30000	Wood	40
+Madhesi	Illiterate	Hilly	30000-50000	Electricity	0
+Madhesi	Illiterate	Hilly	30000-50000	Gobar Gas	0
+Madhesi	Illiterate	Hilly	30000-50000	Kerosene	0
+Madhesi	Illiterate	Hilly	30000-50000	LP Gas	11
+Madhesi	Illiterate	Hilly	30000-50000	Others	0
+Madhesi	Illiterate	Hilly	30000-50000	Wood	4
+Madhesi	Illiterate	Hilly	50000-ABOVE	Electricity	0
+Madhesi	Illiterate	Hilly	50000-ABOVE	Gobar Gas	0
+Madhesi	Illiterate	Hilly	50000-ABOVE	Kerosene	0
+Madhesi	Illiterate	Hilly	50000-ABOVE	LP Gas	4
+Madhesi	Illiterate	Hilly	50000-ABOVE	Others	0
+Madhesi	Illiterate	Hilly	50000-ABOVE	Wood	0
 Madhesi	Illiterate	Himalayan	0-10000	Electricity	0
 Madhesi	Illiterate	Himalayan	0-10000	Gobar Gas	0
 Madhesi	Illiterate	Himalayan	0-10000	Kerosene	0
@@ -1559,36 +1559,36 @@ Madhesi	Illiterate	Himalayan	50000-ABOVE	Kerosene	0
 Madhesi	Illiterate	Himalayan	50000-ABOVE	LP Gas	0
 Madhesi	Illiterate	Himalayan	50000-ABOVE	Others	0
 Madhesi	Illiterate	Himalayan	50000-ABOVE	Wood	3
-Madhesi	NonFormal-Other	Hill	0-10000	Electricity	0
-Madhesi	NonFormal-Other	Hill	0-10000	Gobar Gas	0
-Madhesi	NonFormal-Other	Hill	0-10000	Kerosene	0
-Madhesi	NonFormal-Other	Hill	0-10000	LP Gas	19
-Madhesi	NonFormal-Other	Hill	0-10000	Others	0
-Madhesi	NonFormal-Other	Hill	0-10000	Wood	148
-Madhesi	NonFormal-Other	Hill	10000-20000	Electricity	0
-Madhesi	NonFormal-Other	Hill	10000-20000	Gobar Gas	1
-Madhesi	NonFormal-Other	Hill	10000-20000	Kerosene	1
-Madhesi	NonFormal-Other	Hill	10000-20000	LP Gas	45
-Madhesi	NonFormal-Other	Hill	10000-20000	Others	0
-Madhesi	NonFormal-Other	Hill	10000-20000	Wood	72
-Madhesi	NonFormal-Other	Hill	20000-30000	Electricity	0
-Madhesi	NonFormal-Other	Hill	20000-30000	Gobar Gas	0
-Madhesi	NonFormal-Other	Hill	20000-30000	Kerosene	0
-Madhesi	NonFormal-Other	Hill	20000-30000	LP Gas	27
-Madhesi	NonFormal-Other	Hill	20000-30000	Others	0
-Madhesi	NonFormal-Other	Hill	20000-30000	Wood	21
-Madhesi	NonFormal-Other	Hill	30000-50000	Electricity	0
-Madhesi	NonFormal-Other	Hill	30000-50000	Gobar Gas	0
-Madhesi	NonFormal-Other	Hill	30000-50000	Kerosene	0
-Madhesi	NonFormal-Other	Hill	30000-50000	LP Gas	8
-Madhesi	NonFormal-Other	Hill	30000-50000	Others	0
-Madhesi	NonFormal-Other	Hill	30000-50000	Wood	4
-Madhesi	NonFormal-Other	Hill	50000-ABOVE	Electricity	0
-Madhesi	NonFormal-Other	Hill	50000-ABOVE	Gobar Gas	0
-Madhesi	NonFormal-Other	Hill	50000-ABOVE	Kerosene	0
-Madhesi	NonFormal-Other	Hill	50000-ABOVE	LP Gas	5
-Madhesi	NonFormal-Other	Hill	50000-ABOVE	Others	0
-Madhesi	NonFormal-Other	Hill	50000-ABOVE	Wood	4
+Madhesi	NonFormal-Other	Hilly	0-10000	Electricity	0
+Madhesi	NonFormal-Other	Hilly	0-10000	Gobar Gas	0
+Madhesi	NonFormal-Other	Hilly	0-10000	Kerosene	0
+Madhesi	NonFormal-Other	Hilly	0-10000	LP Gas	19
+Madhesi	NonFormal-Other	Hilly	0-10000	Others	0
+Madhesi	NonFormal-Other	Hilly	0-10000	Wood	148
+Madhesi	NonFormal-Other	Hilly	10000-20000	Electricity	0
+Madhesi	NonFormal-Other	Hilly	10000-20000	Gobar Gas	1
+Madhesi	NonFormal-Other	Hilly	10000-20000	Kerosene	1
+Madhesi	NonFormal-Other	Hilly	10000-20000	LP Gas	45
+Madhesi	NonFormal-Other	Hilly	10000-20000	Others	0
+Madhesi	NonFormal-Other	Hilly	10000-20000	Wood	72
+Madhesi	NonFormal-Other	Hilly	20000-30000	Electricity	0
+Madhesi	NonFormal-Other	Hilly	20000-30000	Gobar Gas	0
+Madhesi	NonFormal-Other	Hilly	20000-30000	Kerosene	0
+Madhesi	NonFormal-Other	Hilly	20000-30000	LP Gas	27
+Madhesi	NonFormal-Other	Hilly	20000-30000	Others	0
+Madhesi	NonFormal-Other	Hilly	20000-30000	Wood	21
+Madhesi	NonFormal-Other	Hilly	30000-50000	Electricity	0
+Madhesi	NonFormal-Other	Hilly	30000-50000	Gobar Gas	0
+Madhesi	NonFormal-Other	Hilly	30000-50000	Kerosene	0
+Madhesi	NonFormal-Other	Hilly	30000-50000	LP Gas	8
+Madhesi	NonFormal-Other	Hilly	30000-50000	Others	0
+Madhesi	NonFormal-Other	Hilly	30000-50000	Wood	4
+Madhesi	NonFormal-Other	Hilly	50000-ABOVE	Electricity	0
+Madhesi	NonFormal-Other	Hilly	50000-ABOVE	Gobar Gas	0
+Madhesi	NonFormal-Other	Hilly	50000-ABOVE	Kerosene	0
+Madhesi	NonFormal-Other	Hilly	50000-ABOVE	LP Gas	5
+Madhesi	NonFormal-Other	Hilly	50000-ABOVE	Others	0
+Madhesi	NonFormal-Other	Hilly	50000-ABOVE	Wood	4
 Madhesi	NonFormal-Other	Himalayan	0-10000	Electricity	0
 Madhesi	NonFormal-Other	Himalayan	0-10000	Gobar Gas	0
 Madhesi	NonFormal-Other	Himalayan	0-10000	Kerosene	0
@@ -1619,36 +1619,36 @@ Madhesi	NonFormal-Other	Himalayan	50000-ABOVE	Kerosene	0
 Madhesi	NonFormal-Other	Himalayan	50000-ABOVE	LP Gas	1
 Madhesi	NonFormal-Other	Himalayan	50000-ABOVE	Others	0
 Madhesi	NonFormal-Other	Himalayan	50000-ABOVE	Wood	1
-Madhesi	Primary	Hill	0-10000	Electricity	0
-Madhesi	Primary	Hill	0-10000	Gobar Gas	5
-Madhesi	Primary	Hill	0-10000	Kerosene	1
-Madhesi	Primary	Hill	0-10000	LP Gas	41
-Madhesi	Primary	Hill	0-10000	Others	1
-Madhesi	Primary	Hill	0-10000	Wood	157
-Madhesi	Primary	Hill	10000-20000	Electricity	0
-Madhesi	Primary	Hill	10000-20000	Gobar Gas	1
-Madhesi	Primary	Hill	10000-20000	Kerosene	0
-Madhesi	Primary	Hill	10000-20000	LP Gas	124
-Madhesi	Primary	Hill	10000-20000	Others	0
-Madhesi	Primary	Hill	10000-20000	Wood	97
-Madhesi	Primary	Hill	20000-30000	Electricity	0
-Madhesi	Primary	Hill	20000-30000	Gobar Gas	2
-Madhesi	Primary	Hill	20000-30000	Kerosene	0
-Madhesi	Primary	Hill	20000-30000	LP Gas	53
-Madhesi	Primary	Hill	20000-30000	Others	0
-Madhesi	Primary	Hill	20000-30000	Wood	16
-Madhesi	Primary	Hill	30000-50000	Electricity	0
-Madhesi	Primary	Hill	30000-50000	Gobar Gas	0
-Madhesi	Primary	Hill	30000-50000	Kerosene	0
-Madhesi	Primary	Hill	30000-50000	LP Gas	13
-Madhesi	Primary	Hill	30000-50000	Others	0
-Madhesi	Primary	Hill	30000-50000	Wood	10
-Madhesi	Primary	Hill	50000-ABOVE	Electricity	0
-Madhesi	Primary	Hill	50000-ABOVE	Gobar Gas	0
-Madhesi	Primary	Hill	50000-ABOVE	Kerosene	0
-Madhesi	Primary	Hill	50000-ABOVE	LP Gas	6
-Madhesi	Primary	Hill	50000-ABOVE	Others	0
-Madhesi	Primary	Hill	50000-ABOVE	Wood	5
+Madhesi	Primary	Hilly	0-10000	Electricity	0
+Madhesi	Primary	Hilly	0-10000	Gobar Gas	5
+Madhesi	Primary	Hilly	0-10000	Kerosene	1
+Madhesi	Primary	Hilly	0-10000	LP Gas	41
+Madhesi	Primary	Hilly	0-10000	Others	1
+Madhesi	Primary	Hilly	0-10000	Wood	157
+Madhesi	Primary	Hilly	10000-20000	Electricity	0
+Madhesi	Primary	Hilly	10000-20000	Gobar Gas	1
+Madhesi	Primary	Hilly	10000-20000	Kerosene	0
+Madhesi	Primary	Hilly	10000-20000	LP Gas	124
+Madhesi	Primary	Hilly	10000-20000	Others	0
+Madhesi	Primary	Hilly	10000-20000	Wood	97
+Madhesi	Primary	Hilly	20000-30000	Electricity	0
+Madhesi	Primary	Hilly	20000-30000	Gobar Gas	2
+Madhesi	Primary	Hilly	20000-30000	Kerosene	0
+Madhesi	Primary	Hilly	20000-30000	LP Gas	53
+Madhesi	Primary	Hilly	20000-30000	Others	0
+Madhesi	Primary	Hilly	20000-30000	Wood	16
+Madhesi	Primary	Hilly	30000-50000	Electricity	0
+Madhesi	Primary	Hilly	30000-50000	Gobar Gas	0
+Madhesi	Primary	Hilly	30000-50000	Kerosene	0
+Madhesi	Primary	Hilly	30000-50000	LP Gas	13
+Madhesi	Primary	Hilly	30000-50000	Others	0
+Madhesi	Primary	Hilly	30000-50000	Wood	10
+Madhesi	Primary	Hilly	50000-ABOVE	Electricity	0
+Madhesi	Primary	Hilly	50000-ABOVE	Gobar Gas	0
+Madhesi	Primary	Hilly	50000-ABOVE	Kerosene	0
+Madhesi	Primary	Hilly	50000-ABOVE	LP Gas	6
+Madhesi	Primary	Hilly	50000-ABOVE	Others	0
+Madhesi	Primary	Hilly	50000-ABOVE	Wood	5
 Madhesi	Primary	Himalayan	0-10000	Electricity	0
 Madhesi	Primary	Himalayan	0-10000	Gobar Gas	0
 Madhesi	Primary	Himalayan	0-10000	Kerosene	0
@@ -1679,36 +1679,36 @@ Madhesi	Primary	Himalayan	50000-ABOVE	Kerosene	0
 Madhesi	Primary	Himalayan	50000-ABOVE	LP Gas	0
 Madhesi	Primary	Himalayan	50000-ABOVE	Others	0
 Madhesi	Primary	Himalayan	50000-ABOVE	Wood	2
-Madhesi	Secondary	Hill	0-10000	Electricity	0
-Madhesi	Secondary	Hill	0-10000	Gobar Gas	0
-Madhesi	Secondary	Hill	0-10000	Kerosene	0
-Madhesi	Secondary	Hill	0-10000	LP Gas	75
-Madhesi	Secondary	Hill	0-10000	Others	0
-Madhesi	Secondary	Hill	0-10000	Wood	98
-Madhesi	Secondary	Hill	10000-20000	Electricity	0
-Madhesi	Secondary	Hill	10000-20000	Gobar Gas	0
-Madhesi	Secondary	Hill	10000-20000	Kerosene	0
-Madhesi	Secondary	Hill	10000-20000	LP Gas	229
-Madhesi	Secondary	Hill	10000-20000	Others	3
-Madhesi	Secondary	Hill	10000-20000	Wood	117
-Madhesi	Secondary	Hill	20000-30000	Electricity	0
-Madhesi	Secondary	Hill	20000-30000	Gobar Gas	0
-Madhesi	Secondary	Hill	20000-30000	Kerosene	1
-Madhesi	Secondary	Hill	20000-30000	LP Gas	143
-Madhesi	Secondary	Hill	20000-30000	Others	1
-Madhesi	Secondary	Hill	20000-30000	Wood	29
-Madhesi	Secondary	Hill	30000-50000	Electricity	1
-Madhesi	Secondary	Hill	30000-50000	Gobar Gas	1
-Madhesi	Secondary	Hill	30000-50000	Kerosene	1
-Madhesi	Secondary	Hill	30000-50000	LP Gas	51
-Madhesi	Secondary	Hill	30000-50000	Others	0
-Madhesi	Secondary	Hill	30000-50000	Wood	8
-Madhesi	Secondary	Hill	50000-ABOVE	Electricity	0
-Madhesi	Secondary	Hill	50000-ABOVE	Gobar Gas	0
-Madhesi	Secondary	Hill	50000-ABOVE	Kerosene	0
-Madhesi	Secondary	Hill	50000-ABOVE	LP Gas	18
-Madhesi	Secondary	Hill	50000-ABOVE	Others	0
-Madhesi	Secondary	Hill	50000-ABOVE	Wood	5
+Madhesi	Secondary	Hilly	0-10000	Electricity	0
+Madhesi	Secondary	Hilly	0-10000	Gobar Gas	0
+Madhesi	Secondary	Hilly	0-10000	Kerosene	0
+Madhesi	Secondary	Hilly	0-10000	LP Gas	75
+Madhesi	Secondary	Hilly	0-10000	Others	0
+Madhesi	Secondary	Hilly	0-10000	Wood	98
+Madhesi	Secondary	Hilly	10000-20000	Electricity	0
+Madhesi	Secondary	Hilly	10000-20000	Gobar Gas	0
+Madhesi	Secondary	Hilly	10000-20000	Kerosene	0
+Madhesi	Secondary	Hilly	10000-20000	LP Gas	229
+Madhesi	Secondary	Hilly	10000-20000	Others	3
+Madhesi	Secondary	Hilly	10000-20000	Wood	117
+Madhesi	Secondary	Hilly	20000-30000	Electricity	0
+Madhesi	Secondary	Hilly	20000-30000	Gobar Gas	0
+Madhesi	Secondary	Hilly	20000-30000	Kerosene	1
+Madhesi	Secondary	Hilly	20000-30000	LP Gas	143
+Madhesi	Secondary	Hilly	20000-30000	Others	1
+Madhesi	Secondary	Hilly	20000-30000	Wood	29
+Madhesi	Secondary	Hilly	30000-50000	Electricity	1
+Madhesi	Secondary	Hilly	30000-50000	Gobar Gas	1
+Madhesi	Secondary	Hilly	30000-50000	Kerosene	1
+Madhesi	Secondary	Hilly	30000-50000	LP Gas	51
+Madhesi	Secondary	Hilly	30000-50000	Others	0
+Madhesi	Secondary	Hilly	30000-50000	Wood	8
+Madhesi	Secondary	Hilly	50000-ABOVE	Electricity	0
+Madhesi	Secondary	Hilly	50000-ABOVE	Gobar Gas	0
+Madhesi	Secondary	Hilly	50000-ABOVE	Kerosene	0
+Madhesi	Secondary	Hilly	50000-ABOVE	LP Gas	18
+Madhesi	Secondary	Hilly	50000-ABOVE	Others	0
+Madhesi	Secondary	Hilly	50000-ABOVE	Wood	5
 Madhesi	Secondary	Himalayan	0-10000	Electricity	0
 Madhesi	Secondary	Himalayan	0-10000	Gobar Gas	0
 Madhesi	Secondary	Himalayan	0-10000	Kerosene	0
@@ -1739,36 +1739,36 @@ Madhesi	Secondary	Himalayan	50000-ABOVE	Kerosene	0
 Madhesi	Secondary	Himalayan	50000-ABOVE	LP Gas	2
 Madhesi	Secondary	Himalayan	50000-ABOVE	Others	0
 Madhesi	Secondary	Himalayan	50000-ABOVE	Wood	1
-Madhesi	University	Hill	0-10000	Electricity	0
-Madhesi	University	Hill	0-10000	Gobar Gas	0
-Madhesi	University	Hill	0-10000	Kerosene	0
-Madhesi	University	Hill	0-10000	LP Gas	11
-Madhesi	University	Hill	0-10000	Others	0
-Madhesi	University	Hill	0-10000	Wood	9
-Madhesi	University	Hill	10000-20000	Electricity	1
-Madhesi	University	Hill	10000-20000	Gobar Gas	0
-Madhesi	University	Hill	10000-20000	Kerosene	0
-Madhesi	University	Hill	10000-20000	LP Gas	48
-Madhesi	University	Hill	10000-20000	Others	1
-Madhesi	University	Hill	10000-20000	Wood	32
-Madhesi	University	Hill	20000-30000	Electricity	0
-Madhesi	University	Hill	20000-30000	Gobar Gas	0
-Madhesi	University	Hill	20000-30000	Kerosene	0
-Madhesi	University	Hill	20000-30000	LP Gas	68
-Madhesi	University	Hill	20000-30000	Others	4
-Madhesi	University	Hill	20000-30000	Wood	17
-Madhesi	University	Hill	30000-50000	Electricity	0
-Madhesi	University	Hill	30000-50000	Gobar Gas	0
-Madhesi	University	Hill	30000-50000	Kerosene	0
-Madhesi	University	Hill	30000-50000	LP Gas	15
-Madhesi	University	Hill	30000-50000	Others	0
-Madhesi	University	Hill	30000-50000	Wood	6
-Madhesi	University	Hill	50000-ABOVE	Electricity	0
-Madhesi	University	Hill	50000-ABOVE	Gobar Gas	0
-Madhesi	University	Hill	50000-ABOVE	Kerosene	0
-Madhesi	University	Hill	50000-ABOVE	LP Gas	15
-Madhesi	University	Hill	50000-ABOVE	Others	0
-Madhesi	University	Hill	50000-ABOVE	Wood	0
+Madhesi	University	Hilly	0-10000	Electricity	0
+Madhesi	University	Hilly	0-10000	Gobar Gas	0
+Madhesi	University	Hilly	0-10000	Kerosene	0
+Madhesi	University	Hilly	0-10000	LP Gas	11
+Madhesi	University	Hilly	0-10000	Others	0
+Madhesi	University	Hilly	0-10000	Wood	9
+Madhesi	University	Hilly	10000-20000	Electricity	1
+Madhesi	University	Hilly	10000-20000	Gobar Gas	0
+Madhesi	University	Hilly	10000-20000	Kerosene	0
+Madhesi	University	Hilly	10000-20000	LP Gas	48
+Madhesi	University	Hilly	10000-20000	Others	1
+Madhesi	University	Hilly	10000-20000	Wood	32
+Madhesi	University	Hilly	20000-30000	Electricity	0
+Madhesi	University	Hilly	20000-30000	Gobar Gas	0
+Madhesi	University	Hilly	20000-30000	Kerosene	0
+Madhesi	University	Hilly	20000-30000	LP Gas	68
+Madhesi	University	Hilly	20000-30000	Others	4
+Madhesi	University	Hilly	20000-30000	Wood	17
+Madhesi	University	Hilly	30000-50000	Electricity	0
+Madhesi	University	Hilly	30000-50000	Gobar Gas	0
+Madhesi	University	Hilly	30000-50000	Kerosene	0
+Madhesi	University	Hilly	30000-50000	LP Gas	15
+Madhesi	University	Hilly	30000-50000	Others	0
+Madhesi	University	Hilly	30000-50000	Wood	6
+Madhesi	University	Hilly	50000-ABOVE	Electricity	0
+Madhesi	University	Hilly	50000-ABOVE	Gobar Gas	0
+Madhesi	University	Hilly	50000-ABOVE	Kerosene	0
+Madhesi	University	Hilly	50000-ABOVE	LP Gas	15
+Madhesi	University	Hilly	50000-ABOVE	Others	0
+Madhesi	University	Hilly	50000-ABOVE	Wood	0
 Madhesi	University	Himalayan	0-10000	Electricity	0
 Madhesi	University	Himalayan	0-10000	Gobar Gas	0
 Madhesi	University	Himalayan	0-10000	Kerosene	0
@@ -1799,36 +1799,36 @@ Madhesi	University	Himalayan	50000-ABOVE	Kerosene	0
 Madhesi	University	Himalayan	50000-ABOVE	LP Gas	1
 Madhesi	University	Himalayan	50000-ABOVE	Others	0
 Madhesi	University	Himalayan	50000-ABOVE	Wood	0
-Muslim-Others	Illiterate	Hill	0-10000	Electricity	0
-Muslim-Others	Illiterate	Hill	0-10000	Gobar Gas	7
-Muslim-Others	Illiterate	Hill	0-10000	Kerosene	0
-Muslim-Others	Illiterate	Hill	0-10000	LP Gas	50
-Muslim-Others	Illiterate	Hill	0-10000	Others	0
-Muslim-Others	Illiterate	Hill	0-10000	Wood	1272
-Muslim-Others	Illiterate	Hill	10000-20000	Electricity	0
-Muslim-Others	Illiterate	Hill	10000-20000	Gobar Gas	3
-Muslim-Others	Illiterate	Hill	10000-20000	Kerosene	0
-Muslim-Others	Illiterate	Hill	10000-20000	LP Gas	65
-Muslim-Others	Illiterate	Hill	10000-20000	Others	0
-Muslim-Others	Illiterate	Hill	10000-20000	Wood	253
-Muslim-Others	Illiterate	Hill	20000-30000	Electricity	0
-Muslim-Others	Illiterate	Hill	20000-30000	Gobar Gas	0
-Muslim-Others	Illiterate	Hill	20000-30000	Kerosene	0
-Muslim-Others	Illiterate	Hill	20000-30000	LP Gas	22
-Muslim-Others	Illiterate	Hill	20000-30000	Others	0
-Muslim-Others	Illiterate	Hill	20000-30000	Wood	44
-Muslim-Others	Illiterate	Hill	30000-50000	Electricity	0
-Muslim-Others	Illiterate	Hill	30000-50000	Gobar Gas	1
-Muslim-Others	Illiterate	Hill	30000-50000	Kerosene	0
-Muslim-Others	Illiterate	Hill	30000-50000	LP Gas	8
-Muslim-Others	Illiterate	Hill	30000-50000	Others	0
-Muslim-Others	Illiterate	Hill	30000-50000	Wood	21
-Muslim-Others	Illiterate	Hill	50000-ABOVE	Electricity	0
-Muslim-Others	Illiterate	Hill	50000-ABOVE	Gobar Gas	0
-Muslim-Others	Illiterate	Hill	50000-ABOVE	Kerosene	0
-Muslim-Others	Illiterate	Hill	50000-ABOVE	LP Gas	3
-Muslim-Others	Illiterate	Hill	50000-ABOVE	Others	0
-Muslim-Others	Illiterate	Hill	50000-ABOVE	Wood	10
+Muslim-Others	Illiterate	Hilly	0-10000	Electricity	0
+Muslim-Others	Illiterate	Hilly	0-10000	Gobar Gas	7
+Muslim-Others	Illiterate	Hilly	0-10000	Kerosene	0
+Muslim-Others	Illiterate	Hilly	0-10000	LP Gas	50
+Muslim-Others	Illiterate	Hilly	0-10000	Others	0
+Muslim-Others	Illiterate	Hilly	0-10000	Wood	1272
+Muslim-Others	Illiterate	Hilly	10000-20000	Electricity	0
+Muslim-Others	Illiterate	Hilly	10000-20000	Gobar Gas	3
+Muslim-Others	Illiterate	Hilly	10000-20000	Kerosene	0
+Muslim-Others	Illiterate	Hilly	10000-20000	LP Gas	65
+Muslim-Others	Illiterate	Hilly	10000-20000	Others	0
+Muslim-Others	Illiterate	Hilly	10000-20000	Wood	253
+Muslim-Others	Illiterate	Hilly	20000-30000	Electricity	0
+Muslim-Others	Illiterate	Hilly	20000-30000	Gobar Gas	0
+Muslim-Others	Illiterate	Hilly	20000-30000	Kerosene	0
+Muslim-Others	Illiterate	Hilly	20000-30000	LP Gas	22
+Muslim-Others	Illiterate	Hilly	20000-30000	Others	0
+Muslim-Others	Illiterate	Hilly	20000-30000	Wood	44
+Muslim-Others	Illiterate	Hilly	30000-50000	Electricity	0
+Muslim-Others	Illiterate	Hilly	30000-50000	Gobar Gas	1
+Muslim-Others	Illiterate	Hilly	30000-50000	Kerosene	0
+Muslim-Others	Illiterate	Hilly	30000-50000	LP Gas	8
+Muslim-Others	Illiterate	Hilly	30000-50000	Others	0
+Muslim-Others	Illiterate	Hilly	30000-50000	Wood	21
+Muslim-Others	Illiterate	Hilly	50000-ABOVE	Electricity	0
+Muslim-Others	Illiterate	Hilly	50000-ABOVE	Gobar Gas	0
+Muslim-Others	Illiterate	Hilly	50000-ABOVE	Kerosene	0
+Muslim-Others	Illiterate	Hilly	50000-ABOVE	LP Gas	3
+Muslim-Others	Illiterate	Hilly	50000-ABOVE	Others	0
+Muslim-Others	Illiterate	Hilly	50000-ABOVE	Wood	10
 Muslim-Others	Illiterate	Himalayan	0-10000	Electricity	0
 Muslim-Others	Illiterate	Himalayan	0-10000	Gobar Gas	5
 Muslim-Others	Illiterate	Himalayan	0-10000	Kerosene	1
@@ -1859,36 +1859,36 @@ Muslim-Others	Illiterate	Himalayan	50000-ABOVE	Kerosene	0
 Muslim-Others	Illiterate	Himalayan	50000-ABOVE	LP Gas	4
 Muslim-Others	Illiterate	Himalayan	50000-ABOVE	Others	0
 Muslim-Others	Illiterate	Himalayan	50000-ABOVE	Wood	8
-Muslim-Others	NonFormal-Other	Hill	0-10000	Electricity	0
-Muslim-Others	NonFormal-Other	Hill	0-10000	Gobar Gas	4
-Muslim-Others	NonFormal-Other	Hill	0-10000	Kerosene	0
-Muslim-Others	NonFormal-Other	Hill	0-10000	LP Gas	32
-Muslim-Others	NonFormal-Other	Hill	0-10000	Others	0
-Muslim-Others	NonFormal-Other	Hill	0-10000	Wood	665
-Muslim-Others	NonFormal-Other	Hill	10000-20000	Electricity	0
-Muslim-Others	NonFormal-Other	Hill	10000-20000	Gobar Gas	5
-Muslim-Others	NonFormal-Other	Hill	10000-20000	Kerosene	0
-Muslim-Others	NonFormal-Other	Hill	10000-20000	LP Gas	60
-Muslim-Others	NonFormal-Other	Hill	10000-20000	Others	0
-Muslim-Others	NonFormal-Other	Hill	10000-20000	Wood	275
-Muslim-Others	NonFormal-Other	Hill	20000-30000	Electricity	0
-Muslim-Others	NonFormal-Other	Hill	20000-30000	Gobar Gas	2
-Muslim-Others	NonFormal-Other	Hill	20000-30000	Kerosene	0
-Muslim-Others	NonFormal-Other	Hill	20000-30000	LP Gas	25
-Muslim-Others	NonFormal-Other	Hill	20000-30000	Others	0
-Muslim-Others	NonFormal-Other	Hill	20000-30000	Wood	62
-Muslim-Others	NonFormal-Other	Hill	30000-50000	Electricity	0
-Muslim-Others	NonFormal-Other	Hill	30000-50000	Gobar Gas	0
-Muslim-Others	NonFormal-Other	Hill	30000-50000	Kerosene	0
-Muslim-Others	NonFormal-Other	Hill	30000-50000	LP Gas	15
-Muslim-Others	NonFormal-Other	Hill	30000-50000	Others	0
-Muslim-Others	NonFormal-Other	Hill	30000-50000	Wood	19
-Muslim-Others	NonFormal-Other	Hill	50000-ABOVE	Electricity	0
-Muslim-Others	NonFormal-Other	Hill	50000-ABOVE	Gobar Gas	0
-Muslim-Others	NonFormal-Other	Hill	50000-ABOVE	Kerosene	0
-Muslim-Others	NonFormal-Other	Hill	50000-ABOVE	LP Gas	5
-Muslim-Others	NonFormal-Other	Hill	50000-ABOVE	Others	0
-Muslim-Others	NonFormal-Other	Hill	50000-ABOVE	Wood	2
+Muslim-Others	NonFormal-Other	Hilly	0-10000	Electricity	0
+Muslim-Others	NonFormal-Other	Hilly	0-10000	Gobar Gas	4
+Muslim-Others	NonFormal-Other	Hilly	0-10000	Kerosene	0
+Muslim-Others	NonFormal-Other	Hilly	0-10000	LP Gas	32
+Muslim-Others	NonFormal-Other	Hilly	0-10000	Others	0
+Muslim-Others	NonFormal-Other	Hilly	0-10000	Wood	665
+Muslim-Others	NonFormal-Other	Hilly	10000-20000	Electricity	0
+Muslim-Others	NonFormal-Other	Hilly	10000-20000	Gobar Gas	5
+Muslim-Others	NonFormal-Other	Hilly	10000-20000	Kerosene	0
+Muslim-Others	NonFormal-Other	Hilly	10000-20000	LP Gas	60
+Muslim-Others	NonFormal-Other	Hilly	10000-20000	Others	0
+Muslim-Others	NonFormal-Other	Hilly	10000-20000	Wood	275
+Muslim-Others	NonFormal-Other	Hilly	20000-30000	Electricity	0
+Muslim-Others	NonFormal-Other	Hilly	20000-30000	Gobar Gas	2
+Muslim-Others	NonFormal-Other	Hilly	20000-30000	Kerosene	0
+Muslim-Others	NonFormal-Other	Hilly	20000-30000	LP Gas	25
+Muslim-Others	NonFormal-Other	Hilly	20000-30000	Others	0
+Muslim-Others	NonFormal-Other	Hilly	20000-30000	Wood	62
+Muslim-Others	NonFormal-Other	Hilly	30000-50000	Electricity	0
+Muslim-Others	NonFormal-Other	Hilly	30000-50000	Gobar Gas	0
+Muslim-Others	NonFormal-Other	Hilly	30000-50000	Kerosene	0
+Muslim-Others	NonFormal-Other	Hilly	30000-50000	LP Gas	15
+Muslim-Others	NonFormal-Other	Hilly	30000-50000	Others	0
+Muslim-Others	NonFormal-Other	Hilly	30000-50000	Wood	19
+Muslim-Others	NonFormal-Other	Hilly	50000-ABOVE	Electricity	0
+Muslim-Others	NonFormal-Other	Hilly	50000-ABOVE	Gobar Gas	0
+Muslim-Others	NonFormal-Other	Hilly	50000-ABOVE	Kerosene	0
+Muslim-Others	NonFormal-Other	Hilly	50000-ABOVE	LP Gas	5
+Muslim-Others	NonFormal-Other	Hilly	50000-ABOVE	Others	0
+Muslim-Others	NonFormal-Other	Hilly	50000-ABOVE	Wood	2
 Muslim-Others	NonFormal-Other	Himalayan	0-10000	Electricity	0
 Muslim-Others	NonFormal-Other	Himalayan	0-10000	Gobar Gas	0
 Muslim-Others	NonFormal-Other	Himalayan	0-10000	Kerosene	0
@@ -1919,36 +1919,36 @@ Muslim-Others	NonFormal-Other	Himalayan	50000-ABOVE	Kerosene	0
 Muslim-Others	NonFormal-Other	Himalayan	50000-ABOVE	LP Gas	2
 Muslim-Others	NonFormal-Other	Himalayan	50000-ABOVE	Others	0
 Muslim-Others	NonFormal-Other	Himalayan	50000-ABOVE	Wood	6
-Muslim-Others	Primary	Hill	0-10000	Electricity	1
-Muslim-Others	Primary	Hill	0-10000	Gobar Gas	11
-Muslim-Others	Primary	Hill	0-10000	Kerosene	0
-Muslim-Others	Primary	Hill	0-10000	LP Gas	46
-Muslim-Others	Primary	Hill	0-10000	Others	0
-Muslim-Others	Primary	Hill	0-10000	Wood	823
-Muslim-Others	Primary	Hill	10000-20000	Electricity	0
-Muslim-Others	Primary	Hill	10000-20000	Gobar Gas	1
-Muslim-Others	Primary	Hill	10000-20000	Kerosene	0
-Muslim-Others	Primary	Hill	10000-20000	LP Gas	115
-Muslim-Others	Primary	Hill	10000-20000	Others	0
-Muslim-Others	Primary	Hill	10000-20000	Wood	368
-Muslim-Others	Primary	Hill	20000-30000	Electricity	0
-Muslim-Others	Primary	Hill	20000-30000	Gobar Gas	0
-Muslim-Others	Primary	Hill	20000-30000	Kerosene	0
-Muslim-Others	Primary	Hill	20000-30000	LP Gas	52
-Muslim-Others	Primary	Hill	20000-30000	Others	0
-Muslim-Others	Primary	Hill	20000-30000	Wood	80
-Muslim-Others	Primary	Hill	30000-50000	Electricity	0
-Muslim-Others	Primary	Hill	30000-50000	Gobar Gas	1
-Muslim-Others	Primary	Hill	30000-50000	Kerosene	0
-Muslim-Others	Primary	Hill	30000-50000	LP Gas	21
-Muslim-Others	Primary	Hill	30000-50000	Others	0
-Muslim-Others	Primary	Hill	30000-50000	Wood	19
-Muslim-Others	Primary	Hill	50000-ABOVE	Electricity	0
-Muslim-Others	Primary	Hill	50000-ABOVE	Gobar Gas	0
-Muslim-Others	Primary	Hill	50000-ABOVE	Kerosene	0
-Muslim-Others	Primary	Hill	50000-ABOVE	LP Gas	6
-Muslim-Others	Primary	Hill	50000-ABOVE	Others	0
-Muslim-Others	Primary	Hill	50000-ABOVE	Wood	5
+Muslim-Others	Primary	Hilly	0-10000	Electricity	1
+Muslim-Others	Primary	Hilly	0-10000	Gobar Gas	11
+Muslim-Others	Primary	Hilly	0-10000	Kerosene	0
+Muslim-Others	Primary	Hilly	0-10000	LP Gas	46
+Muslim-Others	Primary	Hilly	0-10000	Others	0
+Muslim-Others	Primary	Hilly	0-10000	Wood	823
+Muslim-Others	Primary	Hilly	10000-20000	Electricity	0
+Muslim-Others	Primary	Hilly	10000-20000	Gobar Gas	1
+Muslim-Others	Primary	Hilly	10000-20000	Kerosene	0
+Muslim-Others	Primary	Hilly	10000-20000	LP Gas	115
+Muslim-Others	Primary	Hilly	10000-20000	Others	0
+Muslim-Others	Primary	Hilly	10000-20000	Wood	368
+Muslim-Others	Primary	Hilly	20000-30000	Electricity	0
+Muslim-Others	Primary	Hilly	20000-30000	Gobar Gas	0
+Muslim-Others	Primary	Hilly	20000-30000	Kerosene	0
+Muslim-Others	Primary	Hilly	20000-30000	LP Gas	52
+Muslim-Others	Primary	Hilly	20000-30000	Others	0
+Muslim-Others	Primary	Hilly	20000-30000	Wood	80
+Muslim-Others	Primary	Hilly	30000-50000	Electricity	0
+Muslim-Others	Primary	Hilly	30000-50000	Gobar Gas	1
+Muslim-Others	Primary	Hilly	30000-50000	Kerosene	0
+Muslim-Others	Primary	Hilly	30000-50000	LP Gas	21
+Muslim-Others	Primary	Hilly	30000-50000	Others	0
+Muslim-Others	Primary	Hilly	30000-50000	Wood	19
+Muslim-Others	Primary	Hilly	50000-ABOVE	Electricity	0
+Muslim-Others	Primary	Hilly	50000-ABOVE	Gobar Gas	0
+Muslim-Others	Primary	Hilly	50000-ABOVE	Kerosene	0
+Muslim-Others	Primary	Hilly	50000-ABOVE	LP Gas	6
+Muslim-Others	Primary	Hilly	50000-ABOVE	Others	0
+Muslim-Others	Primary	Hilly	50000-ABOVE	Wood	5
 Muslim-Others	Primary	Himalayan	0-10000	Electricity	0
 Muslim-Others	Primary	Himalayan	0-10000	Gobar Gas	3
 Muslim-Others	Primary	Himalayan	0-10000	Kerosene	0
@@ -1979,36 +1979,36 @@ Muslim-Others	Primary	Himalayan	50000-ABOVE	Kerosene	0
 Muslim-Others	Primary	Himalayan	50000-ABOVE	LP Gas	2
 Muslim-Others	Primary	Himalayan	50000-ABOVE	Others	0
 Muslim-Others	Primary	Himalayan	50000-ABOVE	Wood	8
-Muslim-Others	Secondary	Hill	0-10000	Electricity	0
-Muslim-Others	Secondary	Hill	0-10000	Gobar Gas	3
-Muslim-Others	Secondary	Hill	0-10000	Kerosene	0
-Muslim-Others	Secondary	Hill	0-10000	LP Gas	40
-Muslim-Others	Secondary	Hill	0-10000	Others	0
-Muslim-Others	Secondary	Hill	0-10000	Wood	411
-Muslim-Others	Secondary	Hill	10000-20000	Electricity	0
-Muslim-Others	Secondary	Hill	10000-20000	Gobar Gas	3
-Muslim-Others	Secondary	Hill	10000-20000	Kerosene	0
-Muslim-Others	Secondary	Hill	10000-20000	LP Gas	130
-Muslim-Others	Secondary	Hill	10000-20000	Others	0
-Muslim-Others	Secondary	Hill	10000-20000	Wood	284
-Muslim-Others	Secondary	Hill	20000-30000	Electricity	0
-Muslim-Others	Secondary	Hill	20000-30000	Gobar Gas	0
-Muslim-Others	Secondary	Hill	20000-30000	Kerosene	0
-Muslim-Others	Secondary	Hill	20000-30000	LP Gas	71
-Muslim-Others	Secondary	Hill	20000-30000	Others	0
-Muslim-Others	Secondary	Hill	20000-30000	Wood	75
-Muslim-Others	Secondary	Hill	30000-50000	Electricity	0
-Muslim-Others	Secondary	Hill	30000-50000	Gobar Gas	0
-Muslim-Others	Secondary	Hill	30000-50000	Kerosene	0
-Muslim-Others	Secondary	Hill	30000-50000	LP Gas	26
-Muslim-Others	Secondary	Hill	30000-50000	Others	0
-Muslim-Others	Secondary	Hill	30000-50000	Wood	23
-Muslim-Others	Secondary	Hill	50000-ABOVE	Electricity	0
-Muslim-Others	Secondary	Hill	50000-ABOVE	Gobar Gas	0
-Muslim-Others	Secondary	Hill	50000-ABOVE	Kerosene	0
-Muslim-Others	Secondary	Hill	50000-ABOVE	LP Gas	17
-Muslim-Others	Secondary	Hill	50000-ABOVE	Others	0
-Muslim-Others	Secondary	Hill	50000-ABOVE	Wood	5
+Muslim-Others	Secondary	Hilly	0-10000	Electricity	0
+Muslim-Others	Secondary	Hilly	0-10000	Gobar Gas	3
+Muslim-Others	Secondary	Hilly	0-10000	Kerosene	0
+Muslim-Others	Secondary	Hilly	0-10000	LP Gas	40
+Muslim-Others	Secondary	Hilly	0-10000	Others	0
+Muslim-Others	Secondary	Hilly	0-10000	Wood	411
+Muslim-Others	Secondary	Hilly	10000-20000	Electricity	0
+Muslim-Others	Secondary	Hilly	10000-20000	Gobar Gas	3
+Muslim-Others	Secondary	Hilly	10000-20000	Kerosene	0
+Muslim-Others	Secondary	Hilly	10000-20000	LP Gas	130
+Muslim-Others	Secondary	Hilly	10000-20000	Others	0
+Muslim-Others	Secondary	Hilly	10000-20000	Wood	284
+Muslim-Others	Secondary	Hilly	20000-30000	Electricity	0
+Muslim-Others	Secondary	Hilly	20000-30000	Gobar Gas	0
+Muslim-Others	Secondary	Hilly	20000-30000	Kerosene	0
+Muslim-Others	Secondary	Hilly	20000-30000	LP Gas	71
+Muslim-Others	Secondary	Hilly	20000-30000	Others	0
+Muslim-Others	Secondary	Hilly	20000-30000	Wood	75
+Muslim-Others	Secondary	Hilly	30000-50000	Electricity	0
+Muslim-Others	Secondary	Hilly	30000-50000	Gobar Gas	0
+Muslim-Others	Secondary	Hilly	30000-50000	Kerosene	0
+Muslim-Others	Secondary	Hilly	30000-50000	LP Gas	26
+Muslim-Others	Secondary	Hilly	30000-50000	Others	0
+Muslim-Others	Secondary	Hilly	30000-50000	Wood	23
+Muslim-Others	Secondary	Hilly	50000-ABOVE	Electricity	0
+Muslim-Others	Secondary	Hilly	50000-ABOVE	Gobar Gas	0
+Muslim-Others	Secondary	Hilly	50000-ABOVE	Kerosene	0
+Muslim-Others	Secondary	Hilly	50000-ABOVE	LP Gas	17
+Muslim-Others	Secondary	Hilly	50000-ABOVE	Others	0
+Muslim-Others	Secondary	Hilly	50000-ABOVE	Wood	5
 Muslim-Others	Secondary	Himalayan	0-10000	Electricity	0
 Muslim-Others	Secondary	Himalayan	0-10000	Gobar Gas	0
 Muslim-Others	Secondary	Himalayan	0-10000	Kerosene	0
@@ -2039,36 +2039,36 @@ Muslim-Others	Secondary	Himalayan	50000-ABOVE	Kerosene	0
 Muslim-Others	Secondary	Himalayan	50000-ABOVE	LP Gas	5
 Muslim-Others	Secondary	Himalayan	50000-ABOVE	Others	0
 Muslim-Others	Secondary	Himalayan	50000-ABOVE	Wood	3
-Muslim-Others	University	Hill	0-10000	Electricity	0
-Muslim-Others	University	Hill	0-10000	Gobar Gas	0
-Muslim-Others	University	Hill	0-10000	Kerosene	0
-Muslim-Others	University	Hill	0-10000	LP Gas	7
-Muslim-Others	University	Hill	0-10000	Others	0
-Muslim-Others	University	Hill	0-10000	Wood	10
-Muslim-Others	University	Hill	10000-20000	Electricity	0
-Muslim-Others	University	Hill	10000-20000	Gobar Gas	1
-Muslim-Others	University	Hill	10000-20000	Kerosene	0
-Muslim-Others	University	Hill	10000-20000	LP Gas	19
-Muslim-Others	University	Hill	10000-20000	Others	0
-Muslim-Others	University	Hill	10000-20000	Wood	30
-Muslim-Others	University	Hill	20000-30000	Electricity	0
-Muslim-Others	University	Hill	20000-30000	Gobar Gas	1
-Muslim-Others	University	Hill	20000-30000	Kerosene	0
-Muslim-Others	University	Hill	20000-30000	LP Gas	14
-Muslim-Others	University	Hill	20000-30000	Others	0
-Muslim-Others	University	Hill	20000-30000	Wood	16
-Muslim-Others	University	Hill	30000-50000	Electricity	0
-Muslim-Others	University	Hill	30000-50000	Gobar Gas	2
-Muslim-Others	University	Hill	30000-50000	Kerosene	0
-Muslim-Others	University	Hill	30000-50000	LP Gas	12
-Muslim-Others	University	Hill	30000-50000	Others	0
-Muslim-Others	University	Hill	30000-50000	Wood	11
-Muslim-Others	University	Hill	50000-ABOVE	Electricity	0
-Muslim-Others	University	Hill	50000-ABOVE	Gobar Gas	0
-Muslim-Others	University	Hill	50000-ABOVE	Kerosene	0
-Muslim-Others	University	Hill	50000-ABOVE	LP Gas	3
-Muslim-Others	University	Hill	50000-ABOVE	Others	0
-Muslim-Others	University	Hill	50000-ABOVE	Wood	2
+Muslim-Others	University	Hilly	0-10000	Electricity	0
+Muslim-Others	University	Hilly	0-10000	Gobar Gas	0
+Muslim-Others	University	Hilly	0-10000	Kerosene	0
+Muslim-Others	University	Hilly	0-10000	LP Gas	7
+Muslim-Others	University	Hilly	0-10000	Others	0
+Muslim-Others	University	Hilly	0-10000	Wood	10
+Muslim-Others	University	Hilly	10000-20000	Electricity	0
+Muslim-Others	University	Hilly	10000-20000	Gobar Gas	1
+Muslim-Others	University	Hilly	10000-20000	Kerosene	0
+Muslim-Others	University	Hilly	10000-20000	LP Gas	19
+Muslim-Others	University	Hilly	10000-20000	Others	0
+Muslim-Others	University	Hilly	10000-20000	Wood	30
+Muslim-Others	University	Hilly	20000-30000	Electricity	0
+Muslim-Others	University	Hilly	20000-30000	Gobar Gas	1
+Muslim-Others	University	Hilly	20000-30000	Kerosene	0
+Muslim-Others	University	Hilly	20000-30000	LP Gas	14
+Muslim-Others	University	Hilly	20000-30000	Others	0
+Muslim-Others	University	Hilly	20000-30000	Wood	16
+Muslim-Others	University	Hilly	30000-50000	Electricity	0
+Muslim-Others	University	Hilly	30000-50000	Gobar Gas	2
+Muslim-Others	University	Hilly	30000-50000	Kerosene	0
+Muslim-Others	University	Hilly	30000-50000	LP Gas	12
+Muslim-Others	University	Hilly	30000-50000	Others	0
+Muslim-Others	University	Hilly	30000-50000	Wood	11
+Muslim-Others	University	Hilly	50000-ABOVE	Electricity	0
+Muslim-Others	University	Hilly	50000-ABOVE	Gobar Gas	0
+Muslim-Others	University	Hilly	50000-ABOVE	Kerosene	0
+Muslim-Others	University	Hilly	50000-ABOVE	LP Gas	3
+Muslim-Others	University	Hilly	50000-ABOVE	Others	0
+Muslim-Others	University	Hilly	50000-ABOVE	Wood	2
 Muslim-Others	University	Himalayan	0-10000	Electricity	0
 Muslim-Others	University	Himalayan	0-10000	Gobar Gas	0
 Muslim-Others	University	Himalayan	0-10000	Kerosene	0
@@ -2099,36 +2099,36 @@ Muslim-Others	University	Himalayan	50000-ABOVE	Kerosene	0
 Muslim-Others	University	Himalayan	50000-ABOVE	LP Gas	0
 Muslim-Others	University	Himalayan	50000-ABOVE	Others	0
 Muslim-Others	University	Himalayan	50000-ABOVE	Wood	0
-Newar	Illiterate	Hill	0-10000	Electricity	2
-Newar	Illiterate	Hill	0-10000	Gobar Gas	112
-Newar	Illiterate	Hill	0-10000	Kerosene	2
-Newar	Illiterate	Hill	0-10000	LP Gas	430
-Newar	Illiterate	Hill	0-10000	Others	4
-Newar	Illiterate	Hill	0-10000	Wood	6863
-Newar	Illiterate	Hill	10000-20000	Electricity	0
-Newar	Illiterate	Hill	10000-20000	Gobar Gas	87
-Newar	Illiterate	Hill	10000-20000	Kerosene	0
-Newar	Illiterate	Hill	10000-20000	LP Gas	660
-Newar	Illiterate	Hill	10000-20000	Others	1
-Newar	Illiterate	Hill	10000-20000	Wood	2188
-Newar	Illiterate	Hill	20000-30000	Electricity	0
-Newar	Illiterate	Hill	20000-30000	Gobar Gas	54
-Newar	Illiterate	Hill	20000-30000	Kerosene	0
-Newar	Illiterate	Hill	20000-30000	LP Gas	348
-Newar	Illiterate	Hill	20000-30000	Others	0
-Newar	Illiterate	Hill	20000-30000	Wood	524
-Newar	Illiterate	Hill	30000-50000	Electricity	0
-Newar	Illiterate	Hill	30000-50000	Gobar Gas	16
-Newar	Illiterate	Hill	30000-50000	Kerosene	0
-Newar	Illiterate	Hill	30000-50000	LP Gas	117
-Newar	Illiterate	Hill	30000-50000	Others	1
-Newar	Illiterate	Hill	30000-50000	Wood	144
-Newar	Illiterate	Hill	50000-ABOVE	Electricity	0
-Newar	Illiterate	Hill	50000-ABOVE	Gobar Gas	5
-Newar	Illiterate	Hill	50000-ABOVE	Kerosene	0
-Newar	Illiterate	Hill	50000-ABOVE	LP Gas	59
-Newar	Illiterate	Hill	50000-ABOVE	Others	0
-Newar	Illiterate	Hill	50000-ABOVE	Wood	64
+Newar	Illiterate	Hilly	0-10000	Electricity	2
+Newar	Illiterate	Hilly	0-10000	Gobar Gas	112
+Newar	Illiterate	Hilly	0-10000	Kerosene	2
+Newar	Illiterate	Hilly	0-10000	LP Gas	430
+Newar	Illiterate	Hilly	0-10000	Others	4
+Newar	Illiterate	Hilly	0-10000	Wood	6863
+Newar	Illiterate	Hilly	10000-20000	Electricity	0
+Newar	Illiterate	Hilly	10000-20000	Gobar Gas	87
+Newar	Illiterate	Hilly	10000-20000	Kerosene	0
+Newar	Illiterate	Hilly	10000-20000	LP Gas	660
+Newar	Illiterate	Hilly	10000-20000	Others	1
+Newar	Illiterate	Hilly	10000-20000	Wood	2188
+Newar	Illiterate	Hilly	20000-30000	Electricity	0
+Newar	Illiterate	Hilly	20000-30000	Gobar Gas	54
+Newar	Illiterate	Hilly	20000-30000	Kerosene	0
+Newar	Illiterate	Hilly	20000-30000	LP Gas	348
+Newar	Illiterate	Hilly	20000-30000	Others	0
+Newar	Illiterate	Hilly	20000-30000	Wood	524
+Newar	Illiterate	Hilly	30000-50000	Electricity	0
+Newar	Illiterate	Hilly	30000-50000	Gobar Gas	16
+Newar	Illiterate	Hilly	30000-50000	Kerosene	0
+Newar	Illiterate	Hilly	30000-50000	LP Gas	117
+Newar	Illiterate	Hilly	30000-50000	Others	1
+Newar	Illiterate	Hilly	30000-50000	Wood	144
+Newar	Illiterate	Hilly	50000-ABOVE	Electricity	0
+Newar	Illiterate	Hilly	50000-ABOVE	Gobar Gas	5
+Newar	Illiterate	Hilly	50000-ABOVE	Kerosene	0
+Newar	Illiterate	Hilly	50000-ABOVE	LP Gas	59
+Newar	Illiterate	Hilly	50000-ABOVE	Others	0
+Newar	Illiterate	Hilly	50000-ABOVE	Wood	64
 Newar	Illiterate	Himalayan	0-10000	Electricity	0
 Newar	Illiterate	Himalayan	0-10000	Gobar Gas	16
 Newar	Illiterate	Himalayan	0-10000	Kerosene	0
@@ -2159,36 +2159,36 @@ Newar	Illiterate	Himalayan	50000-ABOVE	Kerosene	0
 Newar	Illiterate	Himalayan	50000-ABOVE	LP Gas	19
 Newar	Illiterate	Himalayan	50000-ABOVE	Others	0
 Newar	Illiterate	Himalayan	50000-ABOVE	Wood	50
-Newar	NonFormal-Other	Hill	0-10000	Electricity	0
-Newar	NonFormal-Other	Hill	0-10000	Gobar Gas	90
-Newar	NonFormal-Other	Hill	0-10000	Kerosene	1
-Newar	NonFormal-Other	Hill	0-10000	LP Gas	360
-Newar	NonFormal-Other	Hill	0-10000	Others	2
-Newar	NonFormal-Other	Hill	0-10000	Wood	3941
-Newar	NonFormal-Other	Hill	10000-20000	Electricity	1
-Newar	NonFormal-Other	Hill	10000-20000	Gobar Gas	180
-Newar	NonFormal-Other	Hill	10000-20000	Kerosene	0
-Newar	NonFormal-Other	Hill	10000-20000	LP Gas	782
-Newar	NonFormal-Other	Hill	10000-20000	Others	0
-Newar	NonFormal-Other	Hill	10000-20000	Wood	2284
-Newar	NonFormal-Other	Hill	20000-30000	Electricity	0
-Newar	NonFormal-Other	Hill	20000-30000	Gobar Gas	54
-Newar	NonFormal-Other	Hill	20000-30000	Kerosene	1
-Newar	NonFormal-Other	Hill	20000-30000	LP Gas	534
-Newar	NonFormal-Other	Hill	20000-30000	Others	0
-Newar	NonFormal-Other	Hill	20000-30000	Wood	593
-Newar	NonFormal-Other	Hill	30000-50000	Electricity	0
-Newar	NonFormal-Other	Hill	30000-50000	Gobar Gas	12
-Newar	NonFormal-Other	Hill	30000-50000	Kerosene	1
-Newar	NonFormal-Other	Hill	30000-50000	LP Gas	135
-Newar	NonFormal-Other	Hill	30000-50000	Others	0
-Newar	NonFormal-Other	Hill	30000-50000	Wood	150
-Newar	NonFormal-Other	Hill	50000-ABOVE	Electricity	0
-Newar	NonFormal-Other	Hill	50000-ABOVE	Gobar Gas	2
-Newar	NonFormal-Other	Hill	50000-ABOVE	Kerosene	0
-Newar	NonFormal-Other	Hill	50000-ABOVE	LP Gas	52
-Newar	NonFormal-Other	Hill	50000-ABOVE	Others	0
-Newar	NonFormal-Other	Hill	50000-ABOVE	Wood	57
+Newar	NonFormal-Other	Hilly	0-10000	Electricity	0
+Newar	NonFormal-Other	Hilly	0-10000	Gobar Gas	90
+Newar	NonFormal-Other	Hilly	0-10000	Kerosene	1
+Newar	NonFormal-Other	Hilly	0-10000	LP Gas	360
+Newar	NonFormal-Other	Hilly	0-10000	Others	2
+Newar	NonFormal-Other	Hilly	0-10000	Wood	3941
+Newar	NonFormal-Other	Hilly	10000-20000	Electricity	1
+Newar	NonFormal-Other	Hilly	10000-20000	Gobar Gas	180
+Newar	NonFormal-Other	Hilly	10000-20000	Kerosene	0
+Newar	NonFormal-Other	Hilly	10000-20000	LP Gas	782
+Newar	NonFormal-Other	Hilly	10000-20000	Others	0
+Newar	NonFormal-Other	Hilly	10000-20000	Wood	2284
+Newar	NonFormal-Other	Hilly	20000-30000	Electricity	0
+Newar	NonFormal-Other	Hilly	20000-30000	Gobar Gas	54
+Newar	NonFormal-Other	Hilly	20000-30000	Kerosene	1
+Newar	NonFormal-Other	Hilly	20000-30000	LP Gas	534
+Newar	NonFormal-Other	Hilly	20000-30000	Others	0
+Newar	NonFormal-Other	Hilly	20000-30000	Wood	593
+Newar	NonFormal-Other	Hilly	30000-50000	Electricity	0
+Newar	NonFormal-Other	Hilly	30000-50000	Gobar Gas	12
+Newar	NonFormal-Other	Hilly	30000-50000	Kerosene	1
+Newar	NonFormal-Other	Hilly	30000-50000	LP Gas	135
+Newar	NonFormal-Other	Hilly	30000-50000	Others	0
+Newar	NonFormal-Other	Hilly	30000-50000	Wood	150
+Newar	NonFormal-Other	Hilly	50000-ABOVE	Electricity	0
+Newar	NonFormal-Other	Hilly	50000-ABOVE	Gobar Gas	2
+Newar	NonFormal-Other	Hilly	50000-ABOVE	Kerosene	0
+Newar	NonFormal-Other	Hilly	50000-ABOVE	LP Gas	52
+Newar	NonFormal-Other	Hilly	50000-ABOVE	Others	0
+Newar	NonFormal-Other	Hilly	50000-ABOVE	Wood	57
 Newar	NonFormal-Other	Himalayan	0-10000	Electricity	1
 Newar	NonFormal-Other	Himalayan	0-10000	Gobar Gas	9
 Newar	NonFormal-Other	Himalayan	0-10000	Kerosene	0
@@ -2219,36 +2219,36 @@ Newar	NonFormal-Other	Himalayan	50000-ABOVE	Kerosene	0
 Newar	NonFormal-Other	Himalayan	50000-ABOVE	LP Gas	29
 Newar	NonFormal-Other	Himalayan	50000-ABOVE	Others	0
 Newar	NonFormal-Other	Himalayan	50000-ABOVE	Wood	45
-Newar	Primary	Hill	0-10000	Electricity	1
-Newar	Primary	Hill	0-10000	Gobar Gas	126
-Newar	Primary	Hill	0-10000	Kerosene	1
-Newar	Primary	Hill	0-10000	LP Gas	329
-Newar	Primary	Hill	0-10000	Others	2
-Newar	Primary	Hill	0-10000	Wood	4103
-Newar	Primary	Hill	10000-20000	Electricity	1
-Newar	Primary	Hill	10000-20000	Gobar Gas	205
-Newar	Primary	Hill	10000-20000	Kerosene	0
-Newar	Primary	Hill	10000-20000	LP Gas	1109
-Newar	Primary	Hill	10000-20000	Others	1
-Newar	Primary	Hill	10000-20000	Wood	2596
-Newar	Primary	Hill	20000-30000	Electricity	0
-Newar	Primary	Hill	20000-30000	Gobar Gas	73
-Newar	Primary	Hill	20000-30000	Kerosene	0
-Newar	Primary	Hill	20000-30000	LP Gas	611
-Newar	Primary	Hill	20000-30000	Others	0
-Newar	Primary	Hill	20000-30000	Wood	574
-Newar	Primary	Hill	30000-50000	Electricity	0
-Newar	Primary	Hill	30000-50000	Gobar Gas	22
-Newar	Primary	Hill	30000-50000	Kerosene	0
-Newar	Primary	Hill	30000-50000	LP Gas	182
-Newar	Primary	Hill	30000-50000	Others	0
-Newar	Primary	Hill	30000-50000	Wood	146
-Newar	Primary	Hill	50000-ABOVE	Electricity	1
-Newar	Primary	Hill	50000-ABOVE	Gobar Gas	3
-Newar	Primary	Hill	50000-ABOVE	Kerosene	1
-Newar	Primary	Hill	50000-ABOVE	LP Gas	61
-Newar	Primary	Hill	50000-ABOVE	Others	0
-Newar	Primary	Hill	50000-ABOVE	Wood	49
+Newar	Primary	Hilly	0-10000	Electricity	1
+Newar	Primary	Hilly	0-10000	Gobar Gas	126
+Newar	Primary	Hilly	0-10000	Kerosene	1
+Newar	Primary	Hilly	0-10000	LP Gas	329
+Newar	Primary	Hilly	0-10000	Others	2
+Newar	Primary	Hilly	0-10000	Wood	4103
+Newar	Primary	Hilly	10000-20000	Electricity	1
+Newar	Primary	Hilly	10000-20000	Gobar Gas	205
+Newar	Primary	Hilly	10000-20000	Kerosene	0
+Newar	Primary	Hilly	10000-20000	LP Gas	1109
+Newar	Primary	Hilly	10000-20000	Others	1
+Newar	Primary	Hilly	10000-20000	Wood	2596
+Newar	Primary	Hilly	20000-30000	Electricity	0
+Newar	Primary	Hilly	20000-30000	Gobar Gas	73
+Newar	Primary	Hilly	20000-30000	Kerosene	0
+Newar	Primary	Hilly	20000-30000	LP Gas	611
+Newar	Primary	Hilly	20000-30000	Others	0
+Newar	Primary	Hilly	20000-30000	Wood	574
+Newar	Primary	Hilly	30000-50000	Electricity	0
+Newar	Primary	Hilly	30000-50000	Gobar Gas	22
+Newar	Primary	Hilly	30000-50000	Kerosene	0
+Newar	Primary	Hilly	30000-50000	LP Gas	182
+Newar	Primary	Hilly	30000-50000	Others	0
+Newar	Primary	Hilly	30000-50000	Wood	146
+Newar	Primary	Hilly	50000-ABOVE	Electricity	1
+Newar	Primary	Hilly	50000-ABOVE	Gobar Gas	3
+Newar	Primary	Hilly	50000-ABOVE	Kerosene	1
+Newar	Primary	Hilly	50000-ABOVE	LP Gas	61
+Newar	Primary	Hilly	50000-ABOVE	Others	0
+Newar	Primary	Hilly	50000-ABOVE	Wood	49
 Newar	Primary	Himalayan	0-10000	Electricity	2
 Newar	Primary	Himalayan	0-10000	Gobar Gas	12
 Newar	Primary	Himalayan	0-10000	Kerosene	1
@@ -2279,36 +2279,36 @@ Newar	Primary	Himalayan	50000-ABOVE	Kerosene	0
 Newar	Primary	Himalayan	50000-ABOVE	LP Gas	57
 Newar	Primary	Himalayan	50000-ABOVE	Others	0
 Newar	Primary	Himalayan	50000-ABOVE	Wood	52
-Newar	Secondary	Hill	0-10000	Electricity	2
-Newar	Secondary	Hill	0-10000	Gobar Gas	63
-Newar	Secondary	Hill	0-10000	Kerosene	0
-Newar	Secondary	Hill	0-10000	LP Gas	441
-Newar	Secondary	Hill	0-10000	Others	0
-Newar	Secondary	Hill	0-10000	Wood	2245
-Newar	Secondary	Hill	10000-20000	Electricity	2
-Newar	Secondary	Hill	10000-20000	Gobar Gas	123
-Newar	Secondary	Hill	10000-20000	Kerosene	4
-Newar	Secondary	Hill	10000-20000	LP Gas	1979
-Newar	Secondary	Hill	10000-20000	Others	0
-Newar	Secondary	Hill	10000-20000	Wood	2173
-Newar	Secondary	Hill	20000-30000	Electricity	2
-Newar	Secondary	Hill	20000-30000	Gobar Gas	51
-Newar	Secondary	Hill	20000-30000	Kerosene	1
-Newar	Secondary	Hill	20000-30000	LP Gas	1550
-Newar	Secondary	Hill	20000-30000	Others	2
-Newar	Secondary	Hill	20000-30000	Wood	612
-Newar	Secondary	Hill	30000-50000	Electricity	0
-Newar	Secondary	Hill	30000-50000	Gobar Gas	16
-Newar	Secondary	Hill	30000-50000	Kerosene	1
-Newar	Secondary	Hill	30000-50000	LP Gas	596
-Newar	Secondary	Hill	30000-50000	Others	0
-Newar	Secondary	Hill	30000-50000	Wood	145
-Newar	Secondary	Hill	50000-ABOVE	Electricity	0
-Newar	Secondary	Hill	50000-ABOVE	Gobar Gas	1
-Newar	Secondary	Hill	50000-ABOVE	Kerosene	0
-Newar	Secondary	Hill	50000-ABOVE	LP Gas	261
-Newar	Secondary	Hill	50000-ABOVE	Others	1
-Newar	Secondary	Hill	50000-ABOVE	Wood	66
+Newar	Secondary	Hilly	0-10000	Electricity	2
+Newar	Secondary	Hilly	0-10000	Gobar Gas	63
+Newar	Secondary	Hilly	0-10000	Kerosene	0
+Newar	Secondary	Hilly	0-10000	LP Gas	441
+Newar	Secondary	Hilly	0-10000	Others	0
+Newar	Secondary	Hilly	0-10000	Wood	2245
+Newar	Secondary	Hilly	10000-20000	Electricity	2
+Newar	Secondary	Hilly	10000-20000	Gobar Gas	123
+Newar	Secondary	Hilly	10000-20000	Kerosene	4
+Newar	Secondary	Hilly	10000-20000	LP Gas	1979
+Newar	Secondary	Hilly	10000-20000	Others	0
+Newar	Secondary	Hilly	10000-20000	Wood	2173
+Newar	Secondary	Hilly	20000-30000	Electricity	2
+Newar	Secondary	Hilly	20000-30000	Gobar Gas	51
+Newar	Secondary	Hilly	20000-30000	Kerosene	1
+Newar	Secondary	Hilly	20000-30000	LP Gas	1550
+Newar	Secondary	Hilly	20000-30000	Others	2
+Newar	Secondary	Hilly	20000-30000	Wood	612
+Newar	Secondary	Hilly	30000-50000	Electricity	0
+Newar	Secondary	Hilly	30000-50000	Gobar Gas	16
+Newar	Secondary	Hilly	30000-50000	Kerosene	1
+Newar	Secondary	Hilly	30000-50000	LP Gas	596
+Newar	Secondary	Hilly	30000-50000	Others	0
+Newar	Secondary	Hilly	30000-50000	Wood	145
+Newar	Secondary	Hilly	50000-ABOVE	Electricity	0
+Newar	Secondary	Hilly	50000-ABOVE	Gobar Gas	1
+Newar	Secondary	Hilly	50000-ABOVE	Kerosene	0
+Newar	Secondary	Hilly	50000-ABOVE	LP Gas	261
+Newar	Secondary	Hilly	50000-ABOVE	Others	1
+Newar	Secondary	Hilly	50000-ABOVE	Wood	66
 Newar	Secondary	Himalayan	0-10000	Electricity	1
 Newar	Secondary	Himalayan	0-10000	Gobar Gas	11
 Newar	Secondary	Himalayan	0-10000	Kerosene	0
@@ -2339,36 +2339,36 @@ Newar	Secondary	Himalayan	50000-ABOVE	Kerosene	0
 Newar	Secondary	Himalayan	50000-ABOVE	LP Gas	127
 Newar	Secondary	Himalayan	50000-ABOVE	Others	0
 Newar	Secondary	Himalayan	50000-ABOVE	Wood	63
-Newar	University	Hill	0-10000	Electricity	1
-Newar	University	Hill	0-10000	Gobar Gas	2
-Newar	University	Hill	0-10000	Kerosene	0
-Newar	University	Hill	0-10000	LP Gas	30
-Newar	University	Hill	0-10000	Others	0
-Newar	University	Hill	0-10000	Wood	71
-Newar	University	Hill	10000-20000	Electricity	1
-Newar	University	Hill	10000-20000	Gobar Gas	6
-Newar	University	Hill	10000-20000	Kerosene	1
-Newar	University	Hill	10000-20000	LP Gas	205
-Newar	University	Hill	10000-20000	Others	0
-Newar	University	Hill	10000-20000	Wood	165
-Newar	University	Hill	20000-30000	Electricity	0
-Newar	University	Hill	20000-30000	Gobar Gas	6
-Newar	University	Hill	20000-30000	Kerosene	0
-Newar	University	Hill	20000-30000	LP Gas	284
-Newar	University	Hill	20000-30000	Others	0
-Newar	University	Hill	20000-30000	Wood	112
-Newar	University	Hill	30000-50000	Electricity	0
-Newar	University	Hill	30000-50000	Gobar Gas	4
-Newar	University	Hill	30000-50000	Kerosene	0
-Newar	University	Hill	30000-50000	LP Gas	137
-Newar	University	Hill	30000-50000	Others	0
-Newar	University	Hill	30000-50000	Wood	35
-Newar	University	Hill	50000-ABOVE	Electricity	0
-Newar	University	Hill	50000-ABOVE	Gobar Gas	1
-Newar	University	Hill	50000-ABOVE	Kerosene	0
-Newar	University	Hill	50000-ABOVE	LP Gas	72
-Newar	University	Hill	50000-ABOVE	Others	0
-Newar	University	Hill	50000-ABOVE	Wood	14
+Newar	University	Hilly	0-10000	Electricity	1
+Newar	University	Hilly	0-10000	Gobar Gas	2
+Newar	University	Hilly	0-10000	Kerosene	0
+Newar	University	Hilly	0-10000	LP Gas	30
+Newar	University	Hilly	0-10000	Others	0
+Newar	University	Hilly	0-10000	Wood	71
+Newar	University	Hilly	10000-20000	Electricity	1
+Newar	University	Hilly	10000-20000	Gobar Gas	6
+Newar	University	Hilly	10000-20000	Kerosene	1
+Newar	University	Hilly	10000-20000	LP Gas	205
+Newar	University	Hilly	10000-20000	Others	0
+Newar	University	Hilly	10000-20000	Wood	165
+Newar	University	Hilly	20000-30000	Electricity	0
+Newar	University	Hilly	20000-30000	Gobar Gas	6
+Newar	University	Hilly	20000-30000	Kerosene	0
+Newar	University	Hilly	20000-30000	LP Gas	284
+Newar	University	Hilly	20000-30000	Others	0
+Newar	University	Hilly	20000-30000	Wood	112
+Newar	University	Hilly	30000-50000	Electricity	0
+Newar	University	Hilly	30000-50000	Gobar Gas	4
+Newar	University	Hilly	30000-50000	Kerosene	0
+Newar	University	Hilly	30000-50000	LP Gas	137
+Newar	University	Hilly	30000-50000	Others	0
+Newar	University	Hilly	30000-50000	Wood	35
+Newar	University	Hilly	50000-ABOVE	Electricity	0
+Newar	University	Hilly	50000-ABOVE	Gobar Gas	1
+Newar	University	Hilly	50000-ABOVE	Kerosene	0
+Newar	University	Hilly	50000-ABOVE	LP Gas	72
+Newar	University	Hilly	50000-ABOVE	Others	0
+Newar	University	Hilly	50000-ABOVE	Wood	14
 Newar	University	Himalayan	0-10000	Electricity	1
 Newar	University	Himalayan	0-10000	Gobar Gas	1
 Newar	University	Himalayan	0-10000	Kerosene	0
@@ -2399,36 +2399,36 @@ Newar	University	Himalayan	50000-ABOVE	Kerosene	0
 Newar	University	Himalayan	50000-ABOVE	LP Gas	32
 Newar	University	Himalayan	50000-ABOVE	Others	0
 Newar	University	Himalayan	50000-ABOVE	Wood	13
-Rai-Limbu	Illiterate	Hill	0-10000	Electricity	0
-Rai-Limbu	Illiterate	Hill	0-10000	Gobar Gas	23
-Rai-Limbu	Illiterate	Hill	0-10000	Kerosene	2
-Rai-Limbu	Illiterate	Hill	0-10000	LP Gas	51
-Rai-Limbu	Illiterate	Hill	0-10000	Others	4
-Rai-Limbu	Illiterate	Hill	0-10000	Wood	3999
-Rai-Limbu	Illiterate	Hill	10000-20000	Electricity	1
-Rai-Limbu	Illiterate	Hill	10000-20000	Gobar Gas	10
-Rai-Limbu	Illiterate	Hill	10000-20000	Kerosene	0
-Rai-Limbu	Illiterate	Hill	10000-20000	LP Gas	70
-Rai-Limbu	Illiterate	Hill	10000-20000	Others	0
-Rai-Limbu	Illiterate	Hill	10000-20000	Wood	878
-Rai-Limbu	Illiterate	Hill	20000-30000	Electricity	0
-Rai-Limbu	Illiterate	Hill	20000-30000	Gobar Gas	2
-Rai-Limbu	Illiterate	Hill	20000-30000	Kerosene	0
-Rai-Limbu	Illiterate	Hill	20000-30000	LP Gas	24
-Rai-Limbu	Illiterate	Hill	20000-30000	Others	0
-Rai-Limbu	Illiterate	Hill	20000-30000	Wood	219
-Rai-Limbu	Illiterate	Hill	30000-50000	Electricity	0
-Rai-Limbu	Illiterate	Hill	30000-50000	Gobar Gas	2
-Rai-Limbu	Illiterate	Hill	30000-50000	Kerosene	0
-Rai-Limbu	Illiterate	Hill	30000-50000	LP Gas	9
-Rai-Limbu	Illiterate	Hill	30000-50000	Others	0
-Rai-Limbu	Illiterate	Hill	30000-50000	Wood	60
-Rai-Limbu	Illiterate	Hill	50000-ABOVE	Electricity	0
-Rai-Limbu	Illiterate	Hill	50000-ABOVE	Gobar Gas	0
-Rai-Limbu	Illiterate	Hill	50000-ABOVE	Kerosene	0
-Rai-Limbu	Illiterate	Hill	50000-ABOVE	LP Gas	3
-Rai-Limbu	Illiterate	Hill	50000-ABOVE	Others	0
-Rai-Limbu	Illiterate	Hill	50000-ABOVE	Wood	31
+Rai-Limbu	Illiterate	Hilly	0-10000	Electricity	0
+Rai-Limbu	Illiterate	Hilly	0-10000	Gobar Gas	23
+Rai-Limbu	Illiterate	Hilly	0-10000	Kerosene	2
+Rai-Limbu	Illiterate	Hilly	0-10000	LP Gas	51
+Rai-Limbu	Illiterate	Hilly	0-10000	Others	4
+Rai-Limbu	Illiterate	Hilly	0-10000	Wood	3999
+Rai-Limbu	Illiterate	Hilly	10000-20000	Electricity	1
+Rai-Limbu	Illiterate	Hilly	10000-20000	Gobar Gas	10
+Rai-Limbu	Illiterate	Hilly	10000-20000	Kerosene	0
+Rai-Limbu	Illiterate	Hilly	10000-20000	LP Gas	70
+Rai-Limbu	Illiterate	Hilly	10000-20000	Others	0
+Rai-Limbu	Illiterate	Hilly	10000-20000	Wood	878
+Rai-Limbu	Illiterate	Hilly	20000-30000	Electricity	0
+Rai-Limbu	Illiterate	Hilly	20000-30000	Gobar Gas	2
+Rai-Limbu	Illiterate	Hilly	20000-30000	Kerosene	0
+Rai-Limbu	Illiterate	Hilly	20000-30000	LP Gas	24
+Rai-Limbu	Illiterate	Hilly	20000-30000	Others	0
+Rai-Limbu	Illiterate	Hilly	20000-30000	Wood	219
+Rai-Limbu	Illiterate	Hilly	30000-50000	Electricity	0
+Rai-Limbu	Illiterate	Hilly	30000-50000	Gobar Gas	2
+Rai-Limbu	Illiterate	Hilly	30000-50000	Kerosene	0
+Rai-Limbu	Illiterate	Hilly	30000-50000	LP Gas	9
+Rai-Limbu	Illiterate	Hilly	30000-50000	Others	0
+Rai-Limbu	Illiterate	Hilly	30000-50000	Wood	60
+Rai-Limbu	Illiterate	Hilly	50000-ABOVE	Electricity	0
+Rai-Limbu	Illiterate	Hilly	50000-ABOVE	Gobar Gas	0
+Rai-Limbu	Illiterate	Hilly	50000-ABOVE	Kerosene	0
+Rai-Limbu	Illiterate	Hilly	50000-ABOVE	LP Gas	3
+Rai-Limbu	Illiterate	Hilly	50000-ABOVE	Others	0
+Rai-Limbu	Illiterate	Hilly	50000-ABOVE	Wood	31
 Rai-Limbu	Illiterate	Himalayan	0-10000	Electricity	0
 Rai-Limbu	Illiterate	Himalayan	0-10000	Gobar Gas	10
 Rai-Limbu	Illiterate	Himalayan	0-10000	Kerosene	1
@@ -2459,36 +2459,36 @@ Rai-Limbu	Illiterate	Himalayan	50000-ABOVE	Kerosene	0
 Rai-Limbu	Illiterate	Himalayan	50000-ABOVE	LP Gas	8
 Rai-Limbu	Illiterate	Himalayan	50000-ABOVE	Others	0
 Rai-Limbu	Illiterate	Himalayan	50000-ABOVE	Wood	40
-Rai-Limbu	NonFormal-Other	Hill	0-10000	Electricity	0
-Rai-Limbu	NonFormal-Other	Hill	0-10000	Gobar Gas	34
-Rai-Limbu	NonFormal-Other	Hill	0-10000	Kerosene	0
-Rai-Limbu	NonFormal-Other	Hill	0-10000	LP Gas	34
-Rai-Limbu	NonFormal-Other	Hill	0-10000	Others	3
-Rai-Limbu	NonFormal-Other	Hill	0-10000	Wood	2507
-Rai-Limbu	NonFormal-Other	Hill	10000-20000	Electricity	0
-Rai-Limbu	NonFormal-Other	Hill	10000-20000	Gobar Gas	31
-Rai-Limbu	NonFormal-Other	Hill	10000-20000	Kerosene	0
-Rai-Limbu	NonFormal-Other	Hill	10000-20000	LP Gas	71
-Rai-Limbu	NonFormal-Other	Hill	10000-20000	Others	0
-Rai-Limbu	NonFormal-Other	Hill	10000-20000	Wood	795
-Rai-Limbu	NonFormal-Other	Hill	20000-30000	Electricity	0
-Rai-Limbu	NonFormal-Other	Hill	20000-30000	Gobar Gas	5
-Rai-Limbu	NonFormal-Other	Hill	20000-30000	Kerosene	0
-Rai-Limbu	NonFormal-Other	Hill	20000-30000	LP Gas	38
-Rai-Limbu	NonFormal-Other	Hill	20000-30000	Others	0
-Rai-Limbu	NonFormal-Other	Hill	20000-30000	Wood	221
-Rai-Limbu	NonFormal-Other	Hill	30000-50000	Electricity	0
-Rai-Limbu	NonFormal-Other	Hill	30000-50000	Gobar Gas	0
-Rai-Limbu	NonFormal-Other	Hill	30000-50000	Kerosene	0
-Rai-Limbu	NonFormal-Other	Hill	30000-50000	LP Gas	12
-Rai-Limbu	NonFormal-Other	Hill	30000-50000	Others	0
-Rai-Limbu	NonFormal-Other	Hill	30000-50000	Wood	61
-Rai-Limbu	NonFormal-Other	Hill	50000-ABOVE	Electricity	0
-Rai-Limbu	NonFormal-Other	Hill	50000-ABOVE	Gobar Gas	0
-Rai-Limbu	NonFormal-Other	Hill	50000-ABOVE	Kerosene	0
-Rai-Limbu	NonFormal-Other	Hill	50000-ABOVE	LP Gas	4
-Rai-Limbu	NonFormal-Other	Hill	50000-ABOVE	Others	0
-Rai-Limbu	NonFormal-Other	Hill	50000-ABOVE	Wood	23
+Rai-Limbu	NonFormal-Other	Hilly	0-10000	Electricity	0
+Rai-Limbu	NonFormal-Other	Hilly	0-10000	Gobar Gas	34
+Rai-Limbu	NonFormal-Other	Hilly	0-10000	Kerosene	0
+Rai-Limbu	NonFormal-Other	Hilly	0-10000	LP Gas	34
+Rai-Limbu	NonFormal-Other	Hilly	0-10000	Others	3
+Rai-Limbu	NonFormal-Other	Hilly	0-10000	Wood	2507
+Rai-Limbu	NonFormal-Other	Hilly	10000-20000	Electricity	0
+Rai-Limbu	NonFormal-Other	Hilly	10000-20000	Gobar Gas	31
+Rai-Limbu	NonFormal-Other	Hilly	10000-20000	Kerosene	0
+Rai-Limbu	NonFormal-Other	Hilly	10000-20000	LP Gas	71
+Rai-Limbu	NonFormal-Other	Hilly	10000-20000	Others	0
+Rai-Limbu	NonFormal-Other	Hilly	10000-20000	Wood	795
+Rai-Limbu	NonFormal-Other	Hilly	20000-30000	Electricity	0
+Rai-Limbu	NonFormal-Other	Hilly	20000-30000	Gobar Gas	5
+Rai-Limbu	NonFormal-Other	Hilly	20000-30000	Kerosene	0
+Rai-Limbu	NonFormal-Other	Hilly	20000-30000	LP Gas	38
+Rai-Limbu	NonFormal-Other	Hilly	20000-30000	Others	0
+Rai-Limbu	NonFormal-Other	Hilly	20000-30000	Wood	221
+Rai-Limbu	NonFormal-Other	Hilly	30000-50000	Electricity	0
+Rai-Limbu	NonFormal-Other	Hilly	30000-50000	Gobar Gas	0
+Rai-Limbu	NonFormal-Other	Hilly	30000-50000	Kerosene	0
+Rai-Limbu	NonFormal-Other	Hilly	30000-50000	LP Gas	12
+Rai-Limbu	NonFormal-Other	Hilly	30000-50000	Others	0
+Rai-Limbu	NonFormal-Other	Hilly	30000-50000	Wood	61
+Rai-Limbu	NonFormal-Other	Hilly	50000-ABOVE	Electricity	0
+Rai-Limbu	NonFormal-Other	Hilly	50000-ABOVE	Gobar Gas	0
+Rai-Limbu	NonFormal-Other	Hilly	50000-ABOVE	Kerosene	0
+Rai-Limbu	NonFormal-Other	Hilly	50000-ABOVE	LP Gas	4
+Rai-Limbu	NonFormal-Other	Hilly	50000-ABOVE	Others	0
+Rai-Limbu	NonFormal-Other	Hilly	50000-ABOVE	Wood	23
 Rai-Limbu	NonFormal-Other	Himalayan	0-10000	Electricity	0
 Rai-Limbu	NonFormal-Other	Himalayan	0-10000	Gobar Gas	1
 Rai-Limbu	NonFormal-Other	Himalayan	0-10000	Kerosene	2
@@ -2519,36 +2519,36 @@ Rai-Limbu	NonFormal-Other	Himalayan	50000-ABOVE	Kerosene	0
 Rai-Limbu	NonFormal-Other	Himalayan	50000-ABOVE	LP Gas	32
 Rai-Limbu	NonFormal-Other	Himalayan	50000-ABOVE	Others	0
 Rai-Limbu	NonFormal-Other	Himalayan	50000-ABOVE	Wood	42
-Rai-Limbu	Primary	Hill	0-10000	Electricity	0
-Rai-Limbu	Primary	Hill	0-10000	Gobar Gas	36
-Rai-Limbu	Primary	Hill	0-10000	Kerosene	1
-Rai-Limbu	Primary	Hill	0-10000	LP Gas	44
-Rai-Limbu	Primary	Hill	0-10000	Others	2
-Rai-Limbu	Primary	Hill	0-10000	Wood	2330
-Rai-Limbu	Primary	Hill	10000-20000	Electricity	0
-Rai-Limbu	Primary	Hill	10000-20000	Gobar Gas	22
-Rai-Limbu	Primary	Hill	10000-20000	Kerosene	2
-Rai-Limbu	Primary	Hill	10000-20000	LP Gas	124
-Rai-Limbu	Primary	Hill	10000-20000	Others	1
-Rai-Limbu	Primary	Hill	10000-20000	Wood	740
-Rai-Limbu	Primary	Hill	20000-30000	Electricity	0
-Rai-Limbu	Primary	Hill	20000-30000	Gobar Gas	3
-Rai-Limbu	Primary	Hill	20000-30000	Kerosene	0
-Rai-Limbu	Primary	Hill	20000-30000	LP Gas	48
-Rai-Limbu	Primary	Hill	20000-30000	Others	0
-Rai-Limbu	Primary	Hill	20000-30000	Wood	201
-Rai-Limbu	Primary	Hill	30000-50000	Electricity	0
-Rai-Limbu	Primary	Hill	30000-50000	Gobar Gas	1
-Rai-Limbu	Primary	Hill	30000-50000	Kerosene	0
-Rai-Limbu	Primary	Hill	30000-50000	LP Gas	13
-Rai-Limbu	Primary	Hill	30000-50000	Others	0
-Rai-Limbu	Primary	Hill	30000-50000	Wood	59
-Rai-Limbu	Primary	Hill	50000-ABOVE	Electricity	0
-Rai-Limbu	Primary	Hill	50000-ABOVE	Gobar Gas	0
-Rai-Limbu	Primary	Hill	50000-ABOVE	Kerosene	0
-Rai-Limbu	Primary	Hill	50000-ABOVE	LP Gas	7
-Rai-Limbu	Primary	Hill	50000-ABOVE	Others	0
-Rai-Limbu	Primary	Hill	50000-ABOVE	Wood	22
+Rai-Limbu	Primary	Hilly	0-10000	Electricity	0
+Rai-Limbu	Primary	Hilly	0-10000	Gobar Gas	36
+Rai-Limbu	Primary	Hilly	0-10000	Kerosene	1
+Rai-Limbu	Primary	Hilly	0-10000	LP Gas	44
+Rai-Limbu	Primary	Hilly	0-10000	Others	2
+Rai-Limbu	Primary	Hilly	0-10000	Wood	2330
+Rai-Limbu	Primary	Hilly	10000-20000	Electricity	0
+Rai-Limbu	Primary	Hilly	10000-20000	Gobar Gas	22
+Rai-Limbu	Primary	Hilly	10000-20000	Kerosene	2
+Rai-Limbu	Primary	Hilly	10000-20000	LP Gas	124
+Rai-Limbu	Primary	Hilly	10000-20000	Others	1
+Rai-Limbu	Primary	Hilly	10000-20000	Wood	740
+Rai-Limbu	Primary	Hilly	20000-30000	Electricity	0
+Rai-Limbu	Primary	Hilly	20000-30000	Gobar Gas	3
+Rai-Limbu	Primary	Hilly	20000-30000	Kerosene	0
+Rai-Limbu	Primary	Hilly	20000-30000	LP Gas	48
+Rai-Limbu	Primary	Hilly	20000-30000	Others	0
+Rai-Limbu	Primary	Hilly	20000-30000	Wood	201
+Rai-Limbu	Primary	Hilly	30000-50000	Electricity	0
+Rai-Limbu	Primary	Hilly	30000-50000	Gobar Gas	1
+Rai-Limbu	Primary	Hilly	30000-50000	Kerosene	0
+Rai-Limbu	Primary	Hilly	30000-50000	LP Gas	13
+Rai-Limbu	Primary	Hilly	30000-50000	Others	0
+Rai-Limbu	Primary	Hilly	30000-50000	Wood	59
+Rai-Limbu	Primary	Hilly	50000-ABOVE	Electricity	0
+Rai-Limbu	Primary	Hilly	50000-ABOVE	Gobar Gas	0
+Rai-Limbu	Primary	Hilly	50000-ABOVE	Kerosene	0
+Rai-Limbu	Primary	Hilly	50000-ABOVE	LP Gas	7
+Rai-Limbu	Primary	Hilly	50000-ABOVE	Others	0
+Rai-Limbu	Primary	Hilly	50000-ABOVE	Wood	22
 Rai-Limbu	Primary	Himalayan	0-10000	Electricity	0
 Rai-Limbu	Primary	Himalayan	0-10000	Gobar Gas	3
 Rai-Limbu	Primary	Himalayan	0-10000	Kerosene	0
@@ -2579,36 +2579,36 @@ Rai-Limbu	Primary	Himalayan	50000-ABOVE	Kerosene	0
 Rai-Limbu	Primary	Himalayan	50000-ABOVE	LP Gas	34
 Rai-Limbu	Primary	Himalayan	50000-ABOVE	Others	0
 Rai-Limbu	Primary	Himalayan	50000-ABOVE	Wood	38
-Rai-Limbu	Secondary	Hill	0-10000	Electricity	0
-Rai-Limbu	Secondary	Hill	0-10000	Gobar Gas	16
-Rai-Limbu	Secondary	Hill	0-10000	Kerosene	0
-Rai-Limbu	Secondary	Hill	0-10000	LP Gas	79
-Rai-Limbu	Secondary	Hill	0-10000	Others	0
-Rai-Limbu	Secondary	Hill	0-10000	Wood	1197
-Rai-Limbu	Secondary	Hill	10000-20000	Electricity	0
-Rai-Limbu	Secondary	Hill	10000-20000	Gobar Gas	12
-Rai-Limbu	Secondary	Hill	10000-20000	Kerosene	0
-Rai-Limbu	Secondary	Hill	10000-20000	LP Gas	156
-Rai-Limbu	Secondary	Hill	10000-20000	Others	0
-Rai-Limbu	Secondary	Hill	10000-20000	Wood	670
-Rai-Limbu	Secondary	Hill	20000-30000	Electricity	0
-Rai-Limbu	Secondary	Hill	20000-30000	Gobar Gas	5
-Rai-Limbu	Secondary	Hill	20000-30000	Kerosene	0
-Rai-Limbu	Secondary	Hill	20000-30000	LP Gas	72
-Rai-Limbu	Secondary	Hill	20000-30000	Others	0
-Rai-Limbu	Secondary	Hill	20000-30000	Wood	166
-Rai-Limbu	Secondary	Hill	30000-50000	Electricity	0
-Rai-Limbu	Secondary	Hill	30000-50000	Gobar Gas	0
-Rai-Limbu	Secondary	Hill	30000-50000	Kerosene	0
-Rai-Limbu	Secondary	Hill	30000-50000	LP Gas	21
-Rai-Limbu	Secondary	Hill	30000-50000	Others	1
-Rai-Limbu	Secondary	Hill	30000-50000	Wood	36
-Rai-Limbu	Secondary	Hill	50000-ABOVE	Electricity	0
-Rai-Limbu	Secondary	Hill	50000-ABOVE	Gobar Gas	0
-Rai-Limbu	Secondary	Hill	50000-ABOVE	Kerosene	0
-Rai-Limbu	Secondary	Hill	50000-ABOVE	LP Gas	15
-Rai-Limbu	Secondary	Hill	50000-ABOVE	Others	0
-Rai-Limbu	Secondary	Hill	50000-ABOVE	Wood	20
+Rai-Limbu	Secondary	Hilly	0-10000	Electricity	0
+Rai-Limbu	Secondary	Hilly	0-10000	Gobar Gas	16
+Rai-Limbu	Secondary	Hilly	0-10000	Kerosene	0
+Rai-Limbu	Secondary	Hilly	0-10000	LP Gas	79
+Rai-Limbu	Secondary	Hilly	0-10000	Others	0
+Rai-Limbu	Secondary	Hilly	0-10000	Wood	1197
+Rai-Limbu	Secondary	Hilly	10000-20000	Electricity	0
+Rai-Limbu	Secondary	Hilly	10000-20000	Gobar Gas	12
+Rai-Limbu	Secondary	Hilly	10000-20000	Kerosene	0
+Rai-Limbu	Secondary	Hilly	10000-20000	LP Gas	156
+Rai-Limbu	Secondary	Hilly	10000-20000	Others	0
+Rai-Limbu	Secondary	Hilly	10000-20000	Wood	670
+Rai-Limbu	Secondary	Hilly	20000-30000	Electricity	0
+Rai-Limbu	Secondary	Hilly	20000-30000	Gobar Gas	5
+Rai-Limbu	Secondary	Hilly	20000-30000	Kerosene	0
+Rai-Limbu	Secondary	Hilly	20000-30000	LP Gas	72
+Rai-Limbu	Secondary	Hilly	20000-30000	Others	0
+Rai-Limbu	Secondary	Hilly	20000-30000	Wood	166
+Rai-Limbu	Secondary	Hilly	30000-50000	Electricity	0
+Rai-Limbu	Secondary	Hilly	30000-50000	Gobar Gas	0
+Rai-Limbu	Secondary	Hilly	30000-50000	Kerosene	0
+Rai-Limbu	Secondary	Hilly	30000-50000	LP Gas	21
+Rai-Limbu	Secondary	Hilly	30000-50000	Others	1
+Rai-Limbu	Secondary	Hilly	30000-50000	Wood	36
+Rai-Limbu	Secondary	Hilly	50000-ABOVE	Electricity	0
+Rai-Limbu	Secondary	Hilly	50000-ABOVE	Gobar Gas	0
+Rai-Limbu	Secondary	Hilly	50000-ABOVE	Kerosene	0
+Rai-Limbu	Secondary	Hilly	50000-ABOVE	LP Gas	15
+Rai-Limbu	Secondary	Hilly	50000-ABOVE	Others	0
+Rai-Limbu	Secondary	Hilly	50000-ABOVE	Wood	20
 Rai-Limbu	Secondary	Himalayan	0-10000	Electricity	0
 Rai-Limbu	Secondary	Himalayan	0-10000	Gobar Gas	3
 Rai-Limbu	Secondary	Himalayan	0-10000	Kerosene	0
@@ -2639,36 +2639,36 @@ Rai-Limbu	Secondary	Himalayan	50000-ABOVE	Kerosene	0
 Rai-Limbu	Secondary	Himalayan	50000-ABOVE	LP Gas	35
 Rai-Limbu	Secondary	Himalayan	50000-ABOVE	Others	1
 Rai-Limbu	Secondary	Himalayan	50000-ABOVE	Wood	36
-Rai-Limbu	University	Hill	0-10000	Electricity	0
-Rai-Limbu	University	Hill	0-10000	Gobar Gas	1
-Rai-Limbu	University	Hill	0-10000	Kerosene	0
-Rai-Limbu	University	Hill	0-10000	LP Gas	7
-Rai-Limbu	University	Hill	0-10000	Others	0
-Rai-Limbu	University	Hill	0-10000	Wood	28
-Rai-Limbu	University	Hill	10000-20000	Electricity	0
-Rai-Limbu	University	Hill	10000-20000	Gobar Gas	2
-Rai-Limbu	University	Hill	10000-20000	Kerosene	0
-Rai-Limbu	University	Hill	10000-20000	LP Gas	15
-Rai-Limbu	University	Hill	10000-20000	Others	0
-Rai-Limbu	University	Hill	10000-20000	Wood	50
-Rai-Limbu	University	Hill	20000-30000	Electricity	0
-Rai-Limbu	University	Hill	20000-30000	Gobar Gas	0
-Rai-Limbu	University	Hill	20000-30000	Kerosene	0
-Rai-Limbu	University	Hill	20000-30000	LP Gas	11
-Rai-Limbu	University	Hill	20000-30000	Others	0
-Rai-Limbu	University	Hill	20000-30000	Wood	24
-Rai-Limbu	University	Hill	30000-50000	Electricity	0
-Rai-Limbu	University	Hill	30000-50000	Gobar Gas	1
-Rai-Limbu	University	Hill	30000-50000	Kerosene	0
-Rai-Limbu	University	Hill	30000-50000	LP Gas	3
-Rai-Limbu	University	Hill	30000-50000	Others	1
-Rai-Limbu	University	Hill	30000-50000	Wood	4
-Rai-Limbu	University	Hill	50000-ABOVE	Electricity	0
-Rai-Limbu	University	Hill	50000-ABOVE	Gobar Gas	0
-Rai-Limbu	University	Hill	50000-ABOVE	Kerosene	0
-Rai-Limbu	University	Hill	50000-ABOVE	LP Gas	1
-Rai-Limbu	University	Hill	50000-ABOVE	Others	0
-Rai-Limbu	University	Hill	50000-ABOVE	Wood	3
+Rai-Limbu	University	Hilly	0-10000	Electricity	0
+Rai-Limbu	University	Hilly	0-10000	Gobar Gas	1
+Rai-Limbu	University	Hilly	0-10000	Kerosene	0
+Rai-Limbu	University	Hilly	0-10000	LP Gas	7
+Rai-Limbu	University	Hilly	0-10000	Others	0
+Rai-Limbu	University	Hilly	0-10000	Wood	28
+Rai-Limbu	University	Hilly	10000-20000	Electricity	0
+Rai-Limbu	University	Hilly	10000-20000	Gobar Gas	2
+Rai-Limbu	University	Hilly	10000-20000	Kerosene	0
+Rai-Limbu	University	Hilly	10000-20000	LP Gas	15
+Rai-Limbu	University	Hilly	10000-20000	Others	0
+Rai-Limbu	University	Hilly	10000-20000	Wood	50
+Rai-Limbu	University	Hilly	20000-30000	Electricity	0
+Rai-Limbu	University	Hilly	20000-30000	Gobar Gas	0
+Rai-Limbu	University	Hilly	20000-30000	Kerosene	0
+Rai-Limbu	University	Hilly	20000-30000	LP Gas	11
+Rai-Limbu	University	Hilly	20000-30000	Others	0
+Rai-Limbu	University	Hilly	20000-30000	Wood	24
+Rai-Limbu	University	Hilly	30000-50000	Electricity	0
+Rai-Limbu	University	Hilly	30000-50000	Gobar Gas	1
+Rai-Limbu	University	Hilly	30000-50000	Kerosene	0
+Rai-Limbu	University	Hilly	30000-50000	LP Gas	3
+Rai-Limbu	University	Hilly	30000-50000	Others	1
+Rai-Limbu	University	Hilly	30000-50000	Wood	4
+Rai-Limbu	University	Hilly	50000-ABOVE	Electricity	0
+Rai-Limbu	University	Hilly	50000-ABOVE	Gobar Gas	0
+Rai-Limbu	University	Hilly	50000-ABOVE	Kerosene	0
+Rai-Limbu	University	Hilly	50000-ABOVE	LP Gas	1
+Rai-Limbu	University	Hilly	50000-ABOVE	Others	0
+Rai-Limbu	University	Hilly	50000-ABOVE	Wood	3
 Rai-Limbu	University	Himalayan	0-10000	Electricity	0
 Rai-Limbu	University	Himalayan	0-10000	Gobar Gas	0
 Rai-Limbu	University	Himalayan	0-10000	Kerosene	0
@@ -2699,36 +2699,36 @@ Rai-Limbu	University	Himalayan	50000-ABOVE	Kerosene	0
 Rai-Limbu	University	Himalayan	50000-ABOVE	LP Gas	3
 Rai-Limbu	University	Himalayan	50000-ABOVE	Others	0
 Rai-Limbu	University	Himalayan	50000-ABOVE	Wood	6
-Tamang	Illiterate	Hill	0-10000	Electricity	5
-Tamang	Illiterate	Hill	0-10000	Gobar Gas	134
-Tamang	Illiterate	Hill	0-10000	Kerosene	4
-Tamang	Illiterate	Hill	0-10000	LP Gas	501
-Tamang	Illiterate	Hill	0-10000	Others	25
-Tamang	Illiterate	Hill	0-10000	Wood	34857
-Tamang	Illiterate	Hill	10000-20000	Electricity	1
-Tamang	Illiterate	Hill	10000-20000	Gobar Gas	95
-Tamang	Illiterate	Hill	10000-20000	Kerosene	1
-Tamang	Illiterate	Hill	10000-20000	LP Gas	760
-Tamang	Illiterate	Hill	10000-20000	Others	1
-Tamang	Illiterate	Hill	10000-20000	Wood	10102
-Tamang	Illiterate	Hill	20000-30000	Electricity	0
-Tamang	Illiterate	Hill	20000-30000	Gobar Gas	24
-Tamang	Illiterate	Hill	20000-30000	Kerosene	1
-Tamang	Illiterate	Hill	20000-30000	LP Gas	260
-Tamang	Illiterate	Hill	20000-30000	Others	0
-Tamang	Illiterate	Hill	20000-30000	Wood	2213
-Tamang	Illiterate	Hill	30000-50000	Electricity	1
-Tamang	Illiterate	Hill	30000-50000	Gobar Gas	17
-Tamang	Illiterate	Hill	30000-50000	Kerosene	0
-Tamang	Illiterate	Hill	30000-50000	LP Gas	74
-Tamang	Illiterate	Hill	30000-50000	Others	0
-Tamang	Illiterate	Hill	30000-50000	Wood	686
-Tamang	Illiterate	Hill	50000-ABOVE	Electricity	0
-Tamang	Illiterate	Hill	50000-ABOVE	Gobar Gas	8
-Tamang	Illiterate	Hill	50000-ABOVE	Kerosene	0
-Tamang	Illiterate	Hill	50000-ABOVE	LP Gas	27
-Tamang	Illiterate	Hill	50000-ABOVE	Others	0
-Tamang	Illiterate	Hill	50000-ABOVE	Wood	193
+Tamang	Illiterate	Hilly	0-10000	Electricity	5
+Tamang	Illiterate	Hilly	0-10000	Gobar Gas	134
+Tamang	Illiterate	Hilly	0-10000	Kerosene	4
+Tamang	Illiterate	Hilly	0-10000	LP Gas	501
+Tamang	Illiterate	Hilly	0-10000	Others	25
+Tamang	Illiterate	Hilly	0-10000	Wood	34857
+Tamang	Illiterate	Hilly	10000-20000	Electricity	1
+Tamang	Illiterate	Hilly	10000-20000	Gobar Gas	95
+Tamang	Illiterate	Hilly	10000-20000	Kerosene	1
+Tamang	Illiterate	Hilly	10000-20000	LP Gas	760
+Tamang	Illiterate	Hilly	10000-20000	Others	1
+Tamang	Illiterate	Hilly	10000-20000	Wood	10102
+Tamang	Illiterate	Hilly	20000-30000	Electricity	0
+Tamang	Illiterate	Hilly	20000-30000	Gobar Gas	24
+Tamang	Illiterate	Hilly	20000-30000	Kerosene	1
+Tamang	Illiterate	Hilly	20000-30000	LP Gas	260
+Tamang	Illiterate	Hilly	20000-30000	Others	0
+Tamang	Illiterate	Hilly	20000-30000	Wood	2213
+Tamang	Illiterate	Hilly	30000-50000	Electricity	1
+Tamang	Illiterate	Hilly	30000-50000	Gobar Gas	17
+Tamang	Illiterate	Hilly	30000-50000	Kerosene	0
+Tamang	Illiterate	Hilly	30000-50000	LP Gas	74
+Tamang	Illiterate	Hilly	30000-50000	Others	0
+Tamang	Illiterate	Hilly	30000-50000	Wood	686
+Tamang	Illiterate	Hilly	50000-ABOVE	Electricity	0
+Tamang	Illiterate	Hilly	50000-ABOVE	Gobar Gas	8
+Tamang	Illiterate	Hilly	50000-ABOVE	Kerosene	0
+Tamang	Illiterate	Hilly	50000-ABOVE	LP Gas	27
+Tamang	Illiterate	Hilly	50000-ABOVE	Others	0
+Tamang	Illiterate	Hilly	50000-ABOVE	Wood	193
 Tamang	Illiterate	Himalayan	0-10000	Electricity	3
 Tamang	Illiterate	Himalayan	0-10000	Gobar Gas	17
 Tamang	Illiterate	Himalayan	0-10000	Kerosene	4
@@ -2759,36 +2759,36 @@ Tamang	Illiterate	Himalayan	50000-ABOVE	Kerosene	0
 Tamang	Illiterate	Himalayan	50000-ABOVE	LP Gas	44
 Tamang	Illiterate	Himalayan	50000-ABOVE	Others	1
 Tamang	Illiterate	Himalayan	50000-ABOVE	Wood	202
-Tamang	NonFormal-Other	Hill	0-10000	Electricity	2
-Tamang	NonFormal-Other	Hill	0-10000	Gobar Gas	107
-Tamang	NonFormal-Other	Hill	0-10000	Kerosene	6
-Tamang	NonFormal-Other	Hill	0-10000	LP Gas	291
-Tamang	NonFormal-Other	Hill	0-10000	Others	3
-Tamang	NonFormal-Other	Hill	0-10000	Wood	13880
-Tamang	NonFormal-Other	Hill	10000-20000	Electricity	0
-Tamang	NonFormal-Other	Hill	10000-20000	Gobar Gas	59
-Tamang	NonFormal-Other	Hill	10000-20000	Kerosene	2
-Tamang	NonFormal-Other	Hill	10000-20000	LP Gas	716
-Tamang	NonFormal-Other	Hill	10000-20000	Others	4
-Tamang	NonFormal-Other	Hill	10000-20000	Wood	6576
-Tamang	NonFormal-Other	Hill	20000-30000	Electricity	0
-Tamang	NonFormal-Other	Hill	20000-30000	Gobar Gas	29
-Tamang	NonFormal-Other	Hill	20000-30000	Kerosene	0
-Tamang	NonFormal-Other	Hill	20000-30000	LP Gas	352
-Tamang	NonFormal-Other	Hill	20000-30000	Others	1
-Tamang	NonFormal-Other	Hill	20000-30000	Wood	1598
-Tamang	NonFormal-Other	Hill	30000-50000	Electricity	0
-Tamang	NonFormal-Other	Hill	30000-50000	Gobar Gas	5
-Tamang	NonFormal-Other	Hill	30000-50000	Kerosene	0
-Tamang	NonFormal-Other	Hill	30000-50000	LP Gas	85
-Tamang	NonFormal-Other	Hill	30000-50000	Others	1
-Tamang	NonFormal-Other	Hill	30000-50000	Wood	387
-Tamang	NonFormal-Other	Hill	50000-ABOVE	Electricity	0
-Tamang	NonFormal-Other	Hill	50000-ABOVE	Gobar Gas	6
-Tamang	NonFormal-Other	Hill	50000-ABOVE	Kerosene	0
-Tamang	NonFormal-Other	Hill	50000-ABOVE	LP Gas	43
-Tamang	NonFormal-Other	Hill	50000-ABOVE	Others	0
-Tamang	NonFormal-Other	Hill	50000-ABOVE	Wood	122
+Tamang	NonFormal-Other	Hilly	0-10000	Electricity	2
+Tamang	NonFormal-Other	Hilly	0-10000	Gobar Gas	107
+Tamang	NonFormal-Other	Hilly	0-10000	Kerosene	6
+Tamang	NonFormal-Other	Hilly	0-10000	LP Gas	291
+Tamang	NonFormal-Other	Hilly	0-10000	Others	3
+Tamang	NonFormal-Other	Hilly	0-10000	Wood	13880
+Tamang	NonFormal-Other	Hilly	10000-20000	Electricity	0
+Tamang	NonFormal-Other	Hilly	10000-20000	Gobar Gas	59
+Tamang	NonFormal-Other	Hilly	10000-20000	Kerosene	2
+Tamang	NonFormal-Other	Hilly	10000-20000	LP Gas	716
+Tamang	NonFormal-Other	Hilly	10000-20000	Others	4
+Tamang	NonFormal-Other	Hilly	10000-20000	Wood	6576
+Tamang	NonFormal-Other	Hilly	20000-30000	Electricity	0
+Tamang	NonFormal-Other	Hilly	20000-30000	Gobar Gas	29
+Tamang	NonFormal-Other	Hilly	20000-30000	Kerosene	0
+Tamang	NonFormal-Other	Hilly	20000-30000	LP Gas	352
+Tamang	NonFormal-Other	Hilly	20000-30000	Others	1
+Tamang	NonFormal-Other	Hilly	20000-30000	Wood	1598
+Tamang	NonFormal-Other	Hilly	30000-50000	Electricity	0
+Tamang	NonFormal-Other	Hilly	30000-50000	Gobar Gas	5
+Tamang	NonFormal-Other	Hilly	30000-50000	Kerosene	0
+Tamang	NonFormal-Other	Hilly	30000-50000	LP Gas	85
+Tamang	NonFormal-Other	Hilly	30000-50000	Others	1
+Tamang	NonFormal-Other	Hilly	30000-50000	Wood	387
+Tamang	NonFormal-Other	Hilly	50000-ABOVE	Electricity	0
+Tamang	NonFormal-Other	Hilly	50000-ABOVE	Gobar Gas	6
+Tamang	NonFormal-Other	Hilly	50000-ABOVE	Kerosene	0
+Tamang	NonFormal-Other	Hilly	50000-ABOVE	LP Gas	43
+Tamang	NonFormal-Other	Hilly	50000-ABOVE	Others	0
+Tamang	NonFormal-Other	Hilly	50000-ABOVE	Wood	122
 Tamang	NonFormal-Other	Himalayan	0-10000	Electricity	3
 Tamang	NonFormal-Other	Himalayan	0-10000	Gobar Gas	15
 Tamang	NonFormal-Other	Himalayan	0-10000	Kerosene	2
@@ -2819,36 +2819,36 @@ Tamang	NonFormal-Other	Himalayan	50000-ABOVE	Kerosene	0
 Tamang	NonFormal-Other	Himalayan	50000-ABOVE	LP Gas	36
 Tamang	NonFormal-Other	Himalayan	50000-ABOVE	Others	0
 Tamang	NonFormal-Other	Himalayan	50000-ABOVE	Wood	128
-Tamang	Primary	Hill	0-10000	Electricity	6
-Tamang	Primary	Hill	0-10000	Gobar Gas	89
-Tamang	Primary	Hill	0-10000	Kerosene	3
-Tamang	Primary	Hill	0-10000	LP Gas	421
-Tamang	Primary	Hill	0-10000	Others	15
-Tamang	Primary	Hill	0-10000	Wood	16590
-Tamang	Primary	Hill	10000-20000	Electricity	4
-Tamang	Primary	Hill	10000-20000	Gobar Gas	79
-Tamang	Primary	Hill	10000-20000	Kerosene	1
-Tamang	Primary	Hill	10000-20000	LP Gas	1196
-Tamang	Primary	Hill	10000-20000	Others	7
-Tamang	Primary	Hill	10000-20000	Wood	7647
-Tamang	Primary	Hill	20000-30000	Electricity	0
-Tamang	Primary	Hill	20000-30000	Gobar Gas	33
-Tamang	Primary	Hill	20000-30000	Kerosene	0
-Tamang	Primary	Hill	20000-30000	LP Gas	474
-Tamang	Primary	Hill	20000-30000	Others	2
-Tamang	Primary	Hill	20000-30000	Wood	1556
-Tamang	Primary	Hill	30000-50000	Electricity	0
-Tamang	Primary	Hill	30000-50000	Gobar Gas	10
-Tamang	Primary	Hill	30000-50000	Kerosene	0
-Tamang	Primary	Hill	30000-50000	LP Gas	122
-Tamang	Primary	Hill	30000-50000	Others	0
-Tamang	Primary	Hill	30000-50000	Wood	419
-Tamang	Primary	Hill	50000-ABOVE	Electricity	0
-Tamang	Primary	Hill	50000-ABOVE	Gobar Gas	4
-Tamang	Primary	Hill	50000-ABOVE	Kerosene	0
-Tamang	Primary	Hill	50000-ABOVE	LP Gas	51
-Tamang	Primary	Hill	50000-ABOVE	Others	0
-Tamang	Primary	Hill	50000-ABOVE	Wood	110
+Tamang	Primary	Hilly	0-10000	Electricity	6
+Tamang	Primary	Hilly	0-10000	Gobar Gas	89
+Tamang	Primary	Hilly	0-10000	Kerosene	3
+Tamang	Primary	Hilly	0-10000	LP Gas	421
+Tamang	Primary	Hilly	0-10000	Others	15
+Tamang	Primary	Hilly	0-10000	Wood	16590
+Tamang	Primary	Hilly	10000-20000	Electricity	4
+Tamang	Primary	Hilly	10000-20000	Gobar Gas	79
+Tamang	Primary	Hilly	10000-20000	Kerosene	1
+Tamang	Primary	Hilly	10000-20000	LP Gas	1196
+Tamang	Primary	Hilly	10000-20000	Others	7
+Tamang	Primary	Hilly	10000-20000	Wood	7647
+Tamang	Primary	Hilly	20000-30000	Electricity	0
+Tamang	Primary	Hilly	20000-30000	Gobar Gas	33
+Tamang	Primary	Hilly	20000-30000	Kerosene	0
+Tamang	Primary	Hilly	20000-30000	LP Gas	474
+Tamang	Primary	Hilly	20000-30000	Others	2
+Tamang	Primary	Hilly	20000-30000	Wood	1556
+Tamang	Primary	Hilly	30000-50000	Electricity	0
+Tamang	Primary	Hilly	30000-50000	Gobar Gas	10
+Tamang	Primary	Hilly	30000-50000	Kerosene	0
+Tamang	Primary	Hilly	30000-50000	LP Gas	122
+Tamang	Primary	Hilly	30000-50000	Others	0
+Tamang	Primary	Hilly	30000-50000	Wood	419
+Tamang	Primary	Hilly	50000-ABOVE	Electricity	0
+Tamang	Primary	Hilly	50000-ABOVE	Gobar Gas	4
+Tamang	Primary	Hilly	50000-ABOVE	Kerosene	0
+Tamang	Primary	Hilly	50000-ABOVE	LP Gas	51
+Tamang	Primary	Hilly	50000-ABOVE	Others	0
+Tamang	Primary	Hilly	50000-ABOVE	Wood	110
 Tamang	Primary	Himalayan	0-10000	Electricity	3
 Tamang	Primary	Himalayan	0-10000	Gobar Gas	6
 Tamang	Primary	Himalayan	0-10000	Kerosene	1
@@ -2879,36 +2879,36 @@ Tamang	Primary	Himalayan	50000-ABOVE	Kerosene	0
 Tamang	Primary	Himalayan	50000-ABOVE	LP Gas	67
 Tamang	Primary	Himalayan	50000-ABOVE	Others	0
 Tamang	Primary	Himalayan	50000-ABOVE	Wood	110
-Tamang	Secondary	Hill	0-10000	Electricity	0
-Tamang	Secondary	Hill	0-10000	Gobar Gas	27
-Tamang	Secondary	Hill	0-10000	Kerosene	3
-Tamang	Secondary	Hill	0-10000	LP Gas	377
-Tamang	Secondary	Hill	0-10000	Others	6
-Tamang	Secondary	Hill	0-10000	Wood	4597
-Tamang	Secondary	Hill	10000-20000	Electricity	0
-Tamang	Secondary	Hill	10000-20000	Gobar Gas	51
-Tamang	Secondary	Hill	10000-20000	Kerosene	0
-Tamang	Secondary	Hill	10000-20000	LP Gas	1008
-Tamang	Secondary	Hill	10000-20000	Others	5
-Tamang	Secondary	Hill	10000-20000	Wood	3311
-Tamang	Secondary	Hill	20000-30000	Electricity	1
-Tamang	Secondary	Hill	20000-30000	Gobar Gas	14
-Tamang	Secondary	Hill	20000-30000	Kerosene	0
-Tamang	Secondary	Hill	20000-30000	LP Gas	449
-Tamang	Secondary	Hill	20000-30000	Others	1
-Tamang	Secondary	Hill	20000-30000	Wood	824
-Tamang	Secondary	Hill	30000-50000	Electricity	0
-Tamang	Secondary	Hill	30000-50000	Gobar Gas	9
-Tamang	Secondary	Hill	30000-50000	Kerosene	0
-Tamang	Secondary	Hill	30000-50000	LP Gas	164
-Tamang	Secondary	Hill	30000-50000	Others	1
-Tamang	Secondary	Hill	30000-50000	Wood	232
-Tamang	Secondary	Hill	50000-ABOVE	Electricity	0
-Tamang	Secondary	Hill	50000-ABOVE	Gobar Gas	2
-Tamang	Secondary	Hill	50000-ABOVE	Kerosene	0
-Tamang	Secondary	Hill	50000-ABOVE	LP Gas	66
-Tamang	Secondary	Hill	50000-ABOVE	Others	0
-Tamang	Secondary	Hill	50000-ABOVE	Wood	72
+Tamang	Secondary	Hilly	0-10000	Electricity	0
+Tamang	Secondary	Hilly	0-10000	Gobar Gas	27
+Tamang	Secondary	Hilly	0-10000	Kerosene	3
+Tamang	Secondary	Hilly	0-10000	LP Gas	377
+Tamang	Secondary	Hilly	0-10000	Others	6
+Tamang	Secondary	Hilly	0-10000	Wood	4597
+Tamang	Secondary	Hilly	10000-20000	Electricity	0
+Tamang	Secondary	Hilly	10000-20000	Gobar Gas	51
+Tamang	Secondary	Hilly	10000-20000	Kerosene	0
+Tamang	Secondary	Hilly	10000-20000	LP Gas	1008
+Tamang	Secondary	Hilly	10000-20000	Others	5
+Tamang	Secondary	Hilly	10000-20000	Wood	3311
+Tamang	Secondary	Hilly	20000-30000	Electricity	1
+Tamang	Secondary	Hilly	20000-30000	Gobar Gas	14
+Tamang	Secondary	Hilly	20000-30000	Kerosene	0
+Tamang	Secondary	Hilly	20000-30000	LP Gas	449
+Tamang	Secondary	Hilly	20000-30000	Others	1
+Tamang	Secondary	Hilly	20000-30000	Wood	824
+Tamang	Secondary	Hilly	30000-50000	Electricity	0
+Tamang	Secondary	Hilly	30000-50000	Gobar Gas	9
+Tamang	Secondary	Hilly	30000-50000	Kerosene	0
+Tamang	Secondary	Hilly	30000-50000	LP Gas	164
+Tamang	Secondary	Hilly	30000-50000	Others	1
+Tamang	Secondary	Hilly	30000-50000	Wood	232
+Tamang	Secondary	Hilly	50000-ABOVE	Electricity	0
+Tamang	Secondary	Hilly	50000-ABOVE	Gobar Gas	2
+Tamang	Secondary	Hilly	50000-ABOVE	Kerosene	0
+Tamang	Secondary	Hilly	50000-ABOVE	LP Gas	66
+Tamang	Secondary	Hilly	50000-ABOVE	Others	0
+Tamang	Secondary	Hilly	50000-ABOVE	Wood	72
 Tamang	Secondary	Himalayan	0-10000	Electricity	1
 Tamang	Secondary	Himalayan	0-10000	Gobar Gas	3
 Tamang	Secondary	Himalayan	0-10000	Kerosene	1
@@ -2939,36 +2939,36 @@ Tamang	Secondary	Himalayan	50000-ABOVE	Kerosene	0
 Tamang	Secondary	Himalayan	50000-ABOVE	LP Gas	97
 Tamang	Secondary	Himalayan	50000-ABOVE	Others	2
 Tamang	Secondary	Himalayan	50000-ABOVE	Wood	111
-Tamang	University	Hill	0-10000	Electricity	0
-Tamang	University	Hill	0-10000	Gobar Gas	1
-Tamang	University	Hill	0-10000	Kerosene	0
-Tamang	University	Hill	0-10000	LP Gas	17
-Tamang	University	Hill	0-10000	Others	0
-Tamang	University	Hill	0-10000	Wood	150
-Tamang	University	Hill	10000-20000	Electricity	0
-Tamang	University	Hill	10000-20000	Gobar Gas	7
-Tamang	University	Hill	10000-20000	Kerosene	0
-Tamang	University	Hill	10000-20000	LP Gas	65
-Tamang	University	Hill	10000-20000	Others	0
-Tamang	University	Hill	10000-20000	Wood	234
-Tamang	University	Hill	20000-30000	Electricity	0
-Tamang	University	Hill	20000-30000	Gobar Gas	5
-Tamang	University	Hill	20000-30000	Kerosene	0
-Tamang	University	Hill	20000-30000	LP Gas	57
-Tamang	University	Hill	20000-30000	Others	0
-Tamang	University	Hill	20000-30000	Wood	82
-Tamang	University	Hill	30000-50000	Electricity	0
-Tamang	University	Hill	30000-50000	Gobar Gas	0
-Tamang	University	Hill	30000-50000	Kerosene	0
-Tamang	University	Hill	30000-50000	LP Gas	36
-Tamang	University	Hill	30000-50000	Others	0
-Tamang	University	Hill	30000-50000	Wood	27
-Tamang	University	Hill	50000-ABOVE	Electricity	0
-Tamang	University	Hill	50000-ABOVE	Gobar Gas	0
-Tamang	University	Hill	50000-ABOVE	Kerosene	0
-Tamang	University	Hill	50000-ABOVE	LP Gas	8
-Tamang	University	Hill	50000-ABOVE	Others	0
-Tamang	University	Hill	50000-ABOVE	Wood	8
+Tamang	University	Hilly	0-10000	Electricity	0
+Tamang	University	Hilly	0-10000	Gobar Gas	1
+Tamang	University	Hilly	0-10000	Kerosene	0
+Tamang	University	Hilly	0-10000	LP Gas	17
+Tamang	University	Hilly	0-10000	Others	0
+Tamang	University	Hilly	0-10000	Wood	150
+Tamang	University	Hilly	10000-20000	Electricity	0
+Tamang	University	Hilly	10000-20000	Gobar Gas	7
+Tamang	University	Hilly	10000-20000	Kerosene	0
+Tamang	University	Hilly	10000-20000	LP Gas	65
+Tamang	University	Hilly	10000-20000	Others	0
+Tamang	University	Hilly	10000-20000	Wood	234
+Tamang	University	Hilly	20000-30000	Electricity	0
+Tamang	University	Hilly	20000-30000	Gobar Gas	5
+Tamang	University	Hilly	20000-30000	Kerosene	0
+Tamang	University	Hilly	20000-30000	LP Gas	57
+Tamang	University	Hilly	20000-30000	Others	0
+Tamang	University	Hilly	20000-30000	Wood	82
+Tamang	University	Hilly	30000-50000	Electricity	0
+Tamang	University	Hilly	30000-50000	Gobar Gas	0
+Tamang	University	Hilly	30000-50000	Kerosene	0
+Tamang	University	Hilly	30000-50000	LP Gas	36
+Tamang	University	Hilly	30000-50000	Others	0
+Tamang	University	Hilly	30000-50000	Wood	27
+Tamang	University	Hilly	50000-ABOVE	Electricity	0
+Tamang	University	Hilly	50000-ABOVE	Gobar Gas	0
+Tamang	University	Hilly	50000-ABOVE	Kerosene	0
+Tamang	University	Hilly	50000-ABOVE	LP Gas	8
+Tamang	University	Hilly	50000-ABOVE	Others	0
+Tamang	University	Hilly	50000-ABOVE	Wood	8
 Tamang	University	Himalayan	0-10000	Electricity	0
 Tamang	University	Himalayan	0-10000	Gobar Gas	0
 Tamang	University	Himalayan	0-10000	Kerosene	0

@@ -37,7 +37,7 @@ file.dat <- file.path(dir.output, "household_level_data_categorical.tsv")
 type_ethnicity <- c("Newar","Brahman","Madhesi","Chettri","Muslim−Others",
                     "Gurung−Magar","Dalit","Rai−Limbu","Tamang","Chepang−Thami")
 type_fuel <- c("Wood","LP Gas","Gobar Gas","Kerosene","Electricity","Others")
-type_geo <- c("Himalayan","Hill")
+type_geo <- c("Himalayan","Hilly")
 
 cpalette.eth <- c("#e31a1c","#a6cee3","#1f78b4","#b2df8a","#33a02c",
                   "#fb9a99","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a")
@@ -57,7 +57,7 @@ dat$Ethnicity <- factor(dat$Ethnicity, levels=type_ethnicity)
 head(dat)
 ```
 
-#### Get Proportion of Fuel Type in Total Population
+#### Get Proportion of Households using each FuelType
 ```{r}
 df <- dat %>% 
           dplyr::count(source_cooking_fuel_post_eq, sort=FALSE, name="Freq") %>%
@@ -69,7 +69,7 @@ head(df)
 ```
 
 
-#### Plot Proportion by Fuel Type in Total Household
+#### Plot Proportion of Households by FuelType use
 ```{r fig.height = 4, fig.width = 3, fig.align = "center"}
 # COLOR PALETTE ---
 jColFun <- colorRampPalette(brewer.pal(n = 9, "Set1"))
@@ -101,7 +101,7 @@ p1
 ```
 
 
-#### Get Proportion by Ethnicity, Income Group, and Fuel Type
+#### Get Household Proportion by Ethnicity and Income for each FuelType
 ```{r}
 dm <- dat %>% 
           dplyr::count(Ethnicity, IncomeGroup, source_cooking_fuel_post_eq, sort=FALSE, name="Freq") %>%
@@ -115,7 +115,7 @@ head(dm)
 ```
 
 
-#### Plot Household Proportion by Ethnicity, Income Group, and Fuel Type
+#### Plot Household Proportion by Ethnicity and Income for each FuelType
 ```{r fig.height = 4, fig.width = 8, fig.align = "center"}
 # COLOR PALETTE ---
 jColFun <- colorRampPalette(brewer.pal(n = 9, "Set1"))
@@ -147,7 +147,7 @@ p2 <- ggplot(dm, aes(x=IncomeGroup, y=Proportion)) +
 p2
 ```
 
-#### Get Household Proportion by Ethnicity, Education Level, and Fuel Type
+#### Get Household Proportion by Ethnicity and Education Level for each FuelType
 ```{r}
 dm <- dat %>% 
           dplyr::count(Ethnicity, EducationLevel, source_cooking_fuel_post_eq, sort=FALSE, name="Freq") %>%
@@ -160,7 +160,7 @@ dm$EducationLevel <- as.factor(dm$EducationLevel)
 head(dm)
 ```
 
-#### Plot Household Proportion by Ethnicity, Education Level, and Fuel Type
+#### Plot Household Proportion by Ethnicity and Education Level for each FuelType
 ```{r fig.height = 4, fig.width = 8, fig.align = "center"}
 # COLOR PALETTE ---
 jColFun <- colorRampPalette(brewer.pal(n = 9, "Set1"))
@@ -192,7 +192,7 @@ p3 <- ggplot(dm, aes(x=EducationLevel, y=Proportion)) +
 p3
 ```
 
-#### Get Household Proportion by Ethnicity, Geo-climatic Region, and Fuel Type
+#### Get Household Proportion by Ethnicity and Geo-climatic Region for each FuelType 
 ```{r}
 dm <- dat %>% 
           dplyr::count(Ethnicity, GeoRegion, source_cooking_fuel_post_eq, sort=FALSE, name="Freq") %>%
@@ -206,7 +206,7 @@ head(dm)
 ```
 
 
-#### Plot Household Proportion by Ethnicity, Geo-climatic Region, and Fuel Type
+#### Plot Household Proportion by Ethnicity and Geo-climatic Region for each FuelType 
 ```{r fig.height = 4, fig.width = 8, fig.align = "center"}
 # COLOR PALETTE ---
 jColFun <- colorRampPalette(brewer.pal(n = 9, "Set1"))
@@ -238,7 +238,7 @@ p4 <- ggplot(dm, aes(x=GeoRegion, y=Proportion)) +
 p4
 ```
 
-#### Ethnic Household Population Distribution
+#### Household Population Distribution by Ethnicity
 ```{r}
 dm <- dat %>% 
         dplyr::count(Ethnicity, sort=TRUE, name="Freq") %>%
@@ -365,14 +365,14 @@ p7
 ```
 
 
-#### Get Abundance by Ethnicity and Fuel Type
+#### Get Abundance (Number of Households) by Ethnicity and FuelType
 ```{r}
 df <- dat %>% dplyr::count(Ethnicity, source_cooking_fuel_post_eq, sort=FALSE, name="Freq")
 dm <- reshape2::dcast(data=df, formula=Ethnicity ~ source_cooking_fuel_post_eq, fun.aggregate=sum, value.var="Freq")
 head(dm)
 ```
 
-#### Total (Relative) Transformation
+#### Total Transformation (To Get Relative Abundance Values)
 ```{r}
 # TOTAL TRANSFORMATION ---
 dmt <- vegan::decostand(dm[,2:7], "total")
@@ -382,7 +382,7 @@ dmt <- dmt[match(rev(type_ethnicity), rownames(dmt)),]
 dmt
 ```
 
-#### Heatmap Total (Relative) Salce Abundance by Ethnicity and FuelType
+#### Heatmap for Relative Abundance by Ethnicity and FuelType
 ```{r fig.align = "center"}
 jColFun <- colorRampPalette(brewer.pal(n = 9, "Reds"))
 

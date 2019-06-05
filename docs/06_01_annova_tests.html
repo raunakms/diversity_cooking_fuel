@@ -350,7 +350,7 @@ dir.output &lt;- file.path(dir.wrk, &quot;output&quot;)</code></pre>
 type_fuel &lt;- c(&quot;Wood&quot;,&quot;Electricity&quot;,&quot;BioGas&quot;,&quot;Keroscene&quot;,&quot;LPGas&quot;,&quot;Others&quot;)
 type_inc &lt;- c(&quot;0-10000&quot;,&quot;10000-20000&quot;,&quot;20000-30000&quot;,&quot;30000-50000&quot;,&quot;50000-ABOVE&quot;)
 type_edu &lt;- c(&quot;Illiterate&quot;,&quot;NonFormal-Other&quot;,&quot;Primary&quot;,&quot;Secondary&quot;,&quot;University&quot;)
-type_geo &lt;- c(&quot;Himalayan&quot;,&quot;Hill&quot;)
+type_geo &lt;- c(&quot;Himalayan&quot;,&quot;Hilly&quot;)
 
 cpalette.eth &lt;- c(&quot;#e31a1c&quot;,&quot;#a6cee3&quot;,&quot;#1f78b4&quot;,&quot;#b2df8a&quot;,&quot;#33a02c&quot;,
                   &quot;#fb9a99&quot;,&quot;#fdbf6f&quot;,&quot;#ff7f00&quot;,&quot;#cab2d6&quot;,&quot;#6a3d9a&quot;)
@@ -365,11 +365,11 @@ dat &lt;- dat[-which(rowSums(dat[,5:10]) == 0),]
 
 head(dat)</code></pre>
 <pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas
-## 1   Brahman     Illiterate      Hill     0-10000           0      159
-## 2   Brahman     Illiterate      Hill 10000-20000           0      213
-## 3   Brahman     Illiterate      Hill 20000-30000           1       95
-## 4   Brahman     Illiterate      Hill 30000-50000           0       27
-## 5   Brahman     Illiterate      Hill 50000-ABOVE           0        9
+## 1   Brahman     Illiterate     Hilly     0-10000           0      159
+## 2   Brahman     Illiterate     Hilly 10000-20000           0      213
+## 3   Brahman     Illiterate     Hilly 20000-30000           1       95
+## 4   Brahman     Illiterate     Hilly 30000-50000           0       27
+## 5   Brahman     Illiterate     Hilly 50000-ABOVE           0        9
 ## 6   Brahman     Illiterate Himalayan     0-10000           1       24
 ##   Kerosene LPGas Others Wood
 ## 1        5   375      3 7932
@@ -387,11 +387,11 @@ dml$Ethnicity &lt;- factor(dml$Ethnicity, levels=type_eth)
 
 head(dml)</code></pre>
 <pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas
-## 1   Brahman     Illiterate      Hill     0-10000           0 8.312883
-## 2   Brahman     Illiterate      Hill 10000-20000           0 8.734710
-## 3   Brahman     Illiterate      Hill 20000-30000           1 7.569856
-## 4   Brahman     Illiterate      Hill 30000-50000           0 5.754888
-## 5   Brahman     Illiterate      Hill 50000-ABOVE           0 4.169925
+## 1   Brahman     Illiterate     Hilly     0-10000           0 8.312883
+## 2   Brahman     Illiterate     Hilly 10000-20000           0 8.734710
+## 3   Brahman     Illiterate     Hilly 20000-30000           1 7.569856
+## 4   Brahman     Illiterate     Hilly 30000-50000           0 5.754888
+## 5   Brahman     Illiterate     Hilly 50000-ABOVE           0 4.169925
 ## 6   Brahman     Illiterate Himalayan     0-10000           1 5.584963
 ##   Kerosene     LPGas   Others      Wood
 ## 1 3.321928  9.550747 2.584963 13.953469
@@ -442,11 +442,11 @@ dmt$Ethnicity &lt;- factor(dmt$Ethnicity, levels=type_eth)
 
 head(dmt)</code></pre>
 <pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup  Electricity    GobarGas
-## 1   Brahman     Illiterate      Hill     0-10000 0.0000000000 0.018763276
-## 2   Brahman     Illiterate      Hill 10000-20000 0.0000000000 0.051623849
-## 3   Brahman     Illiterate      Hill 20000-30000 0.0006802721 0.064625850
-## 4   Brahman     Illiterate      Hill 30000-50000 0.0000000000 0.054989817
-## 5   Brahman     Illiterate      Hill 50000-ABOVE 0.0000000000 0.038297872
+## 1   Brahman     Illiterate     Hilly     0-10000 0.0000000000 0.018763276
+## 2   Brahman     Illiterate     Hilly 10000-20000 0.0000000000 0.051623849
+## 3   Brahman     Illiterate     Hilly 20000-30000 0.0006802721 0.064625850
+## 4   Brahman     Illiterate     Hilly 30000-50000 0.0000000000 0.054989817
+## 5   Brahman     Illiterate     Hilly 50000-ABOVE 0.0000000000 0.038297872
 ## 6   Brahman     Illiterate Himalayan     0-10000 0.0001737318 0.004169562
 ##       Kerosene      LPGas       Others      Wood
 ## 1 0.0005900401 0.04425301 0.0003540241 0.9360397
@@ -456,8 +456,8 @@ head(dmt)</code></pre>
 ## 5 0.0000000000 0.29361702 0.0042553191 0.6638298
 ## 6 0.0001737318 0.02050035 0.0006949270 0.9742877</code></pre>
 </div>
-<div id="perform-pairwise-wilcoxn-rank-sum-test" class="section level4">
-<h4>Perform Pairwise Wilcoxn Rank Sum Test</h4>
+<div id="perform-pairwise-wilcoxon-rank-sum-test-mann-whitney-u-test" class="section level4">
+<h4>Perform Pairwise Wilcoxon Rank Sum Test (Mann-Whitney U Test)</h4>
 <pre class="r"><code>list.wrst &lt;- list()
 list.wrst[[1]] &lt;- pairwise.wilcox.test(x=dmt$Wood, g=dmt$Ethnicity, p.adjust.method=&quot;none&quot;, paired=FALSE)
 list.wrst[[2]] &lt;- pairwise.wilcox.test(x=dmt$Electricity, g=dmt$Ethnicity, p.adjust.method=&quot;none&quot;, paired=FALSE)

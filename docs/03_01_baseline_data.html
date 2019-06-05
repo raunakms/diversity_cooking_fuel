@@ -346,7 +346,7 @@ dir.output &lt;- file.path(dir.wrk, &quot;data/data_processed&quot;)</code></pre
 <pre class="r"><code>type_ethnicity &lt;- c(&quot;Newar&quot;,&quot;Brahman&quot;,&quot;Madhesi&quot;,&quot;Chettri&quot;,&quot;Muslim−Others&quot;,
                     &quot;Gurung−Magar&quot;,&quot;Dalit&quot;,&quot;Rai−Limbu&quot;,&quot;Tamang&quot;,&quot;Chepang−Thami&quot;)
 type_fuel &lt;- c(&quot;Wood&quot;,&quot;LP Gas&quot;,&quot;Gobar Gas&quot;,&quot;Kerosene&quot;,&quot;Electricity&quot;,&quot;Others&quot;)
-type_geo &lt;- c(&quot;Himalayan&quot;,&quot;Hill&quot;)
+type_geo &lt;- c(&quot;Himalayan&quot;,&quot;Hilly&quot;)
 
 cpalette.eth &lt;- c(&quot;#e31a1c&quot;,&quot;#a6cee3&quot;,&quot;#1f78b4&quot;,&quot;#b2df8a&quot;,&quot;#33a02c&quot;,
                   &quot;#fb9a99&quot;,&quot;#fdbf6f&quot;,&quot;#ff7f00&quot;,&quot;#cab2d6&quot;,&quot;#6a3d9a&quot;)
@@ -364,12 +364,12 @@ dat$Ethnicity &lt;- factor(dat$Ethnicity, levels = type_ethnicity)
 
 head(dat)</code></pre>
 <pre><code>##     household_id    District GeoRegion    Ethnicity IncomeGroup
-## 1 12010100001101 Okhaldhunga      Hill    Rai-Limbu     0-10000
-## 2 12010100002101 Okhaldhunga      Hill    Rai-Limbu     0-10000
-## 3 12010100003101 Okhaldhunga      Hill Gurung-Magar     0-10000
-## 4 12010100004101 Okhaldhunga      Hill Gurung-Magar     0-10000
-## 5 12010100005101 Okhaldhunga      Hill Gurung-Magar     0-10000
-## 6 12010100006101 Okhaldhunga      Hill Gurung-Magar     0-10000
+## 1 12010100001101 Okhaldhunga     Hilly    Rai-Limbu     0-10000
+## 2 12010100002101 Okhaldhunga     Hilly    Rai-Limbu     0-10000
+## 3 12010100003101 Okhaldhunga     Hilly Gurung-Magar     0-10000
+## 4 12010100004101 Okhaldhunga     Hilly Gurung-Magar     0-10000
+## 5 12010100005101 Okhaldhunga     Hilly Gurung-Magar     0-10000
+## 6 12010100006101 Okhaldhunga     Hilly Gurung-Magar     0-10000
 ##   EducationLevel source_cooking_fuel_post_eq
 ## 1     Illiterate                        Wood
 ## 2     Illiterate                        Wood
@@ -378,8 +378,8 @@ head(dat)</code></pre>
 ## 5     Illiterate                        Wood
 ## 6     Illiterate                        Wood</code></pre>
 </div>
-<div id="get-proportion-of-fuel-type-in-total-population" class="section level4">
-<h4>Get Proportion of Fuel Type in Total Population</h4>
+<div id="get-proportion-of-households-using-each-fueltype" class="section level4">
+<h4>Get Proportion of Households using each FuelType</h4>
 <pre class="r"><code>df &lt;- dat %&gt;% 
           dplyr::count(source_cooking_fuel_post_eq, sort=FALSE, name=&quot;Freq&quot;) %&gt;%
           mutate(Proportion= Freq/sum(Freq))
@@ -397,8 +397,8 @@ head(df)</code></pre>
 ## 5 Electricity                    189   0.000253 Total Household
 ## 6 Others                         458   0.000613 Total Household</code></pre>
 </div>
-<div id="plot-proportion-by-fuel-type-in-total-household" class="section level4">
-<h4>Plot Proportion by Fuel Type in Total Household</h4>
+<div id="plot-proportion-of-households-by-fueltype-use" class="section level4">
+<h4>Plot Proportion of Households by FuelType use</h4>
 <pre class="r"><code># COLOR PALETTE ---
 jColFun &lt;- colorRampPalette(brewer.pal(n = 9, &quot;Set1&quot;))
 
@@ -428,8 +428,8 @@ p1 &lt;- ggplot(df, aes(x=Group, y=Proportion)) +
 p1</code></pre>
 <p><img src="03_01_baseline_data_files/figure-html/unnamed-chunk-7-1.png" width="288" style="display: block; margin: auto;" /></p>
 </div>
-<div id="get-proportion-by-ethnicity-income-group-and-fuel-type" class="section level4">
-<h4>Get Proportion by Ethnicity, Income Group, and Fuel Type</h4>
+<div id="get-household-proportion-by-ethnicity-and-income-for-each-fueltype" class="section level4">
+<h4>Get Household Proportion by Ethnicity and Income for each FuelType</h4>
 <pre class="r"><code>dm &lt;- dat %&gt;% 
           dplyr::count(Ethnicity, IncomeGroup, source_cooking_fuel_post_eq, sort=FALSE, name=&quot;Freq&quot;) %&gt;%
           group_by(Ethnicity, IncomeGroup) %&gt;%
@@ -450,8 +450,8 @@ head(dm)</code></pre>
 ## 5 Newar     0-10000     Electricity                    11   0.000361
 ## 6 Newar     0-10000     Others                         15   0.000492</code></pre>
 </div>
-<div id="plot-household-proportion-by-ethnicity-income-group-and-fuel-type" class="section level4">
-<h4>Plot Household Proportion by Ethnicity, Income Group, and Fuel Type</h4>
+<div id="plot-household-proportion-by-ethnicity-and-income-for-each-fueltype" class="section level4">
+<h4>Plot Household Proportion by Ethnicity and Income for each FuelType</h4>
 <pre class="r"><code># COLOR PALETTE ---
 jColFun &lt;- colorRampPalette(brewer.pal(n = 9, &quot;Set1&quot;))
 
@@ -482,8 +482,8 @@ p2 &lt;- ggplot(dm, aes(x=IncomeGroup, y=Proportion)) +
 p2</code></pre>
 <p><img src="03_01_baseline_data_files/figure-html/unnamed-chunk-9-1.png" width="768" style="display: block; margin: auto;" /></p>
 </div>
-<div id="get-household-proportion-by-ethnicity-education-level-and-fuel-type" class="section level4">
-<h4>Get Household Proportion by Ethnicity, Education Level, and Fuel Type</h4>
+<div id="get-household-proportion-by-ethnicity-and-education-level-for-each-fueltype" class="section level4">
+<h4>Get Household Proportion by Ethnicity and Education Level for each FuelType</h4>
 <pre class="r"><code>dm &lt;- dat %&gt;% 
           dplyr::count(Ethnicity, EducationLevel, source_cooking_fuel_post_eq, sort=FALSE, name=&quot;Freq&quot;) %&gt;%
           group_by(Ethnicity, EducationLevel) %&gt;%
@@ -504,8 +504,8 @@ head(dm)</code></pre>
 ## 5 Newar     Illiterate     Electricity                     5   0.000262
 ## 6 Newar     Illiterate     Others                          8   0.000419</code></pre>
 </div>
-<div id="plot-household-proportion-by-ethnicity-education-level-and-fuel-type" class="section level4">
-<h4>Plot Household Proportion by Ethnicity, Education Level, and Fuel Type</h4>
+<div id="plot-household-proportion-by-ethnicity-and-education-level-for-each-fueltype" class="section level4">
+<h4>Plot Household Proportion by Ethnicity and Education Level for each FuelType</h4>
 <pre class="r"><code># COLOR PALETTE ---
 jColFun &lt;- colorRampPalette(brewer.pal(n = 9, &quot;Set1&quot;))
 
@@ -536,8 +536,8 @@ p3 &lt;- ggplot(dm, aes(x=EducationLevel, y=Proportion)) +
 p3</code></pre>
 <p><img src="03_01_baseline_data_files/figure-html/unnamed-chunk-11-1.png" width="768" style="display: block; margin: auto;" /></p>
 </div>
-<div id="get-household-proportion-by-ethnicity-geo-climatic-region-and-fuel-type" class="section level4">
-<h4>Get Household Proportion by Ethnicity, Geo-climatic Region, and Fuel Type</h4>
+<div id="get-household-proportion-by-ethnicity-and-geo-climatic-region-for-each-fueltype" class="section level4">
+<h4>Get Household Proportion by Ethnicity and Geo-climatic Region for each FuelType</h4>
 <pre class="r"><code>dm &lt;- dat %&gt;% 
           dplyr::count(Ethnicity, GeoRegion, source_cooking_fuel_post_eq, sort=FALSE, name=&quot;Freq&quot;) %&gt;%
           group_by(Ethnicity, GeoRegion) %&gt;%
@@ -551,15 +551,15 @@ head(dm)</code></pre>
 ## # Groups:   Ethnicity, GeoRegion [1]
 ##   Ethnicity GeoRegion source_cooking_fuel_post_eq  Freq Proportion
 ##   &lt;fct&gt;     &lt;fct&gt;     &lt;fct&gt;                       &lt;int&gt;      &lt;dbl&gt;
-## 1 Newar     Hill      Wood                        29914   0.702   
-## 2 Newar     Hill      LP Gas                      11324   0.266   
-## 3 Newar     Hill      Gobar Gas                    1314   0.0308  
-## 4 Newar     Hill      Kerosene                       14   0.000329
-## 5 Newar     Hill      Electricity                    14   0.000329
-## 6 Newar     Hill      Others                         14   0.000329</code></pre>
+## 1 Newar     Hilly     Wood                        29914   0.702   
+## 2 Newar     Hilly     LP Gas                      11324   0.266   
+## 3 Newar     Hilly     Gobar Gas                    1314   0.0308  
+## 4 Newar     Hilly     Kerosene                       14   0.000329
+## 5 Newar     Hilly     Electricity                    14   0.000329
+## 6 Newar     Hilly     Others                         14   0.000329</code></pre>
 </div>
-<div id="plot-household-proportion-by-ethnicity-geo-climatic-region-and-fuel-type" class="section level4">
-<h4>Plot Household Proportion by Ethnicity, Geo-climatic Region, and Fuel Type</h4>
+<div id="plot-household-proportion-by-ethnicity-and-geo-climatic-region-for-each-fueltype" class="section level4">
+<h4>Plot Household Proportion by Ethnicity and Geo-climatic Region for each FuelType</h4>
 <pre class="r"><code># COLOR PALETTE ---
 jColFun &lt;- colorRampPalette(brewer.pal(n = 9, &quot;Set1&quot;))
 
@@ -590,8 +590,8 @@ p4 &lt;- ggplot(dm, aes(x=GeoRegion, y=Proportion)) +
 p4</code></pre>
 <p><img src="03_01_baseline_data_files/figure-html/unnamed-chunk-13-1.png" width="768" style="display: block; margin: auto;" /></p>
 </div>
-<div id="ethnic-household-population-distribution" class="section level4">
-<h4>Ethnic Household Population Distribution</h4>
+<div id="household-population-distribution-by-ethnicity" class="section level4">
+<h4>Household Population Distribution by Ethnicity</h4>
 <pre class="r"><code>dm &lt;- dat %&gt;% 
         dplyr::count(Ethnicity, sort=TRUE, name=&quot;Freq&quot;) %&gt;%
         mutate(Percentage= (Freq/sum(Freq)) * 100)
@@ -735,8 +735,8 @@ p7 &lt;- ggplot(dm, aes(x=Country, y=Percentage)) +
 p7</code></pre>
 <p><img src="03_01_baseline_data_files/figure-html/unnamed-chunk-19-1.png" width="288" style="display: block; margin: auto;" /></p>
 </div>
-<div id="get-abundance-by-ethnicity-and-fuel-type" class="section level4">
-<h4>Get Abundance by Ethnicity and Fuel Type</h4>
+<div id="get-abundance-number-of-households-by-ethnicity-and-fueltype" class="section level4">
+<h4>Get Abundance (Number of Households) by Ethnicity and FuelType</h4>
 <pre class="r"><code>df &lt;- dat %&gt;% dplyr::count(Ethnicity, source_cooking_fuel_post_eq, sort=FALSE, name=&quot;Freq&quot;)
 dm &lt;- reshape2::dcast(data=df, formula=Ethnicity ~ source_cooking_fuel_post_eq, fun.aggregate=sum, value.var=&quot;Freq&quot;)
 head(dm)</code></pre>
@@ -748,8 +748,8 @@ head(dm)</code></pre>
 ## 5 Muslim-Others   9742   1220        62        2           4      1
 ## 6  Gurung-Magar  74867   6135       770       18          13     37</code></pre>
 </div>
-<div id="total-relative-transformation" class="section level4">
-<h4>Total (Relative) Transformation</h4>
+<div id="total-transformation-to-get-relative-abundance-values" class="section level4">
+<h4>Total Transformation (To Get Relative Abundance Values)</h4>
 <pre class="r"><code># TOTAL TRANSFORMATION ---
 dmt &lt;- vegan::decostand(dm[,2:7], &quot;total&quot;)
 rownames(dmt) &lt;- dm$Ethnicity
@@ -779,8 +779,8 @@ dmt</code></pre>
 ## Brahman       7.108681e-04
 ## Newar         4.664519e-04</code></pre>
 </div>
-<div id="heatmap-total-relative-salce-abundance-by-ethnicity-and-fueltype" class="section level4">
-<h4>Heatmap Total (Relative) Salce Abundance by Ethnicity and FuelType</h4>
+<div id="heatmap-for-relative-abundance-by-ethnicity-and-fueltype" class="section level4">
+<h4>Heatmap for Relative Abundance by Ethnicity and FuelType</h4>
 <pre class="r"><code>jColFun &lt;- colorRampPalette(brewer.pal(n = 9, &quot;Reds&quot;))
 
 heatmap.2(as.matrix(dmt), col = jColFun(256), margin=c(8,15),

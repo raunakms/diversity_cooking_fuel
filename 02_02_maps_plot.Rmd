@@ -94,7 +94,7 @@ map77 <- ggplot(data=d, aes(x=long, y=lat, group=group)) +
 map77
 ```
 
-#### Load Household Population by District
+#### Load Household Population by Earthquake-affected Districts
 ```{r tidy=TRUE}
 dat1 <- read.delim(file.dat1, header=TRUE, stringsAsFactors=FALSE)
 
@@ -135,7 +135,7 @@ map1 <- ggplot(data=df, aes(x=long, y=lat, group=group, fill=Group)) +
 map1
 ```
 
-#### Load Household FuelType Usage Proportions by District
+#### Load Household FuelType Usage Proportions by Earthquake affected Districts
 ```{r tidy=TRUE}
 dat2 <- read.delim(file.dat2, header=TRUE, stringsAsFactors=FALSE)
 
@@ -159,7 +159,7 @@ df$RatioGroup <- factor(df$RatioGroup, levels=group_ratio)
 head(df)
 ```
 
-#### Plot Choropleth Maps: Proportion of Households using FuelType
+#### Plot Choropleth Maps: Proportion of Households using six FuelTypes
 ```{r fig.height = 7, fig.width = 7, fig.align = "center"}
 map2 <- ggplot(data=df, aes(x=long, y=lat, group=group, fill=RatioGroup)) +
           geom_path() +

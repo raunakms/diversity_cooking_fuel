@@ -47,7 +47,7 @@ df <- dat.household %>%
 head(df)
 ```
 
-#### Compute Ratios Tables
+#### Compute Ratio Tables
 ```{r tidy=TRUE}
 dm <- reshape2::dcast(data=df, formula= District~source_cooking_fuel_post_eq, fun.aggregate=sum, value.var="Freq")
 dm <- as.data.frame(cbind(id=dm$District, apply(dm[,-1], 2, function(x) x/sum(x))))

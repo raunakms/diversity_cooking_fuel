@@ -325,7 +325,7 @@ $(document).ready(function () {
 <h2>Data Preparation</h2>
 <div id="dataset" class="section level3">
 <h3>Dataset</h3>
-<p>Following the 7.8 Mw Gorkha Earthquake in Nepal on April 25, 2015, the Kathmandu Living Labs in collaboration with the National Planning Commission (the Government of Nepal), carried out the largest household survey ever done in Nepal using mobile technology. Although the primary objective of this survey was to assess damages inflicted by the quake and identify beneficiaries eligible for government’s housing reconstruction grants, the data contain many other valuable socio-economic information, including the types of fuel used by households for cooking and lighting. The survey was carried out between January and March of 2016, about 10 months after the quake that killed over 9,000 people. The survey includes the information on 762,106 households (about 3.6 million individuals) from the 11 most earthquake-affected districts of Nepal excluding the Kathmandu valley.</p>
+<p>Following the 7.8 Mw Gorkha Earthquake in Nepal on April 25, 2015, the Kathmandu Living Labs in collaboration with the National Planning Commission (the Government of Nepal), carried out the largest household survey ever done in Nepal using mobile technology. Although the primary objective of this survey was to assess damages inflicted by the quake and identify beneficiaries eligible for government’s housing reconstruction grants, the data contain many other kinds of valuable socio-economic information, including the types of fuel used by households for cooking and lighting from 11 of the most earthquake-affected districts of Nepal, excluding the Kathmandu valley.</p>
 <p>The data for all 11 districts were downloaded from the <strong>2015 Nepal Earthquake: Open Data Portal</strong> (<a href="http://eq2015.npc.gov.np/" class="uri">http://eq2015.npc.gov.np/</a>). For this study, we use the following two data files:</p>
 <ol style="list-style-type: decimal">
 <li><strong>csv_household_demographics.csv</strong>; this file contains information on household size, ethnicity, household income, and gender, education and age of household head, and</li>
@@ -334,8 +334,8 @@ $(document).ready(function () {
 </div>
 <div id="data-preparation-1" class="section level3">
 <h3>Data Preparation</h3>
-<p>As mentioned above, we restrict our analysis to key socio-economic and demographic information of the households (ethnicity, income, education, and location) and their post-earthquake sources of cooking fuel.</p>
-<p><strong>Ethnicity</strong>: The dataset includes the types of cooking fuel used by 96 different ethnic groups or castes. Since many of these ethnic groups are culturally, and by many other metrics (such as language they speak), very similar to each other, we regroup them into 10 major ethnic groups:</p>
+<p>We restrict our analysis to four key socio-economic and demographic information of the households (ethnicity, income, education, and location) and their post-earthquake sources of cooking fuel.</p>
+<p><strong>Ethnicity</strong>: The dataset includes the types of cooking fuel used by 96 different social groups found in the area. Since the relative population sizes of many of these groups are small, we regroup them together to form a larger group with comparable population size; we also merge some of them with the larger major groups to which they are closer culturally or linguistically. With this regrouping, we obtain 10 major ethnic groups:</p>
 <ul>
 <li>Brahman,</li>
 <li>Chepang-Thami,</li>
@@ -359,9 +359,9 @@ $(document).ready(function () {
 <p><strong>Geo-climatic Region</strong>: Similarly, the data provide information on municipality (and ward-level) location which allows us to divide the entire earthquake-affected 11 contiguous districts into two geo-climatic regions:</p>
 <ul>
 <li>Himalayan and</li>
-<li>Hill.</li>
+<li>Hilly.</li>
 </ul>
-<p><strong>Income Group</strong>: As for income levels, we follow the original dataset’s categorization that breaks the monthly income of the households into 5 levels:</p>
+<p><strong>Income Group</strong>: As for income levels (Rs. 110 = USD 1, approx.), we follow the original dataset’s categorization that breaks the monthly income of the households into 5 levels:</p>
 <ul>
 <li>Rs. 10,000 or less;</li>
 <li>Rs. 10,000 to 20,000;</li>
@@ -410,8 +410,8 @@ head(lookup_dist)</code></pre>
 ## 293          23  Sindhupalchok
 ## 398          24 Kavrepalanchok</code></pre>
 </div>
-<div id="load-grouing-data" class="section level4">
-<h4>Load Grouing Data</h4>
+<div id="load-grouping-data" class="section level4">
+<h4>Load Grouping Data</h4>
 <pre class="r"><code>dat.eth &lt;- read.delim(file.eth_grp, header = TRUE, stringsAsFactors = FALSE)
 dat.edu &lt;- read.delim(file.edu_grp, header = TRUE, stringsAsFactors = FALSE)
 dat.geo &lt;- read.delim(file.geo_grp, header = TRUE, stringsAsFactors = FALSE)
@@ -425,12 +425,12 @@ head(dat.geo)</code></pre>
 ## 5          12   Okhaldhunga      1205    Manebhanjyang Rural Municipality
 ## 6          12   Okhaldhunga      1206           Molung Rural Municipality
 ##   Region
-## 1   Hill
-## 2   Hill
-## 3   Hill
-## 4   Hill
-## 5   Hill
-## 6   Hill</code></pre>
+## 1  Hilly
+## 2  Hilly
+## 3  Hilly
+## 4  Hilly
+## 5  Hilly
+## 6  Hilly</code></pre>
 </div>
 <div id="load-household-data" class="section level4">
 <h4>Load Household Data</h4>
@@ -446,8 +446,8 @@ items &lt;- c(&quot;household_id&quot;, &quot;district_id&quot;, &quot;vdcmun_id
     &quot;caste_household&quot;, &quot;income_level_household&quot;, &quot;education_level_household_head&quot;)
 dat.household &lt;- subset(dat.household, select = items)</code></pre>
 </div>
-<div id="add-district-name" class="section level4">
-<h4>Add District Name</h4>
+<div id="add-district-names" class="section level4">
+<h4>Add District Names</h4>
 <pre class="r"><code>dat.household$District &lt;- NA
 for (i in 1:nrow(lookup_dist)) {
     index &lt;- which(dat.household$district_id == lookup_dist$district_id[i])
@@ -499,12 +499,12 @@ dat.household &lt;- dat.household %&gt;% dplyr::mutate_all(as.character)
 
 head(dat.household)</code></pre>
 <pre><code>##     household_id    District GeoRegion    Ethnicity IncomeGroup
-## 1 12010100001101 Okhaldhunga      Hill    Rai-Limbu     0-10000
-## 2 12010100002101 Okhaldhunga      Hill    Rai-Limbu     0-10000
-## 3 12010100003101 Okhaldhunga      Hill Gurung-Magar     0-10000
-## 4 12010100004101 Okhaldhunga      Hill Gurung-Magar     0-10000
-## 5 12010100005101 Okhaldhunga      Hill Gurung-Magar     0-10000
-## 6 12010100006101 Okhaldhunga      Hill Gurung-Magar     0-10000
+## 1 12010100001101 Okhaldhunga     Hilly    Rai-Limbu     0-10000
+## 2 12010100002101 Okhaldhunga     Hilly    Rai-Limbu     0-10000
+## 3 12010100003101 Okhaldhunga     Hilly Gurung-Magar     0-10000
+## 4 12010100004101 Okhaldhunga     Hilly Gurung-Magar     0-10000
+## 5 12010100005101 Okhaldhunga     Hilly Gurung-Magar     0-10000
+## 6 12010100006101 Okhaldhunga     Hilly Gurung-Magar     0-10000
 ##   EducationLevel source_cooking_fuel_post_eq
 ## 1     Illiterate                        Wood
 ## 2     Illiterate                        Wood
@@ -526,12 +526,12 @@ head(df)</code></pre>
 <pre><code>## # A tibble: 6 x 6
 ##   Ethnicity EducationLevel GeoRegion IncomeGroup source_cooking_fuel~  Freq
 ##   &lt;chr&gt;     &lt;chr&gt;          &lt;chr&gt;     &lt;chr&gt;       &lt;chr&gt;                &lt;int&gt;
-## 1 Brahman   Illiterate     Hill      0-10000     Gobar Gas              159
-## 2 Brahman   Illiterate     Hill      0-10000     Kerosene                 5
-## 3 Brahman   Illiterate     Hill      0-10000     LP Gas                 375
-## 4 Brahman   Illiterate     Hill      0-10000     Others                   3
-## 5 Brahman   Illiterate     Hill      0-10000     Wood                  7932
-## 6 Brahman   Illiterate     Hill      10000-20000 Gobar Gas              213</code></pre>
+## 1 Brahman   Illiterate     Hilly     0-10000     Gobar Gas              159
+## 2 Brahman   Illiterate     Hilly     0-10000     Kerosene                 5
+## 3 Brahman   Illiterate     Hilly     0-10000     LP Gas                 375
+## 4 Brahman   Illiterate     Hilly     0-10000     Others                   3
+## 5 Brahman   Illiterate     Hilly     0-10000     Wood                  7932
+## 6 Brahman   Illiterate     Hilly     10000-20000 Gobar Gas              213</code></pre>
 </div>
 <div id="impute-missing-values" class="section level4">
 <h4>Impute Missing Values</h4>
@@ -584,11 +584,11 @@ colnames(dm) &lt;- c(&quot;Ethnicity&quot;, &quot;EducationLevel&quot;, &quot;Ge
 
 head(dm)</code></pre>
 <pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas
-## 1   Brahman     Illiterate      Hill     0-10000           0      159
-## 2   Brahman     Illiterate      Hill 10000-20000           0      213
-## 3   Brahman     Illiterate      Hill 20000-30000           1       95
-## 4   Brahman     Illiterate      Hill 30000-50000           0       27
-## 5   Brahman     Illiterate      Hill 50000-ABOVE           0        9
+## 1   Brahman     Illiterate     Hilly     0-10000           0      159
+## 2   Brahman     Illiterate     Hilly 10000-20000           0      213
+## 3   Brahman     Illiterate     Hilly 20000-30000           1       95
+## 4   Brahman     Illiterate     Hilly 30000-50000           0       27
+## 5   Brahman     Illiterate     Hilly 50000-ABOVE           0        9
 ## 6   Brahman     Illiterate Himalayan     0-10000           1       24
 ##   Kerosene LPGas Others Wood
 ## 1        5   375      3 7932
