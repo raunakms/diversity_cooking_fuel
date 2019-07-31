@@ -1,11 +1,11 @@
-# Diversity in fuel choice as a basis for group segmentation and target-group identification for promoting cleaner cooking
+# Nudging households towards clean cooking: the role of group segmentation based on diversity in fuel choice
 
 **Ratna K. Shrestha** (Vancouver School of Economics, University of British Columbia)<br/>
 **Raunak Shrestha** (Department of Urologic Sciences, University of British Columbia; Vancouver Prostate)<br/>
 
 
 ### Abstract
-> In promoting cleaner cooking, one of the sustainable development goals of the United Nations, the need for a systematic approach to group segmentation and target-group identification has been well recognized. Yet, no such approach has thus far been proposed. Here, we propose such a framework based on a Euclidean distance of households’ fuel-choice behavior. Applying this framework to the post Gorkha-earthquake data on 747,137 households from Nepal, we find that ethnicity explains the highest intergroup diversity (39.12%) in fuel-choice pattern, followed by income (26.30%), education (12.62%), and location (4.05%). Among the ethnic groups, Chepang-Thamis have the lowest intragroup diversity (Shannon index = 0.101) and Newars the highest (0.667). Once the factor that segments households into subgroups with the highest intergroup, but lowest intragroup, diversity is identified, better targeted policy instruments that align with the behaviours of the subgroups can be designed. The proposed framework can also be useful in designing many socio-economic policies, including those aimed at achieving several other sustainable development goals.
+> Despite significant direct subsidies as well as nonmonetary incentives, the rate of transition to clean cooking has fallen short of expectations; over 3 billion people worldwide, mostly from developing countries, still rely on solid fuels for cooking. Here, we draw upon the insights from behavioural economics and data analytics in developing better-targeted “nudges” towards clean cooking. Devising individually customized nudges would be theoretically ideal but prohibitively costly in practice. Therefore, segmenting households into more homogenous subgroups based on certain socio-economic or behavioural factors is an important first step. For this analysis, we use the post Gorkha-earthquake data from Nepal on 747,137 households’ fuel-choice pattern. We find that ethnicity explains the highest intergroup diversity (39.12%), followed by income (26.30%), education (12.62%), and location (4.05%). Once the factor with the highest discriminatory power is identified, we segregate the households into subgroups and offer several potential nudges that align with the fuel-choice pattern of each subgroup or cluster of subgroups. Such subgroup-based nudges may be less costly and yet outperform the traditional economic incentives in promoting clean cooking.
 
 ### Dataset
 Following the 7.8 Mw Gorkha Earthquake in Nepal on April 25, 2015, the Kathmandu Living Labs in collaboration with the National Planning Commission (the Government of Nepal), carried out the largest household survey ever done in Nepal using mobile technology. Although the primary objective of this survey was to assess damages inflicted by the quake and identify beneficiaries eligible for government’s housing reconstruction grants, the data contain many other kinds of valuable socio-economic information, including the types of fuel used by households for cooking and lighting from 11 of the most earthquake-affected districts of Nepal, excluding the Kathmandu valley. 
@@ -35,7 +35,7 @@ R-codes used for data analysis is available at [https://raunakms.github.io/diver
 <br/><br/>
 
 #### Citation
-Shrestha, Ratna K. and Shrestha, Raunak. **Diversity in fuel choice as a basis for group segmentation and target-group identification for promoting cleaner cooking**. 2019. (*submitted*)
+Shrestha, Ratna K. and Shrestha, Raunak. **Nudging households towards clean cooking: the role of group segmentation based on diversity in fuel choice**. 2019. (*submitted*)
 <br/><br/>
 
 #### Corresponding author
