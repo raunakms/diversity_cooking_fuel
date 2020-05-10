@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
 <title>Permanova with Factor Control: IncomeGroup</title>
 
+<script src="site_libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -83,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -232,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -243,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -360,20 +349,20 @@ cpalette.geo &lt;- c(&quot;#35978f&quot;,&quot;#bf812d&quot;)</code></pre>
 dat &lt;- dat[-which(rowSums(dat[,5:10]) == 0),]
 
 head(dat)</code></pre>
-<pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas
-## 1   Brahman     Illiterate     Hilly     0-10000           0      159
-## 2   Brahman     Illiterate     Hilly 10000-20000           0      213
-## 3   Brahman     Illiterate     Hilly 20000-30000           1       95
-## 4   Brahman     Illiterate     Hilly 30000-50000           0       27
-## 5   Brahman     Illiterate     Hilly 50000-ABOVE           0        9
-## 6   Brahman     Illiterate Himalayan     0-10000           1       24
-##   Kerosene LPGas Others Wood
-## 1        5   375      3 7932
-## 2        1   666      1 3245
-## 3        0   336      0 1038
-## 4        0   109      0  355
-## 5        0    69      1  156
-## 6        1   118      4 5608</code></pre>
+<pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas Kerosene
+## 1   Brahman     Illiterate     Hilly     0-10000           0      159        5
+## 2   Brahman     Illiterate     Hilly 10000-20000           0      213        1
+## 3   Brahman     Illiterate     Hilly 20000-30000           1       95        0
+## 4   Brahman     Illiterate     Hilly 30000-50000           0       27        0
+## 5   Brahman     Illiterate     Hilly 50000-ABOVE           0        9        0
+## 6   Brahman     Illiterate Himalayan     0-10000           1       24        1
+##   LPGas Others Wood
+## 1   375      3 7932
+## 2   666      1 3245
+## 3   336      0 1038
+## 4   109      0  355
+## 5    69      1  156
+## 6   118      4 5608</code></pre>
 </div>
 <div id="transform-data-to-log-scale" class="section level4">
 <h4>Transform Data to Log Scale</h4>
@@ -382,20 +371,20 @@ dml &lt;-  cbind(dat[,-c(5:10)], dml)
 dml$Ethnicity &lt;- factor(dml$Ethnicity, levels=type_eth)
 
 head(dml)</code></pre>
-<pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas
-## 1   Brahman     Illiterate     Hilly     0-10000           0 8.312883
-## 2   Brahman     Illiterate     Hilly 10000-20000           0 8.734710
-## 3   Brahman     Illiterate     Hilly 20000-30000           1 7.569856
-## 4   Brahman     Illiterate     Hilly 30000-50000           0 5.754888
-## 5   Brahman     Illiterate     Hilly 50000-ABOVE           0 4.169925
-## 6   Brahman     Illiterate Himalayan     0-10000           1 5.584963
-##   Kerosene     LPGas   Others      Wood
-## 1 3.321928  9.550747 2.584963 13.953469
-## 2 1.000000 10.379378 1.000000 12.664003
-## 3 0.000000  9.392317 0.000000 11.019591
-## 4 0.000000  7.768184 0.000000  9.471675
-## 5 0.000000  7.108524 1.000000  8.285402
-## 6 1.000000  7.882643 3.000000 13.453271</code></pre>
+<pre><code>##   Ethnicity EducationLevel GeoRegion IncomeGroup Electricity GobarGas Kerosene
+## 1   Brahman     Illiterate     Hilly     0-10000           0 8.312883 3.321928
+## 2   Brahman     Illiterate     Hilly 10000-20000           0 8.734710 1.000000
+## 3   Brahman     Illiterate     Hilly 20000-30000           1 7.569856 0.000000
+## 4   Brahman     Illiterate     Hilly 30000-50000           0 5.754888 0.000000
+## 5   Brahman     Illiterate     Hilly 50000-ABOVE           0 4.169925 0.000000
+## 6   Brahman     Illiterate Himalayan     0-10000           1 5.584963 1.000000
+##       LPGas   Others      Wood
+## 1  9.550747 2.584963 13.953469
+## 2 10.379378 1.000000 12.664003
+## 3  9.392317 0.000000 11.019591
+## 4  7.768184 0.000000  9.471675
+## 5  7.108524 1.000000  8.285402
+## 6  7.882643 3.000000 13.453271</code></pre>
 </div>
 <div id="function-get_permanova" class="section level4">
 <h4>Function: get_permanova()</h4>
@@ -469,6 +458,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
