@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
 <title>Explore Baseline Data</title>
 
+<script src="site_libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -83,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -232,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -243,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -363,20 +352,20 @@ dat$source_cooking_fuel_post_eq &lt;- factor(dat$source_cooking_fuel_post_eq, le
 dat$Ethnicity &lt;- factor(dat$Ethnicity, levels = type_ethnicity)
 
 head(dat)</code></pre>
-<pre><code>##     household_id    District GeoRegion    Ethnicity IncomeGroup
-## 1 12010100001101 Okhaldhunga     Hilly    Rai-Limbu     0-10000
-## 2 12010100002101 Okhaldhunga     Hilly    Rai-Limbu     0-10000
-## 3 12010100003101 Okhaldhunga     Hilly Gurung-Magar     0-10000
-## 4 12010100004101 Okhaldhunga     Hilly Gurung-Magar     0-10000
-## 5 12010100005101 Okhaldhunga     Hilly Gurung-Magar     0-10000
-## 6 12010100006101 Okhaldhunga     Hilly Gurung-Magar     0-10000
-##   EducationLevel source_cooking_fuel_post_eq
-## 1     Illiterate                        Wood
-## 2     Illiterate                        Wood
-## 3     Illiterate                        Wood
-## 4     Illiterate                        Wood
-## 5     Illiterate                        Wood
-## 6     Illiterate                        Wood</code></pre>
+<pre><code>##     household_id    District GeoRegion    Ethnicity IncomeGroup EducationLevel
+## 1 12010100001101 Okhaldhunga     Hilly    Rai-Limbu     0-10000     Illiterate
+## 2 12010100002101 Okhaldhunga     Hilly    Rai-Limbu     0-10000     Illiterate
+## 3 12010100003101 Okhaldhunga     Hilly Gurung-Magar     0-10000     Illiterate
+## 4 12010100004101 Okhaldhunga     Hilly Gurung-Magar     0-10000     Illiterate
+## 5 12010100005101 Okhaldhunga     Hilly Gurung-Magar     0-10000     Illiterate
+## 6 12010100006101 Okhaldhunga     Hilly Gurung-Magar     0-10000     Illiterate
+##   source_cooking_fuel_post_eq
+## 1                        Wood
+## 2                        Wood
+## 3                        Wood
+## 4                        Wood
+## 5                        Wood
+## 6                        Wood</code></pre>
 </div>
 <div id="get-proportion-of-households-using-each-fueltype" class="section level4">
 <h4>Get Proportion of Households using each FuelType</h4>
@@ -837,6 +826,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
-<title>Nudging households towards clean cooking: the role of group segmentation based on diversity in fuel choice</title>
+<title>Group segmentation and heterogeneity in the choice of cooking fuels in post-earthquake Nepal</title>
 
+<script src="site_libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -83,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -232,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -243,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -316,19 +305,19 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Nudging households towards clean cooking: the role of group segmentation based on diversity in fuel choice</h1>
+<h1 class="title toc-ignore">Group segmentation and heterogeneity in the choice of cooking fuels in post-earthquake Nepal</h1>
 <h4 class="author"><strong>Ratna K. Shrestha</strong></h4>
 <address class="author_afil">
 Vancouver School of Economics, University of British Columbia<br><h4 class="author"><strong>Raunak Shrestha</strong></h4>
 <address class="author_afil">
-Department of Urologic Sciences, University of British Columbia; Vancouver Prostate Centre<br>
+Department of Radiation Oncology, University of California San Francisco<br>
 </div>
 
 
 <div id="abstract" class="section level3">
 <h3>Abstract</h3>
 <blockquote>
-<p>The need for targeted policies, particularly those that induce behavioral changes, to achieve universal access to clean cooking by 2030 has been well recognized. Yet no systematic approach to the development of such policies has thus far been proposed. We attempt to fill that gap by integrating the techniques from data analytics (group segmentation) with the insights from behavioral economics (loss aversion and social norm) in developing targeted “nudges” to clean cooking. Individually customized nudges would be theoretically ideal but likely to be prohibitively costly; in contrast, nudges based on a “one-size-fits-all” approach are unlikely to be effective. Therefore, segmenting households into more homogenous subgroups based on certain socioeconomic factors is an important first step. Analyzing the post Gorkha-earthquake data from Nepal on 747,137 households’ fuel-choice pattern, we find that ethnicity, as a factor of segmentation, explains the highest intergroup diversity (39.12%) followed by income (26.30%), education (12.62%), and location (4.05%). Once the factor with the highest discriminatory power is identified and households are segregated into subgroups, we develop several subgroup-specific nudges, which may be less costly and yet outperform the traditional economic incentives in promoting clean cooking.</p>
+<p>Segmenting population into subgroups with higher intergroup, but lower intragroup, heterogeneity can be useful in enhancing the effectiveness of many socio-economic policy interventions; yet it has received little attention in promoting clean cooking. Here, we use PERMANOVA, a distance-based multivariate analysis, to identify the factor that captures the highest intergroup heterogeneity in the choice of cooking fuels. Applying this approach to the post-earthquake data on 747,137 households from Nepal, we find that ethnicity explains 39.12% of variation in fuel choice, followed by income (26.30%), education (12.62%), and location (4.05%). This finding indicates that ethnicity, rather than income or other factors, as a basis of policy interventions may be more effective in promoting clean cooking. We also find that, among the ethnic groups in Nepal, the most marginalized Chepang/Thami community exhibits the lowest intragroup diversity (Shannon index = 0.101) while Newars the highest (0.667). This information on intra-ethnic diversity in fuel choice can have important policy implications for reducing ethnic gap in clean cooking.</p>
 </blockquote>
 </div>
 <div id="dataset" class="section level3">
@@ -395,7 +384,7 @@ Department of Urologic Sciences, University of British Columbia; Vancouver Prost
 </div>
 <div id="citation" class="section level4">
 <h4>Citation</h4>
-<p>Shrestha, Ratna K. and Shrestha, Raunak. <strong>Nudging households towards clean cooking: the role of group segmentation based on diversity in fuel choice</strong>. 2019. (<em>submitted</em>)<br/> See details <a href="http://raunakms.github.io/publication/2019_cooking_fuel/">here</a> <br/><br/></p>
+<p>Shrestha, Ratna K. and Shrestha, Raunak. <strong>Group segmentation and heterogeneity in the choice of cooking fuels in post-earthquake Nepal</strong>. 2020. (<em>submitted</em>)<br/> See details <a href="http://raunakms.github.io/publication/2019_cooking_fuel/">here</a> <br/><br/></p>
 </div>
 <div id="corresponding-author" class="section level4">
 <h4>Corresponding author</h4>
@@ -420,6 +409,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

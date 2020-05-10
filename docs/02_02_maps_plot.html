@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
 <title>Generate Choropleth Maps</title>
 
+<script src="site_libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -83,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -232,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -243,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -365,7 +354,7 @@ head(dat1)</code></pre>
 </div>
 <div id="load-maps" class="section level4">
 <h4>Load Maps</h4>
-<pre class="r"><code>geo &lt;- geojsonio::geojson_read(file.geo, method=&quot;local&quot;, parse=TRUE, what=&quot;sp&quot;)
+<pre class="r"><code>geo &lt;- geojsonio::geojson_read(file.geo, parse=TRUE, what=&quot;sp&quot;)
 geo77 &lt;- broom::tidy(geo, region=&quot;DISTRICT&quot;)
 geo11 &lt;- subset(geo77, geo77$id %in% dat1$id)
 
@@ -428,20 +417,13 @@ group_ratio &lt;- levels(dm$Group)
 # MERGE DATA ---
 df &lt;- merge(geo11, dm, by = &quot;id&quot;)
 head(df)</code></pre>
-<pre><code>##        id     long      lat order  hole piece     group  Freq
-## 1 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1 86345
-## 2 Dhading 84.73970 27.94059 68753 FALSE     1 Dhading.1 86345
-## 3 Dhading 84.73969 27.94087 68754 FALSE     1 Dhading.1 86345
-## 4 Dhading 84.73980 27.94221 68755 FALSE     1 Dhading.1 86345
-## 5 Dhading 84.73977 27.94336 68756 FALSE     1 Dhading.1 86345
-## 6 Dhading 84.73981 27.94370 68757 FALSE     1 Dhading.1 86345
-##           Group
-## 1 (8e+04,9e+04]
-## 2 (8e+04,9e+04]
-## 3 (8e+04,9e+04]
-## 4 (8e+04,9e+04]
-## 5 (8e+04,9e+04]
-## 6 (8e+04,9e+04]</code></pre>
+<pre><code>##        id     long      lat order  hole piece     group  Freq         Group
+## 1 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1 86345 (8e+04,9e+04]
+## 2 Dhading 84.73970 27.94059 68753 FALSE     1 Dhading.1 86345 (8e+04,9e+04]
+## 3 Dhading 84.73969 27.94087 68754 FALSE     1 Dhading.1 86345 (8e+04,9e+04]
+## 4 Dhading 84.73980 27.94221 68755 FALSE     1 Dhading.1 86345 (8e+04,9e+04]
+## 5 Dhading 84.73977 27.94336 68756 FALSE     1 Dhading.1 86345 (8e+04,9e+04]
+## 6 Dhading 84.73981 27.94370 68757 FALSE     1 Dhading.1 86345 (8e+04,9e+04]</code></pre>
 </div>
 <div id="plot-choropleth-maps-total-no.-of-households" class="section level4">
 <h4>Plot Choropleth Maps: Total No. of Households</h4>
@@ -504,20 +486,20 @@ df$FuelType &lt;- factor(df$FuelType, levels = type_fuel)
 df$RatioGroup &lt;- factor(df$RatioGroup, levels = group_ratio)
 
 head(df)</code></pre>
-<pre><code>##        id     long      lat order  hole piece     group    FuelType
-## 1 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1 Electricity
-## 2 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1      Others
-## 3 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1        Wood
-## 4 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1    Kerosene
-## 5 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1      LP.Gas
-## 6 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1   Gobar.Gas
-##        Ratio RatioGroup
-## 1 0.08465608 (0.05,0.1]
-## 2 0.06768559 (0.05,0.1]
-## 3 0.11518469 (0.1,0.15]
-## 4 0.05714286 (0.05,0.1]
-## 5 0.10945537 (0.1,0.15]
-## 6 0.20506415 (0.2,0.25]</code></pre>
+<pre><code>##        id     long      lat order  hole piece     group    FuelType      Ratio
+## 1 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1 Electricity 0.08465608
+## 2 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1      Others 0.06768559
+## 3 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1        Wood 0.11518469
+## 4 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1    Kerosene 0.05714286
+## 5 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1      LP.Gas 0.10945537
+## 6 Dhading 84.73974 27.94036 68752 FALSE     1 Dhading.1   Gobar.Gas 0.20506415
+##   RatioGroup
+## 1 (0.05,0.1]
+## 2 (0.05,0.1]
+## 3 (0.1,0.15]
+## 4 (0.05,0.1]
+## 5 (0.1,0.15]
+## 6 (0.2,0.25]</code></pre>
 </div>
 <div id="plot-choropleth-maps-proportion-of-households-using-six-fueltypes" class="section level4">
 <h4>Plot Choropleth Maps: Proportion of Households using six FuelTypes</h4>
@@ -551,28 +533,28 @@ map2</code></pre>
 <pre class="r"><code>dat3 &lt;- read.delim(file.dat3, header = TRUE, stringsAsFactors = FALSE)
 
 head(dat3)</code></pre>
-<pre><code>##               id    Brahman Chepang.Thami    Chettri      Dalit
-## 1        Dhading 0.13183869  1.992073e-01 0.09895938 0.13744536
-## 2        Dolakha 0.06860788  3.570013e-01 0.18636705 0.06896213
-## 3         Gorkha 0.11886990  5.221076e-02 0.06745067 0.17466477
-## 4 Kavrepalanchok 0.19493279  8.884029e-04 0.10279011 0.10281694
-## 5      Makwanpur 0.12246981  2.473860e-01 0.07565513 0.05270396
-## 6        Nuwakot 0.13789929  6.833869e-05 0.07101362 0.06762366
-##   Gurung.Magar    Madhesi Muslim.Others      Newar   Rai.Limbu     Tamang
-## 1   0.18856305 0.06368421    0.09718067 0.11869743 0.030502227 0.08889155
-## 2   0.02672287 0.02500000    0.02683347 0.10158448 0.170972201 0.05719957
-## 3   0.30926197 0.12394737    0.31012601 0.08608953 0.039318077 0.01146000
-## 4   0.04920577 0.03947368    0.08258544 0.16717928 0.007617877 0.15064451
-## 5   0.06055718 0.27210526    0.05439217 0.08283894 0.072277684 0.20192754
-## 6   0.04849707 0.08394737    0.06055661 0.08180400 0.105882353 0.14936267</code></pre>
+<pre><code>##               id    Brahman Chepang.Thami    Chettri      Dalit Gurung.Magar
+## 1        Dhading 0.13183869  1.992073e-01 0.09895938 0.13744536   0.18856305
+## 2        Dolakha 0.06860788  3.570013e-01 0.18636705 0.06896213   0.02672287
+## 3         Gorkha 0.11886990  5.221076e-02 0.06745067 0.17466477   0.30926197
+## 4 Kavrepalanchok 0.19493279  8.884029e-04 0.10279011 0.10281694   0.04920577
+## 5      Makwanpur 0.12246981  2.473860e-01 0.07565513 0.05270396   0.06055718
+## 6        Nuwakot 0.13789929  6.833869e-05 0.07101362 0.06762366   0.04849707
+##      Madhesi Muslim.Others      Newar   Rai.Limbu     Tamang
+## 1 0.06368421    0.09718067 0.11869743 0.030502227 0.08889155
+## 2 0.02500000    0.02683347 0.10158448 0.170972201 0.05719957
+## 3 0.12394737    0.31012601 0.08608953 0.039318077 0.01146000
+## 4 0.03947368    0.08258544 0.16717928 0.007617877 0.15064451
+## 5 0.27210526    0.05439217 0.08283894 0.072277684 0.20192754
+## 6 0.08394737    0.06055661 0.08180400 0.105882353 0.14936267</code></pre>
 <pre class="r"><code># CONVERT TO DISCRETE DATA ---
 dm &lt;- reshape2::melt(dat3, id.vars = &quot;id&quot;, variable.name = &quot;Ethnicity&quot;, value.name = &quot;Ratio&quot;)
 dm &lt;- mutate(dm, RatioGroup = cut(Ratio, seq(0, 0.4, 0.05), include.lowest = TRUE)) %&gt;% 
     group_by(RatioGroup)
 
 group_ratio &lt;- levels(dm$RatioGroup)
-type_ethnicity &lt;- c(&quot;Newar&quot;, &quot;Brahman&quot;, &quot;Madhesi&quot;, &quot;Chettri&quot;, &quot;Muslim.Others&quot;, 
-    &quot;Gurung.Magar&quot;, &quot;Dalit&quot;, &quot;Rai.Limbu&quot;, &quot;Tamang&quot;, &quot;Chepang.Thami&quot;)
+type_ethnicity &lt;- c(&quot;Newar&quot;, &quot;Brahman&quot;, &quot;Madhesi&quot;, &quot;Chettri&quot;, &quot;Muslim.Others&quot;, &quot;Gurung.Magar&quot;, 
+    &quot;Dalit&quot;, &quot;Rai.Limbu&quot;, &quot;Tamang&quot;, &quot;Chepang.Thami&quot;)
 
 # MERGE DATA ---
 df &lt;- merge(geo11, dm, by = &quot;id&quot;)
@@ -643,6 +625,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

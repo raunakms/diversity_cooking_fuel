@@ -135,7 +135,7 @@ file.output <- file.path(dir.output, "stats_abundance_Mann–Whitney_test.tsv")
 write.table(df, file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
 ```
 
-#### Perform Permanova Test 
+#### Perform Permanova Test: Using Euclidean Distance 
 ```{r}
 # GET DISTANCE MATRIX ---
 dist_dml <- vegan::vegdist(x=as.matrix(dml[,5:10]), method="euclidean", binary=FALSE, diag=TRUE, upper=TRUE, na.rm=FALSE)
@@ -148,6 +148,19 @@ y_permanova
 
 # Write Output ---
 file.output <- file.path(dir.output, "stats_abundance_permanova.tsv")
+write.table(as.data.frame(y_permanova$aov.tab), file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+```
+
+#### Model with Interaction between Income and Ethnicty
+```{r}
+# PERMANOVA TEST ---
+set.seed(12345)
+y_permanova <- vegan::adonis(dist_dml ~ IncomeGroup*Ethnicity+EducationLevel+GeoRegion, 
+                          data=dml, permutations=999, method="euclidean", parallel=4)
+y_permanova
+
+# Write Output ---
+file.output <- file.path(dir.output, "stats_abundance_permanova_interaction.tsv")
 write.table(as.data.frame(y_permanova$aov.tab), file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
 ```
 
@@ -166,4 +179,24 @@ head(df)
 # Write Output ---
 file.output <- file.path(dir.output, "stats_abundance_permanova_posthoc.tsv")
 write.table(df, file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+```
+
+</br>
+
+
+
+#### Perform Permanova Test: Using Bray-Curtis Distance 
+```{r}
+# GET DISTANCE MATRIX ---
+dist_dml <- vegan::vegdist(x=as.matrix(dml[,5:10]), method="bray", binary=FALSE, diag=TRUE, upper=TRUE, na.rm=FALSE)
+
+# PERMANOVA TEST ---
+set.seed(12345)
+y_permanova <- vegan::adonis(dist_dml ~ IncomeGroup+Ethnicity+EducationLevel+GeoRegion, 
+                          data=dml, permutations=999, method="bray", parallel=4)
+y_permanova
+
+# Write Output ---
+file.output <- file.path(dir.output, "stats_abundance_permanova_braycurtis.tsv")
+write.table(as.data.frame(y_permanova$aov.tab), file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
 ```
