@@ -1,0 +1,114 @@
+district_id	district_name	vdcmun_id	vdcmun_name	Region
+12	Okhaldhunga	1201	Champadevi Rural Municipality	Hilly
+12	Okhaldhunga	1202	Chishankhu Gadhi Rural Municipality	Hilly
+12	Okhaldhunga	1203	Khiji Demba Rural Municipality	Hilly
+12	Okhaldhunga	1204	Likhu Rural Municipality	Hilly
+12	Okhaldhunga	1205	Manebhanjyang Rural Municipality	Hilly
+12	Okhaldhunga	1206	Molung Rural Municipality	Hilly
+12	Okhaldhunga	1207	Siddhicharan Municipality	Hilly
+12	Okhaldhunga	1208	Sunkoshi Rural Municipality	Hilly
+20	Sindhuli	2001	Dudhouli Municipality	Hilly
+20	Sindhuli	2002	Ghyanglekha Rural Municipality	Hilly
+20	Sindhuli	2003	Golanjor Rural Municipality	Hilly
+20	Sindhuli	2004	Hariharpurgaghi Rural Municipality	Hilly
+20	Sindhuli	2005	Kamalamai Municipality	Hilly
+20	Sindhuli	2006	Marin Rural Municipality	Hilly
+20	Sindhuli	2007	Phikkal Rural Municipality	Hilly
+20	Sindhuli	2008	Sunkoshi Rural Municipality	Hilly
+20	Sindhuli	2009	Tinpatan Rural Municipality	Hilly
+21	Ramechhap	2101	Doramba Rural Municipality	Hilly
+21	Ramechhap	2102	Gokulganga Rural Municipality	Himalayan
+21	Ramechhap	2103	Khandadevi Rural Municipality	Hilly
+21	Ramechhap	2104	Likhu Tamakoshi Rural Municipality	Hilly
+21	Ramechhap	2105	Manthali  Municipality	Hilly
+21	Ramechhap	2106	Ramechhap Municipality	Hilly
+21	Ramechhap	2107	Sunapati Rural Municipality	Hilly
+21	Ramechhap	2108	Umakunda Rural Municipality	Himalayan
+22	Dolakha	2201	Baitedhar Rural Municipality	Himalayan
+22	Dolakha	2202	Bhimeshwor Municipality	Himalayan
+22	Dolakha	2203	Bigu Rural Municipality	Himalayan
+22	Dolakha	2204	Gaurishankar Rural Municipality	Himalayan
+22	Dolakha	2205	Jiri Municipality	Himalayan
+22	Dolakha	2206	Kalinchowk Rural Municipality	Himalayan
+22	Dolakha	2207	Melung Rural Municipality	Himalayan
+22	Dolakha	2208	Shailung Rural Municipality	Himalayan
+22	Dolakha	2209	Tamakoshi Rural Municipality	Himalayan
+23	Sindhupalchok	2301	Bahrabise Municipality	Himalayan
+23	Sindhupalchok	2302	Balephi Rural Municipality	Himalayan
+23	Sindhupalchok	2303	Bhotekoshi Rural Municipality	Himalayan
+23	Sindhupalchok	2304	Choutara Sangachowkgadhi Municipality	Himalayan
+23	Sindhupalchok	2305	Helambu Rural Municipality	Himalayan
+23	Sindhupalchok	2306	Indrawoti Rural Municipality	Himalayan
+23	Sindhupalchok	2307	Jugal Rural Municipality	Himalayan
+23	Sindhupalchok	2308	Langtang National Park	Himalayan
+23	Sindhupalchok	2309	Lisankhu Pakhar Rural Municipality	Himalayan
+23	Sindhupalchok	2310	Melanchi Municipality	Himalayan
+23	Sindhupalchok	2311	Panchpokhari Thangpal Rural Municipality	Himalayan
+23	Sindhupalchok	2312	Sunkoshi Rural Municipality	Himalayan
+23	Sindhupalchok	2313	Tripurasundari Rural Municipality	Himalayan
+24	Kavrepalanchok	2401	Banepa Municipality	Hilly
+24	Kavrepalanchok	2402	Bethanchowk Rural Municipality	Hilly
+24	Kavrepalanchok	2403	Bhumlu Rural Municipality	Hilly
+24	Kavrepalanchok	2404	Chauri Deurali Rural Municipality	Hilly
+24	Kavrepalanchok	2405	Dhulikhel Municipality	Hilly
+24	Kavrepalanchok	2406	Khanikhola Rural Municipality	Hilly
+24	Kavrepalanchok	2407	Mahabharat Rural Municipality	Hilly
+24	Kavrepalanchok	2408	Mandan Deupur Municipality	Hilly
+24	Kavrepalanchok	2409	Namobuddha Municipality	Hilly
+24	Kavrepalanchok	2410	Panauti Municipality	Hilly
+24	Kavrepalanchok	2411	Panchkhal Municipality	Hilly
+24	Kavrepalanchok	2412	Roshi Rural Municipality	Hilly
+24	Kavrepalanchok	2413	Temal Rural Municipality	Hilly
+28	Nuwakot	2801	Belkotgadhi Municipality	Himalayan
+28	Nuwakot	2802	Bidur Municipality	Himalayan
+28	Nuwakot	2803	Dupcheshwor Rural Municipality	Himalayan
+28	Nuwakot	2804	Kakani Rural Municipality	Himalayan
+28	Nuwakot	2805	Kispang Rural Municipality	Himalayan
+28	Nuwakot	2806	Langtang National Park	Himalayan
+28	Nuwakot	2807	Likhu Rural Municipality	Himalayan
+28	Nuwakot	2808	Myagang Rural Municipality	Himalayan
+28	Nuwakot	2809	Panchakanya Rural Municipality	Himalayan
+28	Nuwakot	2810	Shivapuri Rural Municipality	Himalayan
+28	Nuwakot	2811	Suryagadhi Rural Municipality	Himalayan
+28	Nuwakot	2812	Tadi Rural Municipality	Himalayan
+28	Nuwakot	2813	Tarakeshwor Rural Municipality	Himalayan
+29	Rasuwa	2901	Aamachhodingmo Rural Municipality	Himalayan
+29	Rasuwa	2902	Gosaikunda Rural Municipality	Himalayan
+29	Rasuwa	2903	Kalika Rural Municipality	Himalayan
+29	Rasuwa	2904	Naukunda Rural Municipality	Himalayan
+29	Rasuwa	2905	Uttargaya Rural Municipality	Himalayan
+30	Dhading	3001	Benighat Rorang Rural Municipality	Hilly
+30	Dhading	3002	Dhunibenshi Municipality	Hilly
+30	Dhading	3003	Gajuri Rural Municipality	Hilly
+30	Dhading	3004	Galchhi Rural Municipality	Hilly
+30	Dhading	3005	Ganga Jamuna Rural Municipality	Himalayan
+30	Dhading	3006	Jwalamukhi Rural Municipality	Hilly
+30	Dhading	3007	Khaniyabas Rural Municipality	Himalayan
+30	Dhading	3008	Netrawati Dabajong Rural Municipality	Himalayan
+30	Dhading	3009	Neelakantha Municipality	Hilly
+30	Dhading	3010	Rubi Valley Rural Municipality	Himalayan
+30	Dhading	3011	Siddhalek Rural Municipality	Hilly
+30	Dhading	3012	Thakre Rural Municipality	Hilly
+30	Dhading	3013	Tripurasundari Rural Municipality	Himalayan
+31	Makwanpur	3101	Bagmati Rural Municipality	Hilly
+31	Makwanpur	3102	Bakaiya Rural Municipality	Hilly
+31	Makwanpur	3103	Bhimphedi Rural Municipality	Hilly
+31	Makwanpur	3104	Hetauda Sub-Metropolitian City	Hilly
+31	Makwanpur	3105	Indrasarowar Rural Municipality	Hilly
+31	Makwanpur	3106	Kailash Rural Municipality	Hilly
+31	Makwanpur	3107	Makawanpurgadhi Rural Municipality	Hilly
+31	Makwanpur	3108	Manahari Rural Municipality	Hilly
+31	Makwanpur	3109	Parsa Wild Life Reserve	Hilly
+31	Makwanpur	3110	Raksirang Rural Municipality	Hilly
+31	Makwanpur	3111	Thaha Municipality	Hilly
+36	Gorkha	3601	Aarughat Rural Municipality	Himalayan
+36	Gorkha	3602	Ajirkot Rural Municipality	Himalayan
+36	Gorkha	3603	Barpak Sulikot Rural Municipality	Himalayan
+36	Gorkha	3604	Bhimsen Thapa Rural Municipality	Hilly
+36	Gorkha	3605	Chumanubri Rural Municipality	Himalayan
+36	Gorkha	3606	Dharche Rural Municipality	Himalayan
+36	Gorkha	3607	Gandaki Rural Municipality	Hilly
+36	Gorkha	3608	Gorkha Municipality	Hilly
+36	Gorkha	3609	Palungtar Municipality	Hilly
+36	Gorkha	3610	Shahid Lakhan Rural Municipality	Hilly
+36	Gorkha	3611	Siranchowk Rural Municipality	Himalayan
