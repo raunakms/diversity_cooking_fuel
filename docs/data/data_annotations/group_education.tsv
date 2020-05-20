@@ -1,0 +1,20 @@
+EducationLevel	EducationGroup
+Nursery/K.G./Kindergarten	Primary
+Class 1	Primary
+Class 2	Primary
+Class 3	Primary
+Class 4	Primary
+Class 5	Primary
+Class 6	Primary
+Class 7	Primary
+Class 8	Secondary
+Class 9	Secondary
+Class 10	Secondary
+SLC or equivalent	Secondary
+Intermediate or equivalent	Secondary
+Bachelors or equivalent	University
+Masters or equivalent	University
+Ph.D. or equivalent	University
+Non-formal education	NonFormal-Other
+Illiterate	Illiterate
+Other	NonFormal-Other
