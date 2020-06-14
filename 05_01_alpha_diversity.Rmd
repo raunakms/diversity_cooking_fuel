@@ -101,3 +101,19 @@ p1 <- ggplot(dat, aes(x=Ethnicity, y=ShannonIndex)) +
 
 p1
 ```
+
+#### Mean, Median, and Standard Deviation of Shannon Indices grouped by Ethnicity
+```{r}
+mu
+```
+
+#### Kruskal-Wallis Test of Ethnicity based on Shannon Indices
+```{r}
+kruskal.test(ShannonIndex ~ Ethnicity, data=dat)
+```
+
+#### Pairwise Mann-Whitney U (Wilcox rank sum) Test of Ethnicity based on Shannon Indices
+```{r}
+pairwise.wilcox.test(x=dat$ShannonIndex, g=dat$Ethnicity, p.adjust.method="bonferroni", paired=FALSE, exact=FALSE)
+```
+
