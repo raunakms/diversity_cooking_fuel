@@ -423,6 +423,61 @@ p1 &lt;- ggplot(dat, aes(x=Ethnicity, y=ShannonIndex)) +
 p1</code></pre>
 <p><img src="05_01_alpha_diversity_files/figure-html/unnamed-chunk-7-1.png" width="576" style="display: block; margin: auto;" /></p>
 </div>
+<div id="mean-median-and-standard-deviation-of-shannon-indices-grouped-by-ethnicity" class="section level4">
+<h4>Mean, Median, and Standard Deviation of Shannon Indices grouped by Ethnicity</h4>
+<pre class="r"><code>mu</code></pre>
+<pre><code>##        Ethnicity  grp.mean grp.median grp.stdev
+## 8          Newar 0.6455604  0.6671363 0.1759428
+## 1        Brahman 0.6186428  0.6556733 0.2103721
+## 6        Madhesi 0.4795275  0.6114226 0.2895734
+## 3        Chettri 0.5554833  0.6027773 0.2106092
+## 7  Muslim-Others 0.5264648  0.5623351 0.2125231
+## 5   Gurung-Magar 0.4856270  0.5414137 0.2095235
+## 4          Dalit 0.4761185  0.5084900 0.2011042
+## 9      Rai-Limbu 0.4765142  0.5073835 0.2243463
+## 10        Tamang 0.4758298  0.5026863 0.2092972
+## 2  Chepang-Thami 0.1970968  0.1007111 0.2303414</code></pre>
+</div>
+<div id="kruskal-wallis-test-of-ethnicity-based-on-shannon-indices" class="section level4">
+<h4>Kruskal-Wallis Test of Ethnicity based on Shannon Indices</h4>
+<pre class="r"><code>kruskal.test(ShannonIndex ~ Ethnicity, data=dat)</code></pre>
+<pre><code>## 
+##  Kruskal-Wallis rank sum test
+## 
+## data:  ShannonIndex by Ethnicity
+## Kruskal-Wallis chi-squared = 94.131, df = 9, p-value = 2.406e-16</code></pre>
+</div>
+<div id="pairwise-mann-whitney-u-wilcox-rank-sum-test-of-ethnicity-based-on-shannon-indices" class="section level4">
+<h4>Pairwise Mann-Whitney U (Wilcox rank sum) Test of Ethnicity based on Shannon Indices</h4>
+<pre class="r"><code>pairwise.wilcox.test(x=dat$ShannonIndex, g=dat$Ethnicity, p.adjust.method=&quot;bonferroni&quot;, paired=FALSE, exact=FALSE)</code></pre>
+<pre><code>## 
+##  Pairwise comparisons using Wilcoxon rank sum test 
+## 
+## data:  dat$ShannonIndex and dat$Ethnicity 
+## 
+##               Newar   Brahman Madhesi Chettri Muslim-Others Gurung-Magar
+## Brahman       1.00000 -       -       -       -             -           
+## Madhesi       0.08122 0.43242 -       -       -             -           
+## Chettri       1.00000 1.00000 1.00000 -       -             -           
+## Muslim-Others 0.13984 1.00000 1.00000 1.00000 -             -           
+## Gurung-Magar  0.00539 0.07422 1.00000 1.00000 1.00000       -           
+## Dalit         0.00193 0.03086 1.00000 1.00000 1.00000       1.00000     
+## Rai-Limbu     0.00099 0.02519 1.00000 1.00000 1.00000       1.00000     
+## Tamang        0.00267 0.04060 1.00000 1.00000 1.00000       1.00000     
+## Chepang-Thami 4.7e-11 6.1e-10 0.00054 2.0e-08 1.5e-07       2.2e-06     
+##               Dalit   Rai-Limbu Tamang 
+## Brahman       -       -         -      
+## Madhesi       -       -         -      
+## Chettri       -       -         -      
+## Muslim-Others -       -         -      
+## Gurung-Magar  -       -         -      
+## Dalit         -       -         -      
+## Rai-Limbu     1.00000 -         -      
+## Tamang        1.00000 1.00000   -      
+## Chepang-Thami 2.2e-06 4.3e-06   3.1e-06
+## 
+## P value adjustment method: bonferroni</code></pre>
+</div>
 
 
 
