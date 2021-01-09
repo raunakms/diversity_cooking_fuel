@@ -1,0 +1,64 @@
+---
+title: "Bootstrap: Permanova Summarize Results"
+output: html_document
+
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, '07_03_bootstrap_summarize_result.html'))})
+---
+
+
+#### Define Libraries
+```{r echo=TRUE, message=FALSE, warning=FALSE, tidy=TRUE, eval=FALSE}
+library("stringr")
+library("dplyr")
+library("reshape2")
+library("vegan")
+```
+
+#### Define Path
+```{r tidy=TRUE, eval=FALSE}
+dir.wrk <- str_replace(getwd(), "/scripts", "")
+dir.data <- file.path(dir.wrk, "data/data_permutation_withReplacement")
+dir.output <- file.path(dir.wrk, "output")
+```
+
+#### Collect Permanova Results
+```{r tidy=TRUE, eval=FALSE}
+nperm <- 1000
+
+list.df <- list()
+for(i in 1:nperm){
+     # DEFINE FILE ---
+     file.dat <- file.path(dir.data, paste("stats_permanova_permmute_",i,".tsv", sep=""))
+     
+     # LOAD DATA ---
+     dat <- read.delim(file.dat, header=TRUE, stringsAsFactors=FALSE, row.names=1)
+     
+     # RESHAPE DATA ---
+     df <- reshape2::melt(as.matrix(dat))
+     colnames(df) <- c("Feature","Category","Value")
+     
+     df$Feature <- as.character(df$Feature)
+     df$Category <- as.character(df$Category)
+     
+     # STORE DATA ---
+     list.df[[i]] <- df
+}
+
+
+### MERGE DATA ---
+df <- do.call(cbind.data.frame,  lapply(list.df, function(x) x[,3] ) )
+colnames(df) <- paste("Value", c(1:ncol(df)), sep="_")
+
+### AFFREGATE DATA ---
+dm <- cbind(list.df[[1]][,1:2], df)
+
+#dm[,1:10]
+
+### WRITE OUTPUT ---
+file.output <- file.path(dir.output, "stats_anovatbl_permanova_permmute_results_withReplacement.tsv")
+write.table(dm, file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)     
+```

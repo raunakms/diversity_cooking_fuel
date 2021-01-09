@@ -1,0 +1,61 @@
+---
+title: 'Bootstrap: Prepare Data'
+output: html_document
+
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, '07_01_bootstrap_prepare_input.html'))})
+---
+
+
+#### Define Libraries
+```{r echo=TRUE, message=FALSE, warning=FALSE, tidy=TRUE, eval=FALSE}
+library("stringr")
+library("dplyr")
+library("reshape2")
+```
+
+#### Define Path
+```{r tidy=TRUE, eval=FALSE}
+dir.wrk <- str_replace(getwd(), "/scripts", "")
+dir.data <- file.path(dir.wrk, "data/data_processed")
+dir.output <- file.path(dir.wrk, "data/data_permutation_withReplacement")
+```
+
+#### Define Files
+```{r tidy=TRUE, eval=FALSE}
+file.dat <- file.path(dir.data, "household_level_data_frequency_table.tsv")
+```
+
+
+#### Load Data
+```{r tidy=TRUE, eval=FALSE}
+dat <- read.delim(file.dat, header=TRUE, stringsAsFactors=FALSE)
+
+dim(dat)
+head(dat)
+```
+
+
+#### Permute
+```{r tidy=TRUE, eval=FALSE}
+nperm <- 1000
+set.seed(12345)
+
+for(i in 1:nperm){
+        df <- dat
+     
+        # SAMPLE ROW INDICES ---
+        sampled_index <- sample(x=c(1:nrow(df)), size=nrow(df), replace=TRUE)
+        
+        # GET PERMUTED DATA ---
+        dm <- df[sampled_index,]
+
+     
+        # WRITE OUTPUT ---
+        file.output <- file.path(dir.output, paste("abundance_permmute_",i,".tsv", sep=""))
+        write.table(dm, file.output, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)
+}
+```
