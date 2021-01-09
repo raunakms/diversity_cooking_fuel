@@ -1,0 +1,76 @@
+---
+title: 'Bootstrap: Permanova'
+output: html_document
+
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, '07_02_bootstrap_perform_permanova.html'))})
+---
+
+
+#### Define Libraries
+```{r echo=TRUE, message=FALSE, warning=FALSE, tidy=TRUE, eval=FALSE}
+library("stringr")
+library("dplyr")
+library("reshape2")
+library("vegan")
+```
+
+#### Define Path
+```{r tidy=TRUE, eval=FALSE}
+dir.wrk <- str_replace(getwd(), "/scripts", "")
+dir.data <- file.path(dir.wrk, "data/data_permutation_withReplacement")
+dir.output <- file.path(dir.wrk, "data/data_processed")
+```
+
+#### Function: Log Transformation
+```{r tidy=TRUE, eval=FALSE}
+TransformLog <- function(dat){
+     dml <- vegan::decostand(dat[,5:10], "log")
+     dml <-  cbind(dat[,-c(5:10)], dml)
+     
+     return(dml)
+}
+```
+
+#### Function: Permanova Test 
+```{r, eval=FALSE}
+getPermanova <- function(dat){
+     # GET DISTANCE MATRIX ---
+     dist_dml <- vegan::vegdist(x=as.matrix(dat[,5:10]), method="euclidean", binary=FALSE, diag=TRUE, upper=TRUE, na.rm=FALSE)
+
+     # PERMANOVA TEST ---
+     set.seed(12345)
+     y_permanova <- vegan::adonis(dist_dml ~ IncomeGroup+Ethnicity+EducationLevel+GeoRegion, 
+                                   data=dat, permutations=999, method="euclidean", parallel=8)
+     
+     return(y_permanova)
+}
+```
+
+
+#### Perform Permanova
+```{r tidy=TRUE, eval=FALSE}
+nperm <- 1000
+
+for(i in 1:nperm){
+     # DEFINE FILE ---
+     file.dat <- file.path(dir.data, paste("abundance_permmute_",i,".tsv", sep=""))
+     
+     # LOAD DATA ---
+     dat <- read.delim(file.dat, header=TRUE, stringsAsFactors=FALSE)
+     
+     # LOG TRANSFORM ---
+     dml <- TransformLog(dat)
+     
+     # PERFORM PERMANOVA TEST ---
+     pnova <- getPermanova(dml)
+     dm <- as.data.frame(pnova$aov.tab)
+     
+     # WRITE OUTPUT ---
+     file.output <- file.path(dir.data, paste("stats_permanova_permmute_",i,".tsv", sep=""))
+     write.table(dm, file.output, sep="\t", row.names=TRUE, col.names=NA, quote=FALSE)     
+}
+```

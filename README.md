@@ -1,4 +1,4 @@
-# Group segmentation and heterogeneity in the choice of cooking fuels in post-earthquake Nepal
+# Intergroup Heterogeneity in Cooking Fuel Choice and Group Segregation: Evidence from Post-Earthquake Nepal
 
 **Ratna K. Shrestha** (Vancouver School of Economics, University of British Columbia)<br/>
 **Raunak Shrestha** (Department of Radiation Oncology, University of California San Francisco)<br/>
@@ -26,7 +26,10 @@ The data for all 11 districts were downloaded from the **2015 Nepal Earthquake: 
 | 6.01  | [Annova Tests](https://raunakms.github.io/diversity_cooking_fuel/06_01_annova_tests.html)                                |
 | 6.02  | [Annova Tests with Factor Control: IncomeGroup](https://raunakms.github.io/diversity_cooking_fuel/06_02_annova_tests_factor_control_income.html) |
 | 6.03  | [Annova Tests with Factor Control: GeoRegion](https://raunakms.github.io/diversity_cooking_fuel/06_03_annova_tests_factor_control_georegion.html)                                 |
-
+| 7.01  | [Bootstrap: Prepare Input](https://raunakms.github.io/diversity_cooking_fuel/07_01_bootstrap_prepare_input.html) |
+| 7.02  | [Bootstrap: Perform Permanova](https://raunakms.github.io/diversity_cooking_fuel/07_02_bootstrap_perform_permanova.html) |
+| 7.03  | [Bootstrap: Summarize Result](https://raunakms.github.io/diversity_cooking_fuel/07_03_bootstrap_summarize_result.html) |
+| 7.04  | [Bootstrap: Analyze Stats](https://raunakms.github.io/diversity_cooking_fuel/07_04_bootstrap_analyze_stats.html) |
 
 <br/><br/>
 

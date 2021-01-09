@@ -17,6 +17,8 @@ navbar:
     href: 05_01_alpha_diversity.html
   - text: "Annova"
     href: 06_01_annova_tests.html
+  - text: "Bootstrap"
+    href: 07_01_bootstrap_prepare_input.html    
 output:
   html_document:
 theme: cosmo
