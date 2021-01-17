@@ -13,8 +13,6 @@ navbar:
     href: 03_01_baseline_data.html
   - text: "Ordination"
     href: 04_01_ordination_analysis.html
-  - text: "Alpha Diversity"
-    href: 05_01_alpha_diversity.html
   - text: "Annova"
     href: 06_01_annova_tests.html
   - text: "Bootstrap"

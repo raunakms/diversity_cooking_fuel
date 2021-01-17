@@ -6,7 +6,7 @@ knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
  encoding=encoding,
- output_file=file.path(dirname(input_file), out_dir, '07_03_bootstrap_summarize_result.html'))})
+ output_file=file.path(dirname(input_file), out_dir, '07_03_bootstrap_summarize_results.html'))})
 ---
 
 
