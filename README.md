@@ -22,10 +22,7 @@ The data for all 11 districts were downloaded from the **2015 Nepal Earthquake: 
 | 2.02  | [Generate Choropleth Maps](https://raunakms.github.io/diversity_cooking_fuel/02_02_maps_plot.html)                                 |
 | 3.01  | [Baseline Data](https://raunakms.github.io/diversity_cooking_fuel/03_01_baseline_data.html)                                |
 | 4.01  | [Ordination Analysis](https://raunakms.github.io/diversity_cooking_fuel/04_01_ordination_analysis.html) |
-| 5.01  | [Alpha Diversity](https://raunakms.github.io/diversity_cooking_fuel/05_01_alpha_diversity.html)                                 |
 | 6.01  | [Annova Tests](https://raunakms.github.io/diversity_cooking_fuel/06_01_annova_tests.html)                                |
-| 6.02  | [Annova Tests with Factor Control: IncomeGroup](https://raunakms.github.io/diversity_cooking_fuel/06_02_annova_tests_factor_control_income.html) |
-| 6.03  | [Annova Tests with Factor Control: GeoRegion](https://raunakms.github.io/diversity_cooking_fuel/06_03_annova_tests_factor_control_georegion.html)                                 |
 | 7.01  | [Bootstrap: Prepare Input](https://raunakms.github.io/diversity_cooking_fuel/07_01_bootstrap_prepare_input.html) |
 | 7.02  | [Bootstrap: Perform Permanova](https://raunakms.github.io/diversity_cooking_fuel/07_02_bootstrap_perform_permanova.html) |
 | 7.03  | [Bootstrap: Summarize Result](https://raunakms.github.io/diversity_cooking_fuel/07_03_bootstrap_summarize_result.html) |
