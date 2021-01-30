@@ -288,7 +288,7 @@ $(document).ready(function () {
   <a href="04_01_ordination_analysis.html">Ordination</a>
 </li>
 <li>
-  <a href="06_01_annova_tests.html">Annova</a>
+  <a href="06_01_permanova_test.html">Permanova</a>
 </li>
 <li>
   <a href="07_01_bootstrap_prepare_input.html">Bootstrap</a>
@@ -342,9 +342,19 @@ dm &lt;- reshape2::melt(df, id.var = &quot;Feature&quot;, value.name = &quot;R2&
 dm$Feature &lt;- factor(dm$Feature, levels = c(&quot;Ethnicity&quot;, &quot;IncomeGroup&quot;, &quot;EducationLevel&quot;, 
     &quot;GeoRegion&quot;))</code></pre>
 </div>
-<div id="mean-of-bootstrapped-r2-grouped-by-different-factors" class="section level4">
-<h4>Mean of bootstrapped R2, grouped by different factors</h4>
-<pre class="r"><code>summary_r2 &lt;- dm %&gt;% dplyr::group_by(Feature) %&gt;% dplyr::summarise(mean = mean(R2))</code></pre>
+<div id="mean-and-standard-deviation-of-bootstrapped-r2-grouped-by-different-factors" class="section level4">
+<h4>Mean and Standard Deviation of bootstrapped R2, grouped by different factors</h4>
+<pre class="r"><code>summary_r2 &lt;- dm %&gt;% dplyr::group_by(Feature) %&gt;% dplyr::summarise(mean = mean(R2), 
+    std_dev = sd(R2))
+
+summary_r2</code></pre>
+<pre><code>## # A tibble: 4 x 3
+##   Feature          mean std_dev
+##   &lt;fct&gt;           &lt;dbl&gt;   &lt;dbl&gt;
+## 1 Ethnicity      0.392  0.0225 
+## 2 IncomeGroup    0.279  0.0261 
+## 3 EducationLevel 0.121  0.0146 
+## 4 GeoRegion      0.0379 0.00448</code></pre>
 </div>
 <div id="plot-histogram-of-r2" class="section level4">
 <h4>Plot Histogram of R2</h4>
@@ -380,6 +390,32 @@ p &lt;- ggplot(dm, aes(x=R2)) +
 p</code></pre>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="07_04_bootstrap_analyze_stats_files/figure-html/unnamed-chunk-7-1.png" width="480" style="display: block; margin: auto;" /></p>
+</div>
+<div id="get-pvalue-data" class="section level4">
+<h4>Get Pvalue data</h4>
+<pre class="r"><code>df &lt;- subset(dat, dat$Category == &quot;Pr..F.&quot;)
+df$Category &lt;- NULL
+df &lt;- subset(df, df$Feature %in% c(&quot;Ethnicity&quot;, &quot;IncomeGroup&quot;, &quot;EducationLevel&quot;, 
+    &quot;GeoRegion&quot;))
+
+# RESHAPE DATA ---
+dm &lt;- reshape2::melt(df, id.var = &quot;Feature&quot;, value.name = &quot;pvalue&quot;)
+dm$Feature &lt;- factor(dm$Feature, levels = c(&quot;Ethnicity&quot;, &quot;IncomeGroup&quot;, &quot;EducationLevel&quot;, 
+    &quot;GeoRegion&quot;))</code></pre>
+</div>
+<div id="mean-and-standard-deviation-of-bootstrapped-pvalue-grouped-by-different-factors" class="section level4">
+<h4>Mean and Standard Deviation of bootstrapped pvalue, grouped by different factors</h4>
+<pre class="r"><code>summary_pvalue &lt;- dm %&gt;% dplyr::group_by(Feature) %&gt;% dplyr::summarise(mean = mean(pvalue), 
+    std_dev = sd(pvalue))
+
+summary_pvalue</code></pre>
+<pre><code>## # A tibble: 4 x 3
+##   Feature         mean std_dev
+##   &lt;fct&gt;          &lt;dbl&gt;   &lt;dbl&gt;
+## 1 Ethnicity      0.001       0
+## 2 IncomeGroup    0.001       0
+## 3 EducationLevel 0.001       0
+## 4 GeoRegion      0.001       0</code></pre>
 </div>
 
 

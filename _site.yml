@@ -13,8 +13,8 @@ navbar:
     href: 03_01_baseline_data.html
   - text: "Ordination"
     href: 04_01_ordination_analysis.html
-  - text: "Annova"
-    href: 06_01_annova_tests.html
+  - text: "Permanova"
+    href: 06_01_permanova_test.html
   - text: "Bootstrap"
     href: 07_01_bootstrap_prepare_input.html    
 output:
