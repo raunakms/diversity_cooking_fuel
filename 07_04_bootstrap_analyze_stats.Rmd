@@ -43,11 +43,13 @@ dm <- reshape2::melt(df, id.var="Feature", value.name="R2")
 dm$Feature <- factor(dm$Feature, levels=c("Ethnicity","IncomeGroup","EducationLevel","GeoRegion"))
 ```
 
-#### Mean of bootstrapped R2, grouped by different factors
+#### Mean and Standard Deviation of bootstrapped R2, grouped by different factors
 ```{r tidy=TRUE}
 summary_r2 <- dm %>% 
                dplyr::group_by(Feature) %>%
-               dplyr::summarise(mean=mean(R2))
+               dplyr::summarise(mean=mean(R2), std_dev=sd(R2))
+
+summary_r2
 ```
 
 #### Plot Histogram of R2
@@ -82,4 +84,25 @@ p <- ggplot(dm, aes(x=R2)) +
           ggtitle("") 
 
 p
+```
+
+
+#### Get Pvalue data
+```{r tidy=TRUE}
+df <- subset(dat, dat$Category == "Pr..F.")
+df$Category <- NULL
+df <- subset(df, df$Feature %in% c("Ethnicity","IncomeGroup","EducationLevel","GeoRegion"))
+
+# RESHAPE DATA ---
+dm <- reshape2::melt(df, id.var="Feature", value.name="pvalue")
+dm$Feature <- factor(dm$Feature, levels=c("Ethnicity","IncomeGroup","EducationLevel","GeoRegion"))
+```
+
+#### Mean and Standard Deviation of bootstrapped pvalue, grouped by different factors
+```{r tidy=TRUE}
+summary_pvalue <- dm %>% 
+                    dplyr::group_by(Feature) %>%
+                    dplyr::summarise(mean=mean(pvalue), std_dev=sd(pvalue))
+
+summary_pvalue
 ```
